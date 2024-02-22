@@ -398,7 +398,7 @@ void ConfigMPI(AG_Event *event)
         return;
     }
 
-    AG_WindowSetGeometryAligned(win, AG_WINDOW_ALIGNMENT_NONE, 440, 294);
+    AG_WindowSetGeometryAligned(win, AG_WINDOW_ALIGNMENT_NONE, 454, 350);
     AG_WindowSetCaptionS(win, "MPI Config");
     AG_WindowSetCloseAction(win, AG_WINDOW_DETACH);
 
