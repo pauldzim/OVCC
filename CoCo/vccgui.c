@@ -27,6 +27,8 @@ This file is part of VCC (Virtual Color Computer).
 #include "joystickinputSDL.h"
 #include "throttle.h"
 
+#include "xdebug.h"
+
 #ifndef Ulong
 #define Ulong unsigned long
 #endif
@@ -1030,7 +1032,7 @@ void Configure(AG_Event *ev)
         return;
     }
 
-    AG_WindowSetGeometryAligned(win, AG_WINDOW_ALIGNMENT_NONE, 640, 316);
+    AG_WindowSetGeometryAligned(win, AG_WINDOW_ALIGNMENT_NONE, 682, 366);
     AG_WindowSetCaptionS(win, "OVCC Options");
     AG_WindowSetCloseAction(win, AG_WINDOW_HIDE);
 
@@ -1689,7 +1691,6 @@ void MouseMotion(AG_Event *event)
 
 void KeyDownUp(AG_Event *event)
 {
-    static int lastkey = 0;
 	AG_Widget *w = AG_SELF();
     unsigned short updown = (Uint16)AG_INT(1);
 	unsigned short kb = AG_INT(2);
@@ -1698,8 +1699,64 @@ void KeyDownUp(AG_Event *event)
 
     extern void DoKeyBoardEvent(unsigned short, unsigned short, unsigned short);
 
+#ifdef DARWIN
+    // **** Added for latest MacOS ****
+    static int capslocked;
+
+    if (kb == AG_KEY_CAPSLOCK)
+    {
+        if (updown)
+        {
+            capslocked = 1;
+            XTRACE("CAPS locked\n");
+        }
+        else
+        {
+            capslocked = 0;
+            XTRACE("CAPS unlocked\n");
+        }
+        updown = kEventKeyDown;
+        DoKeyBoardEvent(uc, kb, updown);
+        XTRACE("key %x - mod %x - unicode %lx - updown %x\n", kb, mod, uc, updown);
+        updown = kEventKeyUp;
+        goto event;
+    }
+
+    // make the shift-alpha keys work
+    switch (kb) {
+    case AG_KEY_A - 0x20 ... AG_KEY_Z - 0x20:
+        kb += 0x20;
+        if (capslocked)
+        {
+            // fake a shift key
+            DoKeyBoardEvent(uc, AG_KEY_LSHIFT, updown);
+            XTRACE("faked a SHIFT key\n");
+        }
+        break;
+    default:
+        break;
+    }
+
+    // make the ctrl-alpha keys work
+    if (mod & (AG_KEYMOD_LCTRL | AG_KEYMOD_RCTRL))
+    {
+        switch (kb)
+        {
+        case AG_KEY_ASCII_START ... AG_KEY_ESCAPE:
+            kb += 0x60;
+            break;
+        default:
+            break;
+        }
+    }
+
+event:
+    // **** End of additions ****
+#endif
+
     DoKeyBoardEvent(uc, kb, updown);
 	//fprintf(stderr, "key %d - scancode %d - mod %d - unicode %ld - updown %i,\n", kb&0xf, sc&0xff, mod, uc, updown);
+    XTRACE("key %x - mod %x - unicode %lx - updown %x\n", kb, mod, uc, updown);
 }
 
 void ButtonDownUp(AG_Event *event)
@@ -1713,6 +1770,7 @@ void ButtonDownUp(AG_Event *event)
     DoButton(b, state);
 
 	//fprintf(stderr, "%s: Button %d, updown %i,\n", AGOBJECT(w)->name, b, state);
+    XTRACE("%s: Button %d, updown %i,\n", AGOBJECT(w)->name, b, state);
 }
 
 void LockTexture(AG_Event *event)
