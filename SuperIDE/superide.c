@@ -161,17 +161,23 @@ void ADDCALL ModuleConfig(unsigned char func)
 	switch (func)
 	{
 	case 0: // Destroy Menus
-		AG_MenuDel(itemMasterEject);
+		if (itemMasterEject)
+			AG_MenuDel(itemMasterEject);
 		itemMasterEject = NULL;
-		AG_MenuDel(itemMaster);
+		if (itemMaster)
+			AG_MenuDel(itemMaster);
 		itemMaster = NULL;
-		AG_MenuDel(itemSlaveEject);
+		if (itemSlaveEject)
+			AG_MenuDel(itemSlaveEject);
 		itemSlaveEject = NULL;
-		AG_MenuDel(itemSlave);
+		if (itemSlave)
+			AG_MenuDel(itemSlave);
 		itemSlave = NULL;
-		AG_MenuDel(itemConfig);
+		if (itemConfig)
+			AG_MenuDel(itemConfig);
 		itemConfig = NULL;
-		AG_MenuDel(itemSeperator);
+		if (itemSeperator)
+			AG_MenuDel(itemSeperator);
 		itemSeperator = NULL;
 		break;
 
