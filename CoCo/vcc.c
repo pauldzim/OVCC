@@ -57,8 +57,7 @@ char QuickLoadFile[256];
 
 static void SoftReset(void);
 void LoadIniFile(void);
-void EmuLoop(void);
-void CartLoad(void);
+void *EmuLoop(void *);
 void (*CPUInit)(void)=NULL;
 int  (*CPUExec)( int)=NULL;
 void (*CPUReset)(void)=NULL;
@@ -100,6 +99,7 @@ void DecorateWindow(SystemState2 *);
 void AddDummyCartMenus(void);
 void RemoveDummyCartMenus(void);
 void PrepareEventCallBacks(SystemState2 *);
+void PadDummyCartMenus(void);
 
 /*--------------------------------------------------------------------------*/
 
@@ -187,7 +187,7 @@ int main(int argc, char **argv)
 	EmuState2.emuThread = threadID;
 
 #ifdef ISOCPU
-	extern void CPUloop(SystemState2 *);
+	extern void *CPUloop(void *);
 	if (AG_ThreadTryCreate(&threadID, CPUloop, &EmuState2) != 0)
 	{
 		fprintf(stderr, "Can't Start CPU Thread!\n");
@@ -484,7 +484,7 @@ void SetMMUStat(unsigned char mmu)
 	}
 }
 
-void EmuLoop(void)
+void *EmuLoop(void *p)
 {
 	static float FPS;
 	static unsigned int FrameCounter=0;	
@@ -600,7 +600,7 @@ void EmuLoop(void)
 		}
 #endif
 	} //Still Emulating
-	return;
+	return(p);
 }
 
 void FullScreenToggleAGAR(void)

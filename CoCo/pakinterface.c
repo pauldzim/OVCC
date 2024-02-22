@@ -57,7 +57,7 @@ static unsigned short ModualParms=0;
 static void *hinstLib; 
 static bool DialogOpen=false;
 typedef void (*DYNAMICMENUCALLBACK)( char *,int, int);
-typedef void (*GETNAME)(char *,char *,DYNAMICMENUCALLBACK); 
+typedef void (*GETNAME)(char *,AG_MenuItem * /*,DYNAMICMENUCALLBACK*/);
 typedef void (*CONFIGIT)(unsigned char); 
 typedef void (*HEARTBEAT) (void);
 typedef unsigned char (*PACKPORTREAD)(unsigned char);
@@ -70,12 +70,12 @@ typedef void (*MEMWRITE8)(unsigned char,unsigned short);
 typedef void (*MMUWRITE8)(unsigned char,unsigned char,unsigned short);
 typedef void (*MODULESTATUS)(char *);
 typedef void (*DMAMEMPOINTERS)(MEMREAD8, MEMWRITE8);
-typedef void (*MMUROMSHARE)(unsigned short, unsigned char *);
+typedef void (*MMUROMSHARE)(unsigned char *);
 typedef void (*SETCARTPOINTER)(SETCART);
 typedef void (*SETINTERUPTCALLPOINTER) (ASSERTINTERUPT);
 typedef unsigned short (*MODULEAUDIOSAMPLE)(void);
 typedef void (*MODULERESET)(void);
-typedef void (*SETINIPATH)(char *);
+typedef void (*SETINIPATH)(INIfile *);
 typedef void (*SETINI)(INIfile *);
 
 static void (*GetModuleName)(char *, AG_MenuItem *)=NULL;
@@ -542,7 +542,7 @@ int FileID(char *Filename)
 
 void UpdateCartridgeMenu(char *modname)
 {
-	extern UpdateCartridgeEject(char*);
+	extern void UpdateCartridgeEject(char*);
 
 	UpdateCartridgeEject(modname);
 }

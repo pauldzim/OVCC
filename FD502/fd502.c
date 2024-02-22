@@ -306,14 +306,12 @@ void PhysDriveBSelected(AG_Event *event)
     PhysicalDriveB = ti->u;	
 }
 
-int UpdateROM(AG_Event *event)
+void UpdateROM(AG_Event *event)
 {
 	char *file = AG_STRING(1);
 	AG_FileType *ft = AG_PTR(2);
 
 	AG_Strlcpy(TempRomFileName, file, sizeof(TempRomFileName));
-
-    return 0;
 }
 
 void BrowseROM(AG_Event *event)
@@ -577,7 +575,7 @@ void UnloadFD502(AG_Event *event)
 	UpdateMenu(disk);
 }
 
-int LoadFD502(AG_Event *event)
+void LoadFD502(AG_Event *event)
 {
 	int disk = AG_INT(1);
 	char *file = AG_STRING(2);
