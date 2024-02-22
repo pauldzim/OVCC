@@ -209,6 +209,10 @@ unsigned char vccKeyboardGetScanAGAR(unsigned char Col)
 	#endif
 
 	//if (ret_val != 0xFF) fprintf(stderr, "<%2x>", ret_val);
+	if (ret_val != 0xFF)
+	{
+		//XTRACE("Key <%2X>\n", ret_val);
+	}
 	return (ret_val);
 }
 
@@ -330,14 +334,17 @@ void vccKeyboardHandleKeySDL(unsigned short key, unsigned short ScanCode, unsign
 	{
 		default:
 			// internal error
+			XTRACE("keyState error\n");
 		break;
 
 		// Key Down
 		case kEventKeyDown:
+			XTRACE("Key %02X down\n", ScanCode);
 			if (  (LeftSDL.UseMouse == JOYSTICK_KEYBOARD)
 				| (RightSDL.UseMouse == JOYSTICK_KEYBOARD)
 				)
 			{
+				XTRACE("Mouse\n");
 				ScanCode = SetMouseStatusSDL(ScanCode, 1);
 			}
 
@@ -354,10 +361,12 @@ void vccKeyboardHandleKeySDL(unsigned short key, unsigned short ScanCode, unsign
 
 		// Key Up
 		case kEventKeyUp:
+			XTRACE("Key %02X up\n", ScanCode);
 			if (  (LeftSDL.UseMouse == JOYSTICK_KEYBOARD)
 				| (RightSDL.UseMouse == JOYSTICK_KEYBOARD)
 				)
 			{
+				XTRACE("Mouse\n");
 				ScanCode = SetMouseStatusSDL(ScanCode, 0);
 			}
 
@@ -368,6 +377,7 @@ void vccKeyboardHandleKeySDL(unsigned short key, unsigned short ScanCode, unsign
 			// Clean out rollover table on shift release
 			if ( ScanCode == AG_KEY_LSHIFT )
 			{
+				XTRACE("Clearing table\n");
 				for (int Index = 0; Index < KBTABLE_ENTRY_COUNT; Index++)
 				{
 					ScanTable[Index] = KEY_UP;
