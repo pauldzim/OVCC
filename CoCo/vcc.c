@@ -84,6 +84,12 @@ void (*SetDistoRamBank)(UINT8)=NULL;
 
 // Globals
 
+#ifdef _DEBUG
+# ifdef DARWIN
+FILE *logg;
+# endif
+#endif
+
 char *GlobalExecFolder;
 char *GlobalFullName;
 char *GlobalShortName;
@@ -108,6 +114,17 @@ int main(int argc, char **argv)
 {
 	char cwd[260];
 	char name[260];
+
+#ifdef _DEBUG
+# ifdef DARWIN
+	logg = fopen("./ovcc.log", "w");
+	if (!logg) {
+		fprintf(stderr, "Couldn't open ovcc.log\n");
+		return 1;
+	}
+	setbuf(logg, NULL);
+# endif
+#endif
 
 	if (getcwd(cwd, sizeof(cwd)) != NULL) {
 		GlobalExecFolder = cwd;
@@ -208,6 +225,12 @@ int main(int argc, char **argv)
 	//UnloadDll(0);
 	//SoundDeInitSDL();
 	//WriteIniFile(); //Save Any changes to ini FileS
+
+#ifdef _DEBUG
+# ifdef DARWIN
+	fclose(logg);
+# endif
+#endif
 
 	return 0;
 }
