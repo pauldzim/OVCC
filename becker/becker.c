@@ -608,9 +608,11 @@ void ADDCALL ModuleConfig(unsigned char func)
 	case 0: // Destroy Menus
 	{
 		killDWTCPThread();
-		AG_MenuDel(itemConfig);
-		AG_MenuDel(itemSeperator);
+		if (itemConfig)
+			AG_MenuDel(itemConfig);
 		itemConfig = NULL;
+		if (itemSeperator)
+			AG_MenuDel(itemSeperator);
 		itemSeperator = NULL;
 	}
 	break;
