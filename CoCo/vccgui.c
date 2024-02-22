@@ -20,6 +20,7 @@ This file is part of VCC (Virtual Color Computer).
 #include <agar/core.h>
 #include <agar/gui.h>
 #include <agar/core/types.h>
+#include "AGARInterface.h"
 #include "audio.h"
 #include "config.h"
 #include "keyboard.h"
@@ -136,7 +137,7 @@ void Halt(AG_Event *event)
     AG_TextMsg(AG_MSG_INFO, "Emulation State set to halt!");
 }
 
-int LoadIniFile(AG_Event *event)
+void LoadIniFile(AG_Event *event)
 {
     SystemState2 *state = AG_PTR(1);
 	char *file = AG_STRING(2);
@@ -774,7 +775,7 @@ void AutoStartCartChange(AG_Event *event)
     MiscConfigCartAutoStart(autoStartCart);
 }
 
-int LoadCasette(AG_Event *event)
+void LoadCasette(AG_Event *event)
 {
 	char *file = AG_STRING(1);
 	AG_FileType *ft = AG_PTR(2);
@@ -790,8 +791,6 @@ int LoadCasette(AG_Event *event)
     }
 
     TapeConfigLoadTape();
-
-    return 0;
 }
 
 void BrowseTape(AG_Event *event)
@@ -817,7 +816,7 @@ void UpdateTapeWidgets(int counter, char mode, char *file)
     AG_Strlcpy(tapefile, file, sizeof(tapefile));
 }
 
-int SelectBitBangerFile(AG_Event *event)
+void SelectBitBangerFile(AG_Event *event)
 {
 	char *file = AG_STRING(1);
 	AG_FileType *ft = AG_PTR(2);
@@ -833,8 +832,6 @@ int SelectBitBangerFile(AG_Event *event)
     }
 
     BitBangerConfigOpen(bitbangerfile);
-
-    return 0;
 }
 
 void OpenBitBanger()
@@ -1540,17 +1537,20 @@ AG_MenuItem *GetMenuAnchor()
     return itemCartridge;
 }
 
-void CartLoad(SystemState2 *state)
+void *CartLoad(void *p)
 {
     extern int InsertModule(char *);
+    SystemState2 *state = p;
 
     InsertModule(modulefile);
 
 	state->EmulationRunning = TRUE;
 	inLoadCart = 0;
+
+    return state;
 }
 
-int LoadPack(AG_Event *event)
+void LoadPack(AG_Event *event)
 {
     SystemState2 *state = AG_PTR(1);
 
@@ -1568,11 +1568,9 @@ int LoadPack(AG_Event *event)
         if (threadID == (AG_Thread)NULL)
         {
             fprintf(stderr, "Can't Start Cart Load Thread!\n");
-            return(0);
+            return;
         }
     }
-
-    return 0;
 }
 
 static void LoadCart(AG_Event *event)

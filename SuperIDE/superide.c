@@ -215,7 +215,7 @@ void UpdateMenu(int disk)
 	}
 }
 
-int LoadHardDisk(AG_Event *event)
+void LoadHardDisk(AG_Event *event)
 {
 	int disk = AG_INT(1);
 	char *file = AG_STRING(2);

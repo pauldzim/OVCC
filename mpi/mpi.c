@@ -22,10 +22,10 @@ This file is part of VCC (Virtual Color Computer).
 #include <SDL2/SDL.h>
 #include <stdbool.h>
 #include "stdio.h"
-#include "mpi.h"
 #include "../CoCo/iniman.h"
 #define BOOL bool
 #include "../CoCo/fileops.h"
+#include "mpi.h"
 
 #define MAX_PATH 260
 
@@ -37,8 +37,7 @@ static unsigned char (*MemRead8)(unsigned short)=NULL;
 static void (*MemWrite8)(unsigned char,unsigned short)=NULL;
 static unsigned char (*MmuRead8)(unsigned char,unsigned short)=NULL;
 static void (*MmuWrite8)(unsigned char,unsigned char,unsigned short)=NULL;
-//static void (*PakRomShareCall)(MMUROMSHARE)=NULL;
-static void (*PakRomShareCall)(short, unsigned char *)=NULL;
+static void (*PakRomShareCall)(MMUROMSHARE)=NULL;
 static unsigned char *PakRomAddr=NULL;
 
 static void (*PakSetCart)(unsigned char)=NULL;
@@ -56,7 +55,7 @@ static INIman *iniman = NULL;
 
 //**************************************************************
 //Array of fuction pointer for each Slot
-static void (*GetModuleNameCalls[MAXPAX])(char *, AG_MenuItem *)={NULL,NULL,NULL,NULL};
+static void (*GetModuleNameCalls[MAXPAX])(char *, AG_MenuItem * /*, DYNAMICMENUCALLBACK*/)={NULL,NULL,NULL,NULL};
 static void (*ConfigModuleCalls[MAXPAX])(unsigned char)={NULL,NULL,NULL,NULL};
 static void (*HeartBeatCalls[MAXPAX])(void)={NULL,NULL,NULL,NULL};
 static void (*PakPortWriteCalls[MAXPAX])(unsigned char,unsigned char)={NULL,NULL,NULL,NULL};
@@ -81,7 +80,7 @@ static unsigned char CartForSlot[MAXPAX]={0,0,0,0};
 static void (*SetCarts[MAXPAX])(unsigned char)={SetCartSlot0,SetCartSlot1,SetCartSlot2,SetCartSlot3};
 static void (*SetCartCalls[MAXPAX])(SETCART)={NULL,NULL,NULL,NULL};
 //static void (*SetIniPathCalls[MAXPAX]) (char *)={NULL,NULL,NULL,NULL};
-static void (*SetIniPathCalls[MAXPAX]) (INIfile *)={NULL,NULL,NULL,NULL};
+static void (*SetIniPathCalls[MAXPAX]) (INIman *)={NULL,NULL,NULL,NULL};
 //***************************************************************
 static void *hinstLib[4]={NULL,NULL,NULL,NULL};
 static unsigned char ChipSelectSlot=3,SpareSelectSlot=3,SwitchSlot=3,SlotRegister=255;
@@ -327,7 +326,7 @@ unsigned char ADDCALL ModuleReset(void)
 			MmuMemPointerCalls[modidx](MmuRead8,MmuWrite8);
 
 		if (modidx == ChipSelectSlot)
-			if (PakRomShareCalls[modidx] != NULL)
+			if (PakRomShareCalls[modidx] != NULL && PakRomAddr != NULL)
 				PakRomShareCalls[modidx](PakRomAddr);
 		
 		//PakRomShareCalls[Temp] = NULL;
@@ -608,7 +607,10 @@ static void RetriggerModuleShare(void)
 	if (ExtRomPointers[ChipSelectSlot] != NULL) 
 	{
 		//fprintf(stderr, "MPI calling PakRomShare call back with ROM\n");
-		PakRomShareCall((unsigned short) ExtRomSizes[ChipSelectSlot], ExtRomPointers[ChipSelectSlot]);
+		if (PakRomShareCall != NULL)
+		{
+			PakRomShareCall(ExtRomPointers[ChipSelectSlot]);
+		}
 	}
 }
 
@@ -790,7 +792,7 @@ void UpdateMenu(unsigned char slot)
 	AG_MenuSetLabel(itemEjectSlot[slot], "Eject : %s", slotname);
 }
 
-int LoadSlot(AG_Event *event)
+void LoadSlot(AG_Event *event)
 {
 	int slot = AG_INT(1);
 	char *file = AG_STRING(2);

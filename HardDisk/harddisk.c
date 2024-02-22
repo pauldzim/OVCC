@@ -221,7 +221,7 @@ void CPUAssertInterupt(unsigned char Interupt,unsigned char Latencey)
 }
 */
 
-static int LoadHDD(AG_Event *event)
+static void LoadHDD(AG_Event *event)
 {
 	int disk = AG_INT(1);
 	char *hddfile = AG_STRING(2), entry[16];
@@ -239,8 +239,6 @@ static int LoadHDD(AG_Event *event)
 	sprintf(entry, "VHDImage%d", disk);
 	SaveConfig(entry);
 	UpdateMenu(disk);
-
-  return 0;
 }
 
 static void LoadHardDisk(AG_Event *event)
