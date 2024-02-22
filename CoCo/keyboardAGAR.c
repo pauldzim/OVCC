@@ -304,7 +304,8 @@ static void _vccKeyboardUpdateRolloverTable()
 */
 void vccKeyboardHandleKeySDL(unsigned short key, unsigned short ScanCode, unsigned short keyState)
 {
-	XTRACE("Key  : %c (%3d / 0x%02X)  Scan : %d / 0x%02X\n",key,key,key, ScanCode, ScanCode);
+	XTRACE("Key : %c (%3d / 0x%02X)  Scan : %d / 0x%02X  State : %d\n",
+	       (key >= 0x20 && key <= 0x7f) ? key : ' ', key, key, ScanCode, ScanCode, keyState);
 
 	// check for shift key
 	// Left and right shift generate different scan codes
