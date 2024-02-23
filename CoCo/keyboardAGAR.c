@@ -88,7 +88,7 @@ unsigned char ComparatorSetByDischarge = 0;
 // keyboard
 //
 
-#define KBTABLE_ENTRY_COUNT 100	///< key translation table maximum size, (arbitrary) most of the layouts are < 80 entries
+#define KBTABLE_ENTRY_COUNT 128	///< key translation table maximum size, (arbitrary) most of the layouts are < 80 entries
 #define KEY_DOWN	1
 #define KEY_UP		0
 
@@ -317,16 +317,18 @@ void vccKeyboardHandleKeySDL(unsigned short key, unsigned short ScanCode, unsign
 	{
 		ScanCode = AG_KEY_LSHIFT;
 	}
-#if 0 // TODO: CTRL and/or ALT?
+#ifdef DARWIN
 	// CTRL key - right -> left
-	if (ScanCode == DIK_RCONTROL)
+	if (ScanCode == AG_KEY_RCTRL)
 	{
-		ScanCode = DIK_LCONTROL;
+		ScanCode = AG_KEY_LCTRL;
 	}
+#endif
+#if 0 // TODO: ALT?
 	// ALT key - right -> left
-	if (ScanCode == DIK_RMENU)
+	if (ScanCode == AG_KEY_RALT)
 	{
-		ScanCode = DIK_LMENU;
+		ScanCode = AG_KEY_LALT;
 	}
 #endif
 
