@@ -1667,9 +1667,9 @@ void About(AG_Event *ev)
 void MouseMotion(AG_Event *event)
 {
     AG_Fixed *fx = AG_SELF();
-    int mx = AG_INT(1);
-    int my = AG_INT(2);
-    int mb = AG_INT(5);
+    SystemState2 *SState = AG_PTR(1);
+    int mx = AG_INT(2);
+    int my = AG_INT(3);
     int x, y;
 
     // Ignore out of bound mouse coords
@@ -1684,9 +1684,13 @@ void MouseMotion(AG_Event *event)
     x = (int)((float)mx/(float)fx->wid.w*640.0);
     y = (int)((float)my/(float)fx->wid.h*480.0);
 
+    SState->MouseX = x & 0xffff;
+    SState->MouseY = y & 0xffff;
+
     DoMouseMotion(x, y);
 
-    //fprintf(stderr, "Mouse Motion x : %i, y : %i, buttons : %i\n", x, y, mb);
+    //fprintf(stderr, "Mouse Motion x : %i, y : %i\n", x, y);
+    XTRACE("%s: Mouse Motion x : %i, y : %i, pitch %i\n", AGOBJECT(fx)->name, x, y, SState->SurfacePitch);
 }
 
 void KeyDownUp(AG_Event *event)
@@ -1756,21 +1760,25 @@ event:
 
     DoKeyBoardEvent(uc, kb, updown);
 	//fprintf(stderr, "key %d - scancode %d - mod %d - unicode %ld - updown %i,\n", kb&0xf, sc&0xff, mod, uc, updown);
-    XTRACE("key %x - mod %x - unicode %lx - updown %x\n", kb, mod, uc, updown);
+    XTRACE("%s: key %x - mod %x - unicode %lx - updown %x\n", AGOBJECT(w)->name, kb, mod, uc, updown);
 }
 
 void ButtonDownUp(AG_Event *event)
 {
 	AG_Widget *w = AG_SELF();
-    int state = AG_INT(1) ? 0 : 1; // AGAR Button state is Opposite OVCC requirements
-	int b = AG_INT(2);
+	SystemState2 *SState = AG_PTR(1);
+    int state = AG_INT(2) ? 0 : 1; // AGAR Button state is Opposite OVCC requirements
+	int b = AG_INT(3);
 
     extern void DoButton(int button, int state);
+
+    SState->ButtonState = state & 0xffff;
+    SState->Button = b & 0xffff;
 
     DoButton(b, state);
 
 	//fprintf(stderr, "%s: Button %d, updown %i,\n", AGOBJECT(w)->name, b, state);
-    XTRACE("%s: Button %d, updown %i,\n", AGOBJECT(w)->name, b, state);
+    XTRACE("%s: Button %d, updown %i\n", AGOBJECT(w)->name, b, state);
 }
 
 void LockTexture(AG_Event *event)
@@ -1901,11 +1909,11 @@ void PrepareEventCallBacks(SystemState2 *EmuState2)
         AG_WIDGET_UNFOCUSED_KEYUP |
         AG_WIDGET_UNFOCUSED_BUTTONDOWN |
         AG_WIDGET_UNFOCUSED_BUTTONUP ;
-    AG_SetEvent(EmuState2->fx, "mouse-motion", MouseMotion, NULL);
+    AG_SetEvent(EmuState2->fx, "mouse-motion", MouseMotion, "%p", EmuState2);
 	AG_SetEvent(EmuState2->fx, "key-down", KeyDownUp, "%i", AG_KEY_PRESSED);
 	AG_SetEvent(EmuState2->fx, "key-up", KeyDownUp, "%i", AG_KEY_RELEASED);
-	AG_SetEvent(EmuState2->fx, "mouse-button-down", ButtonDownUp, "%i", AG_BUTTON_PRESSED);
-	AG_SetEvent(EmuState2->fx, "mouse-button-up", ButtonDownUp, "%i", AG_BUTTON_RELEASED);
+	AG_SetEvent(EmuState2->fx, "mouse-button-down", ButtonDownUp, "%p,%i", EmuState2, AG_BUTTON_PRESSED);
+	AG_SetEvent(EmuState2->fx, "mouse-button-up", ButtonDownUp, "%p,%i", EmuState2, AG_BUTTON_RELEASED);
     AG_SetEvent(EmuState2->fx, "lock-texture", LockTexture, "%p", EmuState2);
     AG_SetEvent(EmuState2->agwin, "window-detached", WindowDetached, "%p", EmuState2);
 

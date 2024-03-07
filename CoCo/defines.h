@@ -114,6 +114,10 @@ typedef struct
     RGB24bit        *PTRsurface24;
     unsigned int	*PTRsurface32;
     long			SurfacePitch;
+    unsigned short	MouseX;
+    unsigned short	MouseY;
+    unsigned short	ButtonState;
+    unsigned short	Button;
     unsigned short	LineCounter;
     unsigned char	ScanLines;
     unsigned char	EmulationRunning;
