@@ -26,6 +26,7 @@ This file is part of VCC (Virtual Color Computer).
 #include "logger.h"
 #include "math.h"
 #include <stdio.h>
+#include <assert.h>
 
 #ifdef _DEBUG
 #define XTRACE0(f)			do { fprintf(logg, f); } while(0)
@@ -43,8 +44,6 @@ void MakeCMPpalette(void);
 void SetupDisplayAGAR(void);
 void MakeRGBPaletteAGAR(void);
 void MakeCMPpaletteAGAR(void);
-void HandleSelect(SystemState2 *USState32, unsigned short y, unsigned short YDiv,
-		  unsigned short *MouseX, unsigned short *MouseY0, unsigned short *MouseY1);
 static unsigned char ColorValues[4]={0,85,170,255};
 static unsigned char ColorTable16Bit[4]={0,10,21,31};	//Color brightness at 0 1 2 and 3 (2 bits)
 static unsigned char ColorTable32Bit[4]={0,85,170,255};	
@@ -90,6 +89,8 @@ static unsigned char BoarderChange=3;
 static unsigned char MasterMode=0;
 static unsigned char ColorInvert=1;
 static unsigned char BlinkState=1;
+
+#ifdef CUT_PASTE
 static unsigned int Timeout=250;
 static unsigned int OldTicks=0;
 static unsigned short OldYDiv=0xffff;
@@ -100,12 +101,20 @@ static unsigned short EndY0=0, EndY1=0;
 static char Dragging=0, Selected=0;
 static char Logging=0;
 
-static struct sparms {
+static struct sparms
+{
 	unsigned short MXDiv;
 	unsigned short MYOfs;
 	unsigned short MYMult;
 	unsigned short MYSpan;
 } SParms;
+
+unsigned char SelectBuf[80*24+1];
+unsigned short SBIndex=0;
+
+void HandleSelect(SystemState2 *USState32, unsigned short y, unsigned short YDiv,
+		  unsigned short *MouseX, unsigned short *MouseY0, unsigned short *MouseY1);
+#endif
 
 unsigned char Lpf[4]={192,199,225,225}; // 2 is really undefined but I gotta put something here.
 unsigned char VcenterTable[4]={29,23,12,12};
@@ -126,9 +135,11 @@ void UpdateScreen (SystemState2 *USState32)
 	unsigned int *szSurface32=USState32->PTRsurface32;
 	unsigned short y=USState32->LineCounter;
 	long Xpitch=USState32->SurfacePitch;
+#ifdef CUT_PASTE
 	unsigned char SwitchP=0;
 	unsigned int Ticks, TicksDiff;
 	unsigned short YDiv, MouseX=0, MouseY=0, MouseY0=0, MouseY1=0;
+#endif
 	Carry1=1;
 	Pcolor=0;
 
@@ -160,10 +171,17 @@ void UpdateScreen (SystemState2 *USState32)
 	{
 		// case 0:		//Hi Res text GraphicsMode=0 CompatMode=0 Ignore Bpp and Stretch
 		case 0: //Width 80
+#ifdef CUT_PASTE
 			YDiv = y/LinesperRow;
 			//XTRACE0("<");
 			if (YDiv != OldYDiv)
 			{
+				if (SBIndex != 0)
+				{
+					SelectBuf[SBIndex] = 0;
+					XTRACEN("%s\n", SelectBuf);
+				}
+				SBIndex = 0;
 				if (Logging)
 				{
 					Ticks = AG_GetTicks();
@@ -191,11 +209,12 @@ void UpdateScreen (SystemState2 *USState32)
 				}
 			}
 			//XTRACEN(">[%d,%d]", MouseX, MouseY);
+#endif
 			Attributes=0;
 			for (HorzBeam=0;HorzBeam<BytesperRow*ExtendedText;HorzBeam+=ExtendedText)
 			{									
+#ifdef CUT_PASTE
 				SwitchP = 0;
-				//XTRACEN("{%x %x %x}", y, SvY0, SvY1);
 				if (HorzBeam+1 > StartX && HorzBeam+1 <= MouseX && MouseY0 && MouseY1)
 				{
 					if (Dragging == 1)
@@ -208,30 +227,49 @@ void UpdateScreen (SystemState2 *USState32)
 						if (y+1 > SvY1)
 							SvY1 = y+1;
 					}
-					//XTRACE0("{!}");
 					SwitchP = 1;
 					Character=buffer[Start+(unsigned char)(HorzBeam+Hoffset)];
+					if (Selected == 1 && YDiv != OldYDiv && Character != 32)
+					{
+						SelectBuf[SBIndex++] = Character < 32 ? Character | 64 : Character;
+						assert(SBIndex <= 80 * 24);
+						//if (HorzBeam == BytesperRow)
+						//	SelectBuf[SBIndex++] = 10; // 10 = LF
+					}
 					if (Character == 32)
 					{
 						unsigned short i;
 
-						for (i=HorzBeam+ExtendedText; i<BytesperRow*ExtendedText; i+=ExtendedText)
+						for (i = HorzBeam+ExtendedText; i < BytesperRow*ExtendedText; i += ExtendedText)
 							if (buffer[Start+(unsigned char)(i+Hoffset)] != 32)
 								break;
 						if (i == BytesperRow*ExtendedText)
+						{
 							SwitchP = 0;
+							//if (Selected == 1 && YDiv != OldYDiv)
+							//{
+							//	SelectBuf[YDiv * BytesperRow + HorzBeam] = 10; // 10 = LF
+							//}
+						}
+						else if (Selected == 1 && YDiv != OldYDiv)
+						{
+							SelectBuf[SBIndex++] = Character < 32 ? Character | 64 : Character;
+							assert(SBIndex <= 80 * 24);
+						}
 					}
 				}
 				else
+#endif
 				{
 					Character=buffer[Start+(unsigned char)(HorzBeam+Hoffset)];
 				}
-				//XTRACEN("{%x %x %x %x %x}", SvY0, SvY1, MouseX, MouseY0, MouseY1);
+#ifdef CUT_PASTE
 				if (Logging && YDiv != OldYDiv && TicksDiff > Timeout)
 				{
 					XTRACEN("%c", Character < 32 ? Character | 64 : Character);
 					//XTRACEN("%x ", Character);
 				}
+#endif
 				Pixel=cc3Fontdata8x12[Character * 12 + (y%LinesperRow)]; 
 				if (ExtendedText==2)
 				{
@@ -241,12 +279,14 @@ void UpdateScreen (SystemState2 *USState32)
 					if ((!BlinkState) & !!(Attributes & 128))
 						Pixel=0;
 				}
+#ifdef CUT_PASTE
 				if (SwitchP)
 				{
 					TextPallete[0]=Pallete32Bit[8+((Attributes & 56)>>3)];
 					TextPallete[1]=Pallete32Bit[Attributes & 7];
 				}
 				else
+#endif
 				{
 					TextPallete[1]=Pallete32Bit[8+((Attributes & 56)>>3)];
 					TextPallete[0]=Pallete32Bit[Attributes & 7];
@@ -274,6 +314,7 @@ void UpdateScreen (SystemState2 *USState32)
 					YStride-=Xpitch;
 				}
 			} 
+#ifdef CUT_PASTE
 			if (Logging && YDiv != OldYDiv && TicksDiff > Timeout)
 			{
 				XTRACEN("        0 %d %d\n", y, LinesperRow);
@@ -281,14 +322,22 @@ void UpdateScreen (SystemState2 *USState32)
 					OldTicks = Ticks;
 			}
 			OldYDiv = YDiv;
-
+#endif
 		break;
+
 		case 1:
 		case 2: //Width 40
+#ifdef CUT_PASTE
 			YDiv = y/LinesperRow;
 			//XTRACE0("<");
 			if (YDiv != OldYDiv)
 			{
+				if (SBIndex != 0)
+				{
+					SelectBuf[SBIndex] = 0;
+					XTRACEN("%s\n", SelectBuf);
+				}
+				SBIndex = 0;
 				if (Logging)
 				{
 					Ticks = AG_GetTicks();
@@ -316,11 +365,12 @@ void UpdateScreen (SystemState2 *USState32)
 				}
 			}
 			//XTRACEN(">[%d,%d]", MouseX, MouseY);
+#endif
 			Attributes=0;
 			for (HorzBeam=0;HorzBeam<BytesperRow*ExtendedText;HorzBeam+=ExtendedText)
 			{									
+#ifdef CUT_PASTE
 				SwitchP = 0;
-				//XTRACEN("{%x %x %x}", y, SvY0, SvY1);
 				if (HorzBeam+1 > StartX && HorzBeam+1 <= MouseX && MouseY0 && MouseY1)
 				{
 					if (Dragging == 1)
@@ -333,30 +383,49 @@ void UpdateScreen (SystemState2 *USState32)
 						if (y+1 > SvY1)
 							SvY1 = y+1;
 					}
-					//XTRACE0("{!}");
 					SwitchP = 1;
 					Character=buffer[Start+(unsigned char)(HorzBeam+Hoffset)];
+					if (Selected == 1 && YDiv != OldYDiv && Character != 32)
+					{
+						SelectBuf[SBIndex++] = Character < 32 ? Character | 64 : Character;
+						assert(SBIndex <= 80 * 24);
+						//if (HorzBeam == BytesperRow)
+						//	SelectBuf[SBIndex++] = 10; // 10 = LF
+					}
 					if (Character == 32)
 					{
 						unsigned short i;
 
-						for (i=HorzBeam+ExtendedText; i<BytesperRow*ExtendedText; i+=ExtendedText)
+						for (i = HorzBeam+ExtendedText; i < BytesperRow*ExtendedText; i += ExtendedText)
 							if (buffer[Start+(unsigned char)(i+Hoffset)] != 32)
 								break;
 						if (i == BytesperRow*ExtendedText)
+						{
 							SwitchP = 0;
+							//if (Selected == 1 && YDiv != OldYDiv)
+							//{
+							//	SelectBuf[YDiv * BytesperRow + HorzBeam] = 10; // 10 = LF
+							//}
+						}
+						else if (Selected == 1 && YDiv != OldYDiv)
+						{
+							SelectBuf[SBIndex++] = Character < 32 ? Character | 64 : Character;
+							assert(SBIndex <= 80 * 24);
+						}
 					}
 				}
 				else
+#endif
 				{
 					Character=buffer[Start+(unsigned char)(HorzBeam+Hoffset)];
 				}
-				//XTRACEN("{%x %x %x %x %x}", SvY0, SvY1, MouseX, MouseY0, MouseY1);
+#ifdef CUT_PASTE
 				if (Logging && YDiv != OldYDiv && TicksDiff > Timeout)
 				{
 					XTRACEN("%c", Character < 32 ? Character | 64 : Character);
 					//XTRACEN("%x ", Character);
 				}
+#endif
 				Pixel=cc3Fontdata8x12[Character  * 12 + (y%LinesperRow)]; 
 				if (ExtendedText==2)
 				{
@@ -366,12 +435,14 @@ void UpdateScreen (SystemState2 *USState32)
 					if ((!BlinkState) & !!(Attributes & 128))
 						Pixel=0;
 				}
+#ifdef CUT_PASTE
 				if (SwitchP)
 				{
 					TextPallete[0]=Pallete32Bit[8+((Attributes & 56)>>3)];
 					TextPallete[1]=Pallete32Bit[Attributes & 7];
 				}
 				else
+#endif
 				{
 					TextPallete[1]=Pallete32Bit[8+((Attributes & 56)>>3)];
 					TextPallete[0]=Pallete32Bit[Attributes & 7];
@@ -415,6 +486,7 @@ void UpdateScreen (SystemState2 *USState32)
 					YStride-=Xpitch;
 				}
 			} 
+#ifdef CUT_PASTE
 			if (Logging && YDiv != OldYDiv && TicksDiff > Timeout)
 			{
 				XTRACE0("        1-2\n");
@@ -422,6 +494,7 @@ void UpdateScreen (SystemState2 *USState32)
 					OldTicks = Ticks;
 			}
 			OldYDiv = YDiv;
+#endif
 		break;
 
 		//	case 2:
@@ -577,10 +650,17 @@ void UpdateScreen (SystemState2 *USState32)
 		case 125:
 		case 126:
 		case 127:
+#ifdef CUT_PASTE
 			YDiv = y/12;
 			//XTRACE0("<");
 			if (YDiv != OldYDiv)
 			{
+				if (SBIndex != 0)
+				{
+					SelectBuf[SBIndex] = 0;
+					XTRACEN("%s\n", SelectBuf);
+				}
+				SBIndex = 0;
 				if (Logging)
 				{
 					Ticks = AG_GetTicks();
@@ -608,10 +688,11 @@ void UpdateScreen (SystemState2 *USState32)
 				}
 			}
 			//XTRACEN(">[%d,%d]", MouseX, MouseY);
+#endif
 			for (HorzBeam=0;HorzBeam<BytesperRow;HorzBeam++)
 			{										
+#ifdef CUT_PASTE
 				SwitchP = 0;
-				//XTRACEN("{%x %x %x}", y, SvY0, SvY1);
 				if (HorzBeam+5 > StartX && HorzBeam+5 <= MouseX && MouseY0 && MouseY1)
 				{
 					if (Dragging == 1)
@@ -624,29 +705,47 @@ void UpdateScreen (SystemState2 *USState32)
 						if (y+1 > SvY1)
 							SvY1 = y+1;
 					}
-					//XTRACE0("{!}");
 					SwitchP = 1;
 					Character=buffer[Start+(unsigned char)(HorzBeam+Hoffset)];
+					if (Selected == 1 && YDiv != OldYDiv && (Character & 63) != 32)
+					{
+						SelectBuf[SBIndex++] = (Character & 63) < 32 ? (Character & 63) | 64 : (Character & 63);
+						assert(SBIndex <= 80 * 24);
+						//if (HorzBeam == BytesperRow)
+						//	SelectBuf[SBIndex++] = 10; // 10 = LF
+					}
 					if ((Character & 63) == 32)
 					{
 						unsigned short i;
 
-						for (i=HorzBeam+1; i<BytesperRow; i++)
-							if ((buffer[Start+(unsigned char)(i+Hoffset)] & 63) != 32)
+						for (i = HorzBeam+1; i < BytesperRow; i++)
+							if ((buffer[Start + (unsigned char)(i + Hoffset)] & 63) != 32)
 								break;
 						if (i == BytesperRow)
+						{
 							SwitchP = 0;
+							//if (Selected == 1 && YDiv != OldYDiv)
+							//{
+							//	SelectBuf[YDiv * BytesperRow + HorzBeam] = 10; // 10 = LF
+							//}
+						}
+						else if (Selected == 1 && YDiv != OldYDiv)
+						{
+							SelectBuf[SBIndex++] = (Character & 63) < 32 ? (Character & 63) | 64 : (Character & 63);
+							assert(SBIndex <= 80 * 24);
+						}
 					}
 				}
 				else
+#endif
 				{
 					Character=buffer[Start+(unsigned char)(HorzBeam+Hoffset)];
 				}
-				//XTRACEN("{%x %x %x %x %x}", SvY0, SvY1, MouseX, MouseY0, MouseY1);
 				switch ((Character & 192) >> 6)
 				{
 				case 0:
 					Character = Character & 63;
+#ifdef CUT_PASTE
 					if (Logging && YDiv != OldYDiv && TicksDiff > Timeout)
 					{
 						XTRACEN("%c", Character < 32 ? Character | 64 : Character);
@@ -658,6 +757,7 @@ void UpdateScreen (SystemState2 *USState32)
 						TextPallete[0]=Pallete32Bit[TextFGPallete];
 					}
 					else
+#endif
 					{
 						TextPallete[0]=Pallete32Bit[TextBGPallete];
 						TextPallete[1]=Pallete32Bit[TextFGPallete];
@@ -670,6 +770,7 @@ void UpdateScreen (SystemState2 *USState32)
 
 				case 1:
 					Character = Character & 63;
+#ifdef CUT_PASTE
 					if (Logging && YDiv != OldYDiv && TicksDiff > Timeout)
 					{
 						XTRACEN("%c", Character < 32 ? Character | 64 : Character);
@@ -681,6 +782,7 @@ void UpdateScreen (SystemState2 *USState32)
 						TextPallete[0]=Pallete32Bit[TextFGPallete];
 					}
 					else
+#endif
 					{
 						TextPallete[0]=Pallete32Bit[TextBGPallete];
 						TextPallete[1]=Pallete32Bit[TextFGPallete];
@@ -690,22 +792,26 @@ void UpdateScreen (SystemState2 *USState32)
 
 				case 2:
 				case 3:
+#ifdef CUT_PASTE
 					if (SwitchP)
 					{
 						TextPallete[0] = Pallete32Bit[(Character & 112) >> 4];
 						TextPallete[1] = Pallete32Bit[8];
 					}
 					else
+#endif
 					{
 						TextPallete[1] = Pallete32Bit[(Character & 112) >> 4];
 						TextPallete[0] = Pallete32Bit[8];
 					}
 					Character = 64 + (Character & 0xF);
+#ifdef CUT_PASTE
 					if (Logging && YDiv != OldYDiv && TicksDiff > Timeout)
 					{
 						XTRACEN("%c", Character < 32 ? Character | 64 : Character);
 						//XTRACEN("%x ", Character);
 					}
+#endif
 					Pixel=ntsc_round_fontdata8x12[(Character )*12+ (y%12)];
 				break;
 
@@ -750,6 +856,7 @@ void UpdateScreen (SystemState2 *USState32)
 				}
 			
 			} // Next HorzBeam
+#ifdef CUT_PASTE
 			if (Logging && YDiv != OldYDiv && TicksDiff > Timeout)
 			{
 				XTRACEN("        64-127 %d %d %d %d %d\n",
@@ -758,6 +865,7 @@ void UpdateScreen (SystemState2 *USState32)
 					OldTicks = Ticks;
 			}
 			OldYDiv = YDiv;
+#endif
 		break;
 
 		case 128+0: //Bpp=0 Sr=0 1BPP Stretch=1
@@ -3485,6 +3593,7 @@ void UpdateScreen (SystemState2 *USState32)
 }
 // END of 32 Bit render loop *****************************************************************************************
 
+#ifdef CUT_PASTE
 void HandleSelect(SystemState2 *USState32, unsigned short y, unsigned short YDiv,
 		  unsigned short *MouseX, unsigned short *MouseY0, unsigned short *MouseY1)
 {
@@ -3553,6 +3662,7 @@ void HandleSelect(SystemState2 *USState32, unsigned short y, unsigned short YDiv
 		Selected = 0;
 	}
 }
+#endif
 
 void DrawTopBoarderAGAR(SystemState2 *DTState)
 {
@@ -3829,6 +3939,7 @@ void SetupDisplayAGAR(void)
 	NewStartofVidram =(NewStartofVidram & VidMask)+DistoOffset; //DistoOffset for 2M configuration
 	MasterMode= (GraphicsMode <<7) | (CompatMode<<6)  | ((Bpp & 3)<<4) | (Stretch & 15);
 
+#ifdef CUT_PASTE
 	if (MasterMode == 0)
 	{
 		SParms.MXDiv = 4;
@@ -3850,8 +3961,13 @@ void SetupDisplayAGAR(void)
 		SParms.MYMult = 24;
 		SParms.MYSpan = 21;
 	}
+	OldTicks = 0;
+	OldYDiv = 0xffff;
+	StartX = 0xffff;
 	Dragging = 0;
 	Selected = 0;
+	SBIndex = 0;
+#endif
 	return;
 }
 
