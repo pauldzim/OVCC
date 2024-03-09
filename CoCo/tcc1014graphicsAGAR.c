@@ -175,9 +175,9 @@ void UpdateScreen (SystemState2 *USState32)
 			{
 				unsigned short Ty = USState32->MouseY;
 				//XTRACE0("9");
-				MouseX = USState32->MouseX/4;
-				MouseY0 = 64+YDiv*LinesperRow*2 >= Ty;
-				MouseY1 = 64+YDiv*LinesperRow*2 <= Ty+14;
+				MouseX = USState32->MouseX/SParms.MXDiv;
+				MouseY0 = SParms.MYOfs+YDiv*SParms.MYMult >= Ty;
+				MouseY1 = SParms.MYOfs+YDiv*SParms.MYMult <= Ty+SParms.MYSpan;
 			}
 			if (Selected == 1)
 			{
@@ -210,12 +210,27 @@ void UpdateScreen (SystemState2 *USState32)
 					}
 					//XTRACE0("{!}");
 					SwitchP = 1;
+					Character=buffer[Start+(unsigned char)(HorzBeam+Hoffset)];
+					if (Character == 32)
+					{
+						unsigned short i;
+
+						for (i=HorzBeam+ExtendedText; i<BytesperRow*ExtendedText; i+=ExtendedText)
+							if (buffer[Start+(unsigned char)(i+Hoffset)] != 32)
+								break;
+						if (i == BytesperRow*ExtendedText)
+							SwitchP = 0;
+					}
+				}
+				else
+				{
+					Character=buffer[Start+(unsigned char)(HorzBeam+Hoffset)];
 				}
 				//XTRACEN("{%x %x %x %x %x}", SvY0, SvY1, MouseX, MouseY0, MouseY1);
-				Character=buffer[Start+(unsigned char)(HorzBeam+Hoffset)];
 				if (Logging && YDiv != OldYDiv && TicksDiff > Timeout)
 				{
-					XTRACEN("%c", Character < 0x20 ? Character | 0x40 : Character);
+					XTRACEN("%c", Character < 32 ? Character | 64 : Character);
+					//XTRACEN("%x ", Character);
 				}
 				Pixel=cc3Fontdata8x12[Character * 12 + (y%LinesperRow)]; 
 				if (ExtendedText==2)
@@ -285,9 +300,9 @@ void UpdateScreen (SystemState2 *USState32)
 			{
 				unsigned short Ty = USState32->MouseY;
 				//XTRACE0("9");
-				MouseX = USState32->MouseX/4;
-				MouseY0 = 64+YDiv*LinesperRow*2 >= Ty;
-				MouseY1 = 64+YDiv*LinesperRow*2 <= Ty+14;
+				MouseX = USState32->MouseX/SParms.MXDiv;
+				MouseY0 = SParms.MYOfs+YDiv*SParms.MYMult >= Ty;
+				MouseY1 = SParms.MYOfs+YDiv*SParms.MYMult <= Ty+SParms.MYSpan;
 			}
 			if (Selected == 1)
 			{
@@ -320,12 +335,27 @@ void UpdateScreen (SystemState2 *USState32)
 					}
 					//XTRACE0("{!}");
 					SwitchP = 1;
+					Character=buffer[Start+(unsigned char)(HorzBeam+Hoffset)];
+					if (Character == 32)
+					{
+						unsigned short i;
+
+						for (i=HorzBeam+ExtendedText; i<BytesperRow*ExtendedText; i+=ExtendedText)
+							if (buffer[Start+(unsigned char)(i+Hoffset)] != 32)
+								break;
+						if (i == BytesperRow*ExtendedText)
+							SwitchP = 0;
+					}
+				}
+				else
+				{
+					Character=buffer[Start+(unsigned char)(HorzBeam+Hoffset)];
 				}
 				//XTRACEN("{%x %x %x %x %x}", SvY0, SvY1, MouseX, MouseY0, MouseY1);
-				Character=buffer[Start+(unsigned char)(HorzBeam+Hoffset)];
 				if (Logging && YDiv != OldYDiv && TicksDiff > Timeout)
 				{
-					XTRACEN("%c", Character < 0x20 ? Character | 0x40 : Character);
+					XTRACEN("%c", Character < 32 ? Character | 64 : Character);
+					//XTRACEN("%x ", Character);
 				}
 				Pixel=cc3Fontdata8x12[Character  * 12 + (y%LinesperRow)]; 
 				if (ExtendedText==2)
@@ -562,9 +592,9 @@ void UpdateScreen (SystemState2 *USState32)
 			{
 				unsigned short Ty = USState32->MouseY;
 				//XTRACE0("9");
-				MouseX = USState32->MouseX/16;
-				MouseY0 = 72+YDiv*24 >= Ty;
-				MouseY1 = 72+YDiv*24 <= Ty+21; //20;
+				MouseX = USState32->MouseX/SParms.MXDiv;
+				MouseY0 = SParms.MYOfs+YDiv*SParms.MYMult >= Ty;
+				MouseY1 = SParms.MYOfs+YDiv*SParms.MYMult <= Ty+SParms.MYSpan;
 			}
 			if (Selected == 1)
 			{
@@ -596,16 +626,31 @@ void UpdateScreen (SystemState2 *USState32)
 					}
 					//XTRACE0("{!}");
 					SwitchP = 1;
+					Character=buffer[Start+(unsigned char)(HorzBeam+Hoffset)];
+					if ((Character & 63) == 32)
+					{
+						unsigned short i;
+
+						for (i=HorzBeam+1; i<BytesperRow; i++)
+							if ((buffer[Start+(unsigned char)(i+Hoffset)] & 63) != 32)
+								break;
+						if (i == BytesperRow)
+							SwitchP = 0;
+					}
+				}
+				else
+				{
+					Character=buffer[Start+(unsigned char)(HorzBeam+Hoffset)];
 				}
 				//XTRACEN("{%x %x %x %x %x}", SvY0, SvY1, MouseX, MouseY0, MouseY1);
-				Character=buffer[Start+(unsigned char)(HorzBeam+Hoffset)];
 				switch ((Character & 192) >> 6)
 				{
 				case 0:
 					Character = Character & 63;
 					if (Logging && YDiv != OldYDiv && TicksDiff > Timeout)
 					{
-						XTRACEN("%c", Character < 0x20 ? Character | 0x40 : Character);
+						XTRACEN("%c", Character < 32 ? Character | 64 : Character);
+						//XTRACEN("%x ", Character);
 					}
 					if (SwitchP)
 					{
@@ -627,7 +672,8 @@ void UpdateScreen (SystemState2 *USState32)
 					Character = Character & 63;
 					if (Logging && YDiv != OldYDiv && TicksDiff > Timeout)
 					{
-						XTRACEN("%c", Character < 0x20 ? Character | 0x40 : Character);
+						XTRACEN("%c", Character < 32 ? Character | 64 : Character);
+						//XTRACEN("%x ", Character);
 					}
 					if (SwitchP)
 					{
@@ -657,7 +703,8 @@ void UpdateScreen (SystemState2 *USState32)
 					Character = 64 + (Character & 0xF);
 					if (Logging && YDiv != OldYDiv && TicksDiff > Timeout)
 					{
-						XTRACEN("%c", Character < 0x20 ? Character | 0x40 : Character);
+						XTRACEN("%c", Character < 32 ? Character | 64 : Character);
+						//XTRACEN("%x ", Character);
 					}
 					Pixel=ntsc_round_fontdata8x12[(Character )*12+ (y%12)];
 				break;
@@ -3791,7 +3838,7 @@ void SetupDisplayAGAR(void)
 	}
 	else if (MasterMode == 1 || MasterMode == 2)
 	{
-		SParms.MXDiv = 4;
+		SParms.MXDiv = 8;
 		SParms.MYOfs = 64;
 		SParms.MYMult = LinesperRow*2;
 		SParms.MYSpan = 14;
@@ -3803,6 +3850,8 @@ void SetupDisplayAGAR(void)
 		SParms.MYMult = 24;
 		SParms.MYSpan = 21;
 	}
+	Dragging = 0;
+	Selected = 0;
 	return;
 }
 
