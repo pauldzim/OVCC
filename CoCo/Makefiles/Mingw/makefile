@@ -3,12 +3,13 @@ TARGET=ovcc
  
 # compiler
 CC=gcc
+CXX=g++
 # linker
-LD=gcc
+LD=g++
 # Resource Compiler
 RC=windres
 # debug
-DEBUG=#-g
+DEBUG=#-g #-D _DEBOG
 # optimisation
 OPT=-O2
 # warnings
@@ -19,16 +20,19 @@ INCDIR =
 ODIR = obj
 
 PTHREAD=-pthread
+OPTIONS=#-D CUT_PASTE
 
 SDLINC=`pkg-config --cflags sdl2`
 AGARINC=`agar-config --cflags`
-IDIR=$(INCDIR) $(SDLINC) $(AGARINC)
+CLIPINC=-I ../clip
+IDIR=$(INCDIR) $(SDLINC) $(AGARINC) $(CLIPINC)
  
-CCFLAGS=$(IDIR) $(DEBUG) $(OPT) # $(WARN) $(PTHREAD) -pipe
+CCFLAGS=$(IDIR) $(DEBUG) $(OPT) $(OPTIONS) # $(WARN) $(PTHREAD) -pipe
  
 SDLLIB=`sdl2-config --libs`
 AGARLIB=`agar-config --libs`
-LIBS=$(AGARLIB) $(SDLLIB) -lregex
+CLIPLIB=-L ../clip -lclip
+LIBS=$(AGARLIB) $(CLIPLIB) $(SDLLIB) -lregex
 
 LDFLAGS=$(LIBS) #-Wl,-export-all-symbols # -export-dynamic 
 
@@ -36,18 +40,23 @@ _OBJS=	vcc.o coco3.o config.o fileops.o hd6309.o iobus.o logger.o mc6809.o \
 	mc6821.o pakinterface.o quickload.o tcc1014mmu_nomm.o tcc1014registers.o \
 	throttle.o _xdebug.o cassette.o AGARInterface.o tcc1014graphicsAGAR.o keyboardAGAR.o \
 	keyboardLayoutAGAR.o joystickinputSDL.o audioSDL.o vccgui.o iniman.o tcc1014mmu_common.o
+
+_CXXOBJS= vccclip.o
 	
 _UNUSED_OBJS = hd6309-a.o fixedtexture.o hd6309asmP0-00-7F.o hd6309asmP0-80-FF.o hd6309asmP1-00-FF.o hd6309asmP2-00-FF.o \
 	hd6309asmReg2Reg.o hd6309cea.o hd6309pshpul.o hd6309saveflags.o hd6309tfrexg.o hd6309turbo.o 
+
 OBJS= $(patsubst %,$(ODIR)/%,$(_OBJS))
+CXXOBJS= $(patsubst %,$(ODIR)/%,$(_CXXOBJS))
  
-ovcc: $(OBJS)
-	$(LD) -o $(TARGET) $(OBJS) $(LDFLAGS) -Wl,--subsystem,console
+ovcc: $(OBJS) $(CXXOBJS)
+	$(LD) -o $(TARGET) $(OBJS) $(CXXOBJS) $(LDFLAGS) -Wl,--subsystem,console
     
 $(ODIR):
 	mkdir -p $@
 
 $(OBJS): | $(ODIR)
+$(CXXOBJS): | $(ODIR)
 
 $(ODIR)/vcc.o: vcc.c fileops.h defines.h resource.h vcc.h tcc1014mmu.h tcc1014graphicsAGAR.h \
 		tcc1014registers.h hd6309.h mc6809.h mc6821.h keyboard.h coco3.h pakinterface.h audio.h \
@@ -179,6 +188,9 @@ $(ODIR)/hd6309saveflags.o: hd6309saveflags.asm
 
 $(ODIR)/iniman.o: iniman.c iniman.h
 	$(CC) -c $(CCFLAGS) $< -o $@
+
+$(ODIR)/vccclip.o: vccclip.cpp ../clip/clip.h
+	$(CXX) -c $(CCFLAGS) $(CXXFLAGS) $< -o $@
 
 clean:
 	rm -f $(ODIR)/*.o $(TARGET)

@@ -6,6 +6,8 @@ _OBJS = vcc.o coco3.o config.o fileops.o hd6309.o iobus.o logger.o mc6809.o \
 	throttle.o _xdebug.o cassette.o AGARInterface.o tcc1014graphicsAGAR.o keyboardAGAR.o \
 	keyboardLayoutAGAR.o joystickinputSDL.o audioSDL.o vccgui.o iniman.o
 
+_CXXOBJS = vccclip.o
+
 include ../Makefile.common
 
 $(ODIR)/vcc.o: vcc.c fileops.h defines.h resource.h vcc.h tcc1014mmu.h tcc1014graphicsAGAR.h \
@@ -70,6 +72,8 @@ $(ODIR)/tcc1014graphicsAGAR.o: tcc1014graphicsAGAR.c defines.h tcc1014graphicsAG
 	logger.h 
 
 $(ODIR)/iniman.o: iniman.c iniman.h
+
+$(ODIR)/vccclip.o: vccclip.cpp ../clip/clip.h
 
 install:
 	install $(TARGET) ../ovcc.app/Contents/$(TARGET)

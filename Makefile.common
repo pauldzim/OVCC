@@ -13,6 +13,7 @@ DEBUG=#-g #-D _DEBUG
 OPT=-Ofast -march=native -flto # -Og # -Ofast #
 WARN = -w # -Wall
 PTHREAD = -pthread
+OPTIONS = #-D CUT_PASTE
 
 ifeq ($(TARGETOS),Darwin)
 CFLAGS += -D DARWIN
@@ -20,24 +21,27 @@ endif
 
 SDLINC := $(shell pkg-config --cflags sdl2)
 AGARINC := $(shell agar-config --cflags)
-IDIR = $(INCDIR) $(SDLINC) $(AGARINC)
+CLIPINC := -I ../clip
+IDIR = $(INCDIR) $(SDLINC) $(AGARINC) $(CLIPINC)
 
 SDLLIB := $(shell sdl2-config --libs)
 AGARLIB := $(shell agar-config --libs)
-LIBS = $(SDLLIB) $(AGARLIB)
+CLIPLIB := -L ../clip -lclip
+LIBS = $(SDLLIB) $(AGARLIB) $(CLIPLIB)
 
 ifneq ($(TARGETOS),Darwin)
-LIBS := $(LIBS) -lrt
+LIBS := $(LIBS) -lxcb -lrt
 endif
 
-CFLAGS += $(DEBUG) $(OPT) $(WARN) $(IDIR)
+CFLAGS += $(DEBUG) $(OPT) $(WARN) $(OPTIONS) $(IDIR)
 
 LDFLAGS += $(LIBS) #-Wl,-export-all-symbols # -export-dynamic
 
 OBJS = $(patsubst %,$(ODIR)/%,$(_OBJS))
+CXXOBJS = $(patsubst %,$(ODIR)/%,$(_CXXOBJS))
 
-$(TARGET): $(OBJS)
-	$(CC) -o $@ $(OPT) $^ $(LDFLAGS)
+$(TARGET): $(OBJS) $(CXXOBJS)
+	$(CXX) -o $@ $(OPT) $^ $(LDFLAGS)
 
 testlib: $(ODIR)/testlib.o
 	$(CC) -o $@ $< $(LIBS)
@@ -52,9 +56,13 @@ $(ODIR):
 	mkdir -p $@
 
 $(OBJS): | $(ODIR)
+$(CXXOBJS): | $(ODIR)
 
 $(OBJS):
 	$(CC) $(CFLAGS) -c $< -o $@
+
+$(CXXOBJS):
+	$(CXX) $(CFLAGS) $(CXXFLAGS) -c $< -o $@
 
 install: $(TARGET)
 	install -D --mode=0644 $(TARGET) $(LIBDIR)/$(TARGET)
