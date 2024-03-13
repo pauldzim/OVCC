@@ -108,6 +108,8 @@ void AddDummyCartMenus(void);
 void RemoveDummyCartMenus(void);
 void PrepareEventCallBacks(SystemState2 *);
 void PadDummyCartMenus(void);
+bool ClipboardSet(char *text, size_t len);
+size_t ClipboardGet(char *ret_text, size_t ret_size);
 
 /*--------------------------------------------------------------------------*/
 
@@ -116,6 +118,7 @@ int main(int argc, char **argv)
 {
 	char cwd[260];
 	char name[260];
+	size_t len;
 
 	if (getcwd(cwd, sizeof(cwd)) != NULL)
 	{
