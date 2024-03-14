@@ -33,7 +33,7 @@ This file is part of VCC (Virtual Color Computer).
 #include "logger.h"
 #include "AGARInterface.h"
 
-#ifdef CUT_PASTE
+#ifdef COPY_PASTE
 bool ClipboardSet(char *text, size_t len);
 size_t ClipboardGet(char *ret_text, size_t ret_size);
 
@@ -120,7 +120,7 @@ float RenderFrame (SystemState2 *RFState2, unsigned long DCnt)
 		}
 	} 
 
-#ifdef CUT_PASTE
+#ifdef COPY_PASTE
 	if (SBIndex != 0)
 	{
 		SelectBuf[SBIndex] = 0;
@@ -226,7 +226,7 @@ float RenderFrame (SystemState2 *RFState2, unsigned long DCnt)
 		while(EndTime < TargetTime) { EndTime = SDL_GetPerformanceCounter(); }
 	} 
 
-#ifdef CUT_PASTE
+#ifdef COPY_PASTE
 	if (SBIndex != 0)
 	{
 		SelectBuf[SBIndex] = 0;

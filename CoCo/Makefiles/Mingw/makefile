@@ -20,7 +20,7 @@ INCDIR =
 ODIR = obj
 
 PTHREAD=-pthread
-OPTIONS=#-D CUT_PASTE
+OPTIONS=#-D COPY_PASTE
 
 SDLINC=`pkg-config --cflags sdl2`
 AGARINC=`agar-config --cflags`

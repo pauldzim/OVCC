@@ -13,7 +13,7 @@ DEBUG=#-g #-D _DEBUG
 OPT=-Ofast -march=native -flto # -Og # -Ofast #
 WARN = -w # -Wall
 PTHREAD = -pthread
-OPTIONS = #-D CUT_PASTE
+OPTIONS = #-D COPY_PASTE
 
 ifeq ($(TARGETOS),Darwin)
 CFLAGS += -D DARWIN
