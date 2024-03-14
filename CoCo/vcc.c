@@ -108,8 +108,6 @@ void AddDummyCartMenus(void);
 void RemoveDummyCartMenus(void);
 void PrepareEventCallBacks(SystemState2 *);
 void PadDummyCartMenus(void);
-bool ClipboardSet(char *text, size_t len);
-size_t ClipboardGet(char *ret_text, size_t ret_size);
 
 /*--------------------------------------------------------------------------*/
 

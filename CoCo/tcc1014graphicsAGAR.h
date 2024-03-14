@@ -59,4 +59,10 @@ void SetBlinkStateAGAR(unsigned char);
 extern unsigned char Lpf[4];
 extern unsigned char VcenterTable[4];
 
+#ifdef CUT_PASTE
+extern unsigned char SelectBuf[80*24+1];
+extern unsigned short SBIndex;
+extern char Clipped;
+#endif
+
 #endif

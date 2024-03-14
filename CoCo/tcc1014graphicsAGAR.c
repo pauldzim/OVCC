@@ -28,7 +28,7 @@ This file is part of VCC (Virtual Color Computer).
 #include <stdio.h>
 #include <assert.h>
 
-#ifdef _DEBUG
+#if defined(DARWIN) && defined(_DEBUG)
 #define XTRACE0(f)			do { fprintf(logg, f); } while(0)
 #define XTRACEN(f, ...)			do { fprintf(logg, f, __VA_ARGS__); } while(0)
 #else
@@ -38,10 +38,7 @@ This file is part of VCC (Virtual Color Computer).
 
 #define ALPHA1 (0xFF<<24)
 
-void SetupDisplay(void); //This routine gets called every time a software video register get updated.
-void MakeRGBPalette (void);
-void MakeCMPpalette(void);
-void SetupDisplayAGAR(void);
+void SetupDisplayAGAR(void); //This routine gets called every time a software video register get updated.
 void MakeRGBPaletteAGAR(void);
 void MakeCMPpaletteAGAR(void);
 static unsigned char ColorValues[4]={0,85,170,255};
@@ -90,6 +87,9 @@ static unsigned char MasterMode=0;
 static unsigned char ColorInvert=1;
 static unsigned char BlinkState=1;
 
+unsigned char Lpf[4]={192,199,225,225}; // 2 is really undefined but I gotta put something here.
+unsigned char VcenterTable[4]={29,23,12,12};
+
 #ifdef CUT_PASTE
 static unsigned int Timeout=250;
 static unsigned int OldTicks=0;
@@ -111,13 +111,11 @@ static struct sparms
 
 unsigned char SelectBuf[80*24+1];
 unsigned short SBIndex=0;
+char Clipped=0;
 
 void HandleSelect(SystemState2 *USState32, unsigned short y, unsigned short YDiv,
 		  unsigned short *MouseX, unsigned short *MouseY0, unsigned short *MouseY1);
 #endif
-
-unsigned char Lpf[4]={192,199,225,225}; // 2 is really undefined but I gotta put something here.
-unsigned char VcenterTable[4]={29,23,12,12};
 
 // BEGIN of 32 Bit render loop *****************************************************************************************
 void UpdateScreen (SystemState2 *USState32)
@@ -176,12 +174,6 @@ void UpdateScreen (SystemState2 *USState32)
 			//XTRACE0("<");
 			if (YDiv != OldYDiv)
 			{
-				if (SBIndex != 0)
-				{
-					SelectBuf[SBIndex] = 0;
-					XTRACEN("%s\n", SelectBuf);
-				}
-				SBIndex = 0;
 				if (Logging)
 				{
 					Ticks = AG_GetTicks();
@@ -229,7 +221,7 @@ void UpdateScreen (SystemState2 *USState32)
 					}
 					SwitchP = 1;
 					Character=buffer[Start+(unsigned char)(HorzBeam+Hoffset)];
-					if (Selected == 1 && YDiv != OldYDiv && Character != 32)
+					if (Selected == 1 && Clipped == 0 && YDiv != OldYDiv && Character != 32)
 					{
 						SelectBuf[SBIndex++] = Character < 32 ? Character | 64 : Character;
 						assert(SBIndex <= 80 * 24);
@@ -251,7 +243,7 @@ void UpdateScreen (SystemState2 *USState32)
 							//	SelectBuf[YDiv * BytesperRow + HorzBeam] = 10; // 10 = LF
 							//}
 						}
-						else if (Selected == 1 && YDiv != OldYDiv)
+						else if (Selected == 1 && Clipped == 0 && YDiv != OldYDiv)
 						{
 							SelectBuf[SBIndex++] = Character < 32 ? Character | 64 : Character;
 							assert(SBIndex <= 80 * 24);
@@ -332,12 +324,6 @@ void UpdateScreen (SystemState2 *USState32)
 			//XTRACE0("<");
 			if (YDiv != OldYDiv)
 			{
-				if (SBIndex != 0)
-				{
-					SelectBuf[SBIndex] = 0;
-					XTRACEN("%s\n", SelectBuf);
-				}
-				SBIndex = 0;
 				if (Logging)
 				{
 					Ticks = AG_GetTicks();
@@ -385,7 +371,7 @@ void UpdateScreen (SystemState2 *USState32)
 					}
 					SwitchP = 1;
 					Character=buffer[Start+(unsigned char)(HorzBeam+Hoffset)];
-					if (Selected == 1 && YDiv != OldYDiv && Character != 32)
+					if (Selected == 1 && Clipped == 0 && YDiv != OldYDiv && Character != 32)
 					{
 						SelectBuf[SBIndex++] = Character < 32 ? Character | 64 : Character;
 						assert(SBIndex <= 80 * 24);
@@ -407,7 +393,7 @@ void UpdateScreen (SystemState2 *USState32)
 							//	SelectBuf[YDiv * BytesperRow + HorzBeam] = 10; // 10 = LF
 							//}
 						}
-						else if (Selected == 1 && YDiv != OldYDiv)
+						else if (Selected == 1 && Clipped == 0 && YDiv != OldYDiv)
 						{
 							SelectBuf[SBIndex++] = Character < 32 ? Character | 64 : Character;
 							assert(SBIndex <= 80 * 24);
@@ -655,12 +641,6 @@ void UpdateScreen (SystemState2 *USState32)
 			//XTRACE0("<");
 			if (YDiv != OldYDiv)
 			{
-				if (SBIndex != 0)
-				{
-					SelectBuf[SBIndex] = 0;
-					XTRACEN("%s\n", SelectBuf);
-				}
-				SBIndex = 0;
 				if (Logging)
 				{
 					Ticks = AG_GetTicks();
@@ -707,7 +687,7 @@ void UpdateScreen (SystemState2 *USState32)
 					}
 					SwitchP = 1;
 					Character=buffer[Start+(unsigned char)(HorzBeam+Hoffset)];
-					if (Selected == 1 && YDiv != OldYDiv && (Character & 63) != 32)
+					if (Selected == 1 && Clipped == 0 && YDiv != OldYDiv && (Character & 63) != 32)
 					{
 						SelectBuf[SBIndex++] = (Character & 63) < 32 ? (Character & 63) | 64 : (Character & 63);
 						assert(SBIndex <= 80 * 24);
@@ -729,7 +709,7 @@ void UpdateScreen (SystemState2 *USState32)
 							//	SelectBuf[YDiv * BytesperRow + HorzBeam] = 10; // 10 = LF
 							//}
 						}
-						else if (Selected == 1 && YDiv != OldYDiv)
+						else if (Selected == 1 && Clipped == 0 && YDiv != OldYDiv)
 						{
 							SelectBuf[SBIndex++] = (Character & 63) < 32 ? (Character & 63) | 64 : (Character & 63);
 							assert(SBIndex <= 80 * 24);
@@ -3610,6 +3590,7 @@ void HandleSelect(SystemState2 *USState32, unsigned short y, unsigned short YDiv
 			EndX = 0xffff;
 			EndY0 = 0;
 			EndY1 = 0;
+			Clipped = 0;
 			Selected = 0;
 			Dragging = 0;
 		}
@@ -3658,8 +3639,9 @@ void HandleSelect(SystemState2 *USState32, unsigned short y, unsigned short YDiv
 		EndY1 = 0;
 		SvY0 = 0xffff;
 		SvY1 = 0;
-		Dragging = 0;
+		Clipped = 0;
 		Selected = 0;
+		Dragging = 0;
 	}
 }
 #endif
@@ -3964,9 +3946,10 @@ void SetupDisplayAGAR(void)
 	OldTicks = 0;
 	OldYDiv = 0xffff;
 	StartX = 0xffff;
-	Dragging = 0;
-	Selected = 0;
 	SBIndex = 0;
+	Clipped = 0;
+	Selected = 0;
+	Dragging = 0;
 #endif
 	return;
 }
