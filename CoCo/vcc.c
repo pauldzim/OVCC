@@ -44,6 +44,11 @@ This file is part of VCC (Virtual Color Computer).
 
 #include "xdebug.h"
 
+#ifdef COPY_PASTE
+extern void HandleCopy(void);
+extern void HandlePaste(void);
+#endif
+
 SystemState2 EmuState2;
 static bool DialogOpen=false;
 static unsigned char Throttle=0;
@@ -58,7 +63,6 @@ char QuickLoadFile[256];
 /***Forward declarations of functions included in this code module*****/
 
 static void SoftReset(void);
-void LoadIniFile(void);
 void *EmuLoop(void *);
 void (*CPUInit)(void)=NULL;
 int  (*CPUExec)( int)=NULL;
@@ -104,8 +108,6 @@ bool BinaryRunning;
 static unsigned char FlagEmuStop=TH_RUNNING;
 
 void DecorateWindow(SystemState2 *);
-void AddDummyCartMenus(void);
-void RemoveDummyCartMenus(void);
 void PrepareEventCallBacks(SystemState2 *);
 void PadDummyCartMenus(void);
 
@@ -116,7 +118,6 @@ int main(int argc, char **argv)
 {
 	char cwd[260];
 	char name[260];
-	size_t len;
 
 	if (getcwd(cwd, sizeof(cwd)) != NULL)
 	{
@@ -619,6 +620,12 @@ void *EmuLoop(void *p)
 		}
 
 		EndRender(EmuState2.FrameSkip);
+
+#ifdef COPY_PASTE
+		HandleCopy();
+		HandlePaste();
+#endif
+
 		FPS = FPS != 0.0 ? FPS/EmuState2.FrameSkip : GetCurrentFPS()/EmuState2.FrameSkip;
 		GetModuleStatus(&EmuState2);
 

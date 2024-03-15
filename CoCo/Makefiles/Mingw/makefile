@@ -4,8 +4,18 @@ TARGET=ovcc
 # compiler
 CC=gcc
 CXX=g++
+
+ifeq ($(COPYPASTE),Yes)
 # linker
 LD=g++
+OPTIONS=-D COPY_PASTE
+CLIPINC=-I ../clip
+CLIPLIB=-L ../clip -lclip
+else
+# linker
+LD=gcc
+endif
+
 # Resource Compiler
 RC=windres
 # debug
@@ -20,18 +30,15 @@ INCDIR =
 ODIR = obj
 
 PTHREAD=-pthread
-OPTIONS=#-D COPY_PASTE
 
 SDLINC=`pkg-config --cflags sdl2`
 AGARINC=`agar-config --cflags`
-CLIPINC=-I ../clip
 IDIR=$(INCDIR) $(SDLINC) $(AGARINC) $(CLIPINC)
  
 CCFLAGS=$(IDIR) $(DEBUG) $(OPT) $(OPTIONS) # $(WARN) $(PTHREAD) -pipe
  
 SDLLIB=`sdl2-config --libs`
 AGARLIB=`agar-config --libs`
-CLIPLIB=-L ../clip -lclip
 LIBS=$(AGARLIB) $(CLIPLIB) $(SDLLIB) -lregex
 
 LDFLAGS=$(LIBS) #-Wl,-export-all-symbols # -export-dynamic 
@@ -47,7 +54,10 @@ _UNUSED_OBJS = hd6309-a.o fixedtexture.o hd6309asmP0-00-7F.o hd6309asmP0-80-FF.o
 	hd6309asmReg2Reg.o hd6309cea.o hd6309pshpul.o hd6309saveflags.o hd6309tfrexg.o hd6309turbo.o 
 
 OBJS= $(patsubst %,$(ODIR)/%,$(_OBJS))
+
+ifeq ($(COPYPASTE),Yes)
 CXXOBJS= $(patsubst %,$(ODIR)/%,$(_CXXOBJS))
+endif
  
 ovcc: $(OBJS) $(CXXOBJS)
 	$(LD) -o $(TARGET) $(OBJS) $(CXXOBJS) $(LDFLAGS) -Wl,--subsystem,console

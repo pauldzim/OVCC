@@ -98,7 +98,7 @@ static unsigned short SvY0=0xffff, SvY1=0;
 static unsigned short StartX=0xffff, EndX=0xffff;
 static unsigned short StartY0=0, StartY1=0;
 static unsigned short EndY0=0, EndY1=0;
-static char Dragging=0, Selected=0;
+static char Dragging=0, Selected=0, RightClick=0;
 static char Logging=0;
 
 static struct sparms
@@ -111,7 +111,7 @@ static struct sparms
 
 unsigned char SelectBuf[80*24+1];
 unsigned short SBIndex=0;
-char Clipped=0;
+char Clipped=0, Pasting=0;
 
 void HandleSelect(SystemState2 *USState32, unsigned short y, unsigned short YDiv,
 		  unsigned short *MouseX, unsigned short *MouseY0, unsigned short *MouseY1);
@@ -184,6 +184,7 @@ void UpdateScreen (SystemState2 *USState32)
 			else if (Dragging == 1)
 			{
 				unsigned short Ty = USState32->MouseY;
+
 				//XTRACE0("9");
 				MouseX = USState32->MouseX/SParms.MXDiv;
 				MouseY0 = SParms.MYOfs+YDiv*SParms.MYMult >= Ty;
@@ -224,7 +225,7 @@ void UpdateScreen (SystemState2 *USState32)
 					if (Selected == 1 && Clipped == 0 && YDiv != OldYDiv && Character != 32)
 					{
 						SelectBuf[SBIndex++] = Character < 32 ? Character | 64 : Character;
-						assert(SBIndex <= 80 * 24);
+						assert(SBIndex <= sizeof(SelectBuf)-1);
 						//if (HorzBeam == BytesperRow)
 						//	SelectBuf[SBIndex++] = 10; // 10 = LF
 					}
@@ -246,7 +247,7 @@ void UpdateScreen (SystemState2 *USState32)
 						else if (Selected == 1 && Clipped == 0 && YDiv != OldYDiv)
 						{
 							SelectBuf[SBIndex++] = Character < 32 ? Character | 64 : Character;
-							assert(SBIndex <= 80 * 24);
+							assert(SBIndex <= sizeof(SelectBuf)-1);
 						}
 					}
 				}
@@ -334,6 +335,7 @@ void UpdateScreen (SystemState2 *USState32)
 			else if (Dragging == 1)
 			{
 				unsigned short Ty = USState32->MouseY;
+
 				//XTRACE0("9");
 				MouseX = USState32->MouseX/SParms.MXDiv;
 				MouseY0 = SParms.MYOfs+YDiv*SParms.MYMult >= Ty;
@@ -374,7 +376,7 @@ void UpdateScreen (SystemState2 *USState32)
 					if (Selected == 1 && Clipped == 0 && YDiv != OldYDiv && Character != 32)
 					{
 						SelectBuf[SBIndex++] = Character < 32 ? Character | 64 : Character;
-						assert(SBIndex <= 80 * 24);
+						assert(SBIndex <= sizeof(SelectBuf)-1);
 						//if (HorzBeam == BytesperRow)
 						//	SelectBuf[SBIndex++] = 10; // 10 = LF
 					}
@@ -396,7 +398,7 @@ void UpdateScreen (SystemState2 *USState32)
 						else if (Selected == 1 && Clipped == 0 && YDiv != OldYDiv)
 						{
 							SelectBuf[SBIndex++] = Character < 32 ? Character | 64 : Character;
-							assert(SBIndex <= 80 * 24);
+							assert(SBIndex <= sizeof(SelectBuf)-1);
 						}
 					}
 				}
@@ -651,6 +653,7 @@ void UpdateScreen (SystemState2 *USState32)
 			else if (Dragging == 1)
 			{
 				unsigned short Ty = USState32->MouseY;
+
 				//XTRACE0("9");
 				MouseX = USState32->MouseX/SParms.MXDiv;
 				MouseY0 = SParms.MYOfs+YDiv*SParms.MYMult >= Ty;
@@ -690,7 +693,7 @@ void UpdateScreen (SystemState2 *USState32)
 					if (Selected == 1 && Clipped == 0 && YDiv != OldYDiv && (Character & 63) != 32)
 					{
 						SelectBuf[SBIndex++] = (Character & 63) < 32 ? (Character & 63) | 64 : (Character & 63);
-						assert(SBIndex <= 80 * 24);
+						assert(SBIndex <= sizeof(SelectBuf)-1);
 						//if (HorzBeam == BytesperRow)
 						//	SelectBuf[SBIndex++] = 10; // 10 = LF
 					}
@@ -712,7 +715,7 @@ void UpdateScreen (SystemState2 *USState32)
 						else if (Selected == 1 && Clipped == 0 && YDiv != OldYDiv)
 						{
 							SelectBuf[SBIndex++] = (Character & 63) < 32 ? (Character & 63) | 64 : (Character & 63);
-							assert(SBIndex <= 80 * 24);
+							assert(SBIndex <= sizeof(SelectBuf)-1);
 						}
 					}
 				}
@@ -3577,10 +3580,19 @@ void UpdateScreen (SystemState2 *USState32)
 void HandleSelect(SystemState2 *USState32, unsigned short y, unsigned short YDiv,
 		  unsigned short *MouseX, unsigned short *MouseY0, unsigned short *MouseY1)
 {
-	if (USState32->ButtonState && USState32->Button == SDL_BUTTON_LMASK)
+	if (Pasting == 1)
+	{
+		if (!USState32->ButtonState || USState32->Button != SDL_BUTTON_RIGHT)
+			RightClick = 0;
+		return;
+	}
+
+	if (USState32->ButtonState && USState32->Button == SDL_BUTTON_LEFT)
 	{
 		unsigned short Ty = USState32->MouseY;
+
 		//XTRACE0("1");
+		RightClick = 0;
 		*MouseX = USState32->MouseX/SParms.MXDiv;
 		*MouseY0 = SParms.MYOfs+YDiv*SParms.MYMult >= Ty;
 		*MouseY1 = SParms.MYOfs+YDiv*SParms.MYMult <= Ty+SParms.MYSpan;
@@ -3605,12 +3617,22 @@ void HandleSelect(SystemState2 *USState32, unsigned short y, unsigned short YDiv
 			Dragging = 1;
 		}
 	}
+	else if (USState32->ButtonState && USState32->Button == SDL_BUTTON_RIGHT)
+	{
+		if (RightClick == 1)
+			return;
+		RightClick = 1;
+		Pasting = 1;
+		goto clear;
+	}
 	else if (Dragging == 1 || Selected == 1)
 	{
 		//XTRACE0("4");
+		RightClick = 0;
 		if (Dragging == 1)
 		{
 			unsigned short Ty = USState32->MouseY;
+
 			//XTRACE0("5");
 			*MouseX = USState32->MouseX/SParms.MXDiv;
 			*MouseY0 = SParms.MYOfs+YDiv*SParms.MYMult >= Ty;
@@ -3632,6 +3654,8 @@ void HandleSelect(SystemState2 *USState32, unsigned short y, unsigned short YDiv
 	}
 	else
 	{
+		RightClick = 0;
+clear:
 		//XTRACE0("8");
 		StartX = 0xffff;
 		EndX = 0xffff;
@@ -3948,6 +3972,8 @@ void SetupDisplayAGAR(void)
 	StartX = 0xffff;
 	SBIndex = 0;
 	Clipped = 0;
+	Pasting = 0;
+	RightClick = 0;
 	Selected = 0;
 	Dragging = 0;
 #endif

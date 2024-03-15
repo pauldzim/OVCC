@@ -1701,64 +1701,9 @@ void KeyDownUp(AG_Event *event)
     int mod = AG_INT(3);
     unsigned short uc = AG_ULONG(4);
 
-    extern void DoKeyBoardEvent(unsigned short, unsigned short, unsigned short);
+    extern void DoKeyBoardEvent(unsigned short, unsigned short, unsigned short, unsigned short);
 
-#ifdef DARWIN
-    // **** Added for latest MacOS ****
-    static int capslocked;
-
-    if (kb == AG_KEY_CAPSLOCK)
-    {
-        if (updown)
-        {
-            capslocked = 1;
-            XTRACE("CAPS locked\n");
-        }
-        else
-        {
-            capslocked = 0;
-            XTRACE("CAPS unlocked\n");
-        }
-        updown = kEventKeyDown;
-        DoKeyBoardEvent(uc, kb, updown);
-        XTRACE("key %x - mod %x - unicode %lx - updown %x\n", kb, mod, uc, updown);
-        updown = kEventKeyUp;
-        goto event;
-    }
-
-    // make the shift-alpha keys work
-    switch (kb) {
-    case AG_KEY_A - 0x20 ... AG_KEY_Z - 0x20:
-        kb += 0x20;
-        if (capslocked)
-        {
-            // fake a shift key
-            DoKeyBoardEvent(uc, AG_KEY_LSHIFT, updown);
-            XTRACE("faked a SHIFT key\n");
-        }
-        break;
-    default:
-        break;
-    }
-
-    // make the ctrl-alpha keys work
-    if (mod & (AG_KEYMOD_LCTRL | AG_KEYMOD_RCTRL))
-    {
-        switch (kb)
-        {
-        case AG_KEY_ASCII_START ... AG_KEY_ESCAPE:
-            kb += 0x60;
-            break;
-        default:
-            break;
-        }
-    }
-
-event:
-    // **** End of additions ****
-#endif
-
-    DoKeyBoardEvent(uc, kb, updown);
+    DoKeyBoardEvent(uc, kb, updown, mod);
 	//fprintf(stderr, "key %d - scancode %d - mod %d - unicode %ld - updown %i,\n", kb&0xf, sc&0xff, mod, uc, updown);
     XTRACE("%s: key %x - mod %x - unicode %lx - updown %x\n", AGOBJECT(w)->name, kb, mod, uc, updown);
 }

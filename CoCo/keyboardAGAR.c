@@ -658,8 +658,63 @@ void joystickSDL(unsigned short x,unsigned short y)
 	return;
 }
 
-void DoKeyBoardEvent(unsigned short key, unsigned short scancode, unsigned short state)
+void DoKeyBoardEvent(unsigned short key, unsigned short scancode, unsigned short state, unsigned short mod)
 {
+#ifdef DARWIN
+    // **** Added for latest MacOS ****
+    static int capslocked;
+
+    if (scancode == AG_KEY_CAPSLOCK)
+    {
+        if (state)
+        {
+            capslocked = 1;
+            XTRACE("CAPS locked\n");
+        }
+        else
+        {
+            capslocked = 0;
+            XTRACE("CAPS unlocked\n");
+        }
+        state = kEventKeyDown;
+        vccKeyboardHandleKeySDL(scancode, key, state);
+        XTRACE("key %x - mod %x - unicode %lx - updown %x\n", scancode, mod, key, state);
+        state = kEventKeyUp;
+        goto event;
+    }
+
+    // make the shift-alpha keys work
+    switch (scancode) {
+    case AG_KEY_A - 0x20 ... AG_KEY_Z - 0x20:
+        scancode += 0x20;
+        if (capslocked)
+        {
+            // fake a shift key
+            vccKeyboardHandleKeySDL(scancode, AG_KEY_LSHIFT, state);
+            XTRACE("faked a SHIFT key\n");
+        }
+        break;
+    default:
+        break;
+    }
+
+    // make the ctrl-alpha keys work
+    if (mod & (AG_KEYMOD_LCTRL | AG_KEYMOD_RCTRL))
+    {
+        switch (scancode)
+        {
+        case AG_KEY_ASCII_START ... AG_KEY_ESCAPE:
+            scancode += 0x60;
+            break;
+        default:
+            break;
+        }
+    }
+
+event:
+    // **** End of additions ****
+#endif
+
 	vccKeyboardHandleKeySDL(key, scancode, state);
 }
 

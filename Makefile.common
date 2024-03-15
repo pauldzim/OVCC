@@ -13,7 +13,17 @@ DEBUG=#-g #-D _DEBUG
 OPT=-Ofast -march=native -flto # -Og # -Ofast #
 WARN = -w # -Wall
 PTHREAD = -pthread
-OPTIONS = #-D COPY_PASTE
+
+ifeq ($(COPYPASTE),Yes)
+OPTIONS = -D COPY_PASTE
+LD = c++
+XCBLIB := -lxcb
+CLIPINC := -I ../clip
+CLIPLIB := -L ../clip -lclip
+CXXOBJS = $(patsubst %,$(ODIR)/%,$(_CXXOBJS))
+else
+LD = cc
+endif
 
 ifeq ($(TARGETOS),Darwin)
 CFLAGS += -D DARWIN
@@ -21,16 +31,14 @@ endif
 
 SDLINC := $(shell pkg-config --cflags sdl2)
 AGARINC := $(shell agar-config --cflags)
-CLIPINC := -I ../clip
 IDIR = $(INCDIR) $(SDLINC) $(AGARINC) $(CLIPINC)
 
 SDLLIB := $(shell sdl2-config --libs)
 AGARLIB := $(shell agar-config --libs)
-CLIPLIB := -L ../clip -lclip
 LIBS = $(SDLLIB) $(AGARLIB) $(CLIPLIB)
 
 ifneq ($(TARGETOS),Darwin)
-LIBS := $(LIBS) -lxcb -lrt
+LIBS := $(LIBS) $(XCBLIB) -lrt
 endif
 
 CFLAGS += $(DEBUG) $(OPT) $(WARN) $(OPTIONS) $(IDIR)
@@ -38,10 +46,9 @@ CFLAGS += $(DEBUG) $(OPT) $(WARN) $(OPTIONS) $(IDIR)
 LDFLAGS += $(LIBS) #-Wl,-export-all-symbols # -export-dynamic
 
 OBJS = $(patsubst %,$(ODIR)/%,$(_OBJS))
-CXXOBJS = $(patsubst %,$(ODIR)/%,$(_CXXOBJS))
 
 $(TARGET): $(OBJS) $(CXXOBJS)
-	$(CXX) -o $@ $(OPT) $^ $(LDFLAGS)
+	$(LD) -o $@ $(OPT) $^ $(LDFLAGS)
 
 testlib: $(ODIR)/testlib.o
 	$(CC) -o $@ $< $(LIBS)
