@@ -1,0 +1,11 @@
+cmake_minimum_required (VERSION 3.5)
+project (OVCC C)
+
+add_subdirectory(CoCo)
+add_subdirectory(becker)
+add_subdirectory(FD502)
+add_subdirectory(HardDisk)
+add_subdirectory(mpi)
+add_subdirectory(orch90)
+add_subdirectory(Ramdisk)
+add_subdirectory(SuperIDE)
