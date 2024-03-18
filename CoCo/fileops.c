@@ -27,17 +27,21 @@ static char ExecFolder[MAX_PATH];
 void ValidatePath(char *Path)
 {
 	char TempPath[MAX_PATH]="";
-	int tpl;
+	int tpl, len;
 
 	if (ExecFolder[0] == 0) getcwd(ExecFolder, sizeof(ExecFolder));
 
-	strcpy(TempPath,Path);			
+	strncpy(TempPath,Path,sizeof(TempPath));
+	TempPath[sizeof(TempPath)-1] = 0;
 	PathRemoveFileSpec(TempPath);		//Get path to Incomming file
 	tpl = strlen(ExecFolder);
 
 	if (!strncmp(TempPath, ExecFolder, tpl))	// If they match remove the Path
 	{
-		strcpy(Path, &(Path[++tpl]));
+		tpl++;
+		len = strlen(&Path[tpl]);
+		memmove(Path, &Path[tpl], len);
+		Path[len] = 0;
 		//PathStripPath(Path);
 	}
 	return;
