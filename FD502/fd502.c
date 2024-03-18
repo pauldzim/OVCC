@@ -174,6 +174,7 @@ unsigned char ADDCALL ModuleReset(void)
 	{
 		memcpy(PakRomAddr, RomPointer[SelectRom], EXTROMSIZE);
 	}
+	return 1;
 }
 
 void ADDCALL PakRomShare(char *pakromaddr)

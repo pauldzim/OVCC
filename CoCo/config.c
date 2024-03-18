@@ -229,6 +229,7 @@ unsigned char SaveCurrentConfigToFile(char *newfilename)
 {
 	DuplicatePrivateProfile(IniFilePath, newfilename);
 	WriteNamedIniFile(newfilename);
+	return 1;
 }
 
 void UpdateOnBoot(char *modname)
