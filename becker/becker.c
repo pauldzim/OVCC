@@ -501,8 +501,9 @@ void ADDCALL ModuleStatus(char *DWStatus)
 	// calculate speed
 	struct timespec now;
 
+#ifndef CLOCK_MONOTONIC
 	#define CLOCK_MONOTONIC 1 // Not picking up define from time.h for some reason?
-
+#endif
 	clock_gettime(CLOCK_MONOTONIC, &now);
 
 	long sinceCalc = ((now.tv_sec * 1000) + (now.tv_nsec / 1000000)) - LastStats;
