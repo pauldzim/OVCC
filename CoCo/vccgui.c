@@ -1015,7 +1015,6 @@ void PopulateKeysList(AG_Event *event)
 
 void Configure(AG_Event *ev)
 {
-    char path[AG_PATHNAME_MAX];
     AG_Box *hb;
     AG_Textbox *tbox;
     AG_Notebook *nb;
@@ -1037,10 +1036,10 @@ void Configure(AG_Event *ev)
     AG_WindowSetCloseAction(win, AG_WINDOW_HIDE);
 
     nb = AG_NotebookNew(win, AG_NOTEBOOK_EXPAND);
+
     tab = AG_NotebookAdd(nb, "Audio", AG_BOX_HORIZ);
     {
         AG_Box *box, *lbox, *rbox;
-        AG_ProgressBar *leftVol, *rightVol;
 
         // Sound Output Device Combo
 
@@ -1061,13 +1060,6 @@ void Configure(AG_Event *ev)
         AG_SetEvent(comQual, "combo-selected", QualityComboSelected, NULL);
 
         rbox = AG_BoxNewHoriz(box, 0);
-
-        // Left & Right Sound Bar Meters
-
-        leftVol = AG_ProgressBarNewInt(rbox, AG_PROGRESS_BAR_VERT, AG_PROGRESS_BAR_VFILL | AG_PROGRESS_BAR_EXCL,
-                                       &leftVolPrc, &volMin, &volMax);
-        rightVol = AG_ProgressBarNewInt(rbox, AG_PROGRESS_BAR_VERT, AG_PROGRESS_BAR_VFILL | AG_PROGRESS_BAR_EXCL,
-                                        &rightVolPrc, &volMin, &volMax);
     }
 
     tab = AG_NotebookAdd(nb, "CPU", AG_BOX_VERT);
