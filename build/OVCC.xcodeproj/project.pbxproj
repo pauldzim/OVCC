@@ -64,6 +64,9 @@
 		499208604FCA4D388C5BE75F /* fileops.c in Sources */ = {isa = PBXBuildFile; fileRef = 6639947FC4B24796AD3DED2A /* fileops.c */; };
 		4A3DBE3F28524C258858DD05 /* ramdisk.c in Sources */ = {isa = PBXBuildFile; fileRef = 632B54AE42B4404DB228DE4F /* ramdisk.c */; };
 		4BA596B02BA949FA00AA8BB6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BA596AF2BA949FA00AA8BB6 /* Cocoa.framework */; };
+		4BA596EF2BAA1A7D00AA8BB6 /* libag_core.8.dylib in Copy Files */ = {isa = PBXBuildFile; fileRef = 4BA596EE2BAA1A7D00AA8BB6 /* libag_core.8.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		4BA596F12BAA1A9D00AA8BB6 /* libag_gui.8.dylib in Copy Files */ = {isa = PBXBuildFile; fileRef = 4BA596F02BAA1A9D00AA8BB6 /* libag_gui.8.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		4BA596F32BAA1ACD00AA8BB6 /* libSDL2-2.0.0.dylib in Copy Files */ = {isa = PBXBuildFile; fileRef = 4BA596F22BAA1ACD00AA8BB6 /* libSDL2-2.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		4F4FA801991E4240A1715F90 /* iniman.c in Sources */ = {isa = PBXBuildFile; fileRef = C766825482BF44448A076891 /* iniman.c */; };
 		52164D6F124A4285903F6D96 /* iniman.c in Sources */ = {isa = PBXBuildFile; fileRef = 98D2EA5616EE400FA2144552 /* iniman.c */; };
 		529017E21FF94F9B936DAF97 /* distortc.c in Sources */ = {isa = PBXBuildFile; fileRef = 4E9EFD36BEE84C10BC5DFB5A /* distortc.c */; };
@@ -219,6 +222,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4BA596D42BA980A000AA8BB6 /* Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4BA596F32BAA1ACD00AA8BB6 /* libSDL2-2.0.0.dylib in Copy Files */,
+				4BA596F12BAA1A9D00AA8BB6 /* libag_gui.8.dylib in Copy Files */,
+				4BA596EF2BAA1A7D00AA8BB6 /* libag_core.8.dylib in Copy Files */,
+			);
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		033ABB1A2C6F4D7FA6BCC58F /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = FD502/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
 		0B14223A8CB04E0EA8D93356 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = Ramdisk/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
@@ -241,6 +260,12 @@
 		477A0BBA8FC24F2093EEB225 /* pakinterface.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = pakinterface.c; path = CoCo/pakinterface.c; sourceTree = SOURCE_ROOT; };
 		4969A8D26D07464E8BAFDB63 /* ovcc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = ovcc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BA596AF2BA949FA00AA8BB6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		4BA596CA2BA97FDC00AA8BB6 /* libSDL2-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libSDL2-2.0.0.dylib"; path = "Libs/libSDL2-2.0.0.dylib"; sourceTree = "<group>"; };
+		4BA596CB2BA97FDC00AA8BB6 /* libag_core.8.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libag_core.8.dylib; path = Libs/libag_core.8.dylib; sourceTree = "<group>"; };
+		4BA596CC2BA97FDC00AA8BB6 /* libag_gui.8.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libag_gui.8.dylib; path = Libs/libag_gui.8.dylib; sourceTree = "<group>"; };
+		4BA596EE2BAA1A7D00AA8BB6 /* libag_core.8.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libag_core.8.dylib; path = ../../../usr/local/lib/libag_core.8.dylib; sourceTree = "<group>"; };
+		4BA596F02BAA1A9D00AA8BB6 /* libag_gui.8.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libag_gui.8.dylib; path = ../../../usr/local/lib/libag_gui.8.dylib; sourceTree = "<group>"; };
+		4BA596F22BAA1ACD00AA8BB6 /* libSDL2-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libSDL2-2.0.0.dylib"; path = "../../../opt/homebrew/Cellar/sdl2/2.30.1/lib/libSDL2-2.0.0.dylib"; sourceTree = "<group>"; };
 		4BC9804EADC645D4B5B90AB3 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = CoCo/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
 		4BEB2E18B3A6499E96F273AD /* libfd502.so */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = libfd502.so; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E9EFD36BEE84C10BC5DFB5A /* distortc.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = distortc.c; path = FD502/distortc.c; sourceTree = SOURCE_ROOT; };
@@ -443,6 +468,9 @@
 		5DCBC1242AC247C1BBCD445C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4BA596CB2BA97FDC00AA8BB6 /* libag_core.8.dylib */,
+				4BA596CC2BA97FDC00AA8BB6 /* libag_gui.8.dylib */,
+				4BA596CA2BA97FDC00AA8BB6 /* libSDL2-2.0.0.dylib */,
 				4BA596AF2BA949FA00AA8BB6 /* Cocoa.framework */,
 			);
 			name = Frameworks;
@@ -597,6 +625,9 @@
 		CCDA7D14402F428691614210 = {
 			isa = PBXGroup;
 			children = (
+				4BA596F22BAA1ACD00AA8BB6 /* libSDL2-2.0.0.dylib */,
+				4BA596F02BAA1A9D00AA8BB6 /* libag_gui.8.dylib */,
+				4BA596EE2BAA1A7D00AA8BB6 /* libag_core.8.dylib */,
 				65E275BDF5FE405096DF7E6A /* ALL_BUILD */,
 				90CE5009045749AE9C879A10 /* becker */,
 				7876C60D47DA477B93566C9D /* fd502 */,
@@ -744,6 +775,8 @@
 				6292C98BCB634BD88399E416 /* Resources */,
 				E672E7F339524C458C7712BA /* Sources */,
 				587C32B96CB34CD98D80DAF0 /* Frameworks */,
+				4BA596D42BA980A000AA8BB6 /* Copy Files */,
+				4BA596D82BAA0B5600AA8BB6 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -795,12 +828,12 @@
 			targets = (
 				69F5376D873C4775B4F5D34A /* ALL_BUILD */,
 				B19A7E19C4CD4EA1B945E5D0 /* ZERO_CHECK */,
+				C51FF718A67544BC99CB2738 /* ovcc */,
 				0E934737C63D4BD7A45B19F6 /* becker */,
 				129090014C2D42A795062576 /* fd502 */,
 				0805B0E263934F428753F0F9 /* harddisk */,
 				E121F673E8E84D338223083F /* mpi */,
 				1DB92F6723CD49F19A9B29CA /* orch90 */,
-				C51FF718A67544BC99CB2738 /* ovcc */,
 				B2B811CF46554985A9A9AFFF /* ramdisk */,
 				7EC58A39822141508B8F19B4 /* superide */,
 			);
@@ -819,6 +852,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4BA596D82BAA0B5600AA8BB6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ninstall_name_tool -change /usr/local/lib/libag_core.dylib @executable_path/../Frameworks/libag_core.8.dylib \"$TARGET_BUILD_DIR/ovcc.app/Contents/MacOS/ovcc\"\ninstall_name_tool -change /usr/local/lib/libag_gui.dylib @executable_path/../Frameworks/libag_gui.8.dylib \"$TARGET_BUILD_DIR/ovcc.app/Contents/MacOS/ovcc\"\ninstall_name_tool -change /opt/homebrew/opt/sdl2/lib/libSDL2-2.0.0.dylib @executable_path/../Frameworks/libSDL2-2.0.0.dylib \"$TARGET_BUILD_DIR/ovcc.app/Contents/MacOS/ovcc\"\n";
+		};
 		575EC42B702A3CA79C02128F /* Generate CMakeFiles/ALL_BUILD */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
@@ -1101,13 +1151,12 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"/Users/paulz/OVCC/CoCo/../clip/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/Users/paulz/OVCC/CoCo/../clip,
-					"/opt/homebrew/Cellar/sdl2/2.30.1/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/Cellar/sdl2/2.30.1/lib,
 					"$(inherited)",
+					"$(PROJECT_DIR)",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
@@ -1191,9 +1240,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -1281,9 +1328,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -1370,9 +1415,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -1459,9 +1502,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -1575,9 +1616,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -1664,9 +1703,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -1754,9 +1791,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -1900,9 +1935,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -1990,9 +2023,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -2107,9 +2138,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -2201,13 +2230,12 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"/Users/paulz/OVCC/CoCo/../clip/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/Users/paulz/OVCC/CoCo/../clip,
-					"/opt/homebrew/Cellar/sdl2/2.30.1/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/Cellar/sdl2/2.30.1/lib,
 					"$(inherited)",
+					"$(PROJECT_DIR)",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
@@ -2332,9 +2360,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -2450,9 +2476,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -2540,9 +2564,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -2630,9 +2652,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -2765,9 +2785,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -2855,9 +2873,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -2945,9 +2961,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -3035,9 +3049,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -3128,13 +3140,12 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"/Users/paulz/OVCC/CoCo/../clip/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/Users/paulz/OVCC/CoCo/../clip,
-					"/opt/homebrew/Cellar/sdl2/2.30.1/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/Cellar/sdl2/2.30.1/lib,
 					"$(inherited)",
+					"$(PROJECT_DIR)",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
@@ -3218,9 +3229,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -3307,9 +3316,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -3401,13 +3408,12 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"/Users/paulz/OVCC/CoCo/../clip/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/Users/paulz/OVCC/CoCo/../clip,
-					"/opt/homebrew/Cellar/sdl2/2.30.1/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/Cellar/sdl2/2.30.1/lib,
 					"$(inherited)",
+					"$(PROJECT_DIR)",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
@@ -3518,9 +3524,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -3608,9 +3612,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -3743,9 +3745,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -3877,9 +3877,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -3967,9 +3965,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -4057,9 +4053,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -4147,9 +4141,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -4237,9 +4229,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
