@@ -15,7 +15,7 @@ add_definitions(
 	-DTARGET_API_MAC_OSX
 	-fpascal-strings)
 
-add_library(superide MODULE superide.c cloud9.c idebus.c logger.c)
+add_library(superide MODULE superide.c cloud9.c idebus.c logger.c ../CoCo/iniman.c ../CoCo/fileops.c)
 
 target_include_directories(superide PUBLIC EXPORT ${CMAKE_CURRENT_SOURCE_DIR})
 
