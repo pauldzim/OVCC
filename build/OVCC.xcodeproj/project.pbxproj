@@ -14,6 +14,7 @@
 				575EC42B702A3CA79C02128F /* Generate CMakeFiles/ALL_BUILD */,
 			);
 			dependencies = (
+				4BA597042BAAA64100AA8BB6 /* PBXTargetDependency */,
 				0FA4485A00424C17B06AE539 /* PBXTargetDependency */,
 				4FC0C8FF6A124E36BC1783D4 /* PBXTargetDependency */,
 				2AF3036038A2433299641349 /* PBXTargetDependency */,
@@ -21,7 +22,6 @@
 				CB3E85D8D92A4F84B7365A04 /* PBXTargetDependency */,
 				975753AC58AB4F7C964EC0F6 /* PBXTargetDependency */,
 				151572086939423781B6C34F /* PBXTargetDependency */,
-				5C172004A89A49FFBADD815F /* PBXTargetDependency */,
 				9A6081FD8EDA465298C4A5EC /* PBXTargetDependency */,
 			);
 			name = ALL_BUILD;
@@ -64,9 +64,9 @@
 		499208604FCA4D388C5BE75F /* fileops.c in Sources */ = {isa = PBXBuildFile; fileRef = 6639947FC4B24796AD3DED2A /* fileops.c */; };
 		4A3DBE3F28524C258858DD05 /* ramdisk.c in Sources */ = {isa = PBXBuildFile; fileRef = 632B54AE42B4404DB228DE4F /* ramdisk.c */; };
 		4BA596B02BA949FA00AA8BB6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BA596AF2BA949FA00AA8BB6 /* Cocoa.framework */; };
-		4BA596EF2BAA1A7D00AA8BB6 /* libag_core.8.dylib in Copy Files */ = {isa = PBXBuildFile; fileRef = 4BA596EE2BAA1A7D00AA8BB6 /* libag_core.8.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		4BA596F12BAA1A9D00AA8BB6 /* libag_gui.8.dylib in Copy Files */ = {isa = PBXBuildFile; fileRef = 4BA596F02BAA1A9D00AA8BB6 /* libag_gui.8.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		4BA596F32BAA1ACD00AA8BB6 /* libSDL2-2.0.0.dylib in Copy Files */ = {isa = PBXBuildFile; fileRef = 4BA596F22BAA1ACD00AA8BB6 /* libSDL2-2.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		4BA596EF2BAA1A7D00AA8BB6 /* libag_core.8.dylib in Copy Files */ = {isa = PBXBuildFile; fileRef = 4BA596EE2BAA1A7D00AA8BB6 /* libag_core.8.dylib */; };
+		4BA596F12BAA1A9D00AA8BB6 /* libag_gui.8.dylib in Copy Files */ = {isa = PBXBuildFile; fileRef = 4BA596F02BAA1A9D00AA8BB6 /* libag_gui.8.dylib */; };
+		4BA596F32BAA1ACD00AA8BB6 /* libSDL2-2.0.0.dylib in Copy Files */ = {isa = PBXBuildFile; fileRef = 4BA596F22BAA1ACD00AA8BB6 /* libSDL2-2.0.0.dylib */; };
 		4F4FA801991E4240A1715F90 /* iniman.c in Sources */ = {isa = PBXBuildFile; fileRef = C766825482BF44448A076891 /* iniman.c */; };
 		52164D6F124A4285903F6D96 /* iniman.c in Sources */ = {isa = PBXBuildFile; fileRef = 98D2EA5616EE400FA2144552 /* iniman.c */; };
 		529017E21FF94F9B936DAF97 /* distortc.c in Sources */ = {isa = PBXBuildFile; fileRef = 4E9EFD36BEE84C10BC5DFB5A /* distortc.c */; };
@@ -108,13 +108,6 @@
 			remoteGlobalIDString = B19A7E19C4CD4EA1B945E5D0;
 			remoteInfo = ZERO_CHECK;
 		};
-		2E6E6AB3A1A34C02B401E4EA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D42417646A624E4291F0F866 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7EC58A39822141508B8F19B4;
-			remoteInfo = superide;
-		};
 		3ACAB5D717EF432A9B94BF2A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D42417646A624E4291F0F866 /* Project object */;
@@ -135,6 +128,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = B19A7E19C4CD4EA1B945E5D0;
 			remoteInfo = ZERO_CHECK;
+		};
+		4BA597032BAAA64100AA8BB6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D42417646A624E4291F0F866 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7EC58A39822141508B8F19B4;
+			remoteInfo = superide;
 		};
 		4D598CFAC8FD44A6909AB244 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1051,6 +1051,11 @@
 			target = B19A7E19C4CD4EA1B945E5D0 /* ZERO_CHECK */;
 			targetProxy = 4D598CFAC8FD44A6909AB244 /* PBXContainerItemProxy */;
 		};
+		4BA597042BAAA64100AA8BB6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7EC58A39822141508B8F19B4 /* superide */;
+			targetProxy = 4BA597032BAAA64100AA8BB6 /* PBXContainerItemProxy */;
+		};
 		4FC0C8FF6A124E36BC1783D4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 0E934737C63D4BD7A45B19F6 /* becker */;
@@ -1060,11 +1065,6 @@
 			isa = PBXTargetDependency;
 			target = B19A7E19C4CD4EA1B945E5D0 /* ZERO_CHECK */;
 			targetProxy = 0FE060237ED14F21BB579B4E /* PBXContainerItemProxy */;
-		};
-		5C172004A89A49FFBADD815F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7EC58A39822141508B8F19B4 /* superide */;
-			targetProxy = 2E6E6AB3A1A34C02B401E4EA /* PBXContainerItemProxy */;
 		};
 		6B3EEA282C144A1A901D78F2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1161,13 +1161,9 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
-				OTHER_CPLUSPLUSFLAGS = (
-					"-DNDEBUG",
-					"-fpascal-strings",
-				);
+				OTHER_CPLUSPLUSFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-Wl,-search_paths_first",
 					"-Wl,-headerpad_max_install_names",
@@ -1202,6 +1198,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = ovcc.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/build/mpi/RelWithDebInfo;
 				DEAD_CODE_STRIPPING = YES;
@@ -1250,7 +1249,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = (
@@ -1290,6 +1288,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = ovcc.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/build/orch90/Debug;
 				DEAD_CODE_STRIPPING = YES;
@@ -1337,7 +1338,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = (
@@ -1377,6 +1377,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = ovcc.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/build/HardDisk/Debug;
 				DEAD_CODE_STRIPPING = YES;
@@ -1424,7 +1427,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = (
@@ -1464,6 +1466,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = ovcc.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/build/Ramdisk/Debug;
 				DEAD_CODE_STRIPPING = YES;
@@ -1511,7 +1516,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = (
@@ -1578,6 +1582,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = ovcc.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/build/becker/Debug;
 				DEAD_CODE_STRIPPING = YES;
@@ -1625,7 +1632,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = (
@@ -1665,6 +1671,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = ovcc.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/build/mpi/MinSizeRel;
 				DEAD_CODE_STRIPPING = YES;
@@ -1713,7 +1722,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = (
@@ -1753,6 +1761,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = ovcc.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/build/HardDisk/MinSizeRel;
 				DEAD_CODE_STRIPPING = YES;
@@ -1801,7 +1812,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = (
@@ -1854,6 +1864,13 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INSTALL_PATH = "";
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-DDARWIN",
+					"-D_THREAD_SAFE",
+					"-D_USE_OPENGL_FRAMEWORK",
+					"-DCOPY_PASTE",
+					"-fpascal-strings",
+				);
 				OTHER_LDFLAGS = " $(inherited)";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ALL_BUILD;
@@ -1882,6 +1899,13 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INSTALL_PATH = "";
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-DDARWIN",
+					"-D_THREAD_SAFE",
+					"-D_USE_OPENGL_FRAMEWORK",
+					"-DCOPY_PASTE",
+					"-fpascal-strings",
+				);
 				OTHER_LDFLAGS = " $(inherited)";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ALL_BUILD;
@@ -1897,6 +1921,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = ovcc.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/build/HardDisk/Release;
 				DEAD_CODE_STRIPPING = YES;
@@ -1945,7 +1972,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = (
@@ -1985,6 +2011,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = ovcc.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/build/SuperIDE/RelWithDebInfo;
 				DEAD_CODE_STRIPPING = YES;
@@ -2033,7 +2062,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = (
@@ -2100,6 +2128,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = ovcc.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/build/becker/MinSizeRel;
 				DEAD_CODE_STRIPPING = YES;
@@ -2148,7 +2179,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = (
@@ -2239,10 +2269,10 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
-					"-fpascal-strings",
+					"-D_DEBUG",
 					"$(inherited)",
 				);
-				OTHER_CPLUSPLUSFLAGS = "     -fpascal-strings";
+				OTHER_CPLUSPLUSFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-Wl,-search_paths_first",
 					"-Wl,-headerpad_max_install_names",
@@ -2310,6 +2340,13 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.3;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-DDARWIN",
+					"-D_THREAD_SAFE",
+					"-D_USE_OPENGL_FRAMEWORK",
+					"-DCOPY_PASTE",
+					"-fpascal-strings",
+				);
 				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -2322,6 +2359,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = ovcc.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/build/becker/Release;
 				DEAD_CODE_STRIPPING = YES;
@@ -2370,7 +2410,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = (
@@ -2423,6 +2462,13 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INSTALL_PATH = "";
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-DDARWIN",
+					"-D_THREAD_SAFE",
+					"-D_USE_OPENGL_FRAMEWORK",
+					"-DCOPY_PASTE",
+					"-fpascal-strings",
+				);
 				OTHER_LDFLAGS = " $(inherited)";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ALL_BUILD;
@@ -2438,6 +2484,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = ovcc.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/build/FD502/RelWithDebInfo;
 				DEAD_CODE_STRIPPING = YES;
@@ -2486,7 +2535,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = (
@@ -2526,6 +2574,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = ovcc.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/build/Ramdisk/RelWithDebInfo;
 				DEAD_CODE_STRIPPING = YES;
@@ -2574,7 +2625,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = (
@@ -2614,6 +2664,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = ovcc.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/build/FD502/MinSizeRel;
 				DEAD_CODE_STRIPPING = YES;
@@ -2662,7 +2715,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = (
@@ -2735,6 +2787,13 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.3;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-DDARWIN",
+					"-D_THREAD_SAFE",
+					"-D_USE_OPENGL_FRAMEWORK",
+					"-DCOPY_PASTE",
+					"-fpascal-strings",
+				);
 				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -2747,6 +2806,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = ovcc.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/build/Ramdisk/Release;
 				DEAD_CODE_STRIPPING = YES;
@@ -2795,7 +2857,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = (
@@ -2835,6 +2896,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = ovcc.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/build/orch90/Release;
 				DEAD_CODE_STRIPPING = YES;
@@ -2883,7 +2947,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = (
@@ -2923,6 +2986,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = ovcc.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/build/SuperIDE/MinSizeRel;
 				DEAD_CODE_STRIPPING = YES;
@@ -2971,7 +3037,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = (
@@ -3011,6 +3076,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = ovcc.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/build/mpi/Debug;
 				DEAD_CODE_STRIPPING = YES;
@@ -3058,7 +3126,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = (
@@ -3150,13 +3217,9 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
-				OTHER_CPLUSPLUSFLAGS = (
-					"-DNDEBUG",
-					"-fpascal-strings",
-				);
+				OTHER_CPLUSPLUSFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-Wl,-search_paths_first",
 					"-Wl,-headerpad_max_install_names",
@@ -3191,6 +3254,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = ovcc.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/build/SuperIDE/Debug;
 				DEAD_CODE_STRIPPING = YES;
@@ -3238,7 +3304,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = (
@@ -3278,6 +3343,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = ovcc.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/build/SuperIDE/Release;
 				DEAD_CODE_STRIPPING = YES;
@@ -3326,7 +3394,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = (
@@ -3418,13 +3485,9 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
-				OTHER_CPLUSPLUSFLAGS = (
-					"-DNDEBUG",
-					"-fpascal-strings",
-				);
+				OTHER_CPLUSPLUSFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-Wl,-search_paths_first",
 					"-Wl,-headerpad_max_install_names",
@@ -3486,6 +3549,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = ovcc.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/build/HardDisk/RelWithDebInfo;
 				DEAD_CODE_STRIPPING = YES;
@@ -3534,7 +3600,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = (
@@ -3574,6 +3639,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = ovcc.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/build/becker/RelWithDebInfo;
 				DEAD_CODE_STRIPPING = YES;
@@ -3622,7 +3690,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = (
@@ -3695,6 +3762,13 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.3;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-DDARWIN",
+					"-D_THREAD_SAFE",
+					"-D_USE_OPENGL_FRAMEWORK",
+					"-DCOPY_PASTE",
+					"-fpascal-strings",
+				);
 				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -3707,6 +3781,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = ovcc.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/build/FD502/Debug;
 				DEAD_CODE_STRIPPING = YES;
@@ -3754,7 +3831,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = (
@@ -3828,6 +3904,13 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.3;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-DDARWIN",
+					"-D_THREAD_SAFE",
+					"-D_USE_OPENGL_FRAMEWORK",
+					"-DCOPY_PASTE",
+					"-fpascal-strings",
+				);
 				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = /Users/paulz/OVCC/build/build;
@@ -3839,6 +3922,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = ovcc.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/build/FD502/Release;
 				DEAD_CODE_STRIPPING = YES;
@@ -3887,7 +3973,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = (
@@ -3927,6 +4012,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = ovcc.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/build/mpi/Release;
 				DEAD_CODE_STRIPPING = YES;
@@ -3975,7 +4063,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = (
@@ -4015,6 +4102,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = ovcc.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/build/Ramdisk/MinSizeRel;
 				DEAD_CODE_STRIPPING = YES;
@@ -4063,7 +4153,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = (
@@ -4103,6 +4192,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = ovcc.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/build/orch90/RelWithDebInfo;
 				DEAD_CODE_STRIPPING = YES;
@@ -4151,7 +4243,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = (
@@ -4191,6 +4282,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = ovcc.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/build/orch90/MinSizeRel;
 				DEAD_CODE_STRIPPING = YES;
@@ -4239,7 +4333,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = (
@@ -4292,6 +4385,13 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INSTALL_PATH = "";
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-DDARWIN",
+					"-D_THREAD_SAFE",
+					"-D_USE_OPENGL_FRAMEWORK",
+					"-DCOPY_PASTE",
+					"-fpascal-strings",
+				);
 				OTHER_LDFLAGS = " $(inherited)";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ALL_BUILD;

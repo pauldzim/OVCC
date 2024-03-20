@@ -62,7 +62,7 @@ file(COPY ${ICON_PATH} DESTINATION "ovcc.app/Contents/Resources")
 add_definitions(
 	-DDARWIN
 	-D_THREAD_SAFE
-	-D_USE_OPENGL_FRAMEWOR
+	-D_USE_OPENGL_FRAMEWORK
 	-DTARGET_API_MAC_CARBON
 	-DTARGET_API_MAC_OSX
 	-fpascal-strings

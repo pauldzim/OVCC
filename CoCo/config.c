@@ -40,6 +40,8 @@ This file is part of VCC (Virtual Color Computer).
 //#include "logger.h"
 #include <assert.h>
 
+#include "xdebug.h"
+
 extern JoyStick	LeftSDL;
 extern JoyStick RightSDL;
 
@@ -138,8 +140,10 @@ void LoadConfig(SystemState2 *LCState)
 {
 	extern const char *GlobalShortName;
 
+	XTRACE("Entered LoadConfig()\n");
 	buildTransScan2DispTable();
 
+	XTRACE("GlobalShortName: \"%s\", GlobalExecFolder: \"%s\", IniFileName: \"%s\"\n", GlobalShortName, GlobalExecFolder, IniFileName);
 	strcpy(AppName, GlobalShortName);
 	strcpy(ExecDirectory, GlobalExecFolder);
 	strcpy(CurrentConfig.PathtoExe,ExecDirectory);
@@ -150,21 +154,29 @@ void LoadConfig(SystemState2 *LCState)
 	strcat(IniFilePath,IniFileName);
 	LCState->ScanLines = 0;
 	NumberOfSoundCards = GetSoundCardListSDL(SoundCards);
+	XTRACE("Calling ReadIniFile()\n");
 	ReadIniFile();
 	CurrentConfig.RebootNow=0;
+	XTRACE("Calling UpdateConfig()\n");
 	UpdateConfig();
 	RefreshJoystickStatus();
 	SoundInitSDL(SoundCards[CurrentConfig.SndOutDev].sdlID, CurrentConfig.AudioRate);
+	XTRACE("Calling InsertModule()\n");
 	InsertModule (CurrentConfig.ModulePath);	// Should this be here?
 	LCState->MouseType = LeftSDL.HiRes | RightSDL.HiRes; //If either mouse is Hires we must support Hires
 	//fprintf(stdout, "Mouse Type %d\n", LCState->MouseType);
 	if (!AG_FileExists(IniFilePath))
+	{
+		XTRACE("Calling WriteIniFile()\n");
 		WriteIniFile();
+	}
+	XTRACE("Leaving LoadConfig()\n");
 }
 
 unsigned char WriteNamedIniFile(char *iniFilePath)
 {
 	//fprintf(stderr, "Write Ini File : %s\n", iniFilePath);
+	XTRACE("Entered WriteNamedIniFile(\"%s\")\n", iniFilePath);
 
 	GetCurrentModule(CurrentConfig.ModulePath);
 	ValidatePath(CurrentConfig.ModulePath);
@@ -215,8 +227,10 @@ unsigned char WriteNamedIniFile(char *iniFilePath)
 	WritePrivateProfileInt("RightJoyStick","DiDevice",RightSDL.DiDevice,iniFilePath);
 	WritePrivateProfileInt("RightJoyStick", "HiResDevice", RightSDL.HiRes, iniFilePath);
 
+	XTRACE("Calling FlushPrivateProfile(\"%s\")\n", iniFilePath);
 	FlushPrivateProfile(iniFilePath);
-	
+	XTRACE("Leaving WriteNamedIniFile(\"%s\")\n", iniFilePath);
+
 	return(0);
 }
 

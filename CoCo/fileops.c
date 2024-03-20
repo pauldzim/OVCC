@@ -22,7 +22,22 @@ This file is part of VCC (Virtual Color Computer).
 #include "defines.h"
 #include "fileops.h"
 
+#include "xdebug.h"
+
 static char ExecFolder[MAX_PATH];
+
+static void SetExecFolder(void)
+{
+	AG_User *user = AG_GetEffectiveUser();
+
+	if (user && user->home)
+	{
+		XTRACE("fileops: home directory is %s\n", user->home);
+
+		AG_Strlcpy(ExecFolder, user->home, strlen(user->home) + 1);
+		XTRACE("fileops: ExecFolder: %s\n", ExecFolder);
+	}
+}
 
 void ValidatePath(char *Path)
 {
@@ -30,6 +45,13 @@ void ValidatePath(char *Path)
 	int tpl, len;
 
 	if (ExecFolder[0] == 0) getcwd(ExecFolder, sizeof(ExecFolder));
+	XTRACE("ExecFolder 1a: \"%s\"\n", ExecFolder);
+	if (strcmp(ExecFolder, "/") == 0)
+	{
+		SetExecFolder();
+		chdir(ExecFolder);
+	}
+	XTRACE("ExecFolder 1b: \"%s\"\n", ExecFolder);
 
 	strncpy(TempPath,Path,sizeof(TempPath));
 	TempPath[sizeof(TempPath)-1] = 0;
@@ -52,6 +74,13 @@ int CheckPath( char *Path)	//Return 1 on Error
 	char TempPath[MAX_PATH]="";
 
 	if (ExecFolder[0] == 0) getcwd(ExecFolder, sizeof(ExecFolder));
+	XTRACE("ExecFolder 2a: \"%s\"\n", ExecFolder);
+	if (strcmp(ExecFolder, "/") == 0)
+	{
+		SetExecFolder();
+		chdir(ExecFolder);
+	}
+	XTRACE("ExecFolder 2b: \"%s\"\n", ExecFolder);
 
 	if ((strlen(Path)==0) | (strlen(Path) > MAX_PATH))
 		return(1);

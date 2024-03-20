@@ -16,6 +16,7 @@ This file is part of VCC (Virtual Color Computer).
     along with VCC (Virtual Color Computer).  If not, see <http://www.gnu.org/licenses/>.
 */
 
+#include <agar/core.h>
 #include "defines.h"
 #include "stdio.h"
 #include "stdlib.h"
@@ -29,6 +30,8 @@ This file is part of VCC (Virtual Color Computer).
 #include "logger.h"
 #include "hd6309.h"
 #include "fileops.h"
+
+#include "xdebug.h"
 
 static unsigned char *MemPages[1024];
 static unsigned short MemPageOffsets[1024];
@@ -166,6 +169,9 @@ void CopyRom_sw(void)
 {
 	char ExecPath[MAX_PATH];
 	unsigned short temp=0;
+	//AG_User *user;
+
+	XTRACE("Attempting to load coco3.rom from \"%s\"\n", BasicRomName());
 	temp=load_int_rom(BasicRomName());		//Try to load the image
 	if (temp == 0)
 	{	// If we can't find it use default copy
@@ -174,11 +180,27 @@ void CopyRom_sw(void)
 		strcat(ExecPath, "coco3.rom");
 		temp = load_int_rom(ExecPath);
 	}
-	if (temp == 0)
+	/*if (temp == 0)
 	{
-		fprintf(stderr, "Missing file coco3.rom\n");
-		exit(0);
-	}
+		user = AG_GetEffectiveUser();
+		if (user && user->home)
+		{
+			fprintf(stderr, "home directory is %s\n", user->home);
+			//AG_Strlcpy(ExecPath, "/Users/paulz/.ovcc", 19);
+			AG_Strlcpy(ExecPath, user->home, strlen(user->home)+1);
+			strcat(ExecPath, GetPathDelimStr());
+			strcat(ExecPath, ".ovcc");
+			strcat(ExecPath, GetPathDelimStr());
+			strcat(ExecPath, "coco3.rom");
+			fprintf(stderr, "Attempting to load %s\n", ExecPath);
+			temp = load_int_rom(ExecPath);
+		}*/
+		if (temp == 0)
+		{
+			fprintf(stderr, "Missing file coco3.rom\n");
+			exit(0);
+		}
+	//}
 //		for (temp=0;temp<=32767;temp++)
 //			InternalRomBuffer[temp]=CC3Rom[temp];
 	return;
@@ -188,6 +210,7 @@ static int load_int_rom(char filename[MAX_PATH])
 {
 	unsigned short index=0;
 	FILE *rom_handle;
+	XTRACE("filename \"%s\"\n", filename);
 	rom_handle=fopen(filename,"rb");
 	if (rom_handle==NULL)
 		return(0);

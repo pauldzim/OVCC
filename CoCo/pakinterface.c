@@ -27,6 +27,8 @@ This file is part of VCC (Virtual Color Computer).
 #include "logger.h"
 #include "fileops.h"
 
+#include "xdebug.h"
+
 #define HASCONFIG		1
 #define HASIOWRITE		2
 #define HASIOREAD		4
@@ -218,13 +220,16 @@ int InsertModule (char *ModulePath)
 	FileType=FileID(ModulePath);
 	ExternROMsize = 0;
 
+	XTRACE("Entered InsertModule(\"%s\")\n", ModulePath);
 	switch (FileType)
 	{
 	case 0:		//File doesn't exist
+		XTRACE("Doesn't exist\n");
 		return(NOMODULE);
 		break;
 
 	case 2:		//File is a ROM image
+		XTRACE("ROM image\n");
 		UnloadDll(1);
 		load_ext_rom(ModulePath);
 		strncpy(Modname,ModulePath,MAX_PATH);
@@ -236,9 +241,10 @@ int InsertModule (char *ModulePath)
 		SetCart(1);
 		strcpy(DllPath,ModulePath);
 		return(0);
-	break;
+		break;
 
 	case 1:		//File is a shared library
+		XTRACE("Module\n");
 		UnloadDll(1);
 		strcpy(Modname, "");
 		ValidatePath(ModulePath);
@@ -250,9 +256,13 @@ int InsertModule (char *ModulePath)
 		//PathStripPath(Modname);
 		//void *mylib = dlopen(Modname, RTLD_NOW);
 		//char *error = dlerror();
+		XTRACE("Modname: \"%s\"\n", Modname);
 		hinstLib = SDL_LoadObject(Modname);
 		if (hinstLib ==NULL)
-			return(NOMODULE);
+		{
+			XTRACE("NULL 1\n");
+			return (NOMODULE);
+		}
 		strncpy(Modname, ModulePath, MAX_PATH);
 		//fprintf(stderr, "Insert Module : Found module\n");
 		SetCart(0);
@@ -275,7 +285,8 @@ int InsertModule (char *ModulePath)
 		PakSetCart = SDL_LoadFunction(hinstLib, "SetCart");
 		if (GetModuleName == NULL)
 		{
-			SDL_UnloadObject(hinstLib); 
+			XTRACE("NULL 2\n");
+			SDL_UnloadObject(hinstLib);
 			hinstLib=NULL;
 			return(NOTVCC);
 		}

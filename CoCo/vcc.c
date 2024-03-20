@@ -42,6 +42,8 @@ This file is part of VCC (Virtual Color Computer).
 #include "logger.h"
 #include "AGARInterface.h"
 
+#include "xdebug.h"
+
 SystemState2 EmuState2;
 static bool DialogOpen=false;
 static unsigned char Throttle=0;
@@ -114,11 +116,13 @@ int main(int argc, char **argv)
 {
 	char cwd[260];
 	char name[260];
+	int savlen;
 
 #ifdef _DEBUG
 # ifdef DARWIN
-	logg = fopen("./ovcc.log", "w");
-	if (!logg) {
+	logg = fopen("/Users/paulz/.ovcc/ovcc.log", "w");
+	if (!logg)
+	{
 		fprintf(stderr, "Couldn't open ovcc.log\n");
 		return 1;
 	}
@@ -126,7 +130,8 @@ int main(int argc, char **argv)
 # endif
 #endif
 
-	if (getcwd(cwd, sizeof(cwd)) != NULL) {
+	if (getcwd(cwd, sizeof(cwd)) != NULL)
+	{
 		GlobalExecFolder = cwd;
 	} 
 	else
@@ -171,7 +176,41 @@ int main(int argc, char **argv)
 	{
 		fprintf(stderr,"Can't create AGAR Window\n");
 	}
-	
+
+	XTRACE("GlobalExecFolder: %s\n", GlobalExecFolder);
+
+	if (strcmp(GlobalExecFolder, "/") == 0)
+	{
+		AG_User *user = AG_GetEffectiveUser();
+
+		if (user && user->home)
+		{
+			XTRACE("home directory is %s\n", user->home);
+
+			AG_Strlcpy(GlobalExecFolder, user->home, strlen(user->home) + 1);
+			strcat(GlobalExecFolder, GetPathDelimStr());
+			strcat(GlobalExecFolder, ".ovcc");
+			XTRACE("GlobalExecFolder: %s\n", GlobalExecFolder);
+		}
+	}
+
+#ifdef xxDEBUGxx
+# ifdef DARWIN
+	savlen = strlen(GlobalExecFolder);
+	strcat(GlobalExecFolder, GetPathDelimStr());
+	strcat(GlobalExecFolder, "ovcc.log");
+	XTRACE("Opening log file: %s\n", GlobalExecFolder);
+	logg = fopen(GlobalExecFolder, "w");
+	if (!logg)
+	{
+		XTRACE("Couldn't open ovcc.log\n");
+		return 1;
+	}
+	setbuf(logg, NULL);
+	GlobalExecFolder[savlen] = 0;
+# endif
+#endif
+
 	DecorateWindow(&EmuState2);
 
 	AG_WindowShow(EmuState2.agwin);
@@ -213,7 +252,6 @@ int main(int argc, char **argv)
 #endif
 
 	EmuState2.cpuThread = threadID;
-
 
     AG_EventLoop();
 	
