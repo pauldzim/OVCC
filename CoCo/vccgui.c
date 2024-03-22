@@ -162,7 +162,7 @@ void LoadConf(AG_Event *event)
     AG_FileDlg *fd = AG_FileDlgNew(fdw, AG_FILEDLG_EXPAND | AG_FILEDLG_CLOSEWIN | AG_FILEDLG_MASK_EXT);
     AG_FileDlgSetDirectory(fd, ".");
 
-	AG_FileDlgAddType(fd, "CoCo Confifuration File", "*.ini",	LoadIniFile, "%p", state);
+    AG_FileDlgAddType(fd, "CoCo Confifuration File", "*.ini", LoadIniFile, "%p", state);
     AG_WindowShow(fdw);
 }
 
@@ -1587,9 +1587,9 @@ static void LoadCart(AG_Event *event)
     AG_WindowSetCloseAction(fdw, AG_WINDOW_DETACH);
 
     AG_FileDlg *fd = AG_FileDlgNew(fdw, AG_FILEDLG_EXPAND | AG_FILEDLG_CLOSEWIN | AG_FILEDLG_MASK_EXT);
-    AG_FileDlgSetDirectory(fd, ".");
+    AG_FileDlgSetDirectory(fd, GlobalExecFolder);
 
-	AG_FileDlgAddType(fd, "CoCo Pak or Cartridge", "*.rom,*.ccc,*.so,*.dll",	LoadPack, "%p", state);
+    AG_FileDlgAddType(fd, "CoCo Pak or Cartridge", "*.rom,*.ccc,*.so,*.dll", LoadPack, "%p", state);
     AG_WindowShow(fdw);
 }
 

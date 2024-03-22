@@ -143,15 +143,18 @@ void LoadConfig(SystemState2 *LCState)
 	XTRACE("Entered LoadConfig()\n");
 	buildTransScan2DispTable();
 
-	XTRACE("GlobalShortName: \"%s\", GlobalExecFolder: \"%s\", IniFileName: \"%s\"\n", GlobalShortName, GlobalExecFolder, IniFileName);
+	XTRACE("GlobalShortName: \"%s\", GlobalExecFolder: \"%s\", IniFileName: \"%s\"\n",
+	        GlobalShortName, GlobalExecFolder, IniFileName);
 	strcpy(AppName, GlobalShortName);
 	strcpy(ExecDirectory, GlobalExecFolder);
 	strcpy(CurrentConfig.PathtoExe,ExecDirectory);
 	strcat(CurrentConfig.PathtoExe,GetPathDelimStr());
 	strcat(CurrentConfig.PathtoExe,AppName);
-	strcpy(IniFilePath,ExecDirectory);
+	strcpy(IniFilePath,GlobalUserFolder);
 	strcat(IniFilePath,GetPathDelimStr());
 	strcat(IniFilePath,IniFileName);
+	XTRACE("AppName: \"%s\", ExecDirectory: \"%s\", CurrentConfig.PathtoExe: \"%s\", IniFilePath: \"%s\"\n",
+	       AppName, ExecDirectory, CurrentConfig.PathtoExe, IniFilePath);
 	LCState->ScanLines = 0;
 	NumberOfSoundCards = GetSoundCardListSDL(SoundCards);
 	XTRACE("Calling ReadIniFile()\n");

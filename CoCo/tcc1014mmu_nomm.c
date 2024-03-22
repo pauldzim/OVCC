@@ -169,10 +169,18 @@ void CopyRom_sw(void)
 {
 	char ExecPath[MAX_PATH];
 	unsigned short temp=0;
-	//AG_User *user;
 
 	XTRACE("Attempting to load coco3.rom from \"%s\"\n", BasicRomName());
 	temp=load_int_rom(BasicRomName());		//Try to load the image
+	if (temp == 0)
+	{
+		// If we can't find it check user's .ovcc directory
+		AG_Strlcpy(ExecPath, GlobalUserFolder, sizeof(ExecPath));
+		strcat(ExecPath, GetPathDelimStr());
+		strcat(ExecPath, "coco3.rom");
+		XTRACE("Attempting to load %s\n", ExecPath);
+		temp = load_int_rom(ExecPath);
+	}
 	if (temp == 0)
 	{	// If we can't find it use default copy
 		AG_Strlcpy(ExecPath, GlobalExecFolder, sizeof(ExecPath));
@@ -180,27 +188,11 @@ void CopyRom_sw(void)
 		strcat(ExecPath, "coco3.rom");
 		temp = load_int_rom(ExecPath);
 	}
-	/*if (temp == 0)
+	if (temp == 0)
 	{
-		user = AG_GetEffectiveUser();
-		if (user && user->home)
-		{
-			fprintf(stderr, "home directory is %s\n", user->home);
-			//AG_Strlcpy(ExecPath, "/Users/paulz/.ovcc", 19);
-			AG_Strlcpy(ExecPath, user->home, strlen(user->home)+1);
-			strcat(ExecPath, GetPathDelimStr());
-			strcat(ExecPath, ".ovcc");
-			strcat(ExecPath, GetPathDelimStr());
-			strcat(ExecPath, "coco3.rom");
-			fprintf(stderr, "Attempting to load %s\n", ExecPath);
-			temp = load_int_rom(ExecPath);
-		}*/
-		if (temp == 0)
-		{
-			fprintf(stderr, "Missing file coco3.rom\n");
-			exit(0);
-		}
-	//}
+		fprintf(stderr, "Missing file coco3.rom\n");
+		exit(0);
+	}
 //		for (temp=0;temp<=32767;temp++)
 //			InternalRomBuffer[temp]=CC3Rom[temp];
 	return;

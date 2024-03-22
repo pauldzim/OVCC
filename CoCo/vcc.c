@@ -95,6 +95,7 @@ FILE *logg;
 char *GlobalExecFolder;
 char *GlobalFullName;
 char *GlobalShortName;
+char *GlobalUserFolder;
 void HandleSDLevent(SDL_Event);
 void FullScreenToggleAGAR(void);
 void InvalidateBoarderAGAR(void);
@@ -116,19 +117,7 @@ int main(int argc, char **argv)
 {
 	char cwd[260];
 	char name[260];
-	int savlen;
-
-#ifdef _DEBUG
-# ifdef DARWIN
-	logg = fopen("/Users/paulz/.ovcc/ovcc.log", "w");
-	if (!logg)
-	{
-		fprintf(stderr, "Couldn't open ovcc.log\n");
-		return 1;
-	}
-	setbuf(logg, NULL);
-# endif
-#endif
+	char path[260];
 
 	if (getcwd(cwd, sizeof(cwd)) != NULL)
 	{
@@ -177,39 +166,66 @@ int main(int argc, char **argv)
 		fprintf(stderr,"Can't create AGAR Window\n");
 	}
 
+	//XTRACE("GlobalExecFolder: %s\n", GlobalExecFolder);
+	//XTRACE("GlobalFullName: %s\n", GlobalFullName);
+	//XTRACE("GlobalShortName: %s\n", GlobalShortName);
+	//XTRACE("argv[0]: %s\n", argv[0]);
+	if (strcmp(GlobalExecFolder, "/") == 0)
+	{
+		char *str = argv[0], *laststr = NULL;
+
+		while ((str = strstr(str, "Contents")) != NULL)
+		{
+			laststr = str;
+			str += 8;
+		}
+		if (laststr != NULL)
+		{
+			laststr += 8;
+			*laststr = 0;
+		}
+		//XTRACE("       : %s\n", argv[0]);
+		strcpy(GlobalExecFolder, argv[0]);
+		chdir(GlobalExecFolder);
+	}
+
+#ifdef _DEBUG
+# ifdef DARWIN
+	{
+		size_t savlen = strlen(GlobalExecFolder);
+
+		strcat(GlobalExecFolder, GetPathDelimStr());
+		strcat(GlobalExecFolder, "ovcc.log");
+		fprintf(stderr, "Opening log file: %s\n", GlobalExecFolder);
+		logg = fopen(GlobalExecFolder, "w");
+		if (!logg)
+		{
+			fprintf(stderr, "Couldn't open ovcc.log\n");
+			return 1;
+		}
+		GlobalExecFolder[savlen] = 0;
+		setbuf(logg, NULL);
+	}
+# endif
+#endif
 	XTRACE("GlobalExecFolder: %s\n", GlobalExecFolder);
 
-	if (strcmp(GlobalExecFolder, "/") == 0)
 	{
 		AG_User *user = AG_GetEffectiveUser();
 
+		strcpy(path, ".");
 		if (user && user->home)
 		{
-			XTRACE("home directory is %s\n", user->home);
-
-			AG_Strlcpy(GlobalExecFolder, user->home, strlen(user->home) + 1);
-			strcat(GlobalExecFolder, GetPathDelimStr());
-			strcat(GlobalExecFolder, ".ovcc");
-			XTRACE("GlobalExecFolder: %s\n", GlobalExecFolder);
+			XTRACE("Home directory is %s\n", user->home);
+			AG_Strlcpy(path, user->home, sizeof(path));
+			strcat(path, GetPathDelimStr());
+			strcat(path, ".");
+			strcat(path, "ovcc");
+			chdir(path);
 		}
+		GlobalUserFolder = path;
+		XTRACE("User folder: %s\n", GlobalUserFolder);
 	}
-
-#ifdef xxDEBUGxx
-# ifdef DARWIN
-	savlen = strlen(GlobalExecFolder);
-	strcat(GlobalExecFolder, GetPathDelimStr());
-	strcat(GlobalExecFolder, "ovcc.log");
-	XTRACE("Opening log file: %s\n", GlobalExecFolder);
-	logg = fopen(GlobalExecFolder, "w");
-	if (!logg)
-	{
-		XTRACE("Couldn't open ovcc.log\n");
-		return 1;
-	}
-	setbuf(logg, NULL);
-	GlobalExecFolder[savlen] = 0;
-# endif
-#endif
 
 	DecorateWindow(&EmuState2);
 

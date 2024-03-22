@@ -92,7 +92,7 @@ AG_MenuItem *itemConfig = NULL;
 AG_MenuItem *itemSeperator = NULL;
 
 INIman *iniman = NULL;
-
+FILE *logfile = NULL;
 
 void __attribute__ ((constructor)) initLibrary(void) {
  //
@@ -112,6 +112,12 @@ void UpdateMenu(int disk);
 
 void ADDCALL ModuleName(char *ModName, AG_MenuItem *Temp)
 {
+	if (logfile == NULL)
+	{
+		logfile = fopen("./fd502.log", "w");
+		if (logfile)
+			setbuf(logfile, NULL);
+	}
 
 	menuAnchor = Temp;
 	strcpy(ModName, moduleName);
@@ -152,7 +158,11 @@ void ADDCALL ModuleConfig(unsigned char func)
 		if (itemSeperator)
 			AG_MenuDel(itemSeperator);
 		itemSeperator = NULL;
-
+		if (logfile)
+		{
+			fclose(logfile);
+			logfile = NULL;
+		}
 	}
 	break;
 
@@ -733,12 +743,20 @@ void LoadConfig(void)
 	unsigned int RetVal=0;
 
 	SelectRom = GetPrivateProfileInt(ModName, "DiskRom", 1, IniFile);  //0 External 1=TRSDOS 2=RGB Dos
+	if (logfile)
+		fprintf(logfile, "SelectRom: %d\n", SelectRom);
 	TempSelectRom = SelectRom;
 	GetPrivateProfileString(ModName, "RomPath", "", RomFileName, MAX_PATH, IniFile);
+	if (logfile)
+		fprintf(logfile, "RomFileName: %s\n", RomFileName);
 	AG_Strlcpy(TempRomFileName, RomFileName, sizeof(TempFileName));
 	CheckPath(RomFileName);
+	if (logfile)
+		fprintf(logfile, "RomFileName: %s\n", RomFileName);
 	LoadExtRom(External, RomFileName);
 	getcwd(DiskRomPath, sizeof(DiskRomPath));
+	if (logfile)
+		fprintf(logfile, "DiskRomPath: %s\n", DiskRomPath);
 	strcpy(RGBRomPath, DiskRomPath);
 	strcat(DiskRomPath, "/disk11.rom");
 	strcat(RGBRomPath, "/rgbdos.rom");

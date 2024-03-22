@@ -52,6 +52,7 @@ static unsigned int BankedCartOffset[MAXPAX]={0,0,0,0};
 static unsigned char Temp,Temp2;
 static char IniFile[MAX_PATH]="";
 static INIman *iniman = NULL;
+static char ExecFolder[MAX_PATH]="";
 
 //**************************************************************
 //Array of fuction pointer for each Slot
@@ -155,6 +156,11 @@ void ADDCALL ModuleName(char *ModName, AG_MenuItem *Temp)
 	}
 
 	return ;
+}
+
+void ADDCALL SetExecPath(char *ExecPath)
+{
+	AG_Strlcpy(ExecFolder, ExecPath, sizeof(ExecFolder));
 }
 
 void ADDCALL ModuleConfig(unsigned char func)
@@ -821,9 +827,9 @@ void BrowseSlot(AG_Event *event)
     AG_WindowSetCloseAction(fdw, AG_WINDOW_DETACH);
 
     AG_FileDlg *fd = AG_FileDlgNew(fdw, AG_FILEDLG_EXPAND | AG_FILEDLG_CLOSEWIN | AG_FILEDLG_MASK_EXT);
-    AG_FileDlgSetDirectory(fd, ".");
+    AG_FileDlgSetDirectory(fd, "%s", ExecFolder);
 
-	AG_FileDlgAddType(fd, "CoCo Pak or Cartridge", "*.rom,*.ccc,*.so,*.dll",	LoadSlot, "%i", slot);
+    AG_FileDlgAddType(fd, "CoCo Pak or Cartridge", "*.rom,*.ccc,*.so,*.dll", LoadSlot, "%i", slot);
     AG_WindowShow(fdw);
 }
 

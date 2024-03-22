@@ -44,7 +44,7 @@ This file is part of VCC (Virtual Color Computer).
 #define ASSERTCART		4096
 #define nullptr NULL
 
-extern AG_MenuItem *GetMenuAnchor();
+extern AG_MenuItem *GetMenuAnchor(void);
 
 // Storage for Pak ROMs
 static uint8_t *ExternalRomBuffer = nullptr; 
@@ -97,6 +97,7 @@ static void (*ModuleReset)(void)=NULL;
 static void (*SetIniPath)(char *)=NULL;
 static void (*SetIni)(INIfile *)=NULL;
 static void (*PakSetCart)(SETCART)=NULL;
+static void (*SetExecPath)(char *)=NULL;
 
 void UpdateCartridgeMenu(char *modname);
 
@@ -247,8 +248,10 @@ int InsertModule (char *ModulePath)
 		XTRACE("Module\n");
 		UnloadDll(1);
 		strcpy(Modname, "");
+		XTRACE("ModulePath: \"%s\"\n", ModulePath);
 		ValidatePath(ModulePath);
-		if (ModulePath[0] != 0 && (ModulePath[0] != '/' || ModulePath[1] != ':'))
+		XTRACE("ModulePath: \"%s\"\n", ModulePath);
+		if (ModulePath[0] != 0 && ModulePath[0] != '/' && ModulePath[1] != ':')
 		{
 			strncpy(Modname, "./", MAX_PATH);
 		}
@@ -283,6 +286,7 @@ int InsertModule (char *ModulePath)
 		// SetIniPath = SDL_LoadFunction(hinstLib, "SetIniPath");
 		SetIni = SDL_LoadFunction(hinstLib, "SetIniPath");
 		PakSetCart = SDL_LoadFunction(hinstLib, "SetCart");
+		SetExecPath = SDL_LoadFunction(hinstLib, "SetExecPath");
 		if (GetModuleName == NULL)
 		{
 			XTRACE("NULL 2\n");
@@ -297,6 +301,11 @@ int InsertModule (char *ModulePath)
 		GetModuleName(Modname, GetMenuAnchor());  //Instanciate the menus from HERE!
 		UpdateCartridgeMenu(Modname); //Refresh Menus
 		sprintf(Temp,"Configure %s",Modname);
+
+		if (SetExecPath != NULL)
+		{
+			SetExecPath(GlobalExecFolder);
+		}
 
 		strcat(String,"Module Name: ");
 		strcat(String,Modname);
@@ -462,6 +471,7 @@ void UnloadDll(short int config)
 	ModuleReset=NULL;
 	SetIni=NULL;
 	PakSetCart=NULL;
+	SetExecPath=NULL;
 	if (hinstLib !=NULL)
 		SDL_UnloadObject(hinstLib); 
 	hinstLib=NULL;
