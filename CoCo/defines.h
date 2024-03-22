@@ -75,7 +75,6 @@ extern void (*CPUForcePC)(unsigned short);
 
 extern void _MessageBox(const char *);
 extern char *GlobalExecFolder;
-extern char *GlobalUserFolder;
 
 #ifdef _DEBUG
 # ifdef DARWIN

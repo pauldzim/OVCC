@@ -95,7 +95,6 @@ FILE *logg;
 char *GlobalExecFolder;
 char *GlobalFullName;
 char *GlobalShortName;
-char *GlobalUserFolder;
 void HandleSDLevent(SDL_Event);
 void FullScreenToggleAGAR(void);
 void InvalidateBoarderAGAR(void);
@@ -117,7 +116,6 @@ int main(int argc, char **argv)
 {
 	char cwd[260];
 	char name[260];
-	char path[260];
 
 	if (getcwd(cwd, sizeof(cwd)) != NULL)
 	{
@@ -166,10 +164,10 @@ int main(int argc, char **argv)
 		fprintf(stderr,"Can't create AGAR Window\n");
 	}
 
-	//XTRACE("GlobalExecFolder: %s\n", GlobalExecFolder);
-	//XTRACE("GlobalFullName: %s\n", GlobalFullName);
-	//XTRACE("GlobalShortName: %s\n", GlobalShortName);
-	//XTRACE("argv[0]: %s\n", argv[0]);
+	fprintf(stderr, "GlobalExecFolder: %s\n", GlobalExecFolder);
+	fprintf(stderr, "GlobalFullName: %s\n", GlobalFullName);
+	fprintf(stderr, "GlobalShortName: %s\n", GlobalShortName);
+	fprintf(stderr, "argv[0]: %s\n", argv[0]);
 	if (strcmp(GlobalExecFolder, "/") == 0)
 	{
 		char *str = argv[0], *laststr = NULL;
@@ -184,7 +182,7 @@ int main(int argc, char **argv)
 			laststr += 8;
 			*laststr = 0;
 		}
-		//XTRACE("       : %s\n", argv[0]);
+		fprintf(stderr, "       : %s\n", argv[0]);
 		strcpy(GlobalExecFolder, argv[0]);
 		chdir(GlobalExecFolder);
 	}
@@ -209,23 +207,6 @@ int main(int argc, char **argv)
 # endif
 #endif
 	XTRACE("GlobalExecFolder: %s\n", GlobalExecFolder);
-
-	{
-		AG_User *user = AG_GetEffectiveUser();
-
-		strcpy(path, ".");
-		if (user && user->home)
-		{
-			XTRACE("Home directory is %s\n", user->home);
-			AG_Strlcpy(path, user->home, sizeof(path));
-			strcat(path, GetPathDelimStr());
-			strcat(path, ".");
-			strcat(path, "ovcc");
-			chdir(path);
-		}
-		GlobalUserFolder = path;
-		XTRACE("User folder: %s\n", GlobalUserFolder);
-	}
 
 	DecorateWindow(&EmuState2);
 

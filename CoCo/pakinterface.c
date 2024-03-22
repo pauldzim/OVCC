@@ -97,7 +97,6 @@ static void (*ModuleReset)(void)=NULL;
 static void (*SetIniPath)(char *)=NULL;
 static void (*SetIni)(INIfile *)=NULL;
 static void (*PakSetCart)(SETCART)=NULL;
-static void (*SetExecPath)(char *)=NULL;
 
 void UpdateCartridgeMenu(char *modname);
 
@@ -286,7 +285,6 @@ int InsertModule (char *ModulePath)
 		// SetIniPath = SDL_LoadFunction(hinstLib, "SetIniPath");
 		SetIni = SDL_LoadFunction(hinstLib, "SetIniPath");
 		PakSetCart = SDL_LoadFunction(hinstLib, "SetCart");
-		SetExecPath = SDL_LoadFunction(hinstLib, "SetExecPath");
 		if (GetModuleName == NULL)
 		{
 			XTRACE("NULL 2\n");
@@ -301,11 +299,6 @@ int InsertModule (char *ModulePath)
 		GetModuleName(Modname, GetMenuAnchor());  //Instanciate the menus from HERE!
 		UpdateCartridgeMenu(Modname); //Refresh Menus
 		sprintf(Temp,"Configure %s",Modname);
-
-		if (SetExecPath != NULL)
-		{
-			SetExecPath(GlobalExecFolder);
-		}
 
 		strcat(String,"Module Name: ");
 		strcat(String,Modname);
@@ -471,7 +464,6 @@ void UnloadDll(short int config)
 	ModuleReset=NULL;
 	SetIni=NULL;
 	PakSetCart=NULL;
-	SetExecPath=NULL;
 	if (hinstLib !=NULL)
 		SDL_UnloadObject(hinstLib); 
 	hinstLib=NULL;
