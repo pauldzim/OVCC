@@ -80,7 +80,7 @@ static unsigned char CartForSlot[MAXPAX]={0,0,0,0};
 static void (*SetCarts[MAXPAX])(unsigned char)={SetCartSlot0,SetCartSlot1,SetCartSlot2,SetCartSlot3};
 static void (*SetCartCalls[MAXPAX])(SETCART)={NULL,NULL,NULL,NULL};
 //static void (*SetIniPathCalls[MAXPAX]) (char *)={NULL,NULL,NULL,NULL};
-static void (*SetIniPathCalls[MAXPAX]) (INIfile *)={NULL,NULL,NULL,NULL};
+static void (*SetIniPathCalls[MAXPAX]) (INIman *)={NULL,NULL,NULL,NULL};
 //***************************************************************
 static void *hinstLib[4]={NULL,NULL,NULL,NULL};
 static unsigned char ChipSelectSlot=3,SpareSelectSlot=3,SwitchSlot=3,SlotRegister=255;

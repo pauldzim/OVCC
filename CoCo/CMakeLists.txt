@@ -24,8 +24,7 @@ add_definitions(
 	-D_USE_OPENGL_FRAMEWORK
 	-DTARGET_API_MAC_CARBON
 	-DTARGET_API_MAC_OSX
-	-fpascal-strings
-	-DCOPY_PASTE)
+	-fpascal-strings)
 
 add_executable(ovcc MACOSX_BUNDLE  ${ICON_PATH}
 	_xdebug.c

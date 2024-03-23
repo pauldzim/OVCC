@@ -59,6 +59,6 @@ typedef void (*MMUROMSHARE)(unsigned char *);
 typedef void (*SETINTERUPTCALLPOINTER) (ASSERTINTERUPT);
 typedef unsigned short (*MODULEAUDIOSAMPLE)(void);
 typedef void (*MODULERESET)(void);
-typedef void (*SETINIPATH)(INIfile *);
+typedef void (*SETINIPATH)(INIman *);
 
 #endif

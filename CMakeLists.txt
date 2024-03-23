@@ -1,15 +1,11 @@
 cmake_minimum_required(VERSION 3.5)
 project(OVCC C CXX)
 
-#set(MACOSX_BUNDLE TRUE)
-#set(ICON_NAME "ovcc.ico")
-#set(ICON_PATH CoCo/${ICON_NAME})
-
 add_subdirectory(becker)
 add_subdirectory(FD502)
 add_subdirectory(HardDisk)
 add_subdirectory(mpi)
-#add_subdirectory(mpu)
+add_subdirectory(mpu)
 add_subdirectory(orch90)
 add_subdirectory(Ramdisk)
 add_subdirectory(SuperIDE)

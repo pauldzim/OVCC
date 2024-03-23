@@ -15,10 +15,20 @@ add_definitions(
 	-DTARGET_API_MAC_OSX
 	-fpascal-strings)
 
-add_library(mpi MODULE mpi.c ../CoCo/iniman.c ../CoCo/fileops.c)
+add_library(mpu MODULE
+	mpu.c
+	dma.c
+	fpu.c
+	gpu.c
+	gpuclock.c
+	gpuprimitives.c
+	gputextures.c
+	linkedlists.c
+	../CoCo/iniman.c
+	../CoCo/fileops.c)
 
-target_include_directories(mpi PUBLIC EXPORT ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(mpu PUBLIC EXPORT ${CMAKE_CURRENT_SOURCE_DIR})
 
-target_link_libraries(mpi SDL2)
+target_link_libraries(mpu SDL2)
 
-TARGET_LINK_LIBRARIES(mpi ag_core ag_gui pthread)
+TARGET_LINK_LIBRARIES(mpu ag_core ag_gui pthread)

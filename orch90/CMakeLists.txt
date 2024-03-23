@@ -21,4 +21,4 @@ target_include_directories(orch90 PUBLIC EXPORT ${CMAKE_CURRENT_SOURCE_DIR})
 
 target_link_libraries(orch90 SDL2)
 
-TARGET_LINK_LIBRARIES(orch90 ag_core ag_gui ag_math ag_net ag_sg ag_sk ag_vg ag_core pthread)
+TARGET_LINK_LIBRARIES(orch90 ag_core ag_gui pthread)

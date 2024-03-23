@@ -77,8 +77,8 @@ typedef void (*SETCARTPOINTER)(SETCART);
 typedef void (*SETINTERUPTCALLPOINTER) (ASSERTINTERUPT);
 typedef unsigned short (*MODULEAUDIOSAMPLE)(void);
 typedef void (*MODULERESET)(void);
-typedef void (*SETINIPATH)(INIfile *);
-typedef void (*SETINI)(INIfile *);
+typedef void (*SETINIPATH)(INIman *);
+typedef void (*SETINI)(INIman *);
 
 static void (*GetModuleName)(char *, AG_MenuItem *)=NULL;
 static void (*ConfigModule)(unsigned char)=NULL;
@@ -94,8 +94,8 @@ static unsigned char (*PakMemRead8)(unsigned short)=NULL;
 static void (*ModuleStatus)(char *)=NULL;
 static unsigned short (*ModuleAudioSample)(void)=NULL;
 static void (*ModuleReset)(void)=NULL;
-static void (*SetIniPath)(char *)=NULL;
-static void (*SetIni)(INIfile *)=NULL;
+static void (*SetIniPath)(INIman *)=NULL;
+static void (*SetIni)(INIman *)=NULL;
 static void (*PakSetCart)(SETCART)=NULL;
 
 void UpdateCartridgeMenu(char *modname);
