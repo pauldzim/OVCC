@@ -1,0 +1,4386 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		71EE41D2DBF44773B13AFFD6 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 166DB9456E5E4928A7AB4FCA /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				F2D9CEF91F27E435C69830C9 /* Generate CMakeFiles/ZERO_CHECK */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		F7AC195232A74D0285F04FB5 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = FAE21B4A89E640C59BDC4D13 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				85669F6F111733F3987D4D5D /* Generate CMakeFiles/ALL_BUILD */,
+			);
+			dependencies = (
+				B0FE2A7166944E7C85C6E121 /* PBXTargetDependency */,
+				AC61CACA3FC2440D841415DD /* PBXTargetDependency */,
+				15C45FC807E84CB2A5EF563D /* PBXTargetDependency */,
+				C5623959E34E46598DF85754 /* PBXTargetDependency */,
+				846B3C1B511947DE8F9546CB /* PBXTargetDependency */,
+				C8B2185484ED47DC941AEA89 /* PBXTargetDependency */,
+				1D7C94B51C2A4950BEE76703 /* PBXTargetDependency */,
+				7E76DBFCE24C4454B98C261D /* PBXTargetDependency */,
+				BCD8D826410A45AEAB217937 /* PBXTargetDependency */,
+				CD61784E88F74698A9A6AF8D /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		031A00AF200D42088247C847 /* wd1793.c in Sources */ = {isa = PBXBuildFile; fileRef = E4C04FBE5E4245D992D601C2 /* wd1793.c */; };
+		031B83267D6A4A69B80423BC /* keyboardAGAR.c in Sources */ = {isa = PBXBuildFile; fileRef = AE77D5FA72914277AF9C3369 /* keyboardAGAR.c */; };
+		07FEEEE274BF4C73A0B6D3EC /* hd6309.c in Sources */ = {isa = PBXBuildFile; fileRef = AB0EF483ECCC4F31B317D081 /* hd6309.c */; };
+		0B5F36EEA69D4B2D85B938F1 /* joystickinputSDL.c in Sources */ = {isa = PBXBuildFile; fileRef = F31617C7293C4A0FAA3714EA /* joystickinputSDL.c */; };
+		13311C397B11439AA6F4AE35 /* fileops.c in Sources */ = {isa = PBXBuildFile; fileRef = 6134C2D728A844ACB3DA407B /* fileops.c */; };
+		162AFD6D4BD54C2993258D73 /* idebus.c in Sources */ = {isa = PBXBuildFile; fileRef = DC92E0EAB2A64975B2838CC1 /* idebus.c */; };
+		1A71018D5B0D485BA2E75C09 /* tcc1014graphicsAGAR.c in Sources */ = {isa = PBXBuildFile; fileRef = 36D5BD0A9F6B4902B1F005E5 /* tcc1014graphicsAGAR.c */; };
+		1BE55A1C096F42A48D21E06E /* fpu.c in Sources */ = {isa = PBXBuildFile; fileRef = C18051B632594590A11B77C1 /* fpu.c */; };
+		1CA53F0EE7DF43B38F77012B /* mc6809.c in Sources */ = {isa = PBXBuildFile; fileRef = 4A063AC9B6F34D919B099B6D /* mc6809.c */; };
+		1FC0B35772CC49568F2D3B3A /* quickload.c in Sources */ = {isa = PBXBuildFile; fileRef = 158D9C82B19F451BAEDC2DF0 /* quickload.c */; };
+		2A6F507E01A24DC380B7A82B /* mpu.c in Sources */ = {isa = PBXBuildFile; fileRef = 8245D9FA81D84E1BB943422E /* mpu.c */; };
+		35D6120FDA324BA48B2BF6A8 /* ramdisk.c in Sources */ = {isa = PBXBuildFile; fileRef = FC3C64C6227B4CF0B177FD54 /* ramdisk.c */; };
+		35DE4C959FBB4ACB8607EFCF /* fileops.c in Sources */ = {isa = PBXBuildFile; fileRef = E1D05DA649EB483DAA979879 /* fileops.c */; };
+		3780102955F740DDA2DABFA9 /* memboard.c in Sources */ = {isa = PBXBuildFile; fileRef = 746E0984B1284642A0635013 /* memboard.c */; };
+		3D7BDE0356FA430CA399D6F8 /* logger.c in Sources */ = {isa = PBXBuildFile; fileRef = C9B95F11F1134A85A8C918E5 /* logger.c */; };
+		41D9830F938D4B0CAAD5B051 /* throttle.c in Sources */ = {isa = PBXBuildFile; fileRef = 5A5A0988EDDA4B22B81D628A /* throttle.c */; };
+		4B1303092BAF8FAF00DD2F44 /* libbecker.so in CopyFiles */ = {isa = PBXBuildFile; fileRef = 208688B0EFEB4DDF9E14CB39 /* libbecker.so */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		4B13030A2BAF8FAF00DD2F44 /* libfd502.so in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8452D962325943FE88550587 /* libfd502.so */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		4B13030B2BAF8FAF00DD2F44 /* libharddisk.so in CopyFiles */ = {isa = PBXBuildFile; fileRef = 244EF92741BF4E6AB1B168F0 /* libharddisk.so */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		4B13030C2BAF8FAF00DD2F44 /* libmpi.so in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5C2F6D97234B49B4AF1D8681 /* libmpi.so */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		4B13030D2BAF8FAF00DD2F44 /* libmpu.so in CopyFiles */ = {isa = PBXBuildFile; fileRef = 545A88B7B86047539EAA0A28 /* libmpu.so */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		4B13030E2BAF8FAF00DD2F44 /* liborch90.so in CopyFiles */ = {isa = PBXBuildFile; fileRef = B9BAACB57E5A43928DF78352 /* liborch90.so */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		4B13030F2BAF8FAF00DD2F44 /* libramdisk.so in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D95AB97156A416798894725 /* libramdisk.so */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		4B1303102BAF8FAF00DD2F44 /* libsuperide.so in CopyFiles */ = {isa = PBXBuildFile; fileRef = 192EC50E837A41C7B008937B /* libsuperide.so */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		4E642DEAFFDC4B84912CDB60 /* iniman.c in Sources */ = {isa = PBXBuildFile; fileRef = 4AEE860745AC40E09C86349A /* iniman.c */; };
+		511AD50FA5344F75B33A6D51 /* harddisk.c in Sources */ = {isa = PBXBuildFile; fileRef = A053D5FDFCF0418593DD8ABC /* harddisk.c */; };
+		53841C79FF184DED9D353C24 /* fileops.c in Sources */ = {isa = PBXBuildFile; fileRef = 56167180D9944DC0ADBA93EB /* fileops.c */; };
+		55DE86315FEB4CDEB9E495E6 /* gpuclock.c in Sources */ = {isa = PBXBuildFile; fileRef = 24ADF176A8CB460F939148A7 /* gpuclock.c */; };
+		5868BDB10C254882A5633AA4 /* gpuprimitives.c in Sources */ = {isa = PBXBuildFile; fileRef = F7B55297D09647BEB91D90DF /* gpuprimitives.c */; };
+		61977BD2B0FD4A378E06FE51 /* cassette.c in Sources */ = {isa = PBXBuildFile; fileRef = E4285DB871804F5088CFCEBA /* cassette.c */; };
+		64F02E75B974463B8EBB206E /* iniman.c in Sources */ = {isa = PBXBuildFile; fileRef = EDB5092E170E420791DF415D /* iniman.c */; };
+		7BF31967D0B14A4F881470AE /* dma.c in Sources */ = {isa = PBXBuildFile; fileRef = 61AE1A7707E7401FB8825F88 /* dma.c */; };
+		7CCBFE7D7FE74AFF863F1CB1 /* ovcc.ico in Resources */ = {isa = PBXBuildFile; fileRef = 9E638E198CA0433897069CBF /* ovcc.ico */; };
+		7E5D1821DE8D40A1ACAF1A63 /* AGARInterface.c in Sources */ = {isa = PBXBuildFile; fileRef = D77E5769AB5E4D86A96772BC /* AGARInterface.c */; };
+		7E6B5E6D6FE845FCBDA11814 /* tcc1014mmu.c in Sources */ = {isa = PBXBuildFile; fileRef = EE465C8529E34465BA5FA8D8 /* tcc1014mmu.c */; };
+		7F1CB7AE02864CB896B1999A /* tcc1014registers.c in Sources */ = {isa = PBXBuildFile; fileRef = 105DC9F57D154645AC0463A7 /* tcc1014registers.c */; };
+		83BEC0409D774DA786D822FC /* tcc1014mmu_mm.c in Sources */ = {isa = PBXBuildFile; fileRef = 3CF8FEA79ABB4990B82CAE08 /* tcc1014mmu_mm.c */; };
+		846E4D1D33504C9BAC2CAEB7 /* tcc1014mmu_nomm.c in Sources */ = {isa = PBXBuildFile; fileRef = B77EB13EE62F411E8127979D /* tcc1014mmu_nomm.c */; };
+		89AA3B77E95F4AA8BCE0F3C9 /* orch90.c in Sources */ = {isa = PBXBuildFile; fileRef = B3B802D636DA4AE8AFB96254 /* orch90.c */; };
+		906D6E9921FC4EA6AFC7D67F /* iniman.c in Sources */ = {isa = PBXBuildFile; fileRef = 6BAB95D551E24895A0DBA2E4 /* iniman.c */; };
+		9307D51E8D714715B957F489 /* distortc.c in Sources */ = {isa = PBXBuildFile; fileRef = AF3D25B47C3449E0BDBE40C5 /* distortc.c */; };
+		989FB936B32E4EFABD39E1CB /* fd502.c in Sources */ = {isa = PBXBuildFile; fileRef = 0360FEF16F3A4BB4B2CF5B79 /* fd502.c */; };
+		9AFD0D8B196E46789383846E /* coco3.c in Sources */ = {isa = PBXBuildFile; fileRef = 0D2C6ECEB43745399D13472A /* coco3.c */; };
+		9B890B4910F74CDDBF349400 /* becker.c in Sources */ = {isa = PBXBuildFile; fileRef = 03A6F7BE2170491398D9FCB5 /* becker.c */; };
+		9F871EDC64164FCF85FD8D60 /* gputextures.c in Sources */ = {isa = PBXBuildFile; fileRef = A572282E09D842D8990C2A73 /* gputextures.c */; };
+		A2B44AAB02994B85BD1E5299 /* fileops.c in Sources */ = {isa = PBXBuildFile; fileRef = 5A330D3BA70048339140AF43 /* fileops.c */; };
+		A909C584A09E4CEB97FE6730 /* cc3vhd.c in Sources */ = {isa = PBXBuildFile; fileRef = FD55DA6430F34342B518EBFB /* cc3vhd.c */; };
+		AD1BB681DAE4405F96460726 /* cloud9.c in Sources */ = {isa = PBXBuildFile; fileRef = 2A4BA61BA0174B66A2D45A44 /* cloud9.c */; };
+		AEBECD41A4B04154B431E1DC /* config.c in Sources */ = {isa = PBXBuildFile; fileRef = 637C35E4742043F69A54A1FF /* config.c */; };
+		AFCDD31CE6F8477BB76756D4 /* iniman.c in Sources */ = {isa = PBXBuildFile; fileRef = CED9912A83AB499DBE41520C /* iniman.c */; };
+		B3FC5F19B54E4156B563388C /* fileops.c in Sources */ = {isa = PBXBuildFile; fileRef = 024B77463EC245BE8E22195B /* fileops.c */; };
+		B74B1BF76F5F423AA29A5915 /* linkedlists.c in Sources */ = {isa = PBXBuildFile; fileRef = FD5C5AE646AF4D26AC894F02 /* linkedlists.c */; };
+		B859A85BB1E64D909AE1254C /* fileops.c in Sources */ = {isa = PBXBuildFile; fileRef = FAE27325DB324D95965EDF80 /* fileops.c */; };
+		B87B752868434599ADD6EF8C /* keyboardLayoutAGAR.c in Sources */ = {isa = PBXBuildFile; fileRef = A8879C65021140538901925E /* keyboardLayoutAGAR.c */; };
+		B884F926B9F047F896791FB8 /* iniman.c in Sources */ = {isa = PBXBuildFile; fileRef = 2A73E06B14394309B12FBC52 /* iniman.c */; };
+		C0688AB0A4D84F81872C4743 /* cloud9.c in Sources */ = {isa = PBXBuildFile; fileRef = 8323B721618840EA9E0DB76B /* cloud9.c */; };
+		C0FC46991D574D01BBE7B2E2 /* audioSDL.c in Sources */ = {isa = PBXBuildFile; fileRef = E5F67ABD614E4B059BB815C6 /* audioSDL.c */; };
+		CBCD594414194DD098E86411 /* tcc1014mmu_common.c in Sources */ = {isa = PBXBuildFile; fileRef = 780FEAF768094E50B83BEB1E /* tcc1014mmu_common.c */; };
+		CC7D987759844E0394F5F179 /* pakinterface.c in Sources */ = {isa = PBXBuildFile; fileRef = C5540CAB66684A4E9CBD9ABA /* pakinterface.c */; };
+		CD22A40B2FBE49079AE833E9 /* mc6821.c in Sources */ = {isa = PBXBuildFile; fileRef = 76A5E5B8686F408B93895B09 /* mc6821.c */; };
+		CD7ED10DC38446E89DA315CF /* logger.c in Sources */ = {isa = PBXBuildFile; fileRef = 9654E435F33D4AA9A03D8B53 /* logger.c */; };
+		CE8301E2D316417DA418C834 /* superide.c in Sources */ = {isa = PBXBuildFile; fileRef = DD944BF53AAB42B4BB5C59D5 /* superide.c */; };
+		D02A7228B489476780D511DA /* vccgui.c in Sources */ = {isa = PBXBuildFile; fileRef = 54E9BAC4B5524B208748B35D /* vccgui.c */; };
+		D3CC0454529E4AAEA27A0BE3 /* vcc.c in Sources */ = {isa = PBXBuildFile; fileRef = 6F717425802B44AA9F0A0CE5 /* vcc.c */; };
+		D3E9C9E8A2214C1FA0A3D64A /* iobus.c in Sources */ = {isa = PBXBuildFile; fileRef = 98207F902F14499393FD2DB5 /* iobus.c */; };
+		DA7DCDC0B165404EA1EC63E7 /* mpi.c in Sources */ = {isa = PBXBuildFile; fileRef = 65BDFA6DA2184B8994614CD3 /* mpi.c */; };
+		DADAB6C32BC44CA49906B607 /* _xdebug.c in Sources */ = {isa = PBXBuildFile; fileRef = A509A88D0EB64B48B661524D /* _xdebug.c */; };
+		E40723E9BFBA4F7EA37F81E3 /* iniman.c in Sources */ = {isa = PBXBuildFile; fileRef = B7D17F997B8F4ADCA97B2F5C /* iniman.c */; };
+		E61153177543422786EC9496 /* iniman.c in Sources */ = {isa = PBXBuildFile; fileRef = 5B7DF5CE416D430F8ED2CE41 /* iniman.c */; };
+		F7E638A973704E77A8F666A9 /* gpu.c in Sources */ = {isa = PBXBuildFile; fileRef = 4847C41B8C664851B87F714C /* gpu.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04608EDA1517469881688790 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F86427A7DCF46528881356D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 71EE41D2DBF44773B13AFFD6;
+			remoteInfo = ZERO_CHECK;
+		};
+		0BCBC4082B544549AAB39077 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F86427A7DCF46528881356D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 71EE41D2DBF44773B13AFFD6;
+			remoteInfo = ZERO_CHECK;
+		};
+		16305A3EE1F64EC5992EEFBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F86427A7DCF46528881356D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 71EE41D2DBF44773B13AFFD6;
+			remoteInfo = ZERO_CHECK;
+		};
+		19B0309F0B794F40BA01A6C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F86427A7DCF46528881356D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 71EE41D2DBF44773B13AFFD6;
+			remoteInfo = ZERO_CHECK;
+		};
+		1DD2BEFE13C849F9AC8094C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F86427A7DCF46528881356D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 71EE41D2DBF44773B13AFFD6;
+			remoteInfo = ZERO_CHECK;
+		};
+		21AC44D4855A4848B883907F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F86427A7DCF46528881356D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E4BB743FAB245A8BADC42AC;
+			remoteInfo = superide;
+		};
+		2C9C0F3DC2314C0692FAF250 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F86427A7DCF46528881356D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6406FFE20BEC4E1E932F6358;
+			remoteInfo = becker;
+		};
+		3A1CF2B8155C43A6B1D968B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F86427A7DCF46528881356D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 71EE41D2DBF44773B13AFFD6;
+			remoteInfo = ZERO_CHECK;
+		};
+		545950D2168B4CD1BA272DD6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F86427A7DCF46528881356D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5CCDB6EC37AC41C59F13988F;
+			remoteInfo = mpu;
+		};
+		66CE3DC993BD4B0CA9F09F36 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F86427A7DCF46528881356D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7BFFB2EC7D3420897740CD8;
+			remoteInfo = fd502;
+		};
+		807BD2F57B81468181F0006B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F86427A7DCF46528881356D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2673C64198041B2B959ADE4;
+			remoteInfo = ovcc;
+		};
+		91069B4407CC4F2DB6D848CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F86427A7DCF46528881356D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3577DF34F44E43F2BFD4DCFC;
+			remoteInfo = orch90;
+		};
+		9812EB0AF8674D06ADFA3312 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F86427A7DCF46528881356D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 71EE41D2DBF44773B13AFFD6;
+			remoteInfo = ZERO_CHECK;
+		};
+		9CCE6B1F453342E897A003DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F86427A7DCF46528881356D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A1359E4FB45046108468B9A7;
+			remoteInfo = ramdisk;
+		};
+		B1D07FFC09E14719AEE0E1BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F86427A7DCF46528881356D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 71EE41D2DBF44773B13AFFD6;
+			remoteInfo = ZERO_CHECK;
+		};
+		B1D996654F1A4A02AD80C83F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F86427A7DCF46528881356D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 71EE41D2DBF44773B13AFFD6;
+			remoteInfo = ZERO_CHECK;
+		};
+		B6A0C2B7932D4803BF84BC4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F86427A7DCF46528881356D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 71EE41D2DBF44773B13AFFD6;
+			remoteInfo = ZERO_CHECK;
+		};
+		C71F7DF4D6EE4F82BF687C75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F86427A7DCF46528881356D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1CEDC122A8544B82A048E1F0;
+			remoteInfo = mpi;
+		};
+		E348232BAE6A48908B53219F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F86427A7DCF46528881356D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CBC0C726E7BD4D00B7FEBCDB;
+			remoteInfo = harddisk;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4B1303082BAF8F8900DD2F44 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4B1303092BAF8FAF00DD2F44 /* libbecker.so in CopyFiles */,
+				4B13030A2BAF8FAF00DD2F44 /* libfd502.so in CopyFiles */,
+				4B13030B2BAF8FAF00DD2F44 /* libharddisk.so in CopyFiles */,
+				4B13030C2BAF8FAF00DD2F44 /* libmpi.so in CopyFiles */,
+				4B13030D2BAF8FAF00DD2F44 /* libmpu.so in CopyFiles */,
+				4B13030E2BAF8FAF00DD2F44 /* liborch90.so in CopyFiles */,
+				4B13030F2BAF8FAF00DD2F44 /* libramdisk.so in CopyFiles */,
+				4B1303102BAF8FAF00DD2F44 /* libsuperide.so in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		024B77463EC245BE8E22195B /* fileops.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fileops.c; path = CoCo/fileops.c; sourceTree = SOURCE_ROOT; };
+		0360FEF16F3A4BB4B2CF5B79 /* fd502.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fd502.c; path = FD502/fd502.c; sourceTree = SOURCE_ROOT; };
+		03A6F7BE2170491398D9FCB5 /* becker.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = becker.c; path = becker/becker.c; sourceTree = SOURCE_ROOT; };
+		06D416252E0E4E489258ADF6 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = HardDisk/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		0D2C6ECEB43745399D13472A /* coco3.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = coco3.c; path = CoCo/coco3.c; sourceTree = SOURCE_ROOT; };
+		105DC9F57D154645AC0463A7 /* tcc1014registers.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = tcc1014registers.c; path = CoCo/tcc1014registers.c; sourceTree = SOURCE_ROOT; };
+		158D9C82B19F451BAEDC2DF0 /* quickload.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = quickload.c; path = CoCo/quickload.c; sourceTree = SOURCE_ROOT; };
+		192EC50E837A41C7B008937B /* libsuperide.so */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = libsuperide.so; sourceTree = BUILT_PRODUCTS_DIR; };
+		206AD4EB658D4D38A59FE0C7 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = orch90/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		208688B0EFEB4DDF9E14CB39 /* libbecker.so */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = libbecker.so; sourceTree = BUILT_PRODUCTS_DIR; };
+		242E47A99A764278A45FA570 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = SuperIDE/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		244EF92741BF4E6AB1B168F0 /* libharddisk.so */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = libharddisk.so; sourceTree = BUILT_PRODUCTS_DIR; };
+		24ADF176A8CB460F939148A7 /* gpuclock.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = gpuclock.c; path = mpu/gpuclock.c; sourceTree = SOURCE_ROOT; };
+		2A4BA61BA0174B66A2D45A44 /* cloud9.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = cloud9.c; path = HardDisk/cloud9.c; sourceTree = SOURCE_ROOT; };
+		2A73E06B14394309B12FBC52 /* iniman.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = iniman.c; path = CoCo/iniman.c; sourceTree = SOURCE_ROOT; };
+		2ED47FE4E68F4A2FB17F86E7 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = mpu/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		3242222214F44912BE0A07AB /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = CoCo/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		36D5BD0A9F6B4902B1F005E5 /* tcc1014graphicsAGAR.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = tcc1014graphicsAGAR.c; path = CoCo/tcc1014graphicsAGAR.c; sourceTree = SOURCE_ROOT; };
+		3CF8FEA79ABB4990B82CAE08 /* tcc1014mmu_mm.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = tcc1014mmu_mm.c; path = CoCo/tcc1014mmu_mm.c; sourceTree = SOURCE_ROOT; };
+		4847C41B8C664851B87F714C /* gpu.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = gpu.c; path = mpu/gpu.c; sourceTree = SOURCE_ROOT; };
+		4A063AC9B6F34D919B099B6D /* mc6809.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = mc6809.c; path = CoCo/mc6809.c; sourceTree = SOURCE_ROOT; };
+		4AEE860745AC40E09C86349A /* iniman.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = iniman.c; path = CoCo/iniman.c; sourceTree = SOURCE_ROOT; };
+		4FD02C4F056545B3AFA8BBA2 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = Ramdisk/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		545A88B7B86047539EAA0A28 /* libmpu.so */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = libmpu.so; sourceTree = BUILT_PRODUCTS_DIR; };
+		54E9BAC4B5524B208748B35D /* vccgui.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = vccgui.c; path = CoCo/vccgui.c; sourceTree = SOURCE_ROOT; };
+		56167180D9944DC0ADBA93EB /* fileops.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fileops.c; path = CoCo/fileops.c; sourceTree = SOURCE_ROOT; };
+		5A330D3BA70048339140AF43 /* fileops.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fileops.c; path = CoCo/fileops.c; sourceTree = SOURCE_ROOT; };
+		5A5A0988EDDA4B22B81D628A /* throttle.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = throttle.c; path = CoCo/throttle.c; sourceTree = SOURCE_ROOT; };
+		5B3D667AEC67466282D0E830 /* Cocoa.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		5B7DF5CE416D430F8ED2CE41 /* iniman.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = iniman.c; path = CoCo/iniman.c; sourceTree = SOURCE_ROOT; };
+		5C2F6D97234B49B4AF1D8681 /* libmpi.so */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = libmpi.so; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F4FEB314FC34D6EAE30ADF2 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = becker/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		6134C2D728A844ACB3DA407B /* fileops.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fileops.c; path = CoCo/fileops.c; sourceTree = SOURCE_ROOT; };
+		61AE1A7707E7401FB8825F88 /* dma.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = dma.c; path = mpu/dma.c; sourceTree = SOURCE_ROOT; };
+		637C35E4742043F69A54A1FF /* config.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = config.c; path = CoCo/config.c; sourceTree = SOURCE_ROOT; };
+		65BDFA6DA2184B8994614CD3 /* mpi.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = mpi.c; path = mpi/mpi.c; sourceTree = SOURCE_ROOT; };
+		6BAB95D551E24895A0DBA2E4 /* iniman.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = iniman.c; path = CoCo/iniman.c; sourceTree = SOURCE_ROOT; };
+		6F717425802B44AA9F0A0CE5 /* vcc.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = vcc.c; path = CoCo/vcc.c; sourceTree = SOURCE_ROOT; };
+		746E0984B1284642A0635013 /* memboard.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = memboard.c; path = Ramdisk/memboard.c; sourceTree = SOURCE_ROOT; };
+		76A5E5B8686F408B93895B09 /* mc6821.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = mc6821.c; path = CoCo/mc6821.c; sourceTree = SOURCE_ROOT; };
+		780FEAF768094E50B83BEB1E /* tcc1014mmu_common.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = tcc1014mmu_common.c; path = CoCo/tcc1014mmu_common.c; sourceTree = SOURCE_ROOT; };
+		7C5DFA5F69A7419B89FDEAF8 /* ovcc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = ovcc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8245D9FA81D84E1BB943422E /* mpu.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = mpu.c; path = mpu/mpu.c; sourceTree = SOURCE_ROOT; };
+		8323B721618840EA9E0DB76B /* cloud9.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = cloud9.c; path = SuperIDE/cloud9.c; sourceTree = SOURCE_ROOT; };
+		8452D962325943FE88550587 /* libfd502.so */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = libfd502.so; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B8AB1A45EE440CA8F1B3226 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = mpi/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		8D95AB97156A416798894725 /* libramdisk.so */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = libramdisk.so; sourceTree = BUILT_PRODUCTS_DIR; };
+		9654E435F33D4AA9A03D8B53 /* logger.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = logger.c; path = SuperIDE/logger.c; sourceTree = SOURCE_ROOT; };
+		98207F902F14499393FD2DB5 /* iobus.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = iobus.c; path = CoCo/iobus.c; sourceTree = SOURCE_ROOT; };
+		9E638E198CA0433897069CBF /* ovcc.ico */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = ovcc.ico; path = CoCo/ovcc.ico; sourceTree = SOURCE_ROOT; };
+		A053D5FDFCF0418593DD8ABC /* harddisk.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = harddisk.c; path = HardDisk/harddisk.c; sourceTree = SOURCE_ROOT; };
+		A509A88D0EB64B48B661524D /* _xdebug.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = _xdebug.c; path = CoCo/_xdebug.c; sourceTree = SOURCE_ROOT; };
+		A572282E09D842D8990C2A73 /* gputextures.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = gputextures.c; path = mpu/gputextures.c; sourceTree = SOURCE_ROOT; };
+		A8879C65021140538901925E /* keyboardLayoutAGAR.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = keyboardLayoutAGAR.c; path = CoCo/keyboardLayoutAGAR.c; sourceTree = SOURCE_ROOT; };
+		AB0EF483ECCC4F31B317D081 /* hd6309.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = hd6309.c; path = CoCo/hd6309.c; sourceTree = SOURCE_ROOT; };
+		AE77D5FA72914277AF9C3369 /* keyboardAGAR.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = keyboardAGAR.c; path = CoCo/keyboardAGAR.c; sourceTree = SOURCE_ROOT; };
+		AF3D25B47C3449E0BDBE40C5 /* distortc.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = distortc.c; path = FD502/distortc.c; sourceTree = SOURCE_ROOT; };
+		B3B802D636DA4AE8AFB96254 /* orch90.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = orch90.c; path = orch90/orch90.c; sourceTree = SOURCE_ROOT; };
+		B77EB13EE62F411E8127979D /* tcc1014mmu_nomm.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = tcc1014mmu_nomm.c; path = CoCo/tcc1014mmu_nomm.c; sourceTree = SOURCE_ROOT; };
+		B7D17F997B8F4ADCA97B2F5C /* iniman.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = iniman.c; path = CoCo/iniman.c; sourceTree = SOURCE_ROOT; };
+		B9BAACB57E5A43928DF78352 /* liborch90.so */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = liborch90.so; sourceTree = BUILT_PRODUCTS_DIR; };
+		C18051B632594590A11B77C1 /* fpu.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fpu.c; path = mpu/fpu.c; sourceTree = SOURCE_ROOT; };
+		C5540CAB66684A4E9CBD9ABA /* pakinterface.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = pakinterface.c; path = CoCo/pakinterface.c; sourceTree = SOURCE_ROOT; };
+		C9B95F11F1134A85A8C918E5 /* logger.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = logger.c; path = CoCo/logger.c; sourceTree = SOURCE_ROOT; };
+		CAC8C6E2E58A4064AE3447C3 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		CED9912A83AB499DBE41520C /* iniman.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = iniman.c; path = CoCo/iniman.c; sourceTree = SOURCE_ROOT; };
+		D77E5769AB5E4D86A96772BC /* AGARInterface.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = AGARInterface.c; path = CoCo/AGARInterface.c; sourceTree = SOURCE_ROOT; };
+		DC92E0EAB2A64975B2838CC1 /* idebus.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = idebus.c; path = SuperIDE/idebus.c; sourceTree = SOURCE_ROOT; };
+		DD68A3ABCA464C9D890C9445 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = FD502/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		DD944BF53AAB42B4BB5C59D5 /* superide.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = superide.c; path = SuperIDE/superide.c; sourceTree = SOURCE_ROOT; };
+		E1D05DA649EB483DAA979879 /* fileops.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fileops.c; path = CoCo/fileops.c; sourceTree = SOURCE_ROOT; };
+		E4285DB871804F5088CFCEBA /* cassette.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = cassette.c; path = CoCo/cassette.c; sourceTree = SOURCE_ROOT; };
+		E4C04FBE5E4245D992D601C2 /* wd1793.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = wd1793.c; path = FD502/wd1793.c; sourceTree = SOURCE_ROOT; };
+		E5F67ABD614E4B059BB815C6 /* audioSDL.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = audioSDL.c; path = CoCo/audioSDL.c; sourceTree = SOURCE_ROOT; };
+		EDB5092E170E420791DF415D /* iniman.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = iniman.c; path = CoCo/iniman.c; sourceTree = SOURCE_ROOT; };
+		EE465C8529E34465BA5FA8D8 /* tcc1014mmu.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = tcc1014mmu.c; path = CoCo/tcc1014mmu.c; sourceTree = SOURCE_ROOT; };
+		F31617C7293C4A0FAA3714EA /* joystickinputSDL.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = joystickinputSDL.c; path = CoCo/joystickinputSDL.c; sourceTree = SOURCE_ROOT; };
+		F7B55297D09647BEB91D90DF /* gpuprimitives.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = gpuprimitives.c; path = mpu/gpuprimitives.c; sourceTree = SOURCE_ROOT; };
+		FAE27325DB324D95965EDF80 /* fileops.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fileops.c; path = CoCo/fileops.c; sourceTree = SOURCE_ROOT; };
+		FC3C64C6227B4CF0B177FD54 /* ramdisk.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ramdisk.c; path = Ramdisk/ramdisk.c; sourceTree = SOURCE_ROOT; };
+		FD55DA6430F34342B518EBFB /* cc3vhd.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = cc3vhd.c; path = HardDisk/cc3vhd.c; sourceTree = SOURCE_ROOT; };
+		FD5C5AE646AF4D26AC894F02 /* linkedlists.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = linkedlists.c; path = mpu/linkedlists.c; sourceTree = SOURCE_ROOT; };
+		FD5F61388FFD48BEA3C3A713 /* Info.plist */ = {isa = PBXFileReference; explicitFileType = sourcecode.text.plist; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = CoCo/CMakeFiles/ovcc.dir/Info.plist; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		124820634CAB470CA1B123D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		624DF76EF3144846A2CCE5EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8762E6683971405793752C7F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92B0D94959E34087847292B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A02BC04AD2A542EDB05AC5AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF1E3079A56C4696BE293ECC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B11F6B53A08C4F4B98213261 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E03F44DB4BF84B0B94492428 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA90361AF43F4E4A83F532AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09E7E9A6D06445D48540B1AA /* mpu */ = {
+			isa = PBXGroup;
+			children = (
+				C98CF131782E4EC798ED2F7F /* Source Files */,
+				2ED47FE4E68F4A2FB17F86E7 /* CMakeLists.txt */,
+			);
+			name = mpu;
+			sourceTree = "<group>";
+		};
+		0F91147736C44182936A9206 /* harddisk */ = {
+			isa = PBXGroup;
+			children = (
+				7CC5D22F2E1546A9B9466D4C /* Source Files */,
+				06D416252E0E4E489258ADF6 /* CMakeLists.txt */,
+			);
+			name = harddisk;
+			sourceTree = "<group>";
+		};
+		1477918E86C74C38AD4550D8 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				56167180D9944DC0ADBA93EB /* fileops.c */,
+				5B7DF5CE416D430F8ED2CE41 /* iniman.c */,
+				65BDFA6DA2184B8994614CD3 /* mpi.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		1877199B556644949A7964E5 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				4506399058B24D11B28ABB42 /* CMake Rules */,
+				CAC8C6E2E58A4064AE3447C3 /* CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		28B38C79BB744CAF8F4EEF48 /* ramdisk */ = {
+			isa = PBXGroup;
+			children = (
+				BFECFD253BDD401BB16E2FB2 /* Source Files */,
+				4FD02C4F056545B3AFA8BBA2 /* CMakeLists.txt */,
+			);
+			name = ramdisk;
+			sourceTree = "<group>";
+		};
+		2AEBFB86CEB2456FB75D9A6E /* superide */ = {
+			isa = PBXGroup;
+			children = (
+				B74D470D75304B389F2829F7 /* Source Files */,
+				242E47A99A764278A45FA570 /* CMakeLists.txt */,
+			);
+			name = superide;
+			sourceTree = "<group>";
+		};
+		3499DA71417F463CAF199E03 /* orch90 */ = {
+			isa = PBXGroup;
+			children = (
+				77C72ABABF8F4491A41A19D1 /* Source Files */,
+				206AD4EB658D4D38A59FE0C7 /* CMakeLists.txt */,
+			);
+			name = orch90;
+			sourceTree = "<group>";
+		};
+		4506399058B24D11B28ABB42 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		465E85EFC5DF4EA6B591A73B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FD5F61388FFD48BEA3C3A713 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		516BD6101CB14E15B7FDB7F8 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				4AEE860745AC40E09C86349A /* iniman.c */,
+				03A6F7BE2170491398D9FCB5 /* becker.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		77C72ABABF8F4491A41A19D1 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				B3B802D636DA4AE8AFB96254 /* orch90.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		7CC5D22F2E1546A9B9466D4C /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				FAE27325DB324D95965EDF80 /* fileops.c */,
+				2A73E06B14394309B12FBC52 /* iniman.c */,
+				FD55DA6430F34342B518EBFB /* cc3vhd.c */,
+				2A4BA61BA0174B66A2D45A44 /* cloud9.c */,
+				A053D5FDFCF0418593DD8ABC /* harddisk.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		7E0CDE88FCD14658910D700E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B3D667AEC67466282D0E830 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		845964832C4B4AB38884C899 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				D77E5769AB5E4D86A96772BC /* AGARInterface.c */,
+				A509A88D0EB64B48B661524D /* _xdebug.c */,
+				E5F67ABD614E4B059BB815C6 /* audioSDL.c */,
+				E4285DB871804F5088CFCEBA /* cassette.c */,
+				0D2C6ECEB43745399D13472A /* coco3.c */,
+				637C35E4742043F69A54A1FF /* config.c */,
+				024B77463EC245BE8E22195B /* fileops.c */,
+				AB0EF483ECCC4F31B317D081 /* hd6309.c */,
+				6BAB95D551E24895A0DBA2E4 /* iniman.c */,
+				98207F902F14499393FD2DB5 /* iobus.c */,
+				F31617C7293C4A0FAA3714EA /* joystickinputSDL.c */,
+				AE77D5FA72914277AF9C3369 /* keyboardAGAR.c */,
+				A8879C65021140538901925E /* keyboardLayoutAGAR.c */,
+				C9B95F11F1134A85A8C918E5 /* logger.c */,
+				4A063AC9B6F34D919B099B6D /* mc6809.c */,
+				76A5E5B8686F408B93895B09 /* mc6821.c */,
+				C5540CAB66684A4E9CBD9ABA /* pakinterface.c */,
+				158D9C82B19F451BAEDC2DF0 /* quickload.c */,
+				36D5BD0A9F6B4902B1F005E5 /* tcc1014graphicsAGAR.c */,
+				EE465C8529E34465BA5FA8D8 /* tcc1014mmu.c */,
+				780FEAF768094E50B83BEB1E /* tcc1014mmu_common.c */,
+				3CF8FEA79ABB4990B82CAE08 /* tcc1014mmu_mm.c */,
+				B77EB13EE62F411E8127979D /* tcc1014mmu_nomm.c */,
+				105DC9F57D154645AC0463A7 /* tcc1014registers.c */,
+				5A5A0988EDDA4B22B81D628A /* throttle.c */,
+				6F717425802B44AA9F0A0CE5 /* vcc.c */,
+				54E9BAC4B5524B208748B35D /* vccgui.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		9EBD02FE3EF347E69F7DC140 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				208688B0EFEB4DDF9E14CB39 /* libbecker.so */,
+				8452D962325943FE88550587 /* libfd502.so */,
+				244EF92741BF4E6AB1B168F0 /* libharddisk.so */,
+				5C2F6D97234B49B4AF1D8681 /* libmpi.so */,
+				545A88B7B86047539EAA0A28 /* libmpu.so */,
+				B9BAACB57E5A43928DF78352 /* liborch90.so */,
+				7C5DFA5F69A7419B89FDEAF8 /* ovcc.app */,
+				8D95AB97156A416798894725 /* libramdisk.so */,
+				192EC50E837A41C7B008937B /* libsuperide.so */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A6620248B0764BFDBA2AC88A = {
+			isa = PBXGroup;
+			children = (
+				1877199B556644949A7964E5 /* ALL_BUILD */,
+				EF7D4C9584C04B14A16F9707 /* becker */,
+				F4CECBB0D7724E0492BA1943 /* fd502 */,
+				0F91147736C44182936A9206 /* harddisk */,
+				C1FEAF557FE042B1B9836B67 /* mpi */,
+				09E7E9A6D06445D48540B1AA /* mpu */,
+				3499DA71417F463CAF199E03 /* orch90 */,
+				28B38C79BB744CAF8F4EEF48 /* ramdisk */,
+				2AEBFB86CEB2456FB75D9A6E /* superide */,
+				BA6E59515E9F4FAC8880C687 /* CoCo */,
+				9EBD02FE3EF347E69F7DC140 /* Products */,
+				7E0CDE88FCD14658910D700E /* Frameworks */,
+				B869D9A6E633440FA2342B71 /* Resources */,
+			);
+			indentWidth = 8;
+			sourceTree = "<group>";
+			tabWidth = 8;
+			usesTabs = 1;
+			wrapsLines = 0;
+		};
+		B74D470D75304B389F2829F7 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				E1D05DA649EB483DAA979879 /* fileops.c */,
+				CED9912A83AB499DBE41520C /* iniman.c */,
+				8323B721618840EA9E0DB76B /* cloud9.c */,
+				DC92E0EAB2A64975B2838CC1 /* idebus.c */,
+				9654E435F33D4AA9A03D8B53 /* logger.c */,
+				DD944BF53AAB42B4BB5C59D5 /* superide.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		B869D9A6E633440FA2342B71 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		BA6E59515E9F4FAC8880C687 /* CoCo */ = {
+			isa = PBXGroup;
+			children = (
+				845964832C4B4AB38884C899 /* Source Files */,
+				465E85EFC5DF4EA6B591A73B /* Resources */,
+				3242222214F44912BE0A07AB /* CMakeLists.txt */,
+				9E638E198CA0433897069CBF /* ovcc.ico */,
+			);
+			name = CoCo;
+			sourceTree = "<group>";
+		};
+		BFECFD253BDD401BB16E2FB2 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				746E0984B1284642A0635013 /* memboard.c */,
+				FC3C64C6227B4CF0B177FD54 /* ramdisk.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		C1FEAF557FE042B1B9836B67 /* mpi */ = {
+			isa = PBXGroup;
+			children = (
+				1477918E86C74C38AD4550D8 /* Source Files */,
+				8B8AB1A45EE440CA8F1B3226 /* CMakeLists.txt */,
+			);
+			name = mpi;
+			sourceTree = "<group>";
+		};
+		C98CF131782E4EC798ED2F7F /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				6134C2D728A844ACB3DA407B /* fileops.c */,
+				B7D17F997B8F4ADCA97B2F5C /* iniman.c */,
+				61AE1A7707E7401FB8825F88 /* dma.c */,
+				C18051B632594590A11B77C1 /* fpu.c */,
+				4847C41B8C664851B87F714C /* gpu.c */,
+				24ADF176A8CB460F939148A7 /* gpuclock.c */,
+				F7B55297D09647BEB91D90DF /* gpuprimitives.c */,
+				A572282E09D842D8990C2A73 /* gputextures.c */,
+				FD5C5AE646AF4D26AC894F02 /* linkedlists.c */,
+				8245D9FA81D84E1BB943422E /* mpu.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		D649E7AD513D4F738075112E /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				5A330D3BA70048339140AF43 /* fileops.c */,
+				EDB5092E170E420791DF415D /* iniman.c */,
+				AF3D25B47C3449E0BDBE40C5 /* distortc.c */,
+				0360FEF16F3A4BB4B2CF5B79 /* fd502.c */,
+				E4C04FBE5E4245D992D601C2 /* wd1793.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		EF7D4C9584C04B14A16F9707 /* becker */ = {
+			isa = PBXGroup;
+			children = (
+				516BD6101CB14E15B7FDB7F8 /* Source Files */,
+				5F4FEB314FC34D6EAE30ADF2 /* CMakeLists.txt */,
+			);
+			name = becker;
+			sourceTree = "<group>";
+		};
+		F4CECBB0D7724E0492BA1943 /* fd502 */ = {
+			isa = PBXGroup;
+			children = (
+				D649E7AD513D4F738075112E /* Source Files */,
+				DD68A3ABCA464C9D890C9445 /* CMakeLists.txt */,
+			);
+			name = fd502;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1CEDC122A8544B82A048E1F0 /* mpi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5767E4F48D884833B95B9B1A /* Build configuration list for PBXNativeTarget "mpi" */;
+			buildPhases = (
+				8EBDB04810754AB3B616EE15 /* Sources */,
+				8762E6683971405793752C7F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2AE28BC1465C4639A9F42EA8 /* PBXTargetDependency */,
+			);
+			name = mpi;
+			productName = mpi;
+			productReference = 5C2F6D97234B49B4AF1D8681 /* libmpi.so */;
+			productType = "com.apple.product-type.tool";
+		};
+		1E4BB743FAB245A8BADC42AC /* superide */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E8F731A86B14C989CEB460E /* Build configuration list for PBXNativeTarget "superide" */;
+			buildPhases = (
+				80512D32F0EB429E858752D2 /* Sources */,
+				624DF76EF3144846A2CCE5EE /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD2237BB8BE8496AAB803C27 /* PBXTargetDependency */,
+			);
+			name = superide;
+			productName = superide;
+			productReference = 192EC50E837A41C7B008937B /* libsuperide.so */;
+			productType = "com.apple.product-type.tool";
+		};
+		3577DF34F44E43F2BFD4DCFC /* orch90 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1865137A8C1747B39F636DD7 /* Build configuration list for PBXNativeTarget "orch90" */;
+			buildPhases = (
+				20FA668C647B44418330CD12 /* Sources */,
+				AF1E3079A56C4696BE293ECC /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BB7E4B37FEB24E999904A204 /* PBXTargetDependency */,
+			);
+			name = orch90;
+			productName = orch90;
+			productReference = B9BAACB57E5A43928DF78352 /* liborch90.so */;
+			productType = "com.apple.product-type.tool";
+		};
+		5CCDB6EC37AC41C59F13988F /* mpu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A951F24AEC604046804DAAF7 /* Build configuration list for PBXNativeTarget "mpu" */;
+			buildPhases = (
+				CF75243D4AE3473D9EDA04B7 /* Sources */,
+				92B0D94959E34087847292B5 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7EA8FD9AC668427FA7C0C2DB /* PBXTargetDependency */,
+			);
+			name = mpu;
+			productName = mpu;
+			productReference = 545A88B7B86047539EAA0A28 /* libmpu.so */;
+			productType = "com.apple.product-type.tool";
+		};
+		6406FFE20BEC4E1E932F6358 /* becker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37CC5883D1294C728F04C216 /* Build configuration list for PBXNativeTarget "becker" */;
+			buildPhases = (
+				4F8C4D2DF49D4C34B18CF637 /* Sources */,
+				124820634CAB470CA1B123D6 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6E6B0D3E4ACB4B23B1EEB122 /* PBXTargetDependency */,
+			);
+			name = becker;
+			productName = becker;
+			productReference = 208688B0EFEB4DDF9E14CB39 /* libbecker.so */;
+			productType = "com.apple.product-type.tool";
+		};
+		A1359E4FB45046108468B9A7 /* ramdisk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BB9404DA06A4DB2BFEA4B7A /* Build configuration list for PBXNativeTarget "ramdisk" */;
+			buildPhases = (
+				4AC0A28C708D4EEDB0CD811D /* Sources */,
+				E03F44DB4BF84B0B94492428 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4E2EC9BC0F7D4B69B6320CA9 /* PBXTargetDependency */,
+			);
+			name = ramdisk;
+			productName = ramdisk;
+			productReference = 8D95AB97156A416798894725 /* libramdisk.so */;
+			productType = "com.apple.product-type.tool";
+		};
+		B2673C64198041B2B959ADE4 /* ovcc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32C0DDCC93284AF68FEA64DF /* Build configuration list for PBXNativeTarget "ovcc" */;
+			buildPhases = (
+				5AD347DBA8CC43BD87DAF3B4 /* Resources */,
+				6489975FCFA2432EA2E131D7 /* Sources */,
+				FA90361AF43F4E4A83F532AA /* Frameworks */,
+				4B1303082BAF8F8900DD2F44 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				28164FA74B2A48E6917716ED /* PBXTargetDependency */,
+			);
+			name = ovcc;
+			productName = ovcc;
+			productReference = 7C5DFA5F69A7419B89FDEAF8 /* ovcc.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CBC0C726E7BD4D00B7FEBCDB /* harddisk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3DD7E2491944126834F2EA0 /* Build configuration list for PBXNativeTarget "harddisk" */;
+			buildPhases = (
+				E795826E57D7461C86AEFBB8 /* Sources */,
+				B11F6B53A08C4F4B98213261 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				61D1A706A9D74AB7AFDBF1DC /* PBXTargetDependency */,
+			);
+			name = harddisk;
+			productName = harddisk;
+			productReference = 244EF92741BF4E6AB1B168F0 /* libharddisk.so */;
+			productType = "com.apple.product-type.tool";
+		};
+		D7BFFB2EC7D3420897740CD8 /* fd502 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C06B92AC67B49229D05E441 /* Build configuration list for PBXNativeTarget "fd502" */;
+			buildPhases = (
+				1A05351C049E482590C3F32E /* Sources */,
+				A02BC04AD2A542EDB05AC5AA /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BFD095E760D240F0BC4AC790 /* PBXTargetDependency */,
+			);
+			name = fd502;
+			productName = fd502;
+			productReference = 8452D962325943FE88550587 /* libfd502.so */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0F86427A7DCF46528881356D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1530;
+			};
+			buildConfigurationList = 8E7ACB259671411F914EBEDD /* Build configuration list for PBXProject "OVCC" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A6620248B0764BFDBA2AC88A;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F7AC195232A74D0285F04FB5 /* ALL_BUILD */,
+				71EE41D2DBF44773B13AFFD6 /* ZERO_CHECK */,
+				B2673C64198041B2B959ADE4 /* ovcc */,
+				6406FFE20BEC4E1E932F6358 /* becker */,
+				D7BFFB2EC7D3420897740CD8 /* fd502 */,
+				CBC0C726E7BD4D00B7FEBCDB /* harddisk */,
+				1CEDC122A8544B82A048E1F0 /* mpi */,
+				5CCDB6EC37AC41C59F13988F /* mpu */,
+				3577DF34F44E43F2BFD4DCFC /* orch90 */,
+				A1359E4FB45046108468B9A7 /* ramdisk */,
+				1E4BB743FAB245A8BADC42AC /* superide */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5AD347DBA8CC43BD87DAF3B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CCBFE7D7FE74AFF863F1CB1 /* ovcc.ico in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		85669F6F111733F3987D4D5D /* Generate CMakeFiles/ALL_BUILD */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ALL_BUILD";
+			outputPaths = (
+				/Users/paulz/OVCC/CMakeFiles/ALL_BUILD,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nif test \"$CONFIGURATION\" = \"Debug\"; then :\n  cd /Users/paulz/OVCC\n  echo Build\\ all\\ projects\nfi\nif test \"$CONFIGURATION\" = \"Release\"; then :\n  cd /Users/paulz/OVCC\n  echo Build\\ all\\ projects\nfi\nif test \"$CONFIGURATION\" = \"MinSizeRel\"; then :\n  cd /Users/paulz/OVCC\n  echo Build\\ all\\ projects\nfi\nif test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :\n  cd /Users/paulz/OVCC\n  echo Build\\ all\\ projects\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F2D9CEF91F27E435C69830C9 /* Generate CMakeFiles/ZERO_CHECK */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ZERO_CHECK";
+			outputPaths = (
+				/Users/paulz/OVCC/CMakeFiles/ZERO_CHECK,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nif test \"$CONFIGURATION\" = \"Debug\"; then :\n  cd /Users/paulz/OVCC\n  make -f /Users/paulz/OVCC/CMakeScripts/ReRunCMake.make\nfi\nif test \"$CONFIGURATION\" = \"Release\"; then :\n  cd /Users/paulz/OVCC\n  make -f /Users/paulz/OVCC/CMakeScripts/ReRunCMake.make\nfi\nif test \"$CONFIGURATION\" = \"MinSizeRel\"; then :\n  cd /Users/paulz/OVCC\n  make -f /Users/paulz/OVCC/CMakeScripts/ReRunCMake.make\nfi\nif test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :\n  cd /Users/paulz/OVCC\n  make -f /Users/paulz/OVCC/CMakeScripts/ReRunCMake.make\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1A05351C049E482590C3F32E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2B44AAB02994B85BD1E5299 /* fileops.c in Sources */,
+				64F02E75B974463B8EBB206E /* iniman.c in Sources */,
+				9307D51E8D714715B957F489 /* distortc.c in Sources */,
+				989FB936B32E4EFABD39E1CB /* fd502.c in Sources */,
+				031A00AF200D42088247C847 /* wd1793.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20FA668C647B44418330CD12 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89AA3B77E95F4AA8BCE0F3C9 /* orch90.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4AC0A28C708D4EEDB0CD811D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3780102955F740DDA2DABFA9 /* memboard.c in Sources */,
+				35D6120FDA324BA48B2BF6A8 /* ramdisk.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F8C4D2DF49D4C34B18CF637 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E642DEAFFDC4B84912CDB60 /* iniman.c in Sources */,
+				9B890B4910F74CDDBF349400 /* becker.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6489975FCFA2432EA2E131D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E5D1821DE8D40A1ACAF1A63 /* AGARInterface.c in Sources */,
+				DADAB6C32BC44CA49906B607 /* _xdebug.c in Sources */,
+				C0FC46991D574D01BBE7B2E2 /* audioSDL.c in Sources */,
+				61977BD2B0FD4A378E06FE51 /* cassette.c in Sources */,
+				9AFD0D8B196E46789383846E /* coco3.c in Sources */,
+				AEBECD41A4B04154B431E1DC /* config.c in Sources */,
+				B3FC5F19B54E4156B563388C /* fileops.c in Sources */,
+				07FEEEE274BF4C73A0B6D3EC /* hd6309.c in Sources */,
+				906D6E9921FC4EA6AFC7D67F /* iniman.c in Sources */,
+				D3E9C9E8A2214C1FA0A3D64A /* iobus.c in Sources */,
+				0B5F36EEA69D4B2D85B938F1 /* joystickinputSDL.c in Sources */,
+				031B83267D6A4A69B80423BC /* keyboardAGAR.c in Sources */,
+				B87B752868434599ADD6EF8C /* keyboardLayoutAGAR.c in Sources */,
+				3D7BDE0356FA430CA399D6F8 /* logger.c in Sources */,
+				1CA53F0EE7DF43B38F77012B /* mc6809.c in Sources */,
+				CD22A40B2FBE49079AE833E9 /* mc6821.c in Sources */,
+				CC7D987759844E0394F5F179 /* pakinterface.c in Sources */,
+				1FC0B35772CC49568F2D3B3A /* quickload.c in Sources */,
+				1A71018D5B0D485BA2E75C09 /* tcc1014graphicsAGAR.c in Sources */,
+				7E6B5E6D6FE845FCBDA11814 /* tcc1014mmu.c in Sources */,
+				CBCD594414194DD098E86411 /* tcc1014mmu_common.c in Sources */,
+				83BEC0409D774DA786D822FC /* tcc1014mmu_mm.c in Sources */,
+				846E4D1D33504C9BAC2CAEB7 /* tcc1014mmu_nomm.c in Sources */,
+				7F1CB7AE02864CB896B1999A /* tcc1014registers.c in Sources */,
+				41D9830F938D4B0CAAD5B051 /* throttle.c in Sources */,
+				D3CC0454529E4AAEA27A0BE3 /* vcc.c in Sources */,
+				D02A7228B489476780D511DA /* vccgui.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80512D32F0EB429E858752D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35DE4C959FBB4ACB8607EFCF /* fileops.c in Sources */,
+				AFCDD31CE6F8477BB76756D4 /* iniman.c in Sources */,
+				C0688AB0A4D84F81872C4743 /* cloud9.c in Sources */,
+				162AFD6D4BD54C2993258D73 /* idebus.c in Sources */,
+				CD7ED10DC38446E89DA315CF /* logger.c in Sources */,
+				CE8301E2D316417DA418C834 /* superide.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EBDB04810754AB3B616EE15 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53841C79FF184DED9D353C24 /* fileops.c in Sources */,
+				E61153177543422786EC9496 /* iniman.c in Sources */,
+				DA7DCDC0B165404EA1EC63E7 /* mpi.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF75243D4AE3473D9EDA04B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13311C397B11439AA6F4AE35 /* fileops.c in Sources */,
+				E40723E9BFBA4F7EA37F81E3 /* iniman.c in Sources */,
+				7BF31967D0B14A4F881470AE /* dma.c in Sources */,
+				1BE55A1C096F42A48D21E06E /* fpu.c in Sources */,
+				F7E638A973704E77A8F666A9 /* gpu.c in Sources */,
+				55DE86315FEB4CDEB9E495E6 /* gpuclock.c in Sources */,
+				5868BDB10C254882A5633AA4 /* gpuprimitives.c in Sources */,
+				9F871EDC64164FCF85FD8D60 /* gputextures.c in Sources */,
+				B74B1BF76F5F423AA29A5915 /* linkedlists.c in Sources */,
+				2A6F507E01A24DC380B7A82B /* mpu.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E795826E57D7461C86AEFBB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B859A85BB1E64D909AE1254C /* fileops.c in Sources */,
+				B884F926B9F047F896791FB8 /* iniman.c in Sources */,
+				A909C584A09E4CEB97FE6730 /* cc3vhd.c in Sources */,
+				AD1BB681DAE4405F96460726 /* cloud9.c in Sources */,
+				511AD50FA5344F75B33A6D51 /* harddisk.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		15C45FC807E84CB2A5EF563D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CBC0C726E7BD4D00B7FEBCDB /* harddisk */;
+			targetProxy = E348232BAE6A48908B53219F /* PBXContainerItemProxy */;
+		};
+		1D7C94B51C2A4950BEE76703 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A1359E4FB45046108468B9A7 /* ramdisk */;
+			targetProxy = 9CCE6B1F453342E897A003DF /* PBXContainerItemProxy */;
+		};
+		28164FA74B2A48E6917716ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 71EE41D2DBF44773B13AFFD6 /* ZERO_CHECK */;
+			targetProxy = B1D07FFC09E14719AEE0E1BE /* PBXContainerItemProxy */;
+		};
+		2AE28BC1465C4639A9F42EA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 71EE41D2DBF44773B13AFFD6 /* ZERO_CHECK */;
+			targetProxy = 16305A3EE1F64EC5992EEFBC /* PBXContainerItemProxy */;
+		};
+		4E2EC9BC0F7D4B69B6320CA9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 71EE41D2DBF44773B13AFFD6 /* ZERO_CHECK */;
+			targetProxy = 04608EDA1517469881688790 /* PBXContainerItemProxy */;
+		};
+		61D1A706A9D74AB7AFDBF1DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 71EE41D2DBF44773B13AFFD6 /* ZERO_CHECK */;
+			targetProxy = 3A1CF2B8155C43A6B1D968B0 /* PBXContainerItemProxy */;
+		};
+		6E6B0D3E4ACB4B23B1EEB122 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 71EE41D2DBF44773B13AFFD6 /* ZERO_CHECK */;
+			targetProxy = 19B0309F0B794F40BA01A6C6 /* PBXContainerItemProxy */;
+		};
+		7E76DBFCE24C4454B98C261D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E4BB743FAB245A8BADC42AC /* superide */;
+			targetProxy = 21AC44D4855A4848B883907F /* PBXContainerItemProxy */;
+		};
+		7EA8FD9AC668427FA7C0C2DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 71EE41D2DBF44773B13AFFD6 /* ZERO_CHECK */;
+			targetProxy = B6A0C2B7932D4803BF84BC4E /* PBXContainerItemProxy */;
+		};
+		846B3C1B511947DE8F9546CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5CCDB6EC37AC41C59F13988F /* mpu */;
+			targetProxy = 545950D2168B4CD1BA272DD6 /* PBXContainerItemProxy */;
+		};
+		AC61CACA3FC2440D841415DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7BFFB2EC7D3420897740CD8 /* fd502 */;
+			targetProxy = 66CE3DC993BD4B0CA9F09F36 /* PBXContainerItemProxy */;
+		};
+		B0FE2A7166944E7C85C6E121 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6406FFE20BEC4E1E932F6358 /* becker */;
+			targetProxy = 2C9C0F3DC2314C0692FAF250 /* PBXContainerItemProxy */;
+		};
+		BB7E4B37FEB24E999904A204 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 71EE41D2DBF44773B13AFFD6 /* ZERO_CHECK */;
+			targetProxy = 0BCBC4082B544549AAB39077 /* PBXContainerItemProxy */;
+		};
+		BCD8D826410A45AEAB217937 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B2673C64198041B2B959ADE4 /* ovcc */;
+			targetProxy = 807BD2F57B81468181F0006B /* PBXContainerItemProxy */;
+		};
+		BFD095E760D240F0BC4AC790 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 71EE41D2DBF44773B13AFFD6 /* ZERO_CHECK */;
+			targetProxy = 9812EB0AF8674D06ADFA3312 /* PBXContainerItemProxy */;
+		};
+		C5623959E34E46598DF85754 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1CEDC122A8544B82A048E1F0 /* mpi */;
+			targetProxy = C71F7DF4D6EE4F82BF687C75 /* PBXContainerItemProxy */;
+		};
+		C8B2185484ED47DC941AEA89 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3577DF34F44E43F2BFD4DCFC /* orch90 */;
+			targetProxy = 91069B4407CC4F2DB6D848CB /* PBXContainerItemProxy */;
+		};
+		CD61784E88F74698A9A6AF8D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 71EE41D2DBF44773B13AFFD6 /* ZERO_CHECK */;
+			targetProxy = B1D996654F1A4A02AD80C83F /* PBXContainerItemProxy */;
+		};
+		FD2237BB8BE8496AAB803C27 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 71EE41D2DBF44773B13AFFD6 /* ZERO_CHECK */;
+			targetProxy = 1DD2BEFE13C849F9AC8094C1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		098708BB7F8B4BE4B4BB0557 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/mpi/MinSizeRel;
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .so;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					mpi_EXPORTS,
+					DARWIN,
+					_THREAD_SAFE,
+					_USE_OPENGL_FRAMEWORK,
+					TARGET_API_MAC_CARBON,
+					TARGET_API_MAC_OSX,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					/opt/homebrew/include/SDL2,
+					/usr/local/include,
+					/usr/local/include/agar,
+					/Users/paulz/OVCC/mpi/../CoCo,
+					/Users/paulz/OVCC/mpi/EXPORT,
+					/Users/paulz/OVCC/mpi,
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/opt/homebrew/lib,
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/opt/homebrew/lib,
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_STYLE = BUNDLE;
+				MACH_O_TYPE = mh_bundle;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-fpascal-strings",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lSDL2",
+					"-lag_core",
+					"-lag_gui",
+					"-lpthread",
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = mpi;
+				SECTORDER_FLAGS = "";
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_SWIFT_SYMBOLS = NO;
+				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/mpi.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		0C7C53F0F6E74AC384092406 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/orch90/Debug;
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .so;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					orch90_EXPORTS,
+					DARWIN,
+					_THREAD_SAFE,
+					_USE_OPENGL_FRAMEWORK,
+					TARGET_API_MAC_CARBON,
+					TARGET_API_MAC_OSX,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					/opt/homebrew/include/SDL2,
+					/usr/local/include,
+					/usr/local/include/agar,
+					/Users/paulz/OVCC/orch90/../CoCo,
+					/Users/paulz/OVCC/orch90/EXPORT,
+					/Users/paulz/OVCC/orch90,
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/opt/homebrew/lib,
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/opt/homebrew/lib,
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_STYLE = BUNDLE;
+				MACH_O_TYPE = mh_bundle;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-fPIC",
+					"-fpascal-strings",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lSDL2",
+					"-lag_core",
+					"-lag_gui",
+					"-lpthread",
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = orch90;
+				SECTORDER_FLAGS = "";
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_SWIFT_SYMBOLS = NO;
+				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/orch90.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		11C6C4972BA6449A819F33BC /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/orch90/MinSizeRel;
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .so;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					orch90_EXPORTS,
+					DARWIN,
+					_THREAD_SAFE,
+					_USE_OPENGL_FRAMEWORK,
+					TARGET_API_MAC_CARBON,
+					TARGET_API_MAC_OSX,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					/opt/homebrew/include/SDL2,
+					/usr/local/include,
+					/usr/local/include/agar,
+					/Users/paulz/OVCC/orch90/../CoCo,
+					/Users/paulz/OVCC/orch90/EXPORT,
+					/Users/paulz/OVCC/orch90,
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/opt/homebrew/lib,
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/opt/homebrew/lib,
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_STYLE = BUNDLE;
+				MACH_O_TYPE = mh_bundle;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-fpascal-strings",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lSDL2",
+					"-lag_core",
+					"-lag_gui",
+					"-lpthread",
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = orch90;
+				SECTORDER_FLAGS = "";
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_SWIFT_SYMBOLS = NO;
+				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/orch90.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		14F6B316D1414C98AADA3313 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				DRIVERKIT_DEPLOYMENT_TARGET = 23.4;
+				MACOSX_DEPLOYMENT_TARGET = 14.3;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = /Users/paulz/OVCC/build;
+			};
+			name = MinSizeRel;
+		};
+		1958FB0EF64B473DB11EB54B /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/CoCo/MinSizeRel;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/System/Library/Frameworks,
+					"$(inherited)",
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					DARWIN,
+					_THREAD_SAFE,
+					_USE_OPENGL_FRAMEWORK,
+					TARGET_API_MAC_CARBON,
+					TARGET_API_MAC_OSX,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					/usr/local/include,
+					/opt/homebrew/Cellar/sdl2/2.30.1/include,
+					/Users/paulz/OVCC/CoCo/EXPORT,
+					/Users/paulz/OVCC/CoCo,
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = /Users/paulz/OVCC/CoCo/CMakeFiles/ovcc.dir/Info.plist;
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/usr/local/lib,
+					/opt/homebrew/Cellar/sdl2/2.30.1/lib,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"/opt/homebrew/Cellar/sdl2/2.30.1/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/opt/homebrew/Cellar/sdl2/2.30.1/lib,
+					"$(inherited)",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fpascal-strings",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					/opt/homebrew/Cellar/sdl2/2.30.1/lib/libSDL2.dylib,
+					"-lag_core",
+					"-lag_gui",
+					"-lobjc",
+					"-lpthread",
+					"-framework",
+					Cocoa,
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ovcc;
+				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = NO;
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					/opt/homebrew/Cellar/sdl2/2.30.1/include/SDL2,
+					"$(inherited)",
+				);
+				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/ovcc.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		1A32BA38BCDC4CC58FF3BC98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/HardDisk/Debug;
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .so;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					harddisk_EXPORTS,
+					DARWIN,
+					_THREAD_SAFE,
+					_USE_OPENGL_FRAMEWORK,
+					TARGET_API_MAC_CARBON,
+					TARGET_API_MAC_OSX,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					/opt/homebrew/include/SDL2,
+					/usr/local/include,
+					/usr/local/include/agar,
+					/Users/paulz/OVCC/HardDisk/../CoCo,
+					/Users/paulz/OVCC/HardDisk/EXPORT,
+					/Users/paulz/OVCC/HardDisk,
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/opt/homebrew/lib,
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/opt/homebrew/lib,
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_STYLE = BUNDLE;
+				MACH_O_TYPE = mh_bundle;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-fPIC",
+					"-fpascal-strings",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lSDL2",
+					"-lag_core",
+					"-lag_gui",
+					"-lpthread",
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = harddisk;
+				SECTORDER_FLAGS = "";
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_SWIFT_SYMBOLS = NO;
+				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/harddisk.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		205589A38BE14ACBB877922B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = " $(inherited)";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		23EDB68BA7B448DDA2CB314B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				DRIVERKIT_DEPLOYMENT_TARGET = 23.4;
+				MACOSX_DEPLOYMENT_TARGET = 14.3;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk;
+				SYMROOT = /Users/paulz/OVCC/build;
+			};
+			name = Debug;
+		};
+		2909BE4041F34F008EC1B4B3 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/Ramdisk/MinSizeRel;
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .so;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					ramdisk_EXPORTS,
+					DARWIN,
+					_THREAD_SAFE,
+					_USE_OPENGL_FRAMEWORK,
+					TARGET_API_MAC_CARBON,
+					TARGET_API_MAC_OSX,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					/opt/homebrew/include/SDL2,
+					/usr/local/include,
+					/usr/local/include/agar,
+					/Users/paulz/OVCC/Ramdisk/../CoCo,
+					/Users/paulz/OVCC/Ramdisk/EXPORT,
+					/Users/paulz/OVCC/Ramdisk,
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/opt/homebrew/lib,
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/opt/homebrew/lib,
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_STYLE = BUNDLE;
+				MACH_O_TYPE = mh_bundle;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-fpascal-strings",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lSDL2",
+					"-lag_core",
+					"-lag_gui",
+					"-lpthread",
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ramdisk;
+				SECTORDER_FLAGS = "";
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_SWIFT_SYMBOLS = NO;
+				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/ramdisk.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		2CB2BF2C54C648659A267854 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/mpu/RelWithDebInfo;
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .so;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					mpu_EXPORTS,
+					DARWIN,
+					_THREAD_SAFE,
+					_USE_OPENGL_FRAMEWORK,
+					TARGET_API_MAC_CARBON,
+					TARGET_API_MAC_OSX,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					/opt/homebrew/include/SDL2,
+					/usr/local/include,
+					/usr/local/include/agar,
+					/Users/paulz/OVCC/mpu/../CoCo,
+					/Users/paulz/OVCC/mpu/EXPORT,
+					/Users/paulz/OVCC/mpu,
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/opt/homebrew/lib,
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/opt/homebrew/lib,
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_STYLE = BUNDLE;
+				MACH_O_TYPE = mh_bundle;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-fpascal-strings",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lSDL2",
+					"-lag_core",
+					"-lag_gui",
+					"-lpthread",
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = mpu;
+				SECTORDER_FLAGS = "";
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_SWIFT_SYMBOLS = NO;
+				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/mpu.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		2D18A9396E9D40B68B8FE89E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/FD502/Release;
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .so;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					fd502_EXPORTS,
+					DARWIN,
+					_THREAD_SAFE,
+					_USE_OPENGL_FRAMEWORK,
+					TARGET_API_MAC_CARBON,
+					TARGET_API_MAC_OSX,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					/opt/homebrew/include/SDL2,
+					/usr/local/include,
+					/usr/local/include/agar,
+					/Users/paulz/OVCC/FD502/../CoCo,
+					/Users/paulz/OVCC/FD502/EXPORT,
+					/Users/paulz/OVCC/FD502,
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/opt/homebrew/lib,
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/opt/homebrew/lib,
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_STYLE = BUNDLE;
+				MACH_O_TYPE = mh_bundle;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-fpascal-strings",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lSDL2",
+					"-lag_core",
+					"-lag_gui",
+					"-lpthread",
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = fd502;
+				SECTORDER_FLAGS = "";
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_SWIFT_SYMBOLS = NO;
+				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/fd502.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+		301D9C39C91E49F0867177F0 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/Ramdisk/RelWithDebInfo;
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .so;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					ramdisk_EXPORTS,
+					DARWIN,
+					_THREAD_SAFE,
+					_USE_OPENGL_FRAMEWORK,
+					TARGET_API_MAC_CARBON,
+					TARGET_API_MAC_OSX,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					/opt/homebrew/include/SDL2,
+					/usr/local/include,
+					/usr/local/include/agar,
+					/Users/paulz/OVCC/Ramdisk/../CoCo,
+					/Users/paulz/OVCC/Ramdisk/EXPORT,
+					/Users/paulz/OVCC/Ramdisk,
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/opt/homebrew/lib,
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/opt/homebrew/lib,
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_STYLE = BUNDLE;
+				MACH_O_TYPE = mh_bundle;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-fpascal-strings",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lSDL2",
+					"-lag_core",
+					"-lag_gui",
+					"-lpthread",
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ramdisk;
+				SECTORDER_FLAGS = "";
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_SWIFT_SYMBOLS = NO;
+				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/ramdisk.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		34103F0977BE49FE943CDD1C /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/becker/MinSizeRel;
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .so;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					becker_EXPORTS,
+					DARWIN,
+					_THREAD_SAFE,
+					_USE_OPENGL_FRAMEWORK,
+					TARGET_API_MAC_CARBON,
+					TARGET_API_MAC_OSX,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					/opt/homebrew/include/SDL2,
+					/usr/local/include,
+					/usr/local/include/agar,
+					/Users/paulz/OVCC/becker/../CoCo,
+					/Users/paulz/OVCC/becker/EXPORT,
+					/Users/paulz/OVCC/becker,
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/opt/homebrew/lib,
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/opt/homebrew/lib,
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_STYLE = BUNDLE;
+				MACH_O_TYPE = mh_bundle;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-fpascal-strings",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lSDL2",
+					"-lag_core",
+					"-lag_gui",
+					"-lpthread",
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = becker;
+				SECTORDER_FLAGS = "";
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_SWIFT_SYMBOLS = NO;
+				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/becker.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		35D2F3EE50F9413081DA987E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/orch90/Release;
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .so;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					orch90_EXPORTS,
+					DARWIN,
+					_THREAD_SAFE,
+					_USE_OPENGL_FRAMEWORK,
+					TARGET_API_MAC_CARBON,
+					TARGET_API_MAC_OSX,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					/opt/homebrew/include/SDL2,
+					/usr/local/include,
+					/usr/local/include/agar,
+					/Users/paulz/OVCC/orch90/../CoCo,
+					/Users/paulz/OVCC/orch90/EXPORT,
+					/Users/paulz/OVCC/orch90,
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/opt/homebrew/lib,
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/opt/homebrew/lib,
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_STYLE = BUNDLE;
+				MACH_O_TYPE = mh_bundle;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-fpascal-strings",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lSDL2",
+					"-lag_core",
+					"-lag_gui",
+					"-lpthread",
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = orch90;
+				SECTORDER_FLAGS = "";
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_SWIFT_SYMBOLS = NO;
+				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/orch90.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+		391A132B62D14D0B89AE3032 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/orch90/RelWithDebInfo;
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .so;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					orch90_EXPORTS,
+					DARWIN,
+					_THREAD_SAFE,
+					_USE_OPENGL_FRAMEWORK,
+					TARGET_API_MAC_CARBON,
+					TARGET_API_MAC_OSX,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					/opt/homebrew/include/SDL2,
+					/usr/local/include,
+					/usr/local/include/agar,
+					/Users/paulz/OVCC/orch90/../CoCo,
+					/Users/paulz/OVCC/orch90/EXPORT,
+					/Users/paulz/OVCC/orch90,
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/opt/homebrew/lib,
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/opt/homebrew/lib,
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_STYLE = BUNDLE;
+				MACH_O_TYPE = mh_bundle;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-fpascal-strings",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lSDL2",
+					"-lag_core",
+					"-lag_gui",
+					"-lpthread",
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = orch90;
+				SECTORDER_FLAGS = "";
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_SWIFT_SYMBOLS = NO;
+				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/orch90.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		5472CCB9408B4BFEB936946E /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/SuperIDE/RelWithDebInfo;
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .so;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					superide_EXPORTS,
+					DARWIN,
+					_THREAD_SAFE,
+					_USE_OPENGL_FRAMEWORK,
+					TARGET_API_MAC_CARBON,
+					TARGET_API_MAC_OSX,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					/opt/homebrew/include/SDL2,
+					/usr/local/include,
+					/usr/local/include/agar,
+					/Users/paulz/OVCC/SuperIDE/../CoCo,
+					/Users/paulz/OVCC/SuperIDE/EXPORT,
+					/Users/paulz/OVCC/SuperIDE,
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/opt/homebrew/lib,
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/opt/homebrew/lib,
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_STYLE = BUNDLE;
+				MACH_O_TYPE = mh_bundle;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-fpascal-strings",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lSDL2",
+					"-lag_core",
+					"-lag_gui",
+					"-lpthread",
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = superide;
+				SECTORDER_FLAGS = "";
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_SWIFT_SYMBOLS = NO;
+				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/superide.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		555C5BE9477140EC9F925A4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				DRIVERKIT_DEPLOYMENT_TARGET = 23.4;
+				MACOSX_DEPLOYMENT_TARGET = 14.3;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = /Users/paulz/OVCC/build;
+			};
+			name = Release;
+		};
+		565BAEF6CCB64D939E238884 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/HardDisk/MinSizeRel;
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .so;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					harddisk_EXPORTS,
+					DARWIN,
+					_THREAD_SAFE,
+					_USE_OPENGL_FRAMEWORK,
+					TARGET_API_MAC_CARBON,
+					TARGET_API_MAC_OSX,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					/opt/homebrew/include/SDL2,
+					/usr/local/include,
+					/usr/local/include/agar,
+					/Users/paulz/OVCC/HardDisk/../CoCo,
+					/Users/paulz/OVCC/HardDisk/EXPORT,
+					/Users/paulz/OVCC/HardDisk,
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/opt/homebrew/lib,
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/opt/homebrew/lib,
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_STYLE = BUNDLE;
+				MACH_O_TYPE = mh_bundle;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-fpascal-strings",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lSDL2",
+					"-lag_core",
+					"-lag_gui",
+					"-lpthread",
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = harddisk;
+				SECTORDER_FLAGS = "";
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_SWIFT_SYMBOLS = NO;
+				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/harddisk.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		5B4E082B386346DCAEC1877E /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/HardDisk/RelWithDebInfo;
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .so;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					harddisk_EXPORTS,
+					DARWIN,
+					_THREAD_SAFE,
+					_USE_OPENGL_FRAMEWORK,
+					TARGET_API_MAC_CARBON,
+					TARGET_API_MAC_OSX,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					/opt/homebrew/include/SDL2,
+					/usr/local/include,
+					/usr/local/include/agar,
+					/Users/paulz/OVCC/HardDisk/../CoCo,
+					/Users/paulz/OVCC/HardDisk/EXPORT,
+					/Users/paulz/OVCC/HardDisk,
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/opt/homebrew/lib,
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/opt/homebrew/lib,
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_STYLE = BUNDLE;
+				MACH_O_TYPE = mh_bundle;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-fpascal-strings",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lSDL2",
+					"-lag_core",
+					"-lag_gui",
+					"-lpthread",
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = harddisk;
+				SECTORDER_FLAGS = "";
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_SWIFT_SYMBOLS = NO;
+				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/harddisk.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		5C4F265D956F4976AB366962 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/FD502/Debug;
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .so;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					fd502_EXPORTS,
+					DARWIN,
+					_THREAD_SAFE,
+					_USE_OPENGL_FRAMEWORK,
+					TARGET_API_MAC_CARBON,
+					TARGET_API_MAC_OSX,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					/opt/homebrew/include/SDL2,
+					/usr/local/include,
+					/usr/local/include/agar,
+					/Users/paulz/OVCC/FD502/../CoCo,
+					/Users/paulz/OVCC/FD502/EXPORT,
+					/Users/paulz/OVCC/FD502,
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/opt/homebrew/lib,
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/opt/homebrew/lib,
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_STYLE = BUNDLE;
+				MACH_O_TYPE = mh_bundle;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-fPIC",
+					"-fpascal-strings",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lSDL2",
+					"-lag_core",
+					"-lag_gui",
+					"-lpthread",
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = fd502;
+				SECTORDER_FLAGS = "";
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_SWIFT_SYMBOLS = NO;
+				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/fd502.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		603F6ABE857D4B68B179E4B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/mpi/Debug;
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .so;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					mpi_EXPORTS,
+					DARWIN,
+					_THREAD_SAFE,
+					_USE_OPENGL_FRAMEWORK,
+					TARGET_API_MAC_CARBON,
+					TARGET_API_MAC_OSX,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					/opt/homebrew/include/SDL2,
+					/usr/local/include,
+					/usr/local/include/agar,
+					/Users/paulz/OVCC/mpi/../CoCo,
+					/Users/paulz/OVCC/mpi/EXPORT,
+					/Users/paulz/OVCC/mpi,
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/opt/homebrew/lib,
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/opt/homebrew/lib,
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_STYLE = BUNDLE;
+				MACH_O_TYPE = mh_bundle;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-fPIC",
+					"-fpascal-strings",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lSDL2",
+					"-lag_core",
+					"-lag_gui",
+					"-lpthread",
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = mpi;
+				SECTORDER_FLAGS = "";
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_SWIFT_SYMBOLS = NO;
+				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/mpi.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		678122C95BD2402CA1A712C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/becker/Release;
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .so;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					becker_EXPORTS,
+					DARWIN,
+					_THREAD_SAFE,
+					_USE_OPENGL_FRAMEWORK,
+					TARGET_API_MAC_CARBON,
+					TARGET_API_MAC_OSX,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					/opt/homebrew/include/SDL2,
+					/usr/local/include,
+					/usr/local/include/agar,
+					/Users/paulz/OVCC/becker/../CoCo,
+					/Users/paulz/OVCC/becker/EXPORT,
+					/Users/paulz/OVCC/becker,
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/opt/homebrew/lib,
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/opt/homebrew/lib,
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_STYLE = BUNDLE;
+				MACH_O_TYPE = mh_bundle;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-fpascal-strings",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lSDL2",
+					"-lag_core",
+					"-lag_gui",
+					"-lpthread",
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = becker;
+				SECTORDER_FLAGS = "";
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_SWIFT_SYMBOLS = NO;
+				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/becker.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+		6FB68FAA18354136970A792C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/HardDisk/Release;
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .so;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					harddisk_EXPORTS,
+					DARWIN,
+					_THREAD_SAFE,
+					_USE_OPENGL_FRAMEWORK,
+					TARGET_API_MAC_CARBON,
+					TARGET_API_MAC_OSX,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					/opt/homebrew/include/SDL2,
+					/usr/local/include,
+					/usr/local/include/agar,
+					/Users/paulz/OVCC/HardDisk/../CoCo,
+					/Users/paulz/OVCC/HardDisk/EXPORT,
+					/Users/paulz/OVCC/HardDisk,
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/opt/homebrew/lib,
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/opt/homebrew/lib,
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_STYLE = BUNDLE;
+				MACH_O_TYPE = mh_bundle;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-fpascal-strings",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lSDL2",
+					"-lag_core",
+					"-lag_gui",
+					"-lpthread",
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = harddisk;
+				SECTORDER_FLAGS = "";
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_SWIFT_SYMBOLS = NO;
+				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/harddisk.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+		7398607CDDDB4969B7302F06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/mpu/Release;
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .so;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					mpu_EXPORTS,
+					DARWIN,
+					_THREAD_SAFE,
+					_USE_OPENGL_FRAMEWORK,
+					TARGET_API_MAC_CARBON,
+					TARGET_API_MAC_OSX,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					/opt/homebrew/include/SDL2,
+					/usr/local/include,
+					/usr/local/include/agar,
+					/Users/paulz/OVCC/mpu/../CoCo,
+					/Users/paulz/OVCC/mpu/EXPORT,
+					/Users/paulz/OVCC/mpu,
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/opt/homebrew/lib,
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/opt/homebrew/lib,
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_STYLE = BUNDLE;
+				MACH_O_TYPE = mh_bundle;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-fpascal-strings",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lSDL2",
+					"-lag_core",
+					"-lag_gui",
+					"-lpthread",
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = mpu;
+				SECTORDER_FLAGS = "";
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_SWIFT_SYMBOLS = NO;
+				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/mpu.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+		8330636CC5AC431BA43993C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/Ramdisk/Release;
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .so;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					ramdisk_EXPORTS,
+					DARWIN,
+					_THREAD_SAFE,
+					_USE_OPENGL_FRAMEWORK,
+					TARGET_API_MAC_CARBON,
+					TARGET_API_MAC_OSX,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					/opt/homebrew/include/SDL2,
+					/usr/local/include,
+					/usr/local/include/agar,
+					/Users/paulz/OVCC/Ramdisk/../CoCo,
+					/Users/paulz/OVCC/Ramdisk/EXPORT,
+					/Users/paulz/OVCC/Ramdisk,
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/opt/homebrew/lib,
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/opt/homebrew/lib,
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_STYLE = BUNDLE;
+				MACH_O_TYPE = mh_bundle;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-fpascal-strings",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lSDL2",
+					"-lag_core",
+					"-lag_gui",
+					"-lpthread",
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ramdisk;
+				SECTORDER_FLAGS = "";
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_SWIFT_SYMBOLS = NO;
+				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/ramdisk.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+		83A1344D915C4FFA8F452B8A /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/becker/RelWithDebInfo;
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .so;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					becker_EXPORTS,
+					DARWIN,
+					_THREAD_SAFE,
+					_USE_OPENGL_FRAMEWORK,
+					TARGET_API_MAC_CARBON,
+					TARGET_API_MAC_OSX,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					/opt/homebrew/include/SDL2,
+					/usr/local/include,
+					/usr/local/include/agar,
+					/Users/paulz/OVCC/becker/../CoCo,
+					/Users/paulz/OVCC/becker/EXPORT,
+					/Users/paulz/OVCC/becker,
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/opt/homebrew/lib,
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/opt/homebrew/lib,
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_STYLE = BUNDLE;
+				MACH_O_TYPE = mh_bundle;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-fpascal-strings",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lSDL2",
+					"-lag_core",
+					"-lag_gui",
+					"-lpthread",
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = becker;
+				SECTORDER_FLAGS = "";
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_SWIFT_SYMBOLS = NO;
+				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/becker.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		8628793210584A379F1F8223 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				DRIVERKIT_DEPLOYMENT_TARGET = 23.4;
+				MACOSX_DEPLOYMENT_TARGET = 14.3;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = /Users/paulz/OVCC/build;
+			};
+			name = RelWithDebInfo;
+		};
+		89A6EB0DFA4A45C8A1F034B1 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/mpi/RelWithDebInfo;
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .so;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					mpi_EXPORTS,
+					DARWIN,
+					_THREAD_SAFE,
+					_USE_OPENGL_FRAMEWORK,
+					TARGET_API_MAC_CARBON,
+					TARGET_API_MAC_OSX,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					/opt/homebrew/include/SDL2,
+					/usr/local/include,
+					/usr/local/include/agar,
+					/Users/paulz/OVCC/mpi/../CoCo,
+					/Users/paulz/OVCC/mpi/EXPORT,
+					/Users/paulz/OVCC/mpi,
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/opt/homebrew/lib,
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/opt/homebrew/lib,
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_STYLE = BUNDLE;
+				MACH_O_TYPE = mh_bundle;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-fpascal-strings",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lSDL2",
+					"-lag_core",
+					"-lag_gui",
+					"-lpthread",
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = mpi;
+				SECTORDER_FLAGS = "";
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_SWIFT_SYMBOLS = NO;
+				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/mpi.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		8FADE7391BCA42C3B9867F92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/SuperIDE/Release;
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .so;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					superide_EXPORTS,
+					DARWIN,
+					_THREAD_SAFE,
+					_USE_OPENGL_FRAMEWORK,
+					TARGET_API_MAC_CARBON,
+					TARGET_API_MAC_OSX,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					/opt/homebrew/include/SDL2,
+					/usr/local/include,
+					/usr/local/include/agar,
+					/Users/paulz/OVCC/SuperIDE/../CoCo,
+					/Users/paulz/OVCC/SuperIDE/EXPORT,
+					/Users/paulz/OVCC/SuperIDE,
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/opt/homebrew/lib,
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/opt/homebrew/lib,
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_STYLE = BUNDLE;
+				MACH_O_TYPE = mh_bundle;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-fpascal-strings",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lSDL2",
+					"-lag_core",
+					"-lag_gui",
+					"-lpthread",
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = superide;
+				SECTORDER_FLAGS = "";
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_SWIFT_SYMBOLS = NO;
+				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/superide.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+		91120805A6834783A908BB34 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = " $(inherited)";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		91512523C4B54C08B464BFE4 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/FD502/MinSizeRel;
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .so;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					fd502_EXPORTS,
+					DARWIN,
+					_THREAD_SAFE,
+					_USE_OPENGL_FRAMEWORK,
+					TARGET_API_MAC_CARBON,
+					TARGET_API_MAC_OSX,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					/opt/homebrew/include/SDL2,
+					/usr/local/include,
+					/usr/local/include/agar,
+					/Users/paulz/OVCC/FD502/../CoCo,
+					/Users/paulz/OVCC/FD502/EXPORT,
+					/Users/paulz/OVCC/FD502,
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/opt/homebrew/lib,
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/opt/homebrew/lib,
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_STYLE = BUNDLE;
+				MACH_O_TYPE = mh_bundle;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-fpascal-strings",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lSDL2",
+					"-lag_core",
+					"-lag_gui",
+					"-lpthread",
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = fd502;
+				SECTORDER_FLAGS = "";
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_SWIFT_SYMBOLS = NO;
+				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/fd502.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		93F31B3645924D8282C7E7B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = " $(inherited)";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+		9BA181F67D844B608EF51805 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/mpi/Release;
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .so;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					mpi_EXPORTS,
+					DARWIN,
+					_THREAD_SAFE,
+					_USE_OPENGL_FRAMEWORK,
+					TARGET_API_MAC_CARBON,
+					TARGET_API_MAC_OSX,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					/opt/homebrew/include/SDL2,
+					/usr/local/include,
+					/usr/local/include/agar,
+					/Users/paulz/OVCC/mpi/../CoCo,
+					/Users/paulz/OVCC/mpi/EXPORT,
+					/Users/paulz/OVCC/mpi,
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/opt/homebrew/lib,
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/opt/homebrew/lib,
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_STYLE = BUNDLE;
+				MACH_O_TYPE = mh_bundle;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-fpascal-strings",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lSDL2",
+					"-lag_core",
+					"-lag_gui",
+					"-lpthread",
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = mpi;
+				SECTORDER_FLAGS = "";
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_SWIFT_SYMBOLS = NO;
+				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/mpi.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+		A3DC40658A064B379AA79011 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/mpu/Debug;
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .so;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					mpu_EXPORTS,
+					DARWIN,
+					_THREAD_SAFE,
+					_USE_OPENGL_FRAMEWORK,
+					TARGET_API_MAC_CARBON,
+					TARGET_API_MAC_OSX,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					/opt/homebrew/include/SDL2,
+					/usr/local/include,
+					/usr/local/include/agar,
+					/Users/paulz/OVCC/mpu/../CoCo,
+					/Users/paulz/OVCC/mpu/EXPORT,
+					/Users/paulz/OVCC/mpu,
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/opt/homebrew/lib,
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/opt/homebrew/lib,
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_STYLE = BUNDLE;
+				MACH_O_TYPE = mh_bundle;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-fPIC",
+					"-fpascal-strings",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lSDL2",
+					"-lag_core",
+					"-lag_gui",
+					"-lpthread",
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = mpu;
+				SECTORDER_FLAGS = "";
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_SWIFT_SYMBOLS = NO;
+				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/mpu.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		B16F67312FD54330808D9C9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/Ramdisk/Debug;
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .so;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					ramdisk_EXPORTS,
+					DARWIN,
+					_THREAD_SAFE,
+					_USE_OPENGL_FRAMEWORK,
+					TARGET_API_MAC_CARBON,
+					TARGET_API_MAC_OSX,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					/opt/homebrew/include/SDL2,
+					/usr/local/include,
+					/usr/local/include/agar,
+					/Users/paulz/OVCC/Ramdisk/../CoCo,
+					/Users/paulz/OVCC/Ramdisk/EXPORT,
+					/Users/paulz/OVCC/Ramdisk,
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/opt/homebrew/lib,
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/opt/homebrew/lib,
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_STYLE = BUNDLE;
+				MACH_O_TYPE = mh_bundle;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-fPIC",
+					"-fpascal-strings",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lSDL2",
+					"-lag_core",
+					"-lag_gui",
+					"-lpthread",
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ramdisk;
+				SECTORDER_FLAGS = "";
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_SWIFT_SYMBOLS = NO;
+				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/ramdisk.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		B22E9C957B9A4B798E4CCD26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/CoCo/Release;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/System/Library/Frameworks,
+					"$(inherited)",
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					DARWIN,
+					_THREAD_SAFE,
+					_USE_OPENGL_FRAMEWORK,
+					TARGET_API_MAC_CARBON,
+					TARGET_API_MAC_OSX,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					/usr/local/include,
+					/opt/homebrew/Cellar/sdl2/2.30.1/include,
+					/Users/paulz/OVCC/CoCo/EXPORT,
+					/Users/paulz/OVCC/CoCo,
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = /Users/paulz/OVCC/CoCo/CMakeFiles/ovcc.dir/Info.plist;
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/usr/local/lib,
+					/opt/homebrew/Cellar/sdl2/2.30.1/lib,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"/opt/homebrew/Cellar/sdl2/2.30.1/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/opt/homebrew/Cellar/sdl2/2.30.1/lib,
+					"$(inherited)",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fpascal-strings",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					/opt/homebrew/Cellar/sdl2/2.30.1/lib/libSDL2.dylib,
+					"-lag_core",
+					"-lag_gui",
+					"-lobjc",
+					"-lpthread",
+					"-framework",
+					Cocoa,
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ovcc;
+				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = NO;
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					/opt/homebrew/Cellar/sdl2/2.30.1/include/SDL2,
+					"$(inherited)",
+				);
+				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/ovcc.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+		BB02076B4C9A44AFABC5B9BF /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = " $(inherited)";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		BEF1EB943B02406C8FEBB293 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/SuperIDE/MinSizeRel;
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .so;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					superide_EXPORTS,
+					DARWIN,
+					_THREAD_SAFE,
+					_USE_OPENGL_FRAMEWORK,
+					TARGET_API_MAC_CARBON,
+					TARGET_API_MAC_OSX,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					/opt/homebrew/include/SDL2,
+					/usr/local/include,
+					/usr/local/include/agar,
+					/Users/paulz/OVCC/SuperIDE/../CoCo,
+					/Users/paulz/OVCC/SuperIDE/EXPORT,
+					/Users/paulz/OVCC/SuperIDE,
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/opt/homebrew/lib,
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/opt/homebrew/lib,
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_STYLE = BUNDLE;
+				MACH_O_TYPE = mh_bundle;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-fpascal-strings",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lSDL2",
+					"-lag_core",
+					"-lag_gui",
+					"-lpthread",
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = superide;
+				SECTORDER_FLAGS = "";
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_SWIFT_SYMBOLS = NO;
+				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/superide.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		D4FA23FBD3944DFEB14B4A03 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = " $(inherited)";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		D72E5F582B494F6DBAA12BFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/becker/Debug;
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .so;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					becker_EXPORTS,
+					DARWIN,
+					_THREAD_SAFE,
+					_USE_OPENGL_FRAMEWORK,
+					TARGET_API_MAC_CARBON,
+					TARGET_API_MAC_OSX,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					/opt/homebrew/include/SDL2,
+					/usr/local/include,
+					/usr/local/include/agar,
+					/Users/paulz/OVCC/becker/../CoCo,
+					/Users/paulz/OVCC/becker/EXPORT,
+					/Users/paulz/OVCC/becker,
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/opt/homebrew/lib,
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/opt/homebrew/lib,
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_STYLE = BUNDLE;
+				MACH_O_TYPE = mh_bundle;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-fPIC",
+					"-fpascal-strings",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lSDL2",
+					"-lag_core",
+					"-lag_gui",
+					"-lpthread",
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = becker;
+				SECTORDER_FLAGS = "";
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_SWIFT_SYMBOLS = NO;
+				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/becker.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		DECD2672F6FE495EA52350A8 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/FD502/RelWithDebInfo;
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .so;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					fd502_EXPORTS,
+					DARWIN,
+					_THREAD_SAFE,
+					_USE_OPENGL_FRAMEWORK,
+					TARGET_API_MAC_CARBON,
+					TARGET_API_MAC_OSX,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					/opt/homebrew/include/SDL2,
+					/usr/local/include,
+					/usr/local/include/agar,
+					/Users/paulz/OVCC/FD502/../CoCo,
+					/Users/paulz/OVCC/FD502/EXPORT,
+					/Users/paulz/OVCC/FD502,
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/opt/homebrew/lib,
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/opt/homebrew/lib,
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_STYLE = BUNDLE;
+				MACH_O_TYPE = mh_bundle;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-fpascal-strings",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lSDL2",
+					"-lag_core",
+					"-lag_gui",
+					"-lpthread",
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = fd502;
+				SECTORDER_FLAGS = "";
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_SWIFT_SYMBOLS = NO;
+				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/fd502.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		DFAE9208CE7242C0BA26EFAE /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/CoCo/RelWithDebInfo;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/System/Library/Frameworks,
+					"$(inherited)",
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					DARWIN,
+					_THREAD_SAFE,
+					_USE_OPENGL_FRAMEWORK,
+					TARGET_API_MAC_CARBON,
+					TARGET_API_MAC_OSX,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					/usr/local/include,
+					/opt/homebrew/Cellar/sdl2/2.30.1/include,
+					/Users/paulz/OVCC/CoCo/EXPORT,
+					/Users/paulz/OVCC/CoCo,
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = /Users/paulz/OVCC/CoCo/CMakeFiles/ovcc.dir/Info.plist;
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/usr/local/lib,
+					/opt/homebrew/Cellar/sdl2/2.30.1/lib,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"/opt/homebrew/Cellar/sdl2/2.30.1/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/opt/homebrew/Cellar/sdl2/2.30.1/lib,
+					"$(inherited)",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fpascal-strings",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					/opt/homebrew/Cellar/sdl2/2.30.1/lib/libSDL2.dylib,
+					"-lag_core",
+					"-lag_gui",
+					"-lobjc",
+					"-lpthread",
+					"-framework",
+					Cocoa,
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ovcc;
+				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = NO;
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					/opt/homebrew/Cellar/sdl2/2.30.1/include/SDL2,
+					"$(inherited)",
+				);
+				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/ovcc.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		E92EAFF185DF4D7CA436096C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/CoCo/Debug;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/System/Library/Frameworks,
+					"$(inherited)",
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					DARWIN,
+					_THREAD_SAFE,
+					_USE_OPENGL_FRAMEWORK,
+					TARGET_API_MAC_CARBON,
+					TARGET_API_MAC_OSX,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					/usr/local/include,
+					/opt/homebrew/Cellar/sdl2/2.30.1/include,
+					/Users/paulz/OVCC/CoCo/EXPORT,
+					/Users/paulz/OVCC/CoCo,
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = /Users/paulz/OVCC/CoCo/CMakeFiles/ovcc.dir/Info.plist;
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/usr/local/lib,
+					/opt/homebrew/Cellar/sdl2/2.30.1/lib,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"/opt/homebrew/Cellar/sdl2/2.30.1/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/opt/homebrew/Cellar/sdl2/2.30.1/lib,
+					"$(inherited)",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-fpascal-strings",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					/opt/homebrew/Cellar/sdl2/2.30.1/lib/libSDL2.dylib,
+					"-lag_core",
+					"-lag_gui",
+					"-lobjc",
+					"-lpthread",
+					"-framework",
+					Cocoa,
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ovcc;
+				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = NO;
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					/opt/homebrew/Cellar/sdl2/2.30.1/include/SDL2,
+					"$(inherited)",
+				);
+				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/ovcc.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		EB62D54F74BE4432BECE9CC0 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/mpu/MinSizeRel;
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .so;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					mpu_EXPORTS,
+					DARWIN,
+					_THREAD_SAFE,
+					_USE_OPENGL_FRAMEWORK,
+					TARGET_API_MAC_CARBON,
+					TARGET_API_MAC_OSX,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					/opt/homebrew/include/SDL2,
+					/usr/local/include,
+					/usr/local/include/agar,
+					/Users/paulz/OVCC/mpu/../CoCo,
+					/Users/paulz/OVCC/mpu/EXPORT,
+					/Users/paulz/OVCC/mpu,
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/opt/homebrew/lib,
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/opt/homebrew/lib,
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_STYLE = BUNDLE;
+				MACH_O_TYPE = mh_bundle;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-fpascal-strings",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lSDL2",
+					"-lag_core",
+					"-lag_gui",
+					"-lpthread",
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = mpu;
+				SECTORDER_FLAGS = "";
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_SWIFT_SYMBOLS = NO;
+				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/mpu.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		ED4C5536A85D44BFB7B76962 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = " $(inherited)";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		F649BA54EE964BF68E267874 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = " $(inherited)";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+		F9B90CD938134D3A813FDA65 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = " $(inherited)";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		FE3F387D8E914CD39BEBCFE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/SuperIDE/Debug;
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .so;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					superide_EXPORTS,
+					DARWIN,
+					_THREAD_SAFE,
+					_USE_OPENGL_FRAMEWORK,
+					TARGET_API_MAC_CARBON,
+					TARGET_API_MAC_OSX,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					/opt/homebrew/include/SDL2,
+					/usr/local/include,
+					/usr/local/include/agar,
+					/Users/paulz/OVCC/SuperIDE/../CoCo,
+					/Users/paulz/OVCC/SuperIDE/EXPORT,
+					/Users/paulz/OVCC/SuperIDE,
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/opt/homebrew/lib,
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/opt/homebrew/lib,
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"$(inherited)",
+				);
+				LIBRARY_STYLE = BUNDLE;
+				MACH_O_TYPE = mh_bundle;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-fPIC",
+					"-fpascal-strings",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lSDL2",
+					"-lag_core",
+					"-lag_gui",
+					"-lpthread",
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = superide;
+				SECTORDER_FLAGS = "";
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_SWIFT_SYMBOLS = NO;
+				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/superide.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0C06B92AC67B49229D05E441 /* Build configuration list for PBXNativeTarget "fd502" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C4F265D956F4976AB366962 /* Debug */,
+				2D18A9396E9D40B68B8FE89E /* Release */,
+				91512523C4B54C08B464BFE4 /* MinSizeRel */,
+				DECD2672F6FE495EA52350A8 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		166DB9456E5E4928A7AB4FCA /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED4C5536A85D44BFB7B76962 /* Debug */,
+				F649BA54EE964BF68E267874 /* Release */,
+				BB02076B4C9A44AFABC5B9BF /* MinSizeRel */,
+				D4FA23FBD3944DFEB14B4A03 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		1865137A8C1747B39F636DD7 /* Build configuration list for PBXNativeTarget "orch90" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C7C53F0F6E74AC384092406 /* Debug */,
+				35D2F3EE50F9413081DA987E /* Release */,
+				11C6C4972BA6449A819F33BC /* MinSizeRel */,
+				391A132B62D14D0B89AE3032 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		32C0DDCC93284AF68FEA64DF /* Build configuration list for PBXNativeTarget "ovcc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E92EAFF185DF4D7CA436096C /* Debug */,
+				B22E9C957B9A4B798E4CCD26 /* Release */,
+				1958FB0EF64B473DB11EB54B /* MinSizeRel */,
+				DFAE9208CE7242C0BA26EFAE /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		37CC5883D1294C728F04C216 /* Build configuration list for PBXNativeTarget "becker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D72E5F582B494F6DBAA12BFA /* Debug */,
+				678122C95BD2402CA1A712C4 /* Release */,
+				34103F0977BE49FE943CDD1C /* MinSizeRel */,
+				83A1344D915C4FFA8F452B8A /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		3E8F731A86B14C989CEB460E /* Build configuration list for PBXNativeTarget "superide" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE3F387D8E914CD39BEBCFE6 /* Debug */,
+				8FADE7391BCA42C3B9867F92 /* Release */,
+				BEF1EB943B02406C8FEBB293 /* MinSizeRel */,
+				5472CCB9408B4BFEB936946E /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		5767E4F48D884833B95B9B1A /* Build configuration list for PBXNativeTarget "mpi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				603F6ABE857D4B68B179E4B2 /* Debug */,
+				9BA181F67D844B608EF51805 /* Release */,
+				098708BB7F8B4BE4B4BB0557 /* MinSizeRel */,
+				89A6EB0DFA4A45C8A1F034B1 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		6BB9404DA06A4DB2BFEA4B7A /* Build configuration list for PBXNativeTarget "ramdisk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B16F67312FD54330808D9C9F /* Debug */,
+				8330636CC5AC431BA43993C7 /* Release */,
+				2909BE4041F34F008EC1B4B3 /* MinSizeRel */,
+				301D9C39C91E49F0867177F0 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8E7ACB259671411F914EBEDD /* Build configuration list for PBXProject "OVCC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23EDB68BA7B448DDA2CB314B /* Debug */,
+				555C5BE9477140EC9F925A4A /* Release */,
+				14F6B316D1414C98AADA3313 /* MinSizeRel */,
+				8628793210584A379F1F8223 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A951F24AEC604046804DAAF7 /* Build configuration list for PBXNativeTarget "mpu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3DC40658A064B379AA79011 /* Debug */,
+				7398607CDDDB4969B7302F06 /* Release */,
+				EB62D54F74BE4432BECE9CC0 /* MinSizeRel */,
+				2CB2BF2C54C648659A267854 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F3DD7E2491944126834F2EA0 /* Build configuration list for PBXNativeTarget "harddisk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A32BA38BCDC4CC58FF3BC98 /* Debug */,
+				6FB68FAA18354136970A792C /* Release */,
+				565BAEF6CCB64D939E238884 /* MinSizeRel */,
+				5B4E082B386346DCAEC1877E /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FAE21B4A89E640C59BDC4D13 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				205589A38BE14ACBB877922B /* Debug */,
+				93F31B3645924D8282C7E7B3 /* Release */,
+				F9B90CD938134D3A813FDA65 /* MinSizeRel */,
+				91120805A6834783A908BB34 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0F86427A7DCF46528881356D /* Project object */;
+}

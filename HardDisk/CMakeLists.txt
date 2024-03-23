@@ -21,4 +21,4 @@ target_include_directories(harddisk PUBLIC EXPORT ${CMAKE_CURRENT_SOURCE_DIR})
 
 target_link_libraries(harddisk SDL2)
 
-TARGET_LINK_LIBRARIES(harddisk ag_core ag_gui thread)
+TARGET_LINK_LIBRARIES(harddisk ag_core ag_gui pthread)
