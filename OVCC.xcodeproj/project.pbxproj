@@ -66,6 +66,9 @@
 		4B13030E2BAF8FAF00DD2F44 /* liborch90.so in CopyFiles */ = {isa = PBXBuildFile; fileRef = B9BAACB57E5A43928DF78352 /* liborch90.so */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		4B13030F2BAF8FAF00DD2F44 /* libramdisk.so in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D95AB97156A416798894725 /* libramdisk.so */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		4B1303102BAF8FAF00DD2F44 /* libsuperide.so in CopyFiles */ = {isa = PBXBuildFile; fileRef = 192EC50E837A41C7B008937B /* libsuperide.so */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		4B1303122BAF95B900DD2F44 /* libSDL2-2.0.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4B1303112BAF95B800DD2F44 /* libSDL2-2.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		4B1303142BAF95E800DD2F44 /* libag_core.8.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4B1303132BAF95E800DD2F44 /* libag_core.8.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		4B1303162BAF960600DD2F44 /* libag_gui.8.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4B1303152BAF960600DD2F44 /* libag_gui.8.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		4E642DEAFFDC4B84912CDB60 /* iniman.c in Sources */ = {isa = PBXBuildFile; fileRef = 4AEE860745AC40E09C86349A /* iniman.c */; };
 		511AD50FA5344F75B33A6D51 /* harddisk.c in Sources */ = {isa = PBXBuildFile; fileRef = A053D5FDFCF0418593DD8ABC /* harddisk.c */; };
 		53841C79FF184DED9D353C24 /* fileops.c in Sources */ = {isa = PBXBuildFile; fileRef = 56167180D9944DC0ADBA93EB /* fileops.c */; };
@@ -257,6 +260,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				4B1303162BAF960600DD2F44 /* libag_gui.8.dylib in CopyFiles */,
+				4B1303142BAF95E800DD2F44 /* libag_core.8.dylib in CopyFiles */,
+				4B1303122BAF95B900DD2F44 /* libSDL2-2.0.0.dylib in CopyFiles */,
 				4B1303092BAF8FAF00DD2F44 /* libbecker.so in CopyFiles */,
 				4B13030A2BAF8FAF00DD2F44 /* libfd502.so in CopyFiles */,
 				4B13030B2BAF8FAF00DD2F44 /* libharddisk.so in CopyFiles */,
@@ -293,6 +299,9 @@
 		4847C41B8C664851B87F714C /* gpu.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = gpu.c; path = mpu/gpu.c; sourceTree = SOURCE_ROOT; };
 		4A063AC9B6F34D919B099B6D /* mc6809.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = mc6809.c; path = CoCo/mc6809.c; sourceTree = SOURCE_ROOT; };
 		4AEE860745AC40E09C86349A /* iniman.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = iniman.c; path = CoCo/iniman.c; sourceTree = SOURCE_ROOT; };
+		4B1303112BAF95B800DD2F44 /* libSDL2-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libSDL2-2.0.0.dylib"; path = "../../../opt/homebrew/Cellar/sdl2/2.30.1/lib/libSDL2-2.0.0.dylib"; sourceTree = "<group>"; };
+		4B1303132BAF95E800DD2F44 /* libag_core.8.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libag_core.8.dylib; path = ../../../usr/local/lib/libag_core.8.dylib; sourceTree = "<group>"; };
+		4B1303152BAF960600DD2F44 /* libag_gui.8.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libag_gui.8.dylib; path = ../../../usr/local/lib/libag_gui.8.dylib; sourceTree = "<group>"; };
 		4FD02C4F056545B3AFA8BBA2 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = Ramdisk/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
 		545A88B7B86047539EAA0A28 /* libmpu.so */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = libmpu.so; sourceTree = BUILT_PRODUCTS_DIR; };
 		54E9BAC4B5524B208748B35D /* vccgui.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = vccgui.c; path = CoCo/vccgui.c; sourceTree = SOURCE_ROOT; };
@@ -592,6 +601,9 @@
 		A6620248B0764BFDBA2AC88A = {
 			isa = PBXGroup;
 			children = (
+				4B1303152BAF960600DD2F44 /* libag_gui.8.dylib */,
+				4B1303132BAF95E800DD2F44 /* libag_core.8.dylib */,
+				4B1303112BAF95B800DD2F44 /* libSDL2-2.0.0.dylib */,
 				1877199B556644949A7964E5 /* ALL_BUILD */,
 				EF7D4C9584C04B14A16F9707 /* becker */,
 				F4CECBB0D7724E0492BA1943 /* fd502 */,
@@ -601,7 +613,7 @@
 				3499DA71417F463CAF199E03 /* orch90 */,
 				28B38C79BB744CAF8F4EEF48 /* ramdisk */,
 				2AEBFB86CEB2456FB75D9A6E /* superide */,
-				BA6E59515E9F4FAC8880C687 /* CoCo */,
+				BA6E59515E9F4FAC8880C687 /* ovcc */,
 				9EBD02FE3EF347E69F7DC140 /* Products */,
 				7E0CDE88FCD14658910D700E /* Frameworks */,
 				B869D9A6E633440FA2342B71 /* Resources */,
@@ -632,7 +644,7 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		BA6E59515E9F4FAC8880C687 /* CoCo */ = {
+		BA6E59515E9F4FAC8880C687 /* ovcc */ = {
 			isa = PBXGroup;
 			children = (
 				845964832C4B4AB38884C899 /* Source Files */,
@@ -640,7 +652,7 @@
 				3242222214F44912BE0A07AB /* CMakeLists.txt */,
 				9E638E198CA0433897069CBF /* ovcc.ico */,
 			);
-			name = CoCo;
+			name = ovcc;
 			sourceTree = "<group>";
 		};
 		BFECFD253BDD401BB16E2FB2 /* Source Files */ = {
@@ -821,6 +833,7 @@
 				6489975FCFA2432EA2E131D7 /* Sources */,
 				FA90361AF43F4E4A83F532AA /* Frameworks */,
 				4B1303082BAF8F8900DD2F44 /* CopyFiles */,
+				4B1303172BAF961E00DD2F44 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -913,6 +926,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4B1303172BAF961E00DD2F44 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ninstall_name_tool -change /usr/local/lib/libag_core.dylib @executable_path/../Frameworks/libag_core.8.dylib $TARGET_BUILD_DIR/ovcc.app/Contents/MacOS/ovcc\ninstall_name_tool -change /usr/local/lib/libag_gui.dylib @executable_path/../Frameworks/libag_gui.8.dylib $TARGET_BUILD_DIR/ovcc.app/Contents/MacOS/ovcc\ninstall_name_tool -change /opt/homebrew/opt/sdl2/lib/libSDL2-2.0.0.dylib @executable_path/../Frameworks/libSDL2-2.0.0.dylib $TARGET_BUILD_DIR/ovcc.app/Contents/MacOS/ovcc\n";
+		};
 		85669F6F111733F3987D4D5D /* Generate CMakeFiles/ALL_BUILD */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
