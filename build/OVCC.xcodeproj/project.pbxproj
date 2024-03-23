@@ -54,7 +54,6 @@
 		2664402E69264D3C85DC93E4 /* quickload.c in Sources */ = {isa = PBXBuildFile; fileRef = 710F1852E6FD4DE785E4EC99 /* quickload.c */; };
 		2ECE064C74F74233902F0D1D /* AGARInterface.c in Sources */ = {isa = PBXBuildFile; fileRef = A1223059E2BA4E5389286F3F /* AGARInterface.c */; };
 		311B7FCA5A7B471785660D34 /* _xdebug.c in Sources */ = {isa = PBXBuildFile; fileRef = AFABF35519164E4FA0F474A9 /* _xdebug.c */; };
-		3312B705671C44139233D2E8 /* vccclip.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0DC515037B564AEA922B5177 /* vccclip.cpp */; };
 		3B2D8B4BC5154F3B800C9FFB /* superide.c in Sources */ = {isa = PBXBuildFile; fileRef = ECDE17A402B64C599ED303E8 /* superide.c */; };
 		3C7D7DEC841845EDBD5B09F8 /* orch90.c in Sources */ = {isa = PBXBuildFile; fileRef = EBF56B1853724D1BB4175A40 /* orch90.c */; };
 		3DBA74EA49F24BEC903508F5 /* wd1793.c in Sources */ = {isa = PBXBuildFile; fileRef = F9929AB281454179A713683E /* wd1793.c */; };
@@ -70,6 +69,8 @@
 		4B92D4182BACD024002A35BA /* liborch90.so in Copy Files */ = {isa = PBXBuildFile; fileRef = 975F846ED22A415CA3FF1373 /* liborch90.so */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		4B92D4192BACD024002A35BA /* libramdisk.so in Copy Files */ = {isa = PBXBuildFile; fileRef = 0CFF5040BD1545CCB1462595 /* libramdisk.so */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		4B92D41A2BACD024002A35BA /* libsuperide.so in Copy Files */ = {isa = PBXBuildFile; fileRef = E8B17CA38C4945C2A1F5ED43 /* libsuperide.so */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		4B9702562BAF6DF7008E3630 /* ovcc.ico in Resources */ = {isa = PBXBuildFile; fileRef = 4B9702552BAF6DF7008E3630 /* ovcc.ico */; };
+		4B9702582BAF6E1E008E3630 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B9702572BAF6E1E008E3630 /* Info.plist */; };
 		4BA596B02BA949FA00AA8BB6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BA596AF2BA949FA00AA8BB6 /* Cocoa.framework */; };
 		4BA596EF2BAA1A7D00AA8BB6 /* libag_core.8.dylib in Copy Files */ = {isa = PBXBuildFile; fileRef = 4BA596EE2BAA1A7D00AA8BB6 /* libag_core.8.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		4BA596F12BAA1A9D00AA8BB6 /* libag_gui.8.dylib in Copy Files */ = {isa = PBXBuildFile; fileRef = 4BA596F02BAA1A9D00AA8BB6 /* libag_gui.8.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -80,7 +81,6 @@
 		5F7A01FFF81E48D4B1B4921F /* cloud9.c in Sources */ = {isa = PBXBuildFile; fileRef = 229717BABA7447C2A28FF55D /* cloud9.c */; };
 		5FD3EC57B8134F2AB6A79C4A /* keyboardAGAR.c in Sources */ = {isa = PBXBuildFile; fileRef = 9BA13F024F564C7B9A4EAFC0 /* keyboardAGAR.c */; };
 		6115532F2501441B8936E284 /* joystickinputSDL.c in Sources */ = {isa = PBXBuildFile; fileRef = FA7958999781499D86656387 /* joystickinputSDL.c */; };
-		620B8D114E2E4F768FF14A50 /* ovcc.ico in Resources */ = {isa = PBXBuildFile; fileRef = 87FB0924FD344635952FEB0C /* ovcc.ico */; };
 		6A829ED4D19C48B692902227 /* memboard.c in Sources */ = {isa = PBXBuildFile; fileRef = 41D791F022894BEBB26E5755 /* memboard.c */; };
 		7691B2CACACD45358E727F94 /* logger.c in Sources */ = {isa = PBXBuildFile; fileRef = D539FEBEFA05484AA6802F64 /* logger.c */; };
 		7BCE392CC93B427085EBAB48 /* vccgui.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AE391697B2D4924AB82D2D3 /* vccgui.c */; };
@@ -312,7 +312,6 @@
 		229717BABA7447C2A28FF55D /* cloud9.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = cloud9.c; path = HardDisk/cloud9.c; sourceTree = SOURCE_ROOT; };
 		230558670B7F4304ADC7F7C6 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = orch90/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
 		2398F270DA9E4C00A2125D61 /* config.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = config.c; path = CoCo/config.c; sourceTree = SOURCE_ROOT; };
-		285D7C7FBC104E01B5D41094 /* hd6309tfrexg.asm */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = hd6309tfrexg.asm; path = CoCo/hd6309tfrexg.asm; sourceTree = SOURCE_ROOT; };
 		287D774C62854BE7BD51B5F8 /* tcc1014mmu_common.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = tcc1014mmu_common.c; path = CoCo/tcc1014mmu_common.c; sourceTree = SOURCE_ROOT; };
 		30EB1A184895483CBFEF4513 /* iniman.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = iniman.c; path = CoCo/iniman.c; sourceTree = SOURCE_ROOT; };
 		372A45F69B3343D28F00B371 /* idebus.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = idebus.c; path = SuperIDE/idebus.c; sourceTree = SOURCE_ROOT; };
@@ -323,6 +322,8 @@
 		477A0BBA8FC24F2093EEB225 /* pakinterface.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = pakinterface.c; path = CoCo/pakinterface.c; sourceTree = SOURCE_ROOT; };
 		4969A8D26D07464E8BAFDB63 /* ovcc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = ovcc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B92D41C2BACD10B002A35BA /* fd502.rom */ = {isa = PBXFileReference; lastKnownFileType = file; name = fd502.rom; path = ../fd502.rom; sourceTree = "<group>"; };
+		4B9702552BAF6DF7008E3630 /* ovcc.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; name = ovcc.ico; path = CoCo/ovcc.ico; sourceTree = "<group>"; };
+		4B9702572BAF6E1E008E3630 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = CoCo/CMakeFiles/ovcc.dir/Info.plist; sourceTree = "<group>"; };
 		4BA596AF2BA949FA00AA8BB6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		4BA596CA2BA97FDC00AA8BB6 /* libSDL2-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libSDL2-2.0.0.dylib"; path = "Libs/libSDL2-2.0.0.dylib"; sourceTree = "<group>"; };
 		4BA596CB2BA97FDC00AA8BB6 /* libag_core.8.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libag_core.8.dylib; path = Libs/libag_core.8.dylib; sourceTree = "<group>"; };
@@ -336,7 +337,6 @@
 		58322C312C2B4D7DAE49F6E0 /* fileops.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fileops.c; path = CoCo/fileops.c; sourceTree = SOURCE_ROOT; };
 		632B54AE42B4404DB228DE4F /* ramdisk.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ramdisk.c; path = Ramdisk/ramdisk.c; sourceTree = SOURCE_ROOT; };
 		6639947FC4B24796AD3DED2A /* fileops.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fileops.c; path = CoCo/fileops.c; sourceTree = SOURCE_ROOT; };
-		686C19DB09264443B642B3F6 /* hd6309asmP2-00-FF.asm */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = "hd6309asmP2-00-FF.asm"; path = "CoCo/hd6309asmP2-00-FF.asm"; sourceTree = SOURCE_ROOT; };
 		6999C5A33C1C439CA3DCD806 /* mc6809.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = mc6809.c; path = CoCo/mc6809.c; sourceTree = SOURCE_ROOT; };
 		6A28CB9F18494B0AA8EFFB28 /* cassette.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = cassette.c; path = CoCo/cassette.c; sourceTree = SOURCE_ROOT; };
 		6B1135FBFDF64C8684C9C332 /* cc3vhd.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = cc3vhd.c; path = HardDisk/cc3vhd.c; sourceTree = SOURCE_ROOT; };
@@ -351,20 +351,16 @@
 		7A02B094D409477BAFEDE19F /* cloud9.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = cloud9.c; path = SuperIDE/cloud9.c; sourceTree = SOURCE_ROOT; };
 		7C5667A262E44EE3B4CBF421 /* iniman.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = iniman.c; path = CoCo/iniman.c; sourceTree = SOURCE_ROOT; };
 		7E72A047969F4103A12BB7FD /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		8310D1DD1A344B0D9DCECF24 /* hd6309asmP0-80-FF.asm */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = "hd6309asmP0-80-FF.asm"; path = "CoCo/hd6309asmP0-80-FF.asm"; sourceTree = SOURCE_ROOT; };
-		87FB0924FD344635952FEB0C /* ovcc.ico */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = ovcc.ico; path = CoCo/ovcc.ico; sourceTree = SOURCE_ROOT; };
 		8CAC1629B78C46F088CF1D9B /* fileops.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fileops.c; path = CoCo/fileops.c; sourceTree = SOURCE_ROOT; };
 		9082BFA53E774F6CAF741AC6 /* iobus.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = iobus.c; path = CoCo/iobus.c; sourceTree = SOURCE_ROOT; };
 		9337C65875FA4006AFF0697D /* fileops.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fileops.c; path = CoCo/fileops.c; sourceTree = SOURCE_ROOT; };
 		944534454C8049B39E234EC6 /* iniman.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = iniman.c; path = CoCo/iniman.c; sourceTree = SOURCE_ROOT; };
-		961AE8D23B1B4FF8BC439634 /* hd6309pshpul.asm */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = hd6309pshpul.asm; path = CoCo/hd6309pshpul.asm; sourceTree = SOURCE_ROOT; };
 		975F846ED22A415CA3FF1373 /* liborch90.so */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = liborch90.so; sourceTree = BUILT_PRODUCTS_DIR; };
 		98D2EA5616EE400FA2144552 /* iniman.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = iniman.c; path = CoCo/iniman.c; sourceTree = SOURCE_ROOT; };
 		9955878F34BB4EA48BE0FB25 /* tcc1014graphicsAGAR.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = tcc1014graphicsAGAR.c; path = CoCo/tcc1014graphicsAGAR.c; sourceTree = SOURCE_ROOT; };
 		9AE391697B2D4924AB82D2D3 /* vccgui.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = vccgui.c; path = CoCo/vccgui.c; sourceTree = SOURCE_ROOT; };
 		9BA13F024F564C7B9A4EAFC0 /* keyboardAGAR.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = keyboardAGAR.c; path = CoCo/keyboardAGAR.c; sourceTree = SOURCE_ROOT; };
 		9E4202EB50B74FDEA54DF7EF /* mpi.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = mpi.c; path = mpi/mpi.c; sourceTree = SOURCE_ROOT; };
-		9F74C8F25E2B4BD2B6447B74 /* hd6309asmReg2Reg.asm */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = hd6309asmReg2Reg.asm; path = CoCo/hd6309asmReg2Reg.asm; sourceTree = SOURCE_ROOT; };
 		A037766999A44725A225F3F6 /* audioSDL.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = audioSDL.c; path = CoCo/audioSDL.c; sourceTree = SOURCE_ROOT; };
 		A1223059E2BA4E5389286F3F /* AGARInterface.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = AGARInterface.c; path = CoCo/AGARInterface.c; sourceTree = SOURCE_ROOT; };
 		AFABF35519164E4FA0F474A9 /* _xdebug.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = _xdebug.c; path = CoCo/_xdebug.c; sourceTree = SOURCE_ROOT; };
@@ -372,22 +368,16 @@
 		B6465E545A5A450E946257FA /* coco3.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = coco3.c; path = CoCo/coco3.c; sourceTree = SOURCE_ROOT; };
 		BC06B455D07243B795AFCEE8 /* tcc1014mmu_mm.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = tcc1014mmu_mm.c; path = CoCo/tcc1014mmu_mm.c; sourceTree = SOURCE_ROOT; };
 		BDB2C1C6019645CE9DF99C4A /* hd6309.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = hd6309.c; path = CoCo/hd6309.c; sourceTree = SOURCE_ROOT; };
-		BFF2EC23FDB24FC58D655AFC /* hd6309asm_h.asm */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = hd6309asm_h.asm; path = CoCo/hd6309asm_h.asm; sourceTree = SOURCE_ROOT; };
-		C3F23D8F50534202804E9065 /* Info.plist */ = {isa = PBXFileReference; explicitFileType = sourcecode.text.plist; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = build/CoCo/CMakeFiles/ovcc.dir/Info.plist; sourceTree = SOURCE_ROOT; };
 		C766825482BF44448A076891 /* iniman.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = iniman.c; path = CoCo/iniman.c; sourceTree = SOURCE_ROOT; };
 		C7F7A01230F9495995FB9D20 /* vcc.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = vcc.c; path = CoCo/vcc.c; sourceTree = SOURCE_ROOT; };
 		D31248FC6333444398C27B1F /* tcc1014mmu.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = tcc1014mmu.c; path = CoCo/tcc1014mmu.c; sourceTree = SOURCE_ROOT; };
 		D539FEBEFA05484AA6802F64 /* logger.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = logger.c; path = SuperIDE/logger.c; sourceTree = SOURCE_ROOT; };
-		DEA3C1B7B04C460BBBC28A14 /* hd6309asmP1-00-FF.asm */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = "hd6309asmP1-00-FF.asm"; path = "CoCo/hd6309asmP1-00-FF.asm"; sourceTree = SOURCE_ROOT; };
 		DEC0F475417C4BDD9994CD50 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = HardDisk/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		E1546C6E25D44F7C823B9786 /* hd6309cea.asm */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = hd6309cea.asm; path = CoCo/hd6309cea.asm; sourceTree = SOURCE_ROOT; };
 		E8B17CA38C4945C2A1F5ED43 /* libsuperide.so */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = libsuperide.so; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBF56B1853724D1BB4175A40 /* orch90.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = orch90.c; path = orch90/orch90.c; sourceTree = SOURCE_ROOT; };
 		ECDE17A402B64C599ED303E8 /* superide.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = superide.c; path = SuperIDE/superide.c; sourceTree = SOURCE_ROOT; };
 		EEBA937600E04C4F8DD794AC /* iniman.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = iniman.c; path = CoCo/iniman.c; sourceTree = SOURCE_ROOT; };
-		F51508A25BE54D4D9A75B837 /* hd6309saveflags.asm */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = hd6309saveflags.asm; path = CoCo/hd6309saveflags.asm; sourceTree = SOURCE_ROOT; };
 		F58762246F9741708518FC57 /* fileops.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fileops.c; path = CoCo/fileops.c; sourceTree = SOURCE_ROOT; };
-		F8B65B42B4F04495B4977D43 /* hd6309asmP0-00-7F.asm */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = "hd6309asmP0-00-7F.asm"; path = "CoCo/hd6309asmP0-00-7F.asm"; sourceTree = SOURCE_ROOT; };
 		F9929AB281454179A713683E /* wd1793.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = wd1793.c; path = FD502/wd1793.c; sourceTree = SOURCE_ROOT; };
 		FA7958999781499D86656387 /* joystickinputSDL.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = joystickinputSDL.c; path = CoCo/joystickinputSDL.c; sourceTree = SOURCE_ROOT; };
 		FF44ECB70C8A4787B0F20976 /* mc6821.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = mc6821.c; path = CoCo/mc6821.c; sourceTree = SOURCE_ROOT; };
@@ -609,17 +599,6 @@
 				00D63F6724B744299C050A54 /* Source Files */,
 				DD69AD20E2E8468AA1DA40C2 /* Resources */,
 				4BC9804EADC645D4B5B90AB3 /* CMakeLists.txt */,
-				F8B65B42B4F04495B4977D43 /* hd6309asmP0-00-7F.asm */,
-				8310D1DD1A344B0D9DCECF24 /* hd6309asmP0-80-FF.asm */,
-				DEA3C1B7B04C460BBBC28A14 /* hd6309asmP1-00-FF.asm */,
-				686C19DB09264443B642B3F6 /* hd6309asmP2-00-FF.asm */,
-				9F74C8F25E2B4BD2B6447B74 /* hd6309asmReg2Reg.asm */,
-				BFF2EC23FDB24FC58D655AFC /* hd6309asm_h.asm */,
-				E1546C6E25D44F7C823B9786 /* hd6309cea.asm */,
-				961AE8D23B1B4FF8BC439634 /* hd6309pshpul.asm */,
-				F51508A25BE54D4D9A75B837 /* hd6309saveflags.asm */,
-				285D7C7FBC104E01B5D41094 /* hd6309tfrexg.asm */,
-				87FB0924FD344635952FEB0C /* ovcc.ico */,
 			);
 			name = ovcc;
 			sourceTree = "<group>";
@@ -714,7 +693,8 @@
 		DD69AD20E2E8468AA1DA40C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C3F23D8F50534202804E9065 /* Info.plist */,
+				4B9702572BAF6E1E008E3630 /* Info.plist */,
+				4B9702552BAF6DF7008E3630 /* ovcc.ico */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -917,7 +897,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				620B8D114E2E4F768FF14A50 /* ovcc.ico in Resources */,
+				4B9702582BAF6E1E008E3630 /* Info.plist in Resources */,
+				4B9702562BAF6DF7008E3630 /* ovcc.ico in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1081,7 +1062,6 @@
 				E6A3ACA0D6584B8D92E29A78 /* tcc1014registers.c in Sources */,
 				A8839A9A2CB04D1F959E6525 /* throttle.c in Sources */,
 				149CE13345F94329B0FD14B0 /* vcc.c in Sources */,
-				3312B705671C44139233D2E8 /* vccclip.cpp in Sources */,
 				7BCE392CC93B427085EBAB48 /* vccgui.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

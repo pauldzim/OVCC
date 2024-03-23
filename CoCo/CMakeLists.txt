@@ -1,43 +1,3 @@
-#set(CMAKE_DARWIN_ARCHITECTURES "arm64")
-
-#
-# Standard CMake libraries
-#
-#include(CheckLibraryExists)
-#include(CheckIncludeFiles)
-#include(CheckIncludeFile)
-#include(CheckSymbolExists)
-#include(CheckCSourceCompiles)
-#include(CheckCSourceRuns)
-#include(CheckCCompilerFlag)
-#include(CheckCXXCompilerFlag)
-#include(CheckOBJCSourceCompiles)
-#include(CheckTypeSize)
-#include(CheckStructHasMember)
-#include(CMakeDependentOption)
-#include(FindPkgConfig)
-#include(GNUInstallDirs)
-
-# Detect known platforms.
-#BB_Detect_Platform()
-
-#set(SIZEOF_VOIDP ${CMAKE_SIZEOF_VOID_P})
-#if(CMAKE_SIZEOF_VOID_P EQUAL 8)
-#	set(ARCH_64 TRUE)
-	#
-	# Default to the Large memory model on 64-bit. It is still possible for
-	# 64-bit platforms to use the Medium model (e.g., for lower memory utilization).
-	#
-#	set(AGAR_DEFAULT_MEMORY_MODEL "L")
-#else()
-#	set(ARCH_64 FALSE)
-	#
-	# Default to the Medium memory model on 32-bit. It is still possible for
-	# 32-bit platforms to use the Large model (e.g., for Deep Color support).
-	#
-#	set(AGAR_DEFAULT_MEMORY_MODEL "M")
-#endif()
-
 set(CMAKE_FIND_FRAMEWORK LAST)		# so we get homebrew SDL2
 
 include_directories(/opt/homebrew/include)
@@ -49,7 +9,6 @@ find_library(COCOA_LIBRARY Cocoa)
 include_directories(${SDL2_INCLUDE_DIRS})
 
 link_directories("/usr/local/lib")	# for AGAR
-link_directories("../clip")
 
 set(CMAKE_MODULE_LINKER_FLAGS "-Wl,-framework,Cocoa")
 
@@ -95,18 +54,7 @@ add_executable(ovcc MACOSX_BUNDLE  ${ICON_PATH}
 	tcc1014registers.c
 	throttle.c
 	vcc.c
-	vccgui.c
-	hd6309asmP0-00-7F.asm
-	hd6309asmP0-80-FF.asm
-	hd6309asmP1-00-FF.asm
-	hd6309asmP2-00-FF.asm
-	hd6309asmReg2Reg.asm
-	hd6309asm_h.asm
-	hd6309cea.asm
-	hd6309pshpul.asm
-	hd6309saveflags.asm
-	hd6309tfrexg.asm
-	vccclip.cpp)
+	vccgui.c)
 
 target_include_directories(ovcc PUBLIC EXPORT ${CMAKE_CURRENT_SOURCE_DIR})
 
@@ -121,5 +69,4 @@ set_target_properties(ovcc PROPERTIES
 #    MACOSX_BUNDLE_INFO_PLIST ${CMAKE_SOURCE_DIR}/cmake/customtemplate.plist.in
 )
 
-target_link_libraries(ovcc clip ${SDL2_LIBRARIES} ag_core ag_gui objc ${COCOA_LIBRARY}) # pthread z m)
-#target_link_libraries(ovcc pthread)
+target_link_libraries(ovcc ${SDL2_LIBRARIES} ag_core ag_gui objc pthread ${COCOA_LIBRARY})
