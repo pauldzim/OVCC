@@ -50,6 +50,11 @@ void _xDbgTrace(const void * pFile, const int iLine, const void * pFormat, ...)
 	va_list		args;
 	char temp[1024];
 
+#ifdef DARWIN
+	if (logg == NULL)
+		return;
+#endif
+
 	va_start(args, pFormat);
 
 	sprintf(temp, "%s(%d) : ", (char *)pFile, iLine);
