@@ -72,6 +72,7 @@
 		4B1303192BAFACA200DD2F44 /* libfontconfig.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4B1303182BAFACA200DD2F44 /* libfontconfig.1.dylib */; };
 		4B13031B2BAFACBD00DD2F44 /* libfreetype.6.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4B13031A2BAFACBD00DD2F44 /* libfreetype.6.dylib */; };
 		4B13031D2BAFC3CD00DD2F44 /* libpng16.16.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4B13031C2BAFC3CD00DD2F44 /* libpng16.16.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		4B13158C2BAFD08600DD2F44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B13158B2BAFD08600DD2F44 /* Assets.xcassets */; };
 		4E642DEAFFDC4B84912CDB60 /* iniman.c in Sources */ = {isa = PBXBuildFile; fileRef = 4AEE860745AC40E09C86349A /* iniman.c */; };
 		511AD50FA5344F75B33A6D51 /* harddisk.c in Sources */ = {isa = PBXBuildFile; fileRef = A053D5FDFCF0418593DD8ABC /* harddisk.c */; };
 		53841C79FF184DED9D353C24 /* fileops.c in Sources */ = {isa = PBXBuildFile; fileRef = 56167180D9944DC0ADBA93EB /* fileops.c */; };
@@ -80,7 +81,6 @@
 		61977BD2B0FD4A378E06FE51 /* cassette.c in Sources */ = {isa = PBXBuildFile; fileRef = E4285DB871804F5088CFCEBA /* cassette.c */; };
 		64F02E75B974463B8EBB206E /* iniman.c in Sources */ = {isa = PBXBuildFile; fileRef = EDB5092E170E420791DF415D /* iniman.c */; };
 		7BF31967D0B14A4F881470AE /* dma.c in Sources */ = {isa = PBXBuildFile; fileRef = 61AE1A7707E7401FB8825F88 /* dma.c */; };
-		7CCBFE7D7FE74AFF863F1CB1 /* ovcc.ico in Resources */ = {isa = PBXBuildFile; fileRef = 9E638E198CA0433897069CBF /* ovcc.ico */; };
 		7E5D1821DE8D40A1ACAF1A63 /* AGARInterface.c in Sources */ = {isa = PBXBuildFile; fileRef = D77E5769AB5E4D86A96772BC /* AGARInterface.c */; };
 		7E6B5E6D6FE845FCBDA11814 /* tcc1014mmu.c in Sources */ = {isa = PBXBuildFile; fileRef = EE465C8529E34465BA5FA8D8 /* tcc1014mmu.c */; };
 		7F1CB7AE02864CB896B1999A /* tcc1014registers.c in Sources */ = {isa = PBXBuildFile; fileRef = 105DC9F57D154645AC0463A7 /* tcc1014registers.c */; };
@@ -311,6 +311,7 @@
 		4B1303182BAFACA200DD2F44 /* libfontconfig.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libfontconfig.1.dylib; sourceTree = "<group>"; };
 		4B13031A2BAFACBD00DD2F44 /* libfreetype.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libfreetype.6.dylib; sourceTree = "<group>"; };
 		4B13031C2BAFC3CD00DD2F44 /* libpng16.16.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libpng16.16.dylib; sourceTree = "<group>"; };
+		4B13158B2BAFD08600DD2F44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FD02C4F056545B3AFA8BBA2 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = Ramdisk/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
 		545A88B7B86047539EAA0A28 /* libmpu.so */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = libmpu.so; sourceTree = BUILT_PRODUCTS_DIR; };
 		54E9BAC4B5524B208748B35D /* vccgui.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = vccgui.c; path = CoCo/vccgui.c; sourceTree = SOURCE_ROOT; };
@@ -338,7 +339,6 @@
 		8D95AB97156A416798894725 /* libramdisk.so */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = libramdisk.so; sourceTree = BUILT_PRODUCTS_DIR; };
 		9654E435F33D4AA9A03D8B53 /* logger.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = logger.c; path = SuperIDE/logger.c; sourceTree = SOURCE_ROOT; };
 		98207F902F14499393FD2DB5 /* iobus.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = iobus.c; path = CoCo/iobus.c; sourceTree = SOURCE_ROOT; };
-		9E638E198CA0433897069CBF /* ovcc.ico */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = ovcc.ico; path = CoCo/ovcc.ico; sourceTree = SOURCE_ROOT; };
 		A053D5FDFCF0418593DD8ABC /* harddisk.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = harddisk.c; path = HardDisk/harddisk.c; sourceTree = SOURCE_ROOT; };
 		A509A88D0EB64B48B661524D /* _xdebug.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = _xdebug.c; path = CoCo/_xdebug.c; sourceTree = SOURCE_ROOT; };
 		A572282E09D842D8990C2A73 /* gputextures.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = gputextures.c; path = mpu/gputextures.c; sourceTree = SOURCE_ROOT; };
@@ -515,6 +515,7 @@
 		465E85EFC5DF4EA6B591A73B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4B13158B2BAFD08600DD2F44 /* Assets.xcassets */,
 				FD5F61388FFD48BEA3C3A713 /* Info.plist */,
 			);
 			name = Resources;
@@ -662,7 +663,6 @@
 				845964832C4B4AB38884C899 /* Source Files */,
 				465E85EFC5DF4EA6B591A73B /* Resources */,
 				3242222214F44912BE0A07AB /* CMakeLists.txt */,
-				9E638E198CA0433897069CBF /* ovcc.ico */,
 			);
 			name = ovcc;
 			sourceTree = "<group>";
@@ -931,7 +931,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CCBFE7D7FE74AFF863F1CB1 /* ovcc.ico in Resources */,
+				4B13158C2BAFD08600DD2F44 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1262,9 +1262,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -1340,9 +1338,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -1417,9 +1413,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -1472,7 +1466,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
-				ASSETCATALOG_COMPILER_APPICON_NAME = ovcc.ico;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/CoCo/MinSizeRel;
@@ -1513,11 +1507,18 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
-					"/opt/homebrew/Cellar/sdl2/2.30.1/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/Cellar/sdl2/2.30.1/lib,
 					"$(inherited)",
+					"$(PROJECT_DIR)/becker",
+					"$(PROJECT_DIR)/FD502",
+					"$(PROJECT_DIR)/HardDisk",
+					"$(PROJECT_DIR)/mpi",
+					"$(PROJECT_DIR)/mpu",
+					"$(PROJECT_DIR)/orch90",
+					"$(PROJECT_DIR)/Ramdisk",
+					"$(PROJECT_DIR)/SuperIDE",
+					"$(PROJECT_DIR)",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1595,9 +1596,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -1711,9 +1710,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -1789,9 +1786,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -1867,9 +1862,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -1945,9 +1938,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -2023,9 +2014,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -2101,9 +2090,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -2179,9 +2166,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -2257,9 +2242,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -2350,9 +2333,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -2428,9 +2409,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -2506,9 +2485,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -2583,9 +2560,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -2660,9 +2635,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -2738,9 +2711,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -2816,9 +2787,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -2894,9 +2863,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -2972,9 +2939,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -3065,9 +3030,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -3143,9 +3106,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -3246,9 +3207,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -3349,9 +3308,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -3427,9 +3384,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -3504,9 +3459,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -3543,7 +3496,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
-				ASSETCATALOG_COMPILER_APPICON_NAME = ovcc.ico;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/CoCo/Release;
@@ -3584,11 +3537,18 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
-					"/opt/homebrew/Cellar/sdl2/2.30.1/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/Cellar/sdl2/2.30.1/lib,
 					"$(inherited)",
+					"$(PROJECT_DIR)/becker",
+					"$(PROJECT_DIR)/FD502",
+					"$(PROJECT_DIR)/HardDisk",
+					"$(PROJECT_DIR)/mpi",
+					"$(PROJECT_DIR)/mpu",
+					"$(PROJECT_DIR)/orch90",
+					"$(PROJECT_DIR)/Ramdisk",
+					"$(PROJECT_DIR)/SuperIDE",
+					"$(PROJECT_DIR)",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
@@ -3691,9 +3651,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -3794,9 +3752,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -3871,9 +3827,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -3911,7 +3865,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
-				ASSETCATALOG_COMPILER_APPICON_NAME = ovcc.ico;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/CoCo/RelWithDebInfo;
@@ -3952,11 +3906,18 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
-					"/opt/homebrew/Cellar/sdl2/2.30.1/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/Cellar/sdl2/2.30.1/lib,
 					"$(inherited)",
+					"$(PROJECT_DIR)/becker",
+					"$(PROJECT_DIR)/FD502",
+					"$(PROJECT_DIR)/HardDisk",
+					"$(PROJECT_DIR)/mpi",
+					"$(PROJECT_DIR)/mpu",
+					"$(PROJECT_DIR)/orch90",
+					"$(PROJECT_DIR)/Ramdisk",
+					"$(PROJECT_DIR)/SuperIDE",
+					"$(PROJECT_DIR)",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
@@ -3996,7 +3957,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
-				ASSETCATALOG_COMPILER_APPICON_NAME = ovcc.ico;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=macosx*]" = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/CoCo/Debug;
@@ -4037,11 +3999,18 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
-					"/opt/homebrew/Cellar/sdl2/2.30.1/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/Cellar/sdl2/2.30.1/lib,
 					"$(inherited)",
+					"$(PROJECT_DIR)/becker",
+					"$(PROJECT_DIR)/FD502",
+					"$(PROJECT_DIR)/HardDisk",
+					"$(PROJECT_DIR)/mpi",
+					"$(PROJECT_DIR)/mpu",
+					"$(PROJECT_DIR)/orch90",
+					"$(PROJECT_DIR)/Ramdisk",
+					"$(PROJECT_DIR)/SuperIDE",
+					"$(PROJECT_DIR)",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
@@ -4118,9 +4087,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
@@ -4271,9 +4238,7 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/opt/homebrew/lib,
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					/usr/local/lib,
 					"$(inherited)",
 				);
