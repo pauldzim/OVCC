@@ -55,12 +55,12 @@
 		4B13030F2BAF8FAF00DD2F44 /* libramdisk.so in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D95AB97156A416798894725 /* libramdisk.so */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		4B1303102BAF8FAF00DD2F44 /* libsuperide.so in CopyFiles */ = {isa = PBXBuildFile; fileRef = 192EC50E837A41C7B008937B /* libsuperide.so */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		4B13158C2BAFD08600DD2F44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B13158B2BAFD08600DD2F44 /* Assets.xcassets */; };
-		4BC9116A2BB0C217000189ED /* libag_core.8.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BC911622BB0C0ED000189ED /* libag_core.8.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		4BC9116B2BB0C218000189ED /* libag_gui.8.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BC911632BB0C0ED000189ED /* libag_gui.8.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		4BC9116C2BB0C218000189ED /* libfontconfig.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BC911642BB0C0ED000189ED /* libfontconfig.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		4BC9116D2BB0C218000189ED /* libfreetype.6.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BC911652BB0C0ED000189ED /* libfreetype.6.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		4BC9116E2BB0C218000189ED /* libpng16.16.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BC911662BB0C0ED000189ED /* libpng16.16.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		4BC9116F2BB0C218000189ED /* libSDL2-2.0.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BC911672BB0C0ED000189ED /* libSDL2-2.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		4BC9116A2BB0C217000189ED /* libag_core.8.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BC911622BB0C0ED000189ED /* libag_core.8.dylib */; };
+		4BC9116B2BB0C218000189ED /* libag_gui.8.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BC911632BB0C0ED000189ED /* libag_gui.8.dylib */; };
+		4BC9116C2BB0C218000189ED /* libfontconfig.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BC911642BB0C0ED000189ED /* libfontconfig.1.dylib */; };
+		4BC9116D2BB0C218000189ED /* libfreetype.6.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BC911652BB0C0ED000189ED /* libfreetype.6.dylib */; };
+		4BC9116E2BB0C218000189ED /* libpng16.16.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BC911662BB0C0ED000189ED /* libpng16.16.dylib */; };
+		4BC9116F2BB0C218000189ED /* libSDL2-2.0.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BC911672BB0C0ED000189ED /* libSDL2-2.0.0.dylib */; };
 		4E642DEAFFDC4B84912CDB60 /* iniman.c in Sources */ = {isa = PBXBuildFile; fileRef = 4AEE860745AC40E09C86349A /* iniman.c */; };
 		511AD50FA5344F75B33A6D51 /* harddisk.c in Sources */ = {isa = PBXBuildFile; fileRef = A053D5FDFCF0418593DD8ABC /* harddisk.c */; };
 		53841C79FF184DED9D353C24 /* fileops.c in Sources */ = {isa = PBXBuildFile; fileRef = 56167180D9944DC0ADBA93EB /* fileops.c */; };
@@ -236,7 +236,7 @@
 		56167180D9944DC0ADBA93EB /* fileops.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fileops.c; path = CoCo/fileops.c; sourceTree = SOURCE_ROOT; };
 		5A330D3BA70048339140AF43 /* fileops.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fileops.c; path = CoCo/fileops.c; sourceTree = SOURCE_ROOT; };
 		5A5A0988EDDA4B22B81D628A /* throttle.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = throttle.c; path = CoCo/throttle.c; sourceTree = SOURCE_ROOT; };
-		5B3D667AEC67466282D0E830 /* Cocoa.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		5B3D667AEC67466282D0E830 /* Cocoa.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		5B7DF5CE416D430F8ED2CE41 /* iniman.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = iniman.c; path = CoCo/iniman.c; sourceTree = SOURCE_ROOT; };
 		5C2F6D97234B49B4AF1D8681 /* libmpi.so */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = libmpi.so; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F4FEB314FC34D6EAE30ADF2 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = becker/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
@@ -1083,26 +1083,12 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = s;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					mpi_EXPORTS,
-					DARWIN,
-					_THREAD_SAFE,
-					_USE_OPENGL_FRAMEWORK,
-					TARGET_API_MAC_CARBON,
-					TARGET_API_MAC_OSX,
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/opt/homebrew/include,
-					/opt/homebrew/include/SDL2,
-					/usr/local/include,
-					/usr/local/include/agar,
-					/Users/paulz/OVCC/mpi/../CoCo,
-					/Users/paulz/OVCC/mpi/EXPORT,
-					/Users/paulz/OVCC/mpi,
 					"$(inherited)",
+					/Users/paulz/OVCC/mpi/../CoCo,
+					/Users/paulz/OVCC/mpi,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1110,11 +1096,7 @@
 					/usr/local/lib,
 					"$(inherited)",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					/opt/homebrew/lib,
-					/usr/local/lib,
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				LIBRARY_STYLE = BUNDLE;
 				MACH_O_TYPE = mh_bundle;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1124,15 +1106,7 @@
 					"-fpascal-strings",
 					"$(inherited)",
 				);
-				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"-lSDL2",
-					"-lag_core",
-					"-lag_gui",
-					"-lpthread",
-					"$(inherited)",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = mpi;
 				SECTORDER_FLAGS = "";
@@ -1159,26 +1133,12 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					orch90_EXPORTS,
-					DARWIN,
-					_THREAD_SAFE,
-					_USE_OPENGL_FRAMEWORK,
-					TARGET_API_MAC_CARBON,
-					TARGET_API_MAC_OSX,
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/opt/homebrew/include,
-					/opt/homebrew/include/SDL2,
-					/usr/local/include,
-					/usr/local/include/agar,
-					/Users/paulz/OVCC/orch90/../CoCo,
-					/Users/paulz/OVCC/orch90/EXPORT,
-					/Users/paulz/OVCC/orch90,
 					"$(inherited)",
+					/Users/paulz/OVCC/orch90/../CoCo,
+					/Users/paulz/OVCC/orch90,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1186,11 +1146,7 @@
 					/usr/local/lib,
 					"$(inherited)",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					/opt/homebrew/lib,
-					/usr/local/lib,
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				LIBRARY_STYLE = BUNDLE;
 				MACH_O_TYPE = mh_bundle;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1199,15 +1155,7 @@
 					"-fpascal-strings",
 					"$(inherited)",
 				);
-				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"-lSDL2",
-					"-lag_core",
-					"-lag_gui",
-					"-lpthread",
-					"$(inherited)",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = orch90;
 				SECTORDER_FLAGS = "";
@@ -1234,26 +1182,12 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = s;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					orch90_EXPORTS,
-					DARWIN,
-					_THREAD_SAFE,
-					_USE_OPENGL_FRAMEWORK,
-					TARGET_API_MAC_CARBON,
-					TARGET_API_MAC_OSX,
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/opt/homebrew/include,
-					/opt/homebrew/include/SDL2,
-					/usr/local/include,
-					/usr/local/include/agar,
-					/Users/paulz/OVCC/orch90/../CoCo,
-					/Users/paulz/OVCC/orch90/EXPORT,
-					/Users/paulz/OVCC/orch90,
 					"$(inherited)",
+					/Users/paulz/OVCC/orch90/../CoCo,
+					/Users/paulz/OVCC/orch90,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1261,11 +1195,7 @@
 					/usr/local/lib,
 					"$(inherited)",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					/opt/homebrew/lib,
-					/usr/local/lib,
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				LIBRARY_STYLE = BUNDLE;
 				MACH_O_TYPE = mh_bundle;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1275,15 +1205,7 @@
 					"-fpascal-strings",
 					"$(inherited)",
 				);
-				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"-lSDL2",
-					"-lag_core",
-					"-lag_gui",
-					"-lpthread",
-					"$(inherited)",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = orch90;
 				SECTORDER_FLAGS = "";
@@ -1298,13 +1220,61 @@
 		14F6B316D1414C98AADA3313 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				DRIVERKIT_DEPLOYMENT_TARGET = 23.4;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks,
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					DARWIN,
+					_THREAD_SAFE,
+					_USE_OPENGL_FRAMEWORK,
+					TARGET_API_MAC_CARBON,
+					TARGET_API_MAC_OSX,
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					/opt/homebrew/include/SDL2,
+					/usr/local/include,
+					/usr/local/include/agar,
+					/Users/paulz/OVCC/becker/../CoCo,
+					/Users/paulz/OVCC/becker/EXPORT,
+					/Users/paulz/OVCC/becker,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/opt/homebrew/lib,
+					/usr/local/lib,
+					"$(inherited)",
+					"$(PROJECT_DIR)/becker",
+					"$(PROJECT_DIR)/FD502",
+					"$(PROJECT_DIR)/HardDisk",
+					"$(PROJECT_DIR)/mpi",
+					"$(PROJECT_DIR)/mpu",
+					"$(PROJECT_DIR)/orch90",
+					"$(PROJECT_DIR)/Ramdisk",
+					"$(PROJECT_DIR)/SuperIDE",
+					"$(PROJECT_DIR)",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk;
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lag_core",
+					"-lag_gui",
+					"-lSDL2",
+					"-lobjc",
+					"-lpthread",
+					"$(inherited)",
+				);
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SYMROOT = /Users/paulz/OVCC/build;
 			};
@@ -1322,53 +1292,22 @@
 				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = "";
 				EXECUTABLE_SUFFIX = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/System/Library/Frameworks,
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = s;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					DARWIN,
-					_THREAD_SAFE,
-					_USE_OPENGL_FRAMEWORK,
-					TARGET_API_MAC_CARBON,
-					TARGET_API_MAC_OSX,
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (
-					/opt/homebrew/include,
-					/usr/local/include,
-					/opt/homebrew/Cellar/sdl2/2.30.1/include,
-					/Users/paulz/OVCC/CoCo/EXPORT,
-					/Users/paulz/OVCC/CoCo,
-					"$(inherited)",
-				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = /Users/paulz/OVCC/CoCo/CMakeFiles/ovcc.dir/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = OVCC;
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
+					/opt/homebrew/lib,
 					/usr/local/lib,
-					/opt/homebrew/Cellar/sdl2/2.30.1/lib,
 					"$(inherited)",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					/usr/local/lib,
-					/opt/homebrew/Cellar/sdl2/2.30.1/lib,
-					"$(inherited)",
-					"$(PROJECT_DIR)/becker",
-					"$(PROJECT_DIR)/FD502",
-					"$(PROJECT_DIR)/HardDisk",
-					"$(PROJECT_DIR)/mpi",
-					"$(PROJECT_DIR)/mpu",
-					"$(PROJECT_DIR)/orch90",
-					"$(PROJECT_DIR)/Ramdisk",
-					"$(PROJECT_DIR)/SuperIDE",
-					"$(PROJECT_DIR)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
@@ -1377,25 +1316,15 @@
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					/opt/homebrew/Cellar/sdl2/2.30.1/lib/libSDL2.dylib,
-					"-lag_core",
-					"-lag_gui",
-					"-lobjc",
-					"-lpthread",
+					"$(inherited)",
 					"-framework",
 					Cocoa,
-					"$(inherited)",
 				);
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ovcc;
 				SECTORDER_FLAGS = "";
 				SKIP_INSTALL = NO;
-				SYSTEM_HEADER_SEARCH_PATHS = (
-					/opt/homebrew/Cellar/sdl2/2.30.1/include/SDL2,
-					"$(inherited)",
-				);
+				SYSTEM_HEADER_SEARCH_PATHS = "$(inherited)";
 				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/ovcc.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
@@ -1417,26 +1346,12 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					harddisk_EXPORTS,
-					DARWIN,
-					_THREAD_SAFE,
-					_USE_OPENGL_FRAMEWORK,
-					TARGET_API_MAC_CARBON,
-					TARGET_API_MAC_OSX,
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/opt/homebrew/include,
-					/opt/homebrew/include/SDL2,
-					/usr/local/include,
-					/usr/local/include/agar,
-					/Users/paulz/OVCC/HardDisk/../CoCo,
-					/Users/paulz/OVCC/HardDisk/EXPORT,
-					/Users/paulz/OVCC/HardDisk,
 					"$(inherited)",
+					/Users/paulz/OVCC/HardDisk/../CoCo,
+					/Users/paulz/OVCC/HardDisk,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1444,11 +1359,7 @@
 					/usr/local/lib,
 					"$(inherited)",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					/opt/homebrew/lib,
-					/usr/local/lib,
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				LIBRARY_STYLE = BUNDLE;
 				MACH_O_TYPE = mh_bundle;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1457,15 +1368,7 @@
 					"-fpascal-strings",
 					"$(inherited)",
 				);
-				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"-lSDL2",
-					"-lag_core",
-					"-lag_gui",
-					"-lpthread",
-					"$(inherited)",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = harddisk;
 				SECTORDER_FLAGS = "";
@@ -1483,6 +1386,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -1491,7 +1395,9 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = " $(inherited)";
 				OTHER_REZFLAGS = "";
@@ -1505,13 +1411,61 @@
 		23EDB68BA7B448DDA2CB314B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				DRIVERKIT_DEPLOYMENT_TARGET = 23.4;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks,
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					DARWIN,
+					_THREAD_SAFE,
+					_USE_OPENGL_FRAMEWORK,
+					TARGET_API_MAC_CARBON,
+					TARGET_API_MAC_OSX,
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					/opt/homebrew/include/SDL2,
+					/usr/local/include,
+					/usr/local/include/agar,
+					/Users/paulz/OVCC/becker/../CoCo,
+					/Users/paulz/OVCC/becker/EXPORT,
+					/Users/paulz/OVCC/becker,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/opt/homebrew/lib,
+					/usr/local/lib,
+					"$(inherited)",
+					"$(PROJECT_DIR)/becker",
+					"$(PROJECT_DIR)/FD502",
+					"$(PROJECT_DIR)/HardDisk",
+					"$(PROJECT_DIR)/mpi",
+					"$(PROJECT_DIR)/mpu",
+					"$(PROJECT_DIR)/orch90",
+					"$(PROJECT_DIR)/Ramdisk",
+					"$(PROJECT_DIR)/SuperIDE",
+					"$(PROJECT_DIR)",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk;
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lag_core",
+					"-lag_gui",
+					"-lSDL2",
+					"-lobjc",
+					"-lpthread",
+					"$(inherited)",
+				);
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk;
 				SYMROOT = /Users/paulz/OVCC/build;
 			};
 			name = Debug;
@@ -1531,26 +1485,12 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = s;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					ramdisk_EXPORTS,
-					DARWIN,
-					_THREAD_SAFE,
-					_USE_OPENGL_FRAMEWORK,
-					TARGET_API_MAC_CARBON,
-					TARGET_API_MAC_OSX,
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/opt/homebrew/include,
-					/opt/homebrew/include/SDL2,
-					/usr/local/include,
-					/usr/local/include/agar,
-					/Users/paulz/OVCC/Ramdisk/../CoCo,
-					/Users/paulz/OVCC/Ramdisk/EXPORT,
-					/Users/paulz/OVCC/Ramdisk,
 					"$(inherited)",
+					/Users/paulz/OVCC/Ramdisk/../CoCo,
+					/Users/paulz/OVCC/Ramdisk,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1558,11 +1498,7 @@
 					/usr/local/lib,
 					"$(inherited)",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					/opt/homebrew/lib,
-					/usr/local/lib,
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				LIBRARY_STYLE = BUNDLE;
 				MACH_O_TYPE = mh_bundle;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1572,15 +1508,7 @@
 					"-fpascal-strings",
 					"$(inherited)",
 				);
-				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"-lSDL2",
-					"-lag_core",
-					"-lag_gui",
-					"-lpthread",
-					"$(inherited)",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ramdisk;
 				SECTORDER_FLAGS = "";
@@ -1607,26 +1535,12 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					mpu_EXPORTS,
-					DARWIN,
-					_THREAD_SAFE,
-					_USE_OPENGL_FRAMEWORK,
-					TARGET_API_MAC_CARBON,
-					TARGET_API_MAC_OSX,
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/opt/homebrew/include,
-					/opt/homebrew/include/SDL2,
-					/usr/local/include,
-					/usr/local/include/agar,
-					/Users/paulz/OVCC/mpu/../CoCo,
-					/Users/paulz/OVCC/mpu/EXPORT,
-					/Users/paulz/OVCC/mpu,
 					"$(inherited)",
+					/Users/paulz/OVCC/mpu/../CoCo,
+					/Users/paulz/OVCC/mpu,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1634,11 +1548,7 @@
 					/usr/local/lib,
 					"$(inherited)",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					/opt/homebrew/lib,
-					/usr/local/lib,
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				LIBRARY_STYLE = BUNDLE;
 				MACH_O_TYPE = mh_bundle;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1648,15 +1558,7 @@
 					"-fpascal-strings",
 					"$(inherited)",
 				);
-				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"-lSDL2",
-					"-lag_core",
-					"-lag_gui",
-					"-lpthread",
-					"$(inherited)",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = mpu;
 				SECTORDER_FLAGS = "";
@@ -1683,26 +1585,12 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					fd502_EXPORTS,
-					DARWIN,
-					_THREAD_SAFE,
-					_USE_OPENGL_FRAMEWORK,
-					TARGET_API_MAC_CARBON,
-					TARGET_API_MAC_OSX,
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/opt/homebrew/include,
-					/opt/homebrew/include/SDL2,
-					/usr/local/include,
-					/usr/local/include/agar,
-					/Users/paulz/OVCC/FD502/../CoCo,
-					/Users/paulz/OVCC/FD502/EXPORT,
-					/Users/paulz/OVCC/FD502,
 					"$(inherited)",
+					/Users/paulz/OVCC/FD502/../CoCo,
+					/Users/paulz/OVCC/FD502,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1710,11 +1598,7 @@
 					/usr/local/lib,
 					"$(inherited)",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					/opt/homebrew/lib,
-					/usr/local/lib,
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				LIBRARY_STYLE = BUNDLE;
 				MACH_O_TYPE = mh_bundle;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1724,15 +1608,7 @@
 					"-fpascal-strings",
 					"$(inherited)",
 				);
-				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"-lSDL2",
-					"-lag_core",
-					"-lag_gui",
-					"-lpthread",
-					"$(inherited)",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = fd502;
 				SECTORDER_FLAGS = "";
@@ -1759,26 +1635,12 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					ramdisk_EXPORTS,
-					DARWIN,
-					_THREAD_SAFE,
-					_USE_OPENGL_FRAMEWORK,
-					TARGET_API_MAC_CARBON,
-					TARGET_API_MAC_OSX,
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/opt/homebrew/include,
-					/opt/homebrew/include/SDL2,
-					/usr/local/include,
-					/usr/local/include/agar,
-					/Users/paulz/OVCC/Ramdisk/../CoCo,
-					/Users/paulz/OVCC/Ramdisk/EXPORT,
-					/Users/paulz/OVCC/Ramdisk,
 					"$(inherited)",
+					/Users/paulz/OVCC/Ramdisk/../CoCo,
+					/Users/paulz/OVCC/Ramdisk,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1786,11 +1648,7 @@
 					/usr/local/lib,
 					"$(inherited)",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					/opt/homebrew/lib,
-					/usr/local/lib,
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				LIBRARY_STYLE = BUNDLE;
 				MACH_O_TYPE = mh_bundle;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1800,15 +1658,7 @@
 					"-fpascal-strings",
 					"$(inherited)",
 				);
-				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"-lSDL2",
-					"-lag_core",
-					"-lag_gui",
-					"-lpthread",
-					"$(inherited)",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ramdisk;
 				SECTORDER_FLAGS = "";
@@ -1831,30 +1681,17 @@
 				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .so;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = s;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					becker_EXPORTS,
-					DARWIN,
-					_THREAD_SAFE,
-					_USE_OPENGL_FRAMEWORK,
-					TARGET_API_MAC_CARBON,
-					TARGET_API_MAC_OSX,
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/opt/homebrew/include,
-					/opt/homebrew/include/SDL2,
-					/usr/local/include,
-					/usr/local/include/agar,
-					/Users/paulz/OVCC/becker/../CoCo,
-					/Users/paulz/OVCC/becker/EXPORT,
-					/Users/paulz/OVCC/becker,
 					"$(inherited)",
+					/Users/paulz/OVCC/becker/../CoCo,
+					/Users/paulz/OVCC/becker,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1862,11 +1699,7 @@
 					/usr/local/lib,
 					"$(inherited)",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					/opt/homebrew/lib,
-					/usr/local/lib,
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				LIBRARY_STYLE = BUNDLE;
 				MACH_O_TYPE = mh_bundle;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1876,15 +1709,7 @@
 					"-fpascal-strings",
 					"$(inherited)",
 				);
-				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"-lSDL2",
-					"-lag_core",
-					"-lag_gui",
-					"-lpthread",
-					"$(inherited)",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = becker;
 				SECTORDER_FLAGS = "";
@@ -1911,26 +1736,12 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					orch90_EXPORTS,
-					DARWIN,
-					_THREAD_SAFE,
-					_USE_OPENGL_FRAMEWORK,
-					TARGET_API_MAC_CARBON,
-					TARGET_API_MAC_OSX,
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/opt/homebrew/include,
-					/opt/homebrew/include/SDL2,
-					/usr/local/include,
-					/usr/local/include/agar,
-					/Users/paulz/OVCC/orch90/../CoCo,
-					/Users/paulz/OVCC/orch90/EXPORT,
-					/Users/paulz/OVCC/orch90,
 					"$(inherited)",
+					/Users/paulz/OVCC/orch90/../CoCo,
+					/Users/paulz/OVCC/orch90,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1938,11 +1749,7 @@
 					/usr/local/lib,
 					"$(inherited)",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					/opt/homebrew/lib,
-					/usr/local/lib,
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				LIBRARY_STYLE = BUNDLE;
 				MACH_O_TYPE = mh_bundle;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1952,15 +1759,7 @@
 					"-fpascal-strings",
 					"$(inherited)",
 				);
-				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"-lSDL2",
-					"-lag_core",
-					"-lag_gui",
-					"-lpthread",
-					"$(inherited)",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = orch90;
 				SECTORDER_FLAGS = "";
@@ -1987,26 +1786,12 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					orch90_EXPORTS,
-					DARWIN,
-					_THREAD_SAFE,
-					_USE_OPENGL_FRAMEWORK,
-					TARGET_API_MAC_CARBON,
-					TARGET_API_MAC_OSX,
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/opt/homebrew/include,
-					/opt/homebrew/include/SDL2,
-					/usr/local/include,
-					/usr/local/include/agar,
-					/Users/paulz/OVCC/orch90/../CoCo,
-					/Users/paulz/OVCC/orch90/EXPORT,
-					/Users/paulz/OVCC/orch90,
 					"$(inherited)",
+					/Users/paulz/OVCC/orch90/../CoCo,
+					/Users/paulz/OVCC/orch90,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2014,11 +1799,7 @@
 					/usr/local/lib,
 					"$(inherited)",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					/opt/homebrew/lib,
-					/usr/local/lib,
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				LIBRARY_STYLE = BUNDLE;
 				MACH_O_TYPE = mh_bundle;
 				ONLY_ACTIVE_ARCH = YES;
@@ -2028,15 +1809,7 @@
 					"-fpascal-strings",
 					"$(inherited)",
 				);
-				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"-lSDL2",
-					"-lag_core",
-					"-lag_gui",
-					"-lpthread",
-					"$(inherited)",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = orch90;
 				SECTORDER_FLAGS = "";
@@ -2063,26 +1836,12 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					superide_EXPORTS,
-					DARWIN,
-					_THREAD_SAFE,
-					_USE_OPENGL_FRAMEWORK,
-					TARGET_API_MAC_CARBON,
-					TARGET_API_MAC_OSX,
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/opt/homebrew/include,
-					/opt/homebrew/include/SDL2,
-					/usr/local/include,
-					/usr/local/include/agar,
-					/Users/paulz/OVCC/SuperIDE/../CoCo,
-					/Users/paulz/OVCC/SuperIDE/EXPORT,
-					/Users/paulz/OVCC/SuperIDE,
 					"$(inherited)",
+					/Users/paulz/OVCC/SuperIDE/../CoCo,
+					/Users/paulz/OVCC/SuperIDE,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2090,11 +1849,7 @@
 					/usr/local/lib,
 					"$(inherited)",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					/opt/homebrew/lib,
-					/usr/local/lib,
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				LIBRARY_STYLE = BUNDLE;
 				MACH_O_TYPE = mh_bundle;
 				ONLY_ACTIVE_ARCH = YES;
@@ -2104,15 +1859,7 @@
 					"-fpascal-strings",
 					"$(inherited)",
 				);
-				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"-lSDL2",
-					"-lag_core",
-					"-lag_gui",
-					"-lpthread",
-					"$(inherited)",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = superide;
 				SECTORDER_FLAGS = "";
@@ -2127,13 +1874,61 @@
 		555C5BE9477140EC9F925A4A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				DRIVERKIT_DEPLOYMENT_TARGET = 23.4;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks,
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					DARWIN,
+					_THREAD_SAFE,
+					_USE_OPENGL_FRAMEWORK,
+					TARGET_API_MAC_CARBON,
+					TARGET_API_MAC_OSX,
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					/opt/homebrew/include/SDL2,
+					/usr/local/include,
+					/usr/local/include/agar,
+					/Users/paulz/OVCC/becker/../CoCo,
+					/Users/paulz/OVCC/becker/EXPORT,
+					/Users/paulz/OVCC/becker,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/opt/homebrew/lib,
+					/usr/local/lib,
+					"$(inherited)",
+					"$(PROJECT_DIR)/becker",
+					"$(PROJECT_DIR)/FD502",
+					"$(PROJECT_DIR)/HardDisk",
+					"$(PROJECT_DIR)/mpi",
+					"$(PROJECT_DIR)/mpu",
+					"$(PROJECT_DIR)/orch90",
+					"$(PROJECT_DIR)/Ramdisk",
+					"$(PROJECT_DIR)/SuperIDE",
+					"$(PROJECT_DIR)",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk;
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lag_core",
+					"-lag_gui",
+					"-lSDL2",
+					"-lobjc",
+					"-lpthread",
+					"$(inherited)",
+				);
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SYMROOT = /Users/paulz/OVCC/build;
 			};
@@ -2154,26 +1949,12 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = s;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					harddisk_EXPORTS,
-					DARWIN,
-					_THREAD_SAFE,
-					_USE_OPENGL_FRAMEWORK,
-					TARGET_API_MAC_CARBON,
-					TARGET_API_MAC_OSX,
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/opt/homebrew/include,
-					/opt/homebrew/include/SDL2,
-					/usr/local/include,
-					/usr/local/include/agar,
-					/Users/paulz/OVCC/HardDisk/../CoCo,
-					/Users/paulz/OVCC/HardDisk/EXPORT,
-					/Users/paulz/OVCC/HardDisk,
 					"$(inherited)",
+					/Users/paulz/OVCC/HardDisk/../CoCo,
+					/Users/paulz/OVCC/HardDisk,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2181,11 +1962,7 @@
 					/usr/local/lib,
 					"$(inherited)",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					/opt/homebrew/lib,
-					/usr/local/lib,
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				LIBRARY_STYLE = BUNDLE;
 				MACH_O_TYPE = mh_bundle;
 				ONLY_ACTIVE_ARCH = YES;
@@ -2195,15 +1972,7 @@
 					"-fpascal-strings",
 					"$(inherited)",
 				);
-				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"-lSDL2",
-					"-lag_core",
-					"-lag_gui",
-					"-lpthread",
-					"$(inherited)",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = harddisk;
 				SECTORDER_FLAGS = "";
@@ -2230,26 +1999,12 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					harddisk_EXPORTS,
-					DARWIN,
-					_THREAD_SAFE,
-					_USE_OPENGL_FRAMEWORK,
-					TARGET_API_MAC_CARBON,
-					TARGET_API_MAC_OSX,
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/opt/homebrew/include,
-					/opt/homebrew/include/SDL2,
-					/usr/local/include,
-					/usr/local/include/agar,
-					/Users/paulz/OVCC/HardDisk/../CoCo,
-					/Users/paulz/OVCC/HardDisk/EXPORT,
-					/Users/paulz/OVCC/HardDisk,
 					"$(inherited)",
+					/Users/paulz/OVCC/HardDisk/../CoCo,
+					/Users/paulz/OVCC/HardDisk,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2257,11 +2012,7 @@
 					/usr/local/lib,
 					"$(inherited)",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					/opt/homebrew/lib,
-					/usr/local/lib,
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				LIBRARY_STYLE = BUNDLE;
 				MACH_O_TYPE = mh_bundle;
 				ONLY_ACTIVE_ARCH = YES;
@@ -2271,15 +2022,7 @@
 					"-fpascal-strings",
 					"$(inherited)",
 				);
-				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"-lSDL2",
-					"-lag_core",
-					"-lag_gui",
-					"-lpthread",
-					"$(inherited)",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = harddisk;
 				SECTORDER_FLAGS = "";
@@ -2306,26 +2049,12 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					fd502_EXPORTS,
-					DARWIN,
-					_THREAD_SAFE,
-					_USE_OPENGL_FRAMEWORK,
-					TARGET_API_MAC_CARBON,
-					TARGET_API_MAC_OSX,
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/opt/homebrew/include,
-					/opt/homebrew/include/SDL2,
-					/usr/local/include,
-					/usr/local/include/agar,
-					/Users/paulz/OVCC/FD502/../CoCo,
-					/Users/paulz/OVCC/FD502/EXPORT,
-					/Users/paulz/OVCC/FD502,
 					"$(inherited)",
+					/Users/paulz/OVCC/FD502/../CoCo,
+					/Users/paulz/OVCC/FD502,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2333,11 +2062,7 @@
 					/usr/local/lib,
 					"$(inherited)",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					/opt/homebrew/lib,
-					/usr/local/lib,
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				LIBRARY_STYLE = BUNDLE;
 				MACH_O_TYPE = mh_bundle;
 				ONLY_ACTIVE_ARCH = YES;
@@ -2346,15 +2071,7 @@
 					"-fpascal-strings",
 					"$(inherited)",
 				);
-				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"-lSDL2",
-					"-lag_core",
-					"-lag_gui",
-					"-lpthread",
-					"$(inherited)",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = fd502;
 				SECTORDER_FLAGS = "";
@@ -2381,26 +2098,12 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					mpi_EXPORTS,
-					DARWIN,
-					_THREAD_SAFE,
-					_USE_OPENGL_FRAMEWORK,
-					TARGET_API_MAC_CARBON,
-					TARGET_API_MAC_OSX,
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/opt/homebrew/include,
-					/opt/homebrew/include/SDL2,
-					/usr/local/include,
-					/usr/local/include/agar,
-					/Users/paulz/OVCC/mpi/../CoCo,
-					/Users/paulz/OVCC/mpi/EXPORT,
-					/Users/paulz/OVCC/mpi,
 					"$(inherited)",
+					/Users/paulz/OVCC/mpi/../CoCo,
+					/Users/paulz/OVCC/mpi,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2408,11 +2111,7 @@
 					/usr/local/lib,
 					"$(inherited)",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					/opt/homebrew/lib,
-					/usr/local/lib,
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				LIBRARY_STYLE = BUNDLE;
 				MACH_O_TYPE = mh_bundle;
 				ONLY_ACTIVE_ARCH = YES;
@@ -2421,15 +2120,7 @@
 					"-fpascal-strings",
 					"$(inherited)",
 				);
-				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"-lSDL2",
-					"-lag_core",
-					"-lag_gui",
-					"-lpthread",
-					"$(inherited)",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = mpi;
 				SECTORDER_FLAGS = "";
@@ -2452,30 +2143,17 @@
 				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .so;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					becker_EXPORTS,
-					DARWIN,
-					_THREAD_SAFE,
-					_USE_OPENGL_FRAMEWORK,
-					TARGET_API_MAC_CARBON,
-					TARGET_API_MAC_OSX,
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/opt/homebrew/include,
-					/opt/homebrew/include/SDL2,
-					/usr/local/include,
-					/usr/local/include/agar,
-					/Users/paulz/OVCC/becker/../CoCo,
-					/Users/paulz/OVCC/becker/EXPORT,
-					/Users/paulz/OVCC/becker,
 					"$(inherited)",
+					/Users/paulz/OVCC/becker/../CoCo,
+					/Users/paulz/OVCC/becker,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2483,11 +2161,7 @@
 					/usr/local/lib,
 					"$(inherited)",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					/opt/homebrew/lib,
-					/usr/local/lib,
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				LIBRARY_STYLE = BUNDLE;
 				MACH_O_TYPE = mh_bundle;
 				ONLY_ACTIVE_ARCH = YES;
@@ -2497,15 +2171,7 @@
 					"-fpascal-strings",
 					"$(inherited)",
 				);
-				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"-lSDL2",
-					"-lag_core",
-					"-lag_gui",
-					"-lpthread",
-					"$(inherited)",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = becker;
 				SECTORDER_FLAGS = "";
@@ -2532,26 +2198,12 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					harddisk_EXPORTS,
-					DARWIN,
-					_THREAD_SAFE,
-					_USE_OPENGL_FRAMEWORK,
-					TARGET_API_MAC_CARBON,
-					TARGET_API_MAC_OSX,
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/opt/homebrew/include,
-					/opt/homebrew/include/SDL2,
-					/usr/local/include,
-					/usr/local/include/agar,
-					/Users/paulz/OVCC/HardDisk/../CoCo,
-					/Users/paulz/OVCC/HardDisk/EXPORT,
-					/Users/paulz/OVCC/HardDisk,
 					"$(inherited)",
+					/Users/paulz/OVCC/HardDisk/../CoCo,
+					/Users/paulz/OVCC/HardDisk,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2559,11 +2211,7 @@
 					/usr/local/lib,
 					"$(inherited)",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					/opt/homebrew/lib,
-					/usr/local/lib,
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				LIBRARY_STYLE = BUNDLE;
 				MACH_O_TYPE = mh_bundle;
 				ONLY_ACTIVE_ARCH = YES;
@@ -2573,15 +2221,7 @@
 					"-fpascal-strings",
 					"$(inherited)",
 				);
-				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"-lSDL2",
-					"-lag_core",
-					"-lag_gui",
-					"-lpthread",
-					"$(inherited)",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = harddisk;
 				SECTORDER_FLAGS = "";
@@ -2608,26 +2248,12 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					mpu_EXPORTS,
-					DARWIN,
-					_THREAD_SAFE,
-					_USE_OPENGL_FRAMEWORK,
-					TARGET_API_MAC_CARBON,
-					TARGET_API_MAC_OSX,
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/opt/homebrew/include,
-					/opt/homebrew/include/SDL2,
-					/usr/local/include,
-					/usr/local/include/agar,
-					/Users/paulz/OVCC/mpu/../CoCo,
-					/Users/paulz/OVCC/mpu/EXPORT,
-					/Users/paulz/OVCC/mpu,
 					"$(inherited)",
+					/Users/paulz/OVCC/mpu/../CoCo,
+					/Users/paulz/OVCC/mpu,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2635,11 +2261,7 @@
 					/usr/local/lib,
 					"$(inherited)",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					/opt/homebrew/lib,
-					/usr/local/lib,
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				LIBRARY_STYLE = BUNDLE;
 				MACH_O_TYPE = mh_bundle;
 				ONLY_ACTIVE_ARCH = YES;
@@ -2649,15 +2271,7 @@
 					"-fpascal-strings",
 					"$(inherited)",
 				);
-				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"-lSDL2",
-					"-lag_core",
-					"-lag_gui",
-					"-lpthread",
-					"$(inherited)",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = mpu;
 				SECTORDER_FLAGS = "";
@@ -2684,26 +2298,12 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					ramdisk_EXPORTS,
-					DARWIN,
-					_THREAD_SAFE,
-					_USE_OPENGL_FRAMEWORK,
-					TARGET_API_MAC_CARBON,
-					TARGET_API_MAC_OSX,
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/opt/homebrew/include,
-					/opt/homebrew/include/SDL2,
-					/usr/local/include,
-					/usr/local/include/agar,
-					/Users/paulz/OVCC/Ramdisk/../CoCo,
-					/Users/paulz/OVCC/Ramdisk/EXPORT,
-					/Users/paulz/OVCC/Ramdisk,
 					"$(inherited)",
+					/Users/paulz/OVCC/Ramdisk/../CoCo,
+					/Users/paulz/OVCC/Ramdisk,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2711,11 +2311,7 @@
 					/usr/local/lib,
 					"$(inherited)",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					/opt/homebrew/lib,
-					/usr/local/lib,
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				LIBRARY_STYLE = BUNDLE;
 				MACH_O_TYPE = mh_bundle;
 				ONLY_ACTIVE_ARCH = YES;
@@ -2725,15 +2321,7 @@
 					"-fpascal-strings",
 					"$(inherited)",
 				);
-				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"-lSDL2",
-					"-lag_core",
-					"-lag_gui",
-					"-lpthread",
-					"$(inherited)",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ramdisk;
 				SECTORDER_FLAGS = "";
@@ -2756,30 +2344,17 @@
 				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .so;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					becker_EXPORTS,
-					DARWIN,
-					_THREAD_SAFE,
-					_USE_OPENGL_FRAMEWORK,
-					TARGET_API_MAC_CARBON,
-					TARGET_API_MAC_OSX,
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/opt/homebrew/include,
-					/opt/homebrew/include/SDL2,
-					/usr/local/include,
-					/usr/local/include/agar,
-					/Users/paulz/OVCC/becker/../CoCo,
-					/Users/paulz/OVCC/becker/EXPORT,
-					/Users/paulz/OVCC/becker,
 					"$(inherited)",
+					/Users/paulz/OVCC/becker/../CoCo,
+					/Users/paulz/OVCC/becker,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2787,11 +2362,7 @@
 					/usr/local/lib,
 					"$(inherited)",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					/opt/homebrew/lib,
-					/usr/local/lib,
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				LIBRARY_STYLE = BUNDLE;
 				MACH_O_TYPE = mh_bundle;
 				ONLY_ACTIVE_ARCH = YES;
@@ -2801,15 +2372,7 @@
 					"-fpascal-strings",
 					"$(inherited)",
 				);
-				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"-lSDL2",
-					"-lag_core",
-					"-lag_gui",
-					"-lpthread",
-					"$(inherited)",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = becker;
 				SECTORDER_FLAGS = "";
@@ -2824,13 +2387,61 @@
 		8628793210584A379F1F8223 /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				DRIVERKIT_DEPLOYMENT_TARGET = 23.4;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks,
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					DARWIN,
+					_THREAD_SAFE,
+					_USE_OPENGL_FRAMEWORK,
+					TARGET_API_MAC_CARBON,
+					TARGET_API_MAC_OSX,
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					/opt/homebrew/include/SDL2,
+					/usr/local/include,
+					/usr/local/include/agar,
+					/Users/paulz/OVCC/becker/../CoCo,
+					/Users/paulz/OVCC/becker/EXPORT,
+					/Users/paulz/OVCC/becker,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/opt/homebrew/lib,
+					/usr/local/lib,
+					"$(inherited)",
+					"$(PROJECT_DIR)/becker",
+					"$(PROJECT_DIR)/FD502",
+					"$(PROJECT_DIR)/HardDisk",
+					"$(PROJECT_DIR)/mpi",
+					"$(PROJECT_DIR)/mpu",
+					"$(PROJECT_DIR)/orch90",
+					"$(PROJECT_DIR)/Ramdisk",
+					"$(PROJECT_DIR)/SuperIDE",
+					"$(PROJECT_DIR)",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk;
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lag_core",
+					"-lag_gui",
+					"-lSDL2",
+					"-lobjc",
+					"-lpthread",
+					"$(inherited)",
+				);
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SYMROOT = /Users/paulz/OVCC/build;
 			};
@@ -2851,26 +2462,12 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					mpi_EXPORTS,
-					DARWIN,
-					_THREAD_SAFE,
-					_USE_OPENGL_FRAMEWORK,
-					TARGET_API_MAC_CARBON,
-					TARGET_API_MAC_OSX,
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/opt/homebrew/include,
-					/opt/homebrew/include/SDL2,
-					/usr/local/include,
-					/usr/local/include/agar,
-					/Users/paulz/OVCC/mpi/../CoCo,
-					/Users/paulz/OVCC/mpi/EXPORT,
-					/Users/paulz/OVCC/mpi,
 					"$(inherited)",
+					/Users/paulz/OVCC/mpi/../CoCo,
+					/Users/paulz/OVCC/mpi,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2878,11 +2475,7 @@
 					/usr/local/lib,
 					"$(inherited)",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					/opt/homebrew/lib,
-					/usr/local/lib,
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				LIBRARY_STYLE = BUNDLE;
 				MACH_O_TYPE = mh_bundle;
 				ONLY_ACTIVE_ARCH = YES;
@@ -2892,15 +2485,7 @@
 					"-fpascal-strings",
 					"$(inherited)",
 				);
-				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"-lSDL2",
-					"-lag_core",
-					"-lag_gui",
-					"-lpthread",
-					"$(inherited)",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = mpi;
 				SECTORDER_FLAGS = "";
@@ -2927,26 +2512,12 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					superide_EXPORTS,
-					DARWIN,
-					_THREAD_SAFE,
-					_USE_OPENGL_FRAMEWORK,
-					TARGET_API_MAC_CARBON,
-					TARGET_API_MAC_OSX,
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/opt/homebrew/include,
-					/opt/homebrew/include/SDL2,
-					/usr/local/include,
-					/usr/local/include/agar,
-					/Users/paulz/OVCC/SuperIDE/../CoCo,
-					/Users/paulz/OVCC/SuperIDE/EXPORT,
-					/Users/paulz/OVCC/SuperIDE,
 					"$(inherited)",
+					/Users/paulz/OVCC/SuperIDE/../CoCo,
+					/Users/paulz/OVCC/SuperIDE,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2954,11 +2525,7 @@
 					/usr/local/lib,
 					"$(inherited)",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					/opt/homebrew/lib,
-					/usr/local/lib,
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				LIBRARY_STYLE = BUNDLE;
 				MACH_O_TYPE = mh_bundle;
 				ONLY_ACTIVE_ARCH = YES;
@@ -2968,15 +2535,7 @@
 					"-fpascal-strings",
 					"$(inherited)",
 				);
-				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"-lSDL2",
-					"-lag_core",
-					"-lag_gui",
-					"-lpthread",
-					"$(inherited)",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = superide;
 				SECTORDER_FLAGS = "";
@@ -2994,6 +2553,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -3002,7 +2562,9 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = " $(inherited)";
 				OTHER_REZFLAGS = "";
@@ -3028,26 +2590,12 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = s;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					fd502_EXPORTS,
-					DARWIN,
-					_THREAD_SAFE,
-					_USE_OPENGL_FRAMEWORK,
-					TARGET_API_MAC_CARBON,
-					TARGET_API_MAC_OSX,
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/opt/homebrew/include,
-					/opt/homebrew/include/SDL2,
-					/usr/local/include,
-					/usr/local/include/agar,
-					/Users/paulz/OVCC/FD502/../CoCo,
-					/Users/paulz/OVCC/FD502/EXPORT,
-					/Users/paulz/OVCC/FD502,
 					"$(inherited)",
+					/Users/paulz/OVCC/FD502/../CoCo,
+					/Users/paulz/OVCC/FD502,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3055,11 +2603,7 @@
 					/usr/local/lib,
 					"$(inherited)",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					/opt/homebrew/lib,
-					/usr/local/lib,
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				LIBRARY_STYLE = BUNDLE;
 				MACH_O_TYPE = mh_bundle;
 				ONLY_ACTIVE_ARCH = YES;
@@ -3069,15 +2613,7 @@
 					"-fpascal-strings",
 					"$(inherited)",
 				);
-				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"-lSDL2",
-					"-lag_core",
-					"-lag_gui",
-					"-lpthread",
-					"$(inherited)",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = fd502;
 				SECTORDER_FLAGS = "";
@@ -3095,6 +2631,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -3103,7 +2640,9 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = " $(inherited)";
 				OTHER_REZFLAGS = "";
@@ -3129,26 +2668,12 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					mpi_EXPORTS,
-					DARWIN,
-					_THREAD_SAFE,
-					_USE_OPENGL_FRAMEWORK,
-					TARGET_API_MAC_CARBON,
-					TARGET_API_MAC_OSX,
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/opt/homebrew/include,
-					/opt/homebrew/include/SDL2,
-					/usr/local/include,
-					/usr/local/include/agar,
-					/Users/paulz/OVCC/mpi/../CoCo,
-					/Users/paulz/OVCC/mpi/EXPORT,
-					/Users/paulz/OVCC/mpi,
 					"$(inherited)",
+					/Users/paulz/OVCC/mpi/../CoCo,
+					/Users/paulz/OVCC/mpi,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3156,11 +2681,7 @@
 					/usr/local/lib,
 					"$(inherited)",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					/opt/homebrew/lib,
-					/usr/local/lib,
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				LIBRARY_STYLE = BUNDLE;
 				MACH_O_TYPE = mh_bundle;
 				ONLY_ACTIVE_ARCH = YES;
@@ -3170,15 +2691,7 @@
 					"-fpascal-strings",
 					"$(inherited)",
 				);
-				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"-lSDL2",
-					"-lag_core",
-					"-lag_gui",
-					"-lpthread",
-					"$(inherited)",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = mpi;
 				SECTORDER_FLAGS = "";
@@ -3205,26 +2718,12 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					mpu_EXPORTS,
-					DARWIN,
-					_THREAD_SAFE,
-					_USE_OPENGL_FRAMEWORK,
-					TARGET_API_MAC_CARBON,
-					TARGET_API_MAC_OSX,
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/opt/homebrew/include,
-					/opt/homebrew/include/SDL2,
-					/usr/local/include,
-					/usr/local/include/agar,
-					/Users/paulz/OVCC/mpu/../CoCo,
-					/Users/paulz/OVCC/mpu/EXPORT,
-					/Users/paulz/OVCC/mpu,
 					"$(inherited)",
+					/Users/paulz/OVCC/mpu/../CoCo,
+					/Users/paulz/OVCC/mpu,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3232,11 +2731,7 @@
 					/usr/local/lib,
 					"$(inherited)",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					/opt/homebrew/lib,
-					/usr/local/lib,
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				LIBRARY_STYLE = BUNDLE;
 				MACH_O_TYPE = mh_bundle;
 				ONLY_ACTIVE_ARCH = YES;
@@ -3245,15 +2740,7 @@
 					"-fpascal-strings",
 					"$(inherited)",
 				);
-				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"-lSDL2",
-					"-lag_core",
-					"-lag_gui",
-					"-lpthread",
-					"$(inherited)",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = mpu;
 				SECTORDER_FLAGS = "";
@@ -3280,26 +2767,12 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					ramdisk_EXPORTS,
-					DARWIN,
-					_THREAD_SAFE,
-					_USE_OPENGL_FRAMEWORK,
-					TARGET_API_MAC_CARBON,
-					TARGET_API_MAC_OSX,
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/opt/homebrew/include,
-					/opt/homebrew/include/SDL2,
-					/usr/local/include,
-					/usr/local/include/agar,
-					/Users/paulz/OVCC/Ramdisk/../CoCo,
-					/Users/paulz/OVCC/Ramdisk/EXPORT,
-					/Users/paulz/OVCC/Ramdisk,
 					"$(inherited)",
+					/Users/paulz/OVCC/Ramdisk/../CoCo,
+					/Users/paulz/OVCC/Ramdisk,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3307,11 +2780,7 @@
 					/usr/local/lib,
 					"$(inherited)",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					/opt/homebrew/lib,
-					/usr/local/lib,
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				LIBRARY_STYLE = BUNDLE;
 				MACH_O_TYPE = mh_bundle;
 				ONLY_ACTIVE_ARCH = YES;
@@ -3320,15 +2789,7 @@
 					"-fpascal-strings",
 					"$(inherited)",
 				);
-				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"-lSDL2",
-					"-lag_core",
-					"-lag_gui",
-					"-lpthread",
-					"$(inherited)",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ramdisk;
 				SECTORDER_FLAGS = "";
@@ -3352,53 +2813,22 @@
 				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = "";
 				EXECUTABLE_SUFFIX = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/System/Library/Frameworks,
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					DARWIN,
-					_THREAD_SAFE,
-					_USE_OPENGL_FRAMEWORK,
-					TARGET_API_MAC_CARBON,
-					TARGET_API_MAC_OSX,
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (
-					/opt/homebrew/include,
-					/usr/local/include,
-					/opt/homebrew/Cellar/sdl2/2.30.1/include,
-					/Users/paulz/OVCC/CoCo/EXPORT,
-					/Users/paulz/OVCC/CoCo,
-					"$(inherited)",
-				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = /Users/paulz/OVCC/CoCo/CMakeFiles/ovcc.dir/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = OVCC;
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
+					/opt/homebrew/lib,
 					/usr/local/lib,
-					/opt/homebrew/Cellar/sdl2/2.30.1/lib,
 					"$(inherited)",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					/usr/local/lib,
-					/opt/homebrew/Cellar/sdl2/2.30.1/lib,
-					"$(inherited)",
-					"$(PROJECT_DIR)/becker",
-					"$(PROJECT_DIR)/FD502",
-					"$(PROJECT_DIR)/HardDisk",
-					"$(PROJECT_DIR)/mpi",
-					"$(PROJECT_DIR)/mpu",
-					"$(PROJECT_DIR)/orch90",
-					"$(PROJECT_DIR)/Ramdisk",
-					"$(PROJECT_DIR)/SuperIDE",
-					"$(PROJECT_DIR)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
@@ -3407,25 +2837,15 @@
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					/opt/homebrew/Cellar/sdl2/2.30.1/lib/libSDL2.dylib,
-					"-lag_core",
-					"-lag_gui",
-					"-lobjc",
-					"-lpthread",
+					"$(inherited)",
 					"-framework",
 					Cocoa,
-					"$(inherited)",
 				);
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ovcc;
 				SECTORDER_FLAGS = "";
 				SKIP_INSTALL = NO;
-				SYSTEM_HEADER_SEARCH_PATHS = (
-					/opt/homebrew/Cellar/sdl2/2.30.1/include/SDL2,
-					"$(inherited)",
-				);
+				SYSTEM_HEADER_SEARCH_PATHS = "$(inherited)";
 				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/ovcc.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
@@ -3447,26 +2867,12 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = s;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					superide_EXPORTS,
-					DARWIN,
-					_THREAD_SAFE,
-					_USE_OPENGL_FRAMEWORK,
-					TARGET_API_MAC_CARBON,
-					TARGET_API_MAC_OSX,
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/opt/homebrew/include,
-					/opt/homebrew/include/SDL2,
-					/usr/local/include,
-					/usr/local/include/agar,
-					/Users/paulz/OVCC/SuperIDE/../CoCo,
-					/Users/paulz/OVCC/SuperIDE/EXPORT,
-					/Users/paulz/OVCC/SuperIDE,
 					"$(inherited)",
+					/Users/paulz/OVCC/SuperIDE/../CoCo,
+					/Users/paulz/OVCC/SuperIDE,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3474,11 +2880,7 @@
 					/usr/local/lib,
 					"$(inherited)",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					/opt/homebrew/lib,
-					/usr/local/lib,
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				LIBRARY_STYLE = BUNDLE;
 				MACH_O_TYPE = mh_bundle;
 				ONLY_ACTIVE_ARCH = YES;
@@ -3488,15 +2890,7 @@
 					"-fpascal-strings",
 					"$(inherited)",
 				);
-				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"-lSDL2",
-					"-lag_core",
-					"-lag_gui",
-					"-lpthread",
-					"$(inherited)",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = superide;
 				SECTORDER_FLAGS = "";
@@ -3519,30 +2913,17 @@
 				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .so;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					becker_EXPORTS,
-					DARWIN,
-					_THREAD_SAFE,
-					_USE_OPENGL_FRAMEWORK,
-					TARGET_API_MAC_CARBON,
-					TARGET_API_MAC_OSX,
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/opt/homebrew/include,
-					/opt/homebrew/include/SDL2,
-					/usr/local/include,
-					/usr/local/include/agar,
-					/Users/paulz/OVCC/becker/../CoCo,
-					/Users/paulz/OVCC/becker/EXPORT,
-					/Users/paulz/OVCC/becker,
 					"$(inherited)",
+					/Users/paulz/OVCC/becker/../CoCo,
+					/Users/paulz/OVCC/becker,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3550,11 +2931,7 @@
 					/usr/local/lib,
 					"$(inherited)",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					/opt/homebrew/lib,
-					/usr/local/lib,
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				LIBRARY_STYLE = BUNDLE;
 				MACH_O_TYPE = mh_bundle;
 				ONLY_ACTIVE_ARCH = YES;
@@ -3563,15 +2940,7 @@
 					"-fpascal-strings",
 					"$(inherited)",
 				);
-				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"-lSDL2",
-					"-lag_core",
-					"-lag_gui",
-					"-lpthread",
-					"$(inherited)",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = becker;
 				SECTORDER_FLAGS = "";
@@ -3598,26 +2967,12 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					fd502_EXPORTS,
-					DARWIN,
-					_THREAD_SAFE,
-					_USE_OPENGL_FRAMEWORK,
-					TARGET_API_MAC_CARBON,
-					TARGET_API_MAC_OSX,
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/opt/homebrew/include,
-					/opt/homebrew/include/SDL2,
-					/usr/local/include,
-					/usr/local/include/agar,
-					/Users/paulz/OVCC/FD502/../CoCo,
-					/Users/paulz/OVCC/FD502/EXPORT,
-					/Users/paulz/OVCC/FD502,
 					"$(inherited)",
+					/Users/paulz/OVCC/FD502/../CoCo,
+					/Users/paulz/OVCC/FD502,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3625,11 +2980,7 @@
 					/usr/local/lib,
 					"$(inherited)",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					/opt/homebrew/lib,
-					/usr/local/lib,
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				LIBRARY_STYLE = BUNDLE;
 				MACH_O_TYPE = mh_bundle;
 				ONLY_ACTIVE_ARCH = YES;
@@ -3639,15 +2990,7 @@
 					"-fpascal-strings",
 					"$(inherited)",
 				);
-				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"-lSDL2",
-					"-lag_core",
-					"-lag_gui",
-					"-lpthread",
-					"$(inherited)",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = fd502;
 				SECTORDER_FLAGS = "";
@@ -3671,53 +3014,22 @@
 				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = "";
 				EXECUTABLE_SUFFIX = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/System/Library/Frameworks,
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					DARWIN,
-					_THREAD_SAFE,
-					_USE_OPENGL_FRAMEWORK,
-					TARGET_API_MAC_CARBON,
-					TARGET_API_MAC_OSX,
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (
-					/opt/homebrew/include,
-					/usr/local/include,
-					/opt/homebrew/Cellar/sdl2/2.30.1/include,
-					/Users/paulz/OVCC/CoCo/EXPORT,
-					/Users/paulz/OVCC/CoCo,
-					"$(inherited)",
-				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = /Users/paulz/OVCC/CoCo/CMakeFiles/ovcc.dir/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = OVCC;
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
+					/opt/homebrew/lib,
 					/usr/local/lib,
-					/opt/homebrew/Cellar/sdl2/2.30.1/lib,
 					"$(inherited)",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					/usr/local/lib,
-					/opt/homebrew/Cellar/sdl2/2.30.1/lib,
-					"$(inherited)",
-					"$(PROJECT_DIR)/becker",
-					"$(PROJECT_DIR)/FD502",
-					"$(PROJECT_DIR)/HardDisk",
-					"$(PROJECT_DIR)/mpi",
-					"$(PROJECT_DIR)/mpu",
-					"$(PROJECT_DIR)/orch90",
-					"$(PROJECT_DIR)/Ramdisk",
-					"$(PROJECT_DIR)/SuperIDE",
-					"$(PROJECT_DIR)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
@@ -3726,25 +3038,15 @@
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					/opt/homebrew/Cellar/sdl2/2.30.1/lib/libSDL2.dylib,
-					"-lag_core",
-					"-lag_gui",
-					"-lobjc",
-					"-lpthread",
+					"$(inherited)",
 					"-framework",
 					Cocoa,
-					"$(inherited)",
 				);
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ovcc;
 				SECTORDER_FLAGS = "";
 				SKIP_INSTALL = NO;
-				SYSTEM_HEADER_SEARCH_PATHS = (
-					/opt/homebrew/Cellar/sdl2/2.30.1/include/SDL2,
-					"$(inherited)",
-				);
+				SYSTEM_HEADER_SEARCH_PATHS = "$(inherited)";
 				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/ovcc.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
@@ -3764,53 +3066,22 @@
 				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = "";
 				EXECUTABLE_SUFFIX = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/System/Library/Frameworks,
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					DARWIN,
-					_THREAD_SAFE,
-					_USE_OPENGL_FRAMEWORK,
-					TARGET_API_MAC_CARBON,
-					TARGET_API_MAC_OSX,
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (
-					/opt/homebrew/include,
-					/usr/local/include,
-					/opt/homebrew/Cellar/sdl2/2.30.1/include,
-					/Users/paulz/OVCC/CoCo/EXPORT,
-					/Users/paulz/OVCC/CoCo,
-					"$(inherited)",
-				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = /Users/paulz/OVCC/CoCo/CMakeFiles/ovcc.dir/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = OVCC;
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
+					/opt/homebrew/lib,
 					/usr/local/lib,
-					/opt/homebrew/Cellar/sdl2/2.30.1/lib,
 					"$(inherited)",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					/usr/local/lib,
-					/opt/homebrew/Cellar/sdl2/2.30.1/lib,
-					"$(inherited)",
-					"$(PROJECT_DIR)/becker",
-					"$(PROJECT_DIR)/FD502",
-					"$(PROJECT_DIR)/HardDisk",
-					"$(PROJECT_DIR)/mpi",
-					"$(PROJECT_DIR)/mpu",
-					"$(PROJECT_DIR)/orch90",
-					"$(PROJECT_DIR)/Ramdisk",
-					"$(PROJECT_DIR)/SuperIDE",
-					"$(PROJECT_DIR)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
@@ -3818,25 +3089,15 @@
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					/opt/homebrew/Cellar/sdl2/2.30.1/lib/libSDL2.dylib,
-					"-lag_core",
-					"-lag_gui",
-					"-lobjc",
-					"-lpthread",
+					"$(inherited)",
 					"-framework",
 					Cocoa,
-					"$(inherited)",
 				);
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ovcc;
 				SECTORDER_FLAGS = "";
 				SKIP_INSTALL = NO;
-				SYSTEM_HEADER_SEARCH_PATHS = (
-					/opt/homebrew/Cellar/sdl2/2.30.1/include/SDL2,
-					"$(inherited)",
-				);
+				SYSTEM_HEADER_SEARCH_PATHS = "$(inherited)";
 				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/ovcc.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
@@ -3858,26 +3119,12 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = s;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					mpu_EXPORTS,
-					DARWIN,
-					_THREAD_SAFE,
-					_USE_OPENGL_FRAMEWORK,
-					TARGET_API_MAC_CARBON,
-					TARGET_API_MAC_OSX,
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/opt/homebrew/include,
-					/opt/homebrew/include/SDL2,
-					/usr/local/include,
-					/usr/local/include/agar,
-					/Users/paulz/OVCC/mpu/../CoCo,
-					/Users/paulz/OVCC/mpu/EXPORT,
-					/Users/paulz/OVCC/mpu,
 					"$(inherited)",
+					/Users/paulz/OVCC/mpu/../CoCo,
+					/Users/paulz/OVCC/mpu,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3885,11 +3132,7 @@
 					/usr/local/lib,
 					"$(inherited)",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					/opt/homebrew/lib,
-					/usr/local/lib,
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				LIBRARY_STYLE = BUNDLE;
 				MACH_O_TYPE = mh_bundle;
 				ONLY_ACTIVE_ARCH = YES;
@@ -3899,15 +3142,7 @@
 					"-fpascal-strings",
 					"$(inherited)",
 				);
-				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"-lSDL2",
-					"-lag_core",
-					"-lag_gui",
-					"-lpthread",
-					"$(inherited)",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = mpu;
 				SECTORDER_FLAGS = "";
@@ -3925,6 +3160,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -3933,7 +3169,9 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = " $(inherited)";
 				OTHER_REZFLAGS = "";
@@ -3959,26 +3197,12 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					superide_EXPORTS,
-					DARWIN,
-					_THREAD_SAFE,
-					_USE_OPENGL_FRAMEWORK,
-					TARGET_API_MAC_CARBON,
-					TARGET_API_MAC_OSX,
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/opt/homebrew/include,
-					/opt/homebrew/include/SDL2,
-					/usr/local/include,
-					/usr/local/include/agar,
-					/Users/paulz/OVCC/SuperIDE/../CoCo,
-					/Users/paulz/OVCC/SuperIDE/EXPORT,
-					/Users/paulz/OVCC/SuperIDE,
 					"$(inherited)",
+					/Users/paulz/OVCC/SuperIDE/../CoCo,
+					/Users/paulz/OVCC/SuperIDE,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3986,11 +3210,7 @@
 					/usr/local/lib,
 					"$(inherited)",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					/opt/homebrew/lib,
-					/usr/local/lib,
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				LIBRARY_STYLE = BUNDLE;
 				MACH_O_TYPE = mh_bundle;
 				ONLY_ACTIVE_ARCH = YES;
@@ -3999,15 +3219,7 @@
 					"-fpascal-strings",
 					"$(inherited)",
 				);
-				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"-lSDL2",
-					"-lag_core",
-					"-lag_gui",
-					"-lpthread",
-					"$(inherited)",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = superide;
 				SECTORDER_FLAGS = "";
