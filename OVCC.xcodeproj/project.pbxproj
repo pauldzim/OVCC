@@ -7,17 +7,6 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		71EE41D2DBF44773B13AFFD6 /* ZERO_CHECK */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 166DB9456E5E4928A7AB4FCA /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
-			buildPhases = (
-				F2D9CEF91F27E435C69830C9 /* Generate CMakeFiles/ZERO_CHECK */,
-			);
-			dependencies = (
-			);
-			name = ZERO_CHECK;
-			productName = ZERO_CHECK;
-		};
 		F7AC195232A74D0285F04FB5 /* ALL_BUILD */ = {
 			isa = PBXAggregateTarget;
 			buildConfigurationList = FAE21B4A89E640C59BDC4D13 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
@@ -34,7 +23,6 @@
 				1D7C94B51C2A4950BEE76703 /* PBXTargetDependency */,
 				7E76DBFCE24C4454B98C261D /* PBXTargetDependency */,
 				BCD8D826410A45AEAB217937 /* PBXTargetDependency */,
-				CD61784E88F74698A9A6AF8D /* PBXTargetDependency */,
 			);
 			name = ALL_BUILD;
 			productName = ALL_BUILD;
@@ -66,13 +54,13 @@
 		4B13030E2BAF8FAF00DD2F44 /* liborch90.so in CopyFiles */ = {isa = PBXBuildFile; fileRef = B9BAACB57E5A43928DF78352 /* liborch90.so */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		4B13030F2BAF8FAF00DD2F44 /* libramdisk.so in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D95AB97156A416798894725 /* libramdisk.so */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		4B1303102BAF8FAF00DD2F44 /* libsuperide.so in CopyFiles */ = {isa = PBXBuildFile; fileRef = 192EC50E837A41C7B008937B /* libsuperide.so */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		4B1303122BAF95B900DD2F44 /* libSDL2-2.0.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4B1303112BAF95B800DD2F44 /* libSDL2-2.0.0.dylib */; };
-		4B1303142BAF95E800DD2F44 /* libag_core.8.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4B1303132BAF95E800DD2F44 /* libag_core.8.dylib */; };
-		4B1303162BAF960600DD2F44 /* libag_gui.8.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4B1303152BAF960600DD2F44 /* libag_gui.8.dylib */; };
-		4B1303192BAFACA200DD2F44 /* libfontconfig.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4B1303182BAFACA200DD2F44 /* libfontconfig.1.dylib */; };
-		4B13031B2BAFACBD00DD2F44 /* libfreetype.6.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4B13031A2BAFACBD00DD2F44 /* libfreetype.6.dylib */; };
-		4B13031D2BAFC3CD00DD2F44 /* libpng16.16.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4B13031C2BAFC3CD00DD2F44 /* libpng16.16.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		4B13158C2BAFD08600DD2F44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B13158B2BAFD08600DD2F44 /* Assets.xcassets */; };
+		4BC9116A2BB0C217000189ED /* libag_core.8.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BC911622BB0C0ED000189ED /* libag_core.8.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		4BC9116B2BB0C218000189ED /* libag_gui.8.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BC911632BB0C0ED000189ED /* libag_gui.8.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		4BC9116C2BB0C218000189ED /* libfontconfig.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BC911642BB0C0ED000189ED /* libfontconfig.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		4BC9116D2BB0C218000189ED /* libfreetype.6.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BC911652BB0C0ED000189ED /* libfreetype.6.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		4BC9116E2BB0C218000189ED /* libpng16.16.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BC911662BB0C0ED000189ED /* libpng16.16.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		4BC9116F2BB0C218000189ED /* libSDL2-2.0.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BC911672BB0C0ED000189ED /* libSDL2-2.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		4E642DEAFFDC4B84912CDB60 /* iniman.c in Sources */ = {isa = PBXBuildFile; fileRef = 4AEE860745AC40E09C86349A /* iniman.c */; };
 		511AD50FA5344F75B33A6D51 /* harddisk.c in Sources */ = {isa = PBXBuildFile; fileRef = A053D5FDFCF0418593DD8ABC /* harddisk.c */; };
 		53841C79FF184DED9D353C24 /* fileops.c in Sources */ = {isa = PBXBuildFile; fileRef = 56167180D9944DC0ADBA93EB /* fileops.c */; };
@@ -121,41 +109,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		04608EDA1517469881688790 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0F86427A7DCF46528881356D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 71EE41D2DBF44773B13AFFD6;
-			remoteInfo = ZERO_CHECK;
-		};
-		0BCBC4082B544549AAB39077 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0F86427A7DCF46528881356D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 71EE41D2DBF44773B13AFFD6;
-			remoteInfo = ZERO_CHECK;
-		};
-		16305A3EE1F64EC5992EEFBC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0F86427A7DCF46528881356D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 71EE41D2DBF44773B13AFFD6;
-			remoteInfo = ZERO_CHECK;
-		};
-		19B0309F0B794F40BA01A6C6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0F86427A7DCF46528881356D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 71EE41D2DBF44773B13AFFD6;
-			remoteInfo = ZERO_CHECK;
-		};
-		1DD2BEFE13C849F9AC8094C1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0F86427A7DCF46528881356D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 71EE41D2DBF44773B13AFFD6;
-			remoteInfo = ZERO_CHECK;
-		};
 		21AC44D4855A4848B883907F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0F86427A7DCF46528881356D /* Project object */;
@@ -169,13 +122,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 6406FFE20BEC4E1E932F6358;
 			remoteInfo = becker;
-		};
-		3A1CF2B8155C43A6B1D968B0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0F86427A7DCF46528881356D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 71EE41D2DBF44773B13AFFD6;
-			remoteInfo = ZERO_CHECK;
 		};
 		545950D2168B4CD1BA272DD6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -205,40 +151,12 @@
 			remoteGlobalIDString = 3577DF34F44E43F2BFD4DCFC;
 			remoteInfo = orch90;
 		};
-		9812EB0AF8674D06ADFA3312 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0F86427A7DCF46528881356D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 71EE41D2DBF44773B13AFFD6;
-			remoteInfo = ZERO_CHECK;
-		};
 		9CCE6B1F453342E897A003DF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0F86427A7DCF46528881356D /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = A1359E4FB45046108468B9A7;
 			remoteInfo = ramdisk;
-		};
-		B1D07FFC09E14719AEE0E1BE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0F86427A7DCF46528881356D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 71EE41D2DBF44773B13AFFD6;
-			remoteInfo = ZERO_CHECK;
-		};
-		B1D996654F1A4A02AD80C83F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0F86427A7DCF46528881356D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 71EE41D2DBF44773B13AFFD6;
-			remoteInfo = ZERO_CHECK;
-		};
-		B6A0C2B7932D4803BF84BC4E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0F86427A7DCF46528881356D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 71EE41D2DBF44773B13AFFD6;
-			remoteInfo = ZERO_CHECK;
 		};
 		C71F7DF4D6EE4F82BF687C75 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -263,12 +181,12 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4B1303162BAF960600DD2F44 /* libag_gui.8.dylib in CopyFiles */,
-				4B1303142BAF95E800DD2F44 /* libag_core.8.dylib in CopyFiles */,
-				4B13031B2BAFACBD00DD2F44 /* libfreetype.6.dylib in CopyFiles */,
-				4B1303192BAFACA200DD2F44 /* libfontconfig.1.dylib in CopyFiles */,
-				4B13031D2BAFC3CD00DD2F44 /* libpng16.16.dylib in CopyFiles */,
-				4B1303122BAF95B900DD2F44 /* libSDL2-2.0.0.dylib in CopyFiles */,
+				4BC9116A2BB0C217000189ED /* libag_core.8.dylib in CopyFiles */,
+				4BC9116B2BB0C218000189ED /* libag_gui.8.dylib in CopyFiles */,
+				4BC9116C2BB0C218000189ED /* libfontconfig.1.dylib in CopyFiles */,
+				4BC9116D2BB0C218000189ED /* libfreetype.6.dylib in CopyFiles */,
+				4BC9116E2BB0C218000189ED /* libpng16.16.dylib in CopyFiles */,
+				4BC9116F2BB0C218000189ED /* libSDL2-2.0.0.dylib in CopyFiles */,
 				4B1303092BAF8FAF00DD2F44 /* libbecker.so in CopyFiles */,
 				4B13030A2BAF8FAF00DD2F44 /* libfd502.so in CopyFiles */,
 				4B13030B2BAF8FAF00DD2F44 /* libharddisk.so in CopyFiles */,
@@ -305,13 +223,13 @@
 		4847C41B8C664851B87F714C /* gpu.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = gpu.c; path = mpu/gpu.c; sourceTree = SOURCE_ROOT; };
 		4A063AC9B6F34D919B099B6D /* mc6809.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = mc6809.c; path = CoCo/mc6809.c; sourceTree = SOURCE_ROOT; };
 		4AEE860745AC40E09C86349A /* iniman.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = iniman.c; path = CoCo/iniman.c; sourceTree = SOURCE_ROOT; };
-		4B1303112BAF95B800DD2F44 /* libSDL2-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libSDL2-2.0.0.dylib"; path = "../../../opt/homebrew/Cellar/sdl2/2.30.1/lib/libSDL2-2.0.0.dylib"; sourceTree = "<group>"; };
-		4B1303132BAF95E800DD2F44 /* libag_core.8.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libag_core.8.dylib; path = ../../../usr/local/lib/libag_core.8.dylib; sourceTree = "<group>"; };
-		4B1303152BAF960600DD2F44 /* libag_gui.8.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libag_gui.8.dylib; path = ../../../usr/local/lib/libag_gui.8.dylib; sourceTree = "<group>"; };
-		4B1303182BAFACA200DD2F44 /* libfontconfig.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libfontconfig.1.dylib; sourceTree = "<group>"; };
-		4B13031A2BAFACBD00DD2F44 /* libfreetype.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libfreetype.6.dylib; sourceTree = "<group>"; };
-		4B13031C2BAFC3CD00DD2F44 /* libpng16.16.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libpng16.16.dylib; sourceTree = "<group>"; };
 		4B13158B2BAFD08600DD2F44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4BC911622BB0C0ED000189ED /* libag_core.8.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libag_core.8.dylib; sourceTree = "<group>"; };
+		4BC911632BB0C0ED000189ED /* libag_gui.8.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libag_gui.8.dylib; sourceTree = "<group>"; };
+		4BC911642BB0C0ED000189ED /* libfontconfig.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libfontconfig.1.dylib; sourceTree = "<group>"; };
+		4BC911652BB0C0ED000189ED /* libfreetype.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libfreetype.6.dylib; sourceTree = "<group>"; };
+		4BC911662BB0C0ED000189ED /* libpng16.16.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libpng16.16.dylib; sourceTree = "<group>"; };
+		4BC911672BB0C0ED000189ED /* libSDL2-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libSDL2-2.0.0.dylib"; sourceTree = "<group>"; };
 		4FD02C4F056545B3AFA8BBA2 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = Ramdisk/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
 		545A88B7B86047539EAA0A28 /* libmpu.so */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = libmpu.so; sourceTree = BUILT_PRODUCTS_DIR; };
 		54E9BAC4B5524B208748B35D /* vccgui.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = vccgui.c; path = CoCo/vccgui.c; sourceTree = SOURCE_ROOT; };
@@ -521,6 +439,19 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		4BC911682BB0C0ED000189ED /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				4BC911622BB0C0ED000189ED /* libag_core.8.dylib */,
+				4BC911632BB0C0ED000189ED /* libag_gui.8.dylib */,
+				4BC911642BB0C0ED000189ED /* libfontconfig.1.dylib */,
+				4BC911652BB0C0ED000189ED /* libfreetype.6.dylib */,
+				4BC911662BB0C0ED000189ED /* libpng16.16.dylib */,
+				4BC911672BB0C0ED000189ED /* libSDL2-2.0.0.dylib */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
 		516BD6101CB14E15B7FDB7F8 /* Source Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -611,12 +542,6 @@
 		A6620248B0764BFDBA2AC88A = {
 			isa = PBXGroup;
 			children = (
-				4B13031C2BAFC3CD00DD2F44 /* libpng16.16.dylib */,
-				4B13031A2BAFACBD00DD2F44 /* libfreetype.6.dylib */,
-				4B1303182BAFACA200DD2F44 /* libfontconfig.1.dylib */,
-				4B1303152BAF960600DD2F44 /* libag_gui.8.dylib */,
-				4B1303132BAF95E800DD2F44 /* libag_core.8.dylib */,
-				4B1303112BAF95B800DD2F44 /* libSDL2-2.0.0.dylib */,
 				1877199B556644949A7964E5 /* ALL_BUILD */,
 				EF7D4C9584C04B14A16F9707 /* becker */,
 				F4CECBB0D7724E0492BA1943 /* fd502 */,
@@ -653,6 +578,7 @@
 		B869D9A6E633440FA2342B71 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4BC911682BB0C0ED000189ED /* Libs */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -745,7 +671,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				2AE28BC1465C4639A9F42EA8 /* PBXTargetDependency */,
 			);
 			name = mpi;
 			productName = mpi;
@@ -762,7 +687,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				FD2237BB8BE8496AAB803C27 /* PBXTargetDependency */,
 			);
 			name = superide;
 			productName = superide;
@@ -779,7 +703,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				BB7E4B37FEB24E999904A204 /* PBXTargetDependency */,
 			);
 			name = orch90;
 			productName = orch90;
@@ -796,7 +719,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				7EA8FD9AC668427FA7C0C2DB /* PBXTargetDependency */,
 			);
 			name = mpu;
 			productName = mpu;
@@ -813,7 +735,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				6E6B0D3E4ACB4B23B1EEB122 /* PBXTargetDependency */,
 			);
 			name = becker;
 			productName = becker;
@@ -830,7 +751,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				4E2EC9BC0F7D4B69B6320CA9 /* PBXTargetDependency */,
 			);
 			name = ramdisk;
 			productName = ramdisk;
@@ -850,7 +770,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				28164FA74B2A48E6917716ED /* PBXTargetDependency */,
 			);
 			name = ovcc;
 			productName = ovcc;
@@ -867,7 +786,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				61D1A706A9D74AB7AFDBF1DC /* PBXTargetDependency */,
 			);
 			name = harddisk;
 			productName = harddisk;
@@ -884,7 +802,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				BFD095E760D240F0BC4AC790 /* PBXTargetDependency */,
 			);
 			name = fd502;
 			productName = fd502;
@@ -912,7 +829,6 @@
 			projectRoot = "";
 			targets = (
 				F7AC195232A74D0285F04FB5 /* ALL_BUILD */,
-				71EE41D2DBF44773B13AFFD6 /* ZERO_CHECK */,
 				B2673C64198041B2B959ADE4 /* ovcc */,
 				6406FFE20BEC4E1E932F6358 /* becker */,
 				D7BFFB2EC7D3420897740CD8 /* fd502 */,
@@ -972,23 +888,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "set -e\nif test \"$CONFIGURATION\" = \"Debug\"; then :\n  cd /Users/paulz/OVCC\n  echo Build\\ all\\ projects\nfi\nif test \"$CONFIGURATION\" = \"Release\"; then :\n  cd /Users/paulz/OVCC\n  echo Build\\ all\\ projects\nfi\nif test \"$CONFIGURATION\" = \"MinSizeRel\"; then :\n  cd /Users/paulz/OVCC\n  echo Build\\ all\\ projects\nfi\nif test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :\n  cd /Users/paulz/OVCC\n  echo Build\\ all\\ projects\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		F2D9CEF91F27E435C69830C9 /* Generate CMakeFiles/ZERO_CHECK */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Generate CMakeFiles/ZERO_CHECK";
-			outputPaths = (
-				/Users/paulz/OVCC/CMakeFiles/ZERO_CHECK,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "set -e\nif test \"$CONFIGURATION\" = \"Debug\"; then :\n  cd /Users/paulz/OVCC\n  make -f /Users/paulz/OVCC/CMakeScripts/ReRunCMake.make\nfi\nif test \"$CONFIGURATION\" = \"Release\"; then :\n  cd /Users/paulz/OVCC\n  make -f /Users/paulz/OVCC/CMakeScripts/ReRunCMake.make\nfi\nif test \"$CONFIGURATION\" = \"MinSizeRel\"; then :\n  cd /Users/paulz/OVCC\n  make -f /Users/paulz/OVCC/CMakeScripts/ReRunCMake.make\nfi\nif test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :\n  cd /Users/paulz/OVCC\n  make -f /Users/paulz/OVCC/CMakeScripts/ReRunCMake.make\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1131,40 +1030,10 @@
 			target = A1359E4FB45046108468B9A7 /* ramdisk */;
 			targetProxy = 9CCE6B1F453342E897A003DF /* PBXContainerItemProxy */;
 		};
-		28164FA74B2A48E6917716ED /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 71EE41D2DBF44773B13AFFD6 /* ZERO_CHECK */;
-			targetProxy = B1D07FFC09E14719AEE0E1BE /* PBXContainerItemProxy */;
-		};
-		2AE28BC1465C4639A9F42EA8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 71EE41D2DBF44773B13AFFD6 /* ZERO_CHECK */;
-			targetProxy = 16305A3EE1F64EC5992EEFBC /* PBXContainerItemProxy */;
-		};
-		4E2EC9BC0F7D4B69B6320CA9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 71EE41D2DBF44773B13AFFD6 /* ZERO_CHECK */;
-			targetProxy = 04608EDA1517469881688790 /* PBXContainerItemProxy */;
-		};
-		61D1A706A9D74AB7AFDBF1DC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 71EE41D2DBF44773B13AFFD6 /* ZERO_CHECK */;
-			targetProxy = 3A1CF2B8155C43A6B1D968B0 /* PBXContainerItemProxy */;
-		};
-		6E6B0D3E4ACB4B23B1EEB122 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 71EE41D2DBF44773B13AFFD6 /* ZERO_CHECK */;
-			targetProxy = 19B0309F0B794F40BA01A6C6 /* PBXContainerItemProxy */;
-		};
 		7E76DBFCE24C4454B98C261D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1E4BB743FAB245A8BADC42AC /* superide */;
 			targetProxy = 21AC44D4855A4848B883907F /* PBXContainerItemProxy */;
-		};
-		7EA8FD9AC668427FA7C0C2DB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 71EE41D2DBF44773B13AFFD6 /* ZERO_CHECK */;
-			targetProxy = B6A0C2B7932D4803BF84BC4E /* PBXContainerItemProxy */;
 		};
 		846B3C1B511947DE8F9546CB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1181,20 +1050,10 @@
 			target = 6406FFE20BEC4E1E932F6358 /* becker */;
 			targetProxy = 2C9C0F3DC2314C0692FAF250 /* PBXContainerItemProxy */;
 		};
-		BB7E4B37FEB24E999904A204 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 71EE41D2DBF44773B13AFFD6 /* ZERO_CHECK */;
-			targetProxy = 0BCBC4082B544549AAB39077 /* PBXContainerItemProxy */;
-		};
 		BCD8D826410A45AEAB217937 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B2673C64198041B2B959ADE4 /* ovcc */;
 			targetProxy = 807BD2F57B81468181F0006B /* PBXContainerItemProxy */;
-		};
-		BFD095E760D240F0BC4AC790 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 71EE41D2DBF44773B13AFFD6 /* ZERO_CHECK */;
-			targetProxy = 9812EB0AF8674D06ADFA3312 /* PBXContainerItemProxy */;
 		};
 		C5623959E34E46598DF85754 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1205,16 +1064,6 @@
 			isa = PBXTargetDependency;
 			target = 3577DF34F44E43F2BFD4DCFC /* orch90 */;
 			targetProxy = 91069B4407CC4F2DB6D848CB /* PBXContainerItemProxy */;
-		};
-		CD61784E88F74698A9A6AF8D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 71EE41D2DBF44773B13AFFD6 /* ZERO_CHECK */;
-			targetProxy = B1D996654F1A4A02AD80C83F /* PBXContainerItemProxy */;
-		};
-		FD2237BB8BE8496AAB803C27 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 71EE41D2DBF44773B13AFFD6 /* ZERO_CHECK */;
-			targetProxy = 1DD2BEFE13C849F9AC8094C1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -3583,31 +3432,6 @@
 			};
 			name = Release;
 		};
-		BB02076B4C9A44AFABC5B9BF /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = " $(inherited)";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = "$(inherited)";
-			};
-			name = MinSizeRel;
-		};
 		BEF1EB943B02406C8FEBB293 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -3683,31 +3507,6 @@
 				WARNING_CFLAGS = "$(inherited)";
 			};
 			name = MinSizeRel;
-		};
-		D4FA23FBD3944DFEB14B4A03 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = " $(inherited)";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = "$(inherited)";
-			};
-			name = RelWithDebInfo;
 		};
 		D72E5F582B494F6DBAA12BFA /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -4120,56 +3919,6 @@
 			};
 			name = MinSizeRel;
 		};
-		ED4C5536A85D44BFB7B76962 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = " $(inherited)";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = "$(inherited)";
-			};
-			name = Debug;
-		};
-		F649BA54EE964BF68E267874 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = " $(inherited)";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = "$(inherited)";
-			};
-			name = Release;
-		};
 		F9B90CD938134D3A813FDA65 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -4280,17 +4029,6 @@
 				2D18A9396E9D40B68B8FE89E /* Release */,
 				91512523C4B54C08B464BFE4 /* MinSizeRel */,
 				DECD2672F6FE495EA52350A8 /* RelWithDebInfo */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
-		};
-		166DB9456E5E4928A7AB4FCA /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				ED4C5536A85D44BFB7B76962 /* Debug */,
-				F649BA54EE964BF68E267874 /* Release */,
-				BB02076B4C9A44AFABC5B9BF /* MinSizeRel */,
-				D4FA23FBD3944DFEB14B4A03 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
