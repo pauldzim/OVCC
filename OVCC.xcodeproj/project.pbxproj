@@ -66,9 +66,12 @@
 		4B13030E2BAF8FAF00DD2F44 /* liborch90.so in CopyFiles */ = {isa = PBXBuildFile; fileRef = B9BAACB57E5A43928DF78352 /* liborch90.so */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		4B13030F2BAF8FAF00DD2F44 /* libramdisk.so in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D95AB97156A416798894725 /* libramdisk.so */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		4B1303102BAF8FAF00DD2F44 /* libsuperide.so in CopyFiles */ = {isa = PBXBuildFile; fileRef = 192EC50E837A41C7B008937B /* libsuperide.so */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		4B1303122BAF95B900DD2F44 /* libSDL2-2.0.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4B1303112BAF95B800DD2F44 /* libSDL2-2.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		4B1303142BAF95E800DD2F44 /* libag_core.8.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4B1303132BAF95E800DD2F44 /* libag_core.8.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		4B1303162BAF960600DD2F44 /* libag_gui.8.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4B1303152BAF960600DD2F44 /* libag_gui.8.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		4B1303122BAF95B900DD2F44 /* libSDL2-2.0.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4B1303112BAF95B800DD2F44 /* libSDL2-2.0.0.dylib */; };
+		4B1303142BAF95E800DD2F44 /* libag_core.8.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4B1303132BAF95E800DD2F44 /* libag_core.8.dylib */; };
+		4B1303162BAF960600DD2F44 /* libag_gui.8.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4B1303152BAF960600DD2F44 /* libag_gui.8.dylib */; };
+		4B1303192BAFACA200DD2F44 /* libfontconfig.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4B1303182BAFACA200DD2F44 /* libfontconfig.1.dylib */; };
+		4B13031B2BAFACBD00DD2F44 /* libfreetype.6.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4B13031A2BAFACBD00DD2F44 /* libfreetype.6.dylib */; };
+		4B13031D2BAFC3CD00DD2F44 /* libpng16.16.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4B13031C2BAFC3CD00DD2F44 /* libpng16.16.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		4E642DEAFFDC4B84912CDB60 /* iniman.c in Sources */ = {isa = PBXBuildFile; fileRef = 4AEE860745AC40E09C86349A /* iniman.c */; };
 		511AD50FA5344F75B33A6D51 /* harddisk.c in Sources */ = {isa = PBXBuildFile; fileRef = A053D5FDFCF0418593DD8ABC /* harddisk.c */; };
 		53841C79FF184DED9D353C24 /* fileops.c in Sources */ = {isa = PBXBuildFile; fileRef = 56167180D9944DC0ADBA93EB /* fileops.c */; };
@@ -262,6 +265,9 @@
 			files = (
 				4B1303162BAF960600DD2F44 /* libag_gui.8.dylib in CopyFiles */,
 				4B1303142BAF95E800DD2F44 /* libag_core.8.dylib in CopyFiles */,
+				4B13031B2BAFACBD00DD2F44 /* libfreetype.6.dylib in CopyFiles */,
+				4B1303192BAFACA200DD2F44 /* libfontconfig.1.dylib in CopyFiles */,
+				4B13031D2BAFC3CD00DD2F44 /* libpng16.16.dylib in CopyFiles */,
 				4B1303122BAF95B900DD2F44 /* libSDL2-2.0.0.dylib in CopyFiles */,
 				4B1303092BAF8FAF00DD2F44 /* libbecker.so in CopyFiles */,
 				4B13030A2BAF8FAF00DD2F44 /* libfd502.so in CopyFiles */,
@@ -302,6 +308,9 @@
 		4B1303112BAF95B800DD2F44 /* libSDL2-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libSDL2-2.0.0.dylib"; path = "../../../opt/homebrew/Cellar/sdl2/2.30.1/lib/libSDL2-2.0.0.dylib"; sourceTree = "<group>"; };
 		4B1303132BAF95E800DD2F44 /* libag_core.8.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libag_core.8.dylib; path = ../../../usr/local/lib/libag_core.8.dylib; sourceTree = "<group>"; };
 		4B1303152BAF960600DD2F44 /* libag_gui.8.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libag_gui.8.dylib; path = ../../../usr/local/lib/libag_gui.8.dylib; sourceTree = "<group>"; };
+		4B1303182BAFACA200DD2F44 /* libfontconfig.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libfontconfig.1.dylib; sourceTree = "<group>"; };
+		4B13031A2BAFACBD00DD2F44 /* libfreetype.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libfreetype.6.dylib; sourceTree = "<group>"; };
+		4B13031C2BAFC3CD00DD2F44 /* libpng16.16.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libpng16.16.dylib; sourceTree = "<group>"; };
 		4FD02C4F056545B3AFA8BBA2 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = Ramdisk/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
 		545A88B7B86047539EAA0A28 /* libmpu.so */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = libmpu.so; sourceTree = BUILT_PRODUCTS_DIR; };
 		54E9BAC4B5524B208748B35D /* vccgui.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = vccgui.c; path = CoCo/vccgui.c; sourceTree = SOURCE_ROOT; };
@@ -601,6 +610,9 @@
 		A6620248B0764BFDBA2AC88A = {
 			isa = PBXGroup;
 			children = (
+				4B13031C2BAFC3CD00DD2F44 /* libpng16.16.dylib */,
+				4B13031A2BAFACBD00DD2F44 /* libfreetype.6.dylib */,
+				4B1303182BAFACA200DD2F44 /* libfontconfig.1.dylib */,
 				4B1303152BAF960600DD2F44 /* libag_gui.8.dylib */,
 				4B1303132BAF95E800DD2F44 /* libag_core.8.dylib */,
 				4B1303112BAF95B800DD2F44 /* libSDL2-2.0.0.dylib */,
@@ -833,7 +845,7 @@
 				6489975FCFA2432EA2E131D7 /* Sources */,
 				FA90361AF43F4E4A83F532AA /* Frameworks */,
 				4B1303082BAF8F8900DD2F44 /* CopyFiles */,
-				4B1303172BAF961E00DD2F44 /* ShellScript */,
+				4B1303172BAF961E00DD2F44 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -926,7 +938,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4B1303172BAF961E00DD2F44 /* ShellScript */ = {
+		4B1303172BAF961E00DD2F44 /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
@@ -936,13 +948,14 @@
 			);
 			inputPaths = (
 			);
+			name = "Run Script";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ninstall_name_tool -change /usr/local/lib/libag_core.dylib @executable_path/../Frameworks/libag_core.8.dylib $TARGET_BUILD_DIR/ovcc.app/Contents/MacOS/ovcc\ninstall_name_tool -change /usr/local/lib/libag_gui.dylib @executable_path/../Frameworks/libag_gui.8.dylib $TARGET_BUILD_DIR/ovcc.app/Contents/MacOS/ovcc\ninstall_name_tool -change /opt/homebrew/opt/sdl2/lib/libSDL2-2.0.0.dylib @executable_path/../Frameworks/libSDL2-2.0.0.dylib $TARGET_BUILD_DIR/ovcc.app/Contents/MacOS/ovcc\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ninstall_name_tool -change /opt/homebrew/opt/freetype/lib/libfreetype.6.dylib @executable_path/../Frameworks/libfreetype.6.dylib $TARGET_BUILD_DIR/ovcc.app/Contents/Frameworks/libag_gui.8.dylib\ninstall_name_tool -change /opt/homebrew/opt/fontconfig/lib/libfontconfig.1.dylib @executable_path/../Frameworks/libfontconfig.1.dylib $TARGET_BUILD_DIR/ovcc.app/Contents/Frameworks/libag_gui.8.dylib\ninstall_name_tool -change /opt/homebrew/opt/libpng/lib/libpng16.16.dylib @executable_path/../Frameworks/libpng16.16.dylib $TARGET_BUILD_DIR/ovcc.app/Contents/Frameworks/libag_gui.8.dylib\ninstall_name_tool -change /opt/homebrew/opt/fontconfig/lib/libfontconfig.1.dylib @executable_path/../Frameworks/libfontconfig.1.dylib $TARGET_BUILD_DIR/ovcc.app/Contents/MacOS/ovcc\ninstall_name_tool -change /opt/homebrew/opt/freetype/lib/libfreetype.6.dylib @executable_path/../Frameworks/libfreetype.6.dylib $TARGET_BUILD_DIR/ovcc.app/Contents/MacOS/ovcc\ninstall_name_tool -change /opt/homebrew/opt/libpng/lib/libpng16.16.dylib @executable_path/../Frameworks/libpng16.16.dylib $TARGET_BUILD_DIR/ovcc.app/Contents/MacOS/ovcc\ninstall_name_tool -change /usr/local/lib/libag_core.dylib @executable_path/../Frameworks/libag_core.8.dylib $TARGET_BUILD_DIR/ovcc.app/Contents/MacOS/ovcc\ninstall_name_tool -change /usr/local/lib/libag_gui.dylib @executable_path/../Frameworks/libag_gui.8.dylib $TARGET_BUILD_DIR/ovcc.app/Contents/MacOS/ovcc\ninstall_name_tool -change /opt/homebrew/opt/sdl2/lib/libSDL2-2.0.0.dylib @executable_path/../Frameworks/libSDL2-2.0.0.dylib $TARGET_BUILD_DIR/ovcc.app/Contents/MacOS/ovcc\n";
 		};
 		85669F6F111733F3987D4D5D /* Generate CMakeFiles/ALL_BUILD */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1446,7 +1459,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				DRIVERKIT_DEPLOYMENT_TARGET = 23.4;
-				MACOSX_DEPLOYMENT_TARGET = 14.3;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -1459,6 +1472,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
+				ASSETCATALOG_COMPILER_APPICON_NAME = ovcc.ico;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/CoCo/MinSizeRel;
 				DEPLOYMENT_POSTPROCESSING = YES;
@@ -1490,6 +1505,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = /Users/paulz/OVCC/CoCo/CMakeFiles/ovcc.dir/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OVCC;
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/local/lib,
@@ -1503,6 +1519,7 @@
 					/opt/homebrew/Cellar/sdl2/2.30.1/lib,
 					"$(inherited)",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
@@ -1644,7 +1661,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				DRIVERKIT_DEPLOYMENT_TARGET = 23.4;
-				MACOSX_DEPLOYMENT_TARGET = 14.3;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk;
 				SYMROOT = /Users/paulz/OVCC/build;
@@ -2282,7 +2299,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				DRIVERKIT_DEPLOYMENT_TARGET = 23.4;
-				MACOSX_DEPLOYMENT_TARGET = 14.3;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -2997,7 +3014,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				DRIVERKIT_DEPLOYMENT_TARGET = 23.4;
-				MACOSX_DEPLOYMENT_TARGET = 14.3;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -3526,6 +3543,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
+				ASSETCATALOG_COMPILER_APPICON_NAME = ovcc.ico;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/CoCo/Release;
 				DEPLOYMENT_POSTPROCESSING = YES;
@@ -3557,6 +3576,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = /Users/paulz/OVCC/CoCo/CMakeFiles/ovcc.dir/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OVCC;
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/local/lib,
@@ -3570,6 +3590,7 @@
 					/opt/homebrew/Cellar/sdl2/2.30.1/lib,
 					"$(inherited)",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
@@ -3890,6 +3911,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
+				ASSETCATALOG_COMPILER_APPICON_NAME = ovcc.ico;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/CoCo/RelWithDebInfo;
 				DEPLOYMENT_POSTPROCESSING = YES;
@@ -3921,6 +3944,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = /Users/paulz/OVCC/CoCo/CMakeFiles/ovcc.dir/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OVCC;
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/local/lib,
@@ -3934,6 +3958,7 @@
 					/opt/homebrew/Cellar/sdl2/2.30.1/lib,
 					"$(inherited)",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
@@ -3971,6 +3996,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
+				ASSETCATALOG_COMPILER_APPICON_NAME = ovcc.ico;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/CoCo/Debug;
 				DEPLOYMENT_POSTPROCESSING = YES;
@@ -4002,6 +4029,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = /Users/paulz/OVCC/CoCo/CMakeFiles/ovcc.dir/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OVCC;
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/local/lib,
@@ -4015,6 +4043,7 @@
 					/opt/homebrew/Cellar/sdl2/2.30.1/lib,
 					"$(inherited)",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-fpascal-strings",
