@@ -1532,6 +1532,7 @@ bool FormatTrack (FILE *h_, u_int8_t cyl_, u_int8_t head_, u_int8_t Fill)
 //     }
 
 //    return CmdFormat(h_, pfp, (PBYTE)ph - abFormat);
+     return 1;
 }
 
 // bool CmdFormat (FILE *h_, PFD_FORMAT_PARAMS pfp_, ULONG ulSize_)

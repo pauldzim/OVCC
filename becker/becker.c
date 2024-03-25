@@ -648,6 +648,7 @@ unsigned char ADDCALL ModuleReset(void)
 	{
 		memcpy(PakRomAddr, HDBRom, EXTROMSIZE);
 	}
+	return 1;
 }
 
 void ADDCALL PakRomShare(char *pakromaddr)
