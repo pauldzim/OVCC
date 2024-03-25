@@ -1,7 +1,7 @@
 TOS:=$(shell uname -s)
 export TARGETOS = $(TOS)
 
-#export COPYPASTE = Yes
+export COPYPASTE = Yes
 
 DIRS = CoCo becker FD502 HardDisk mpi orch90 Ramdisk SuperIDE
 

@@ -61,6 +61,7 @@
 		4BC9116D2BB0C218000189ED /* libfreetype.6.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BC911652BB0C0ED000189ED /* libfreetype.6.dylib */; };
 		4BC9116E2BB0C218000189ED /* libpng16.16.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BC911662BB0C0ED000189ED /* libpng16.16.dylib */; };
 		4BC9116F2BB0C218000189ED /* libSDL2-2.0.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BC911672BB0C0ED000189ED /* libSDL2-2.0.0.dylib */; };
+		4BC9121F2BB229BD000189ED /* vccclip.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BC9121E2BB229BD000189ED /* vccclip.cpp */; };
 		4E642DEAFFDC4B84912CDB60 /* iniman.c in Sources */ = {isa = PBXBuildFile; fileRef = 4AEE860745AC40E09C86349A /* iniman.c */; };
 		511AD50FA5344F75B33A6D51 /* harddisk.c in Sources */ = {isa = PBXBuildFile; fileRef = A053D5FDFCF0418593DD8ABC /* harddisk.c */; };
 		53841C79FF184DED9D353C24 /* fileops.c in Sources */ = {isa = PBXBuildFile; fileRef = 56167180D9944DC0ADBA93EB /* fileops.c */; };
@@ -230,6 +231,7 @@
 		4BC911652BB0C0ED000189ED /* libfreetype.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libfreetype.6.dylib; sourceTree = "<group>"; };
 		4BC911662BB0C0ED000189ED /* libpng16.16.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libpng16.16.dylib; sourceTree = "<group>"; };
 		4BC911672BB0C0ED000189ED /* libSDL2-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libSDL2-2.0.0.dylib"; sourceTree = "<group>"; };
+		4BC9121E2BB229BD000189ED /* vccclip.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vccclip.cpp; path = CoCo/vccclip.cpp; sourceTree = "<group>"; };
 		4FD02C4F056545B3AFA8BBA2 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = Ramdisk/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
 		545A88B7B86047539EAA0A28 /* libmpu.so */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = libmpu.so; sourceTree = BUILT_PRODUCTS_DIR; };
 		54E9BAC4B5524B208748B35D /* vccgui.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = vccgui.c; path = CoCo/vccgui.c; sourceTree = SOURCE_ROOT; };
@@ -519,6 +521,7 @@
 				5A5A0988EDDA4B22B81D628A /* throttle.c */,
 				6F717425802B44AA9F0A0CE5 /* vcc.c */,
 				54E9BAC4B5524B208748B35D /* vccgui.c */,
+				4BC9121E2BB229BD000189ED /* vccclip.cpp */,
 			);
 			name = "Source Files";
 			sourceTree = "<group>";
@@ -951,6 +954,7 @@
 				3D7BDE0356FA430CA399D6F8 /* logger.c in Sources */,
 				1CA53F0EE7DF43B38F77012B /* mc6809.c in Sources */,
 				CD22A40B2FBE49079AE833E9 /* mc6821.c in Sources */,
+				4BC9121F2BB229BD000189ED /* vccclip.cpp in Sources */,
 				CC7D987759844E0394F5F179 /* pakinterface.c in Sources */,
 				1FC0B35772CC49568F2D3B3A /* quickload.c in Sources */,
 				1A71018D5B0D485BA2E75C09 /* tcc1014graphicsAGAR.c in Sources */,
@@ -1103,7 +1107,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -1152,7 +1155,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -1202,7 +1204,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -1264,11 +1265,17 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-DCOPY_PASTE",
+					"-fpascal-strings",
+				);
 				OTHER_LDFLAGS = (
 					"-Wl,-search_paths_first",
 					"-Wl,-headerpad_max_install_names",
 					"-lag_core",
 					"-lag_gui",
+					"-Lclip",
+					"-lclip",
 					"-lSDL2",
 					"-lobjc",
 					"-lpthread",
@@ -1312,7 +1319,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = (
@@ -1365,7 +1371,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -1455,11 +1460,17 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-DCOPY_PASTE",
+					"-fpascal-strings",
+				);
 				OTHER_LDFLAGS = (
 					"-Wl,-search_paths_first",
 					"-Wl,-headerpad_max_install_names",
 					"-lag_core",
 					"-lag_gui",
+					"-Lclip",
+					"-lclip",
 					"-lSDL2",
 					"-lobjc",
 					"-lpthread",
@@ -1505,7 +1516,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -1555,7 +1565,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -1605,7 +1614,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -1655,7 +1663,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -1706,7 +1713,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -1756,7 +1762,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -1806,7 +1811,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -1856,7 +1860,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -1918,11 +1921,17 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-DCOPY_PASTE",
+					"-fpascal-strings",
+				);
 				OTHER_LDFLAGS = (
 					"-Wl,-search_paths_first",
 					"-Wl,-headerpad_max_install_names",
 					"-lag_core",
 					"-lag_gui",
+					"-Lclip",
+					"-lclip",
 					"-lSDL2",
 					"-lobjc",
 					"-lpthread",
@@ -1969,7 +1978,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -2019,7 +2027,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -2068,7 +2075,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -2117,7 +2123,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -2168,7 +2173,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -2218,7 +2222,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -2268,7 +2271,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -2318,7 +2320,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -2369,7 +2370,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -2431,11 +2431,17 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-DCOPY_PASTE",
+					"-fpascal-strings",
+				);
 				OTHER_LDFLAGS = (
 					"-Wl,-search_paths_first",
 					"-Wl,-headerpad_max_install_names",
 					"-lag_core",
 					"-lag_gui",
+					"-Lclip",
+					"-lclip",
 					"-lSDL2",
 					"-lobjc",
 					"-lpthread",
@@ -2482,7 +2488,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -2532,7 +2537,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -2610,7 +2614,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -2688,7 +2691,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -2737,7 +2739,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -2786,7 +2787,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -2833,7 +2833,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = (
@@ -2887,7 +2886,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -2937,7 +2935,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -2987,7 +2984,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -3034,7 +3030,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = (
@@ -3084,10 +3079,7 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_CFLAGS = (
-					"-fpascal-strings",
-					"$(inherited)",
-				);
+				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
@@ -3139,7 +3131,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -3216,7 +3207,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
