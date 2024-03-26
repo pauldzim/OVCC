@@ -883,11 +883,11 @@
 			);
 			name = "Generate CMakeFiles/ALL_BUILD";
 			outputPaths = (
-				/Users/paulz/OVCC/CMakeFiles/ALL_BUILD,
+				$SOURCE_ROOT/CMakeFiles/ALL_BUILD,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\nif test \"$CONFIGURATION\" = \"Debug\"; then :\n  cd /Users/paulz/OVCC\n  echo Build\\ all\\ projects\nfi\nif test \"$CONFIGURATION\" = \"Release\"; then :\n  cd /Users/paulz/OVCC\n  echo Build\\ all\\ projects\nfi\nif test \"$CONFIGURATION\" = \"MinSizeRel\"; then :\n  cd /Users/paulz/OVCC\n  echo Build\\ all\\ projects\nfi\nif test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :\n  cd /Users/paulz/OVCC\n  echo Build\\ all\\ projects\nfi\n";
+			shellScript = "set -e\nif test \"$CONFIGURATION\" = \"Debug\"; then :\n  cd $SOURCE_ROOT\n  echo Build\\ all\\ projects\nfi\nif test \"$CONFIGURATION\" = \"Release\"; then :\n  cd $SOURCE_ROOT\n  echo Build\\ all\\ projects\nfi\nif test \"$CONFIGURATION\" = \"MinSizeRel\"; then :\n  cd $SOURCE_ROOT\n  echo Build\\ all\\ projects\nfi\nif test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :\n  cd $SOURCE_ROOT\n  echo Build\\ all\\ projects\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1074,7 +1074,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/mpi/MinSizeRel;
+				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/mpi/MinSizeRel;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -1087,8 +1087,8 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/paulz/OVCC/mpi/../CoCo,
-					/Users/paulz/OVCC/mpi,
+					$SOURCE_ROOT/mpi/../CoCo,
+					$SOURCE_ROOT/mpi,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1103,7 +1103,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -1112,7 +1111,7 @@
 				SECTORDER_FLAGS = "";
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
-				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/mpi.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/mpi.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -1124,7 +1123,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/orch90/Debug;
+				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/orch90/Debug;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -1137,8 +1136,8 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/paulz/OVCC/orch90/../CoCo,
-					/Users/paulz/OVCC/orch90,
+					$SOURCE_ROOT/orch90/../CoCo,
+					$SOURCE_ROOT/orch90,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1152,7 +1151,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -1161,7 +1159,7 @@
 				SECTORDER_FLAGS = "";
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
-				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/orch90.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/orch90.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -1173,7 +1171,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/orch90/MinSizeRel;
+				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/orch90/MinSizeRel;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -1186,8 +1184,8 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/paulz/OVCC/orch90/../CoCo,
-					/Users/paulz/OVCC/orch90,
+					$SOURCE_ROOT/orch90/../CoCo,
+					$SOURCE_ROOT/orch90,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1202,7 +1200,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -1211,7 +1208,7 @@
 				SECTORDER_FLAGS = "";
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
-				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/orch90.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/orch90.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -1243,9 +1240,9 @@
 					/opt/homebrew/include/SDL2,
 					/usr/local/include,
 					/usr/local/include/agar,
-					/Users/paulz/OVCC/becker/../CoCo,
-					/Users/paulz/OVCC/becker/EXPORT,
-					/Users/paulz/OVCC/becker,
+					$SOURCE_ROOT/becker/../CoCo,
+					$SOURCE_ROOT/becker/EXPORT,
+					$SOURCE_ROOT/becker,
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
@@ -1264,6 +1261,9 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-fpascal-strings",
+				);
 				OTHER_LDFLAGS = (
 					"-Wl,-search_paths_first",
 					"-Wl,-headerpad_max_install_names",
@@ -1276,7 +1276,7 @@
 				);
 				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SYMROOT = /Users/paulz/OVCC/build;
+				SYMROOT = $SOURCE_ROOT/build;
 			};
 			name = MinSizeRel;
 		};
@@ -1288,7 +1288,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/CoCo/MinSizeRel;
+				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/CoCo/MinSizeRel;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = "";
 				EXECUTABLE_SUFFIX = "";
@@ -1299,7 +1299,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = /Users/paulz/OVCC/CoCo/CMakeFiles/ovcc.dir/Info.plist;
+				INFOPLIST_FILE = $SOURCE_ROOT/CoCo/CMakeFiles/ovcc.dir/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = OVCC;
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1312,7 +1312,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = (
@@ -1325,7 +1324,7 @@
 				SECTORDER_FLAGS = "";
 				SKIP_INSTALL = NO;
 				SYSTEM_HEADER_SEARCH_PATHS = "$(inherited)";
-				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/ovcc.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/ovcc.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -1337,7 +1336,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/HardDisk/Debug;
+				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/HardDisk/Debug;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -1350,8 +1349,8 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/paulz/OVCC/HardDisk/../CoCo,
-					/Users/paulz/OVCC/HardDisk,
+					$SOURCE_ROOT/HardDisk/../CoCo,
+					$SOURCE_ROOT/HardDisk,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1365,7 +1364,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -1374,7 +1372,7 @@
 				SECTORDER_FLAGS = "";
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
-				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/harddisk.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/harddisk.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -1434,9 +1432,9 @@
 					/opt/homebrew/include/SDL2,
 					/usr/local/include,
 					/usr/local/include/agar,
-					/Users/paulz/OVCC/becker/../CoCo,
-					/Users/paulz/OVCC/becker/EXPORT,
-					/Users/paulz/OVCC/becker,
+					$SOURCE_ROOT/becker/../CoCo,
+					$SOURCE_ROOT/becker/EXPORT,
+					$SOURCE_ROOT/becker,
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
@@ -1455,6 +1453,9 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-fpascal-strings",
+				);
 				OTHER_LDFLAGS = (
 					"-Wl,-search_paths_first",
 					"-Wl,-headerpad_max_install_names",
@@ -1466,7 +1467,7 @@
 					"$(inherited)",
 				);
 				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk;
-				SYMROOT = /Users/paulz/OVCC/build;
+				SYMROOT = $SOURCE_ROOT/build;
 			};
 			name = Debug;
 		};
@@ -1476,7 +1477,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/Ramdisk/MinSizeRel;
+				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/Ramdisk/MinSizeRel;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -1489,8 +1490,8 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/paulz/OVCC/Ramdisk/../CoCo,
-					/Users/paulz/OVCC/Ramdisk,
+					$SOURCE_ROOT/Ramdisk/../CoCo,
+					$SOURCE_ROOT/Ramdisk,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1505,7 +1506,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -1514,7 +1514,7 @@
 				SECTORDER_FLAGS = "";
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
-				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/ramdisk.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/ramdisk.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -1526,7 +1526,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/mpu/RelWithDebInfo;
+				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/mpu/RelWithDebInfo;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -1539,8 +1539,8 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/paulz/OVCC/mpu/../CoCo,
-					/Users/paulz/OVCC/mpu,
+					$SOURCE_ROOT/mpu/../CoCo,
+					$SOURCE_ROOT/mpu,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1555,7 +1555,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -1564,7 +1563,7 @@
 				SECTORDER_FLAGS = "";
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
-				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/mpu.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/mpu.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -1576,7 +1575,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/FD502/Release;
+				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/FD502/Release;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -1589,8 +1588,8 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/paulz/OVCC/FD502/../CoCo,
-					/Users/paulz/OVCC/FD502,
+					$SOURCE_ROOT/FD502/../CoCo,
+					$SOURCE_ROOT/FD502,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1605,7 +1604,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -1614,7 +1612,7 @@
 				SECTORDER_FLAGS = "";
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
-				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/fd502.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/fd502.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -1626,7 +1624,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/Ramdisk/RelWithDebInfo;
+				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/Ramdisk/RelWithDebInfo;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -1639,8 +1637,8 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/paulz/OVCC/Ramdisk/../CoCo,
-					/Users/paulz/OVCC/Ramdisk,
+					$SOURCE_ROOT/Ramdisk/../CoCo,
+					$SOURCE_ROOT/Ramdisk,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1655,7 +1653,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -1664,7 +1661,7 @@
 				SECTORDER_FLAGS = "";
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
-				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/ramdisk.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/ramdisk.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -1676,7 +1673,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/becker/MinSizeRel;
+				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/becker/MinSizeRel;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -1690,8 +1687,8 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/paulz/OVCC/becker/../CoCo,
-					/Users/paulz/OVCC/becker,
+					$SOURCE_ROOT/becker/../CoCo,
+					$SOURCE_ROOT/becker,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1706,7 +1703,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -1715,7 +1711,7 @@
 				SECTORDER_FLAGS = "";
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
-				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/becker.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/becker.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -1727,7 +1723,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/orch90/Release;
+				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/orch90/Release;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -1740,8 +1736,8 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/paulz/OVCC/orch90/../CoCo,
-					/Users/paulz/OVCC/orch90,
+					$SOURCE_ROOT/orch90/../CoCo,
+					$SOURCE_ROOT/orch90,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1756,7 +1752,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -1765,7 +1760,7 @@
 				SECTORDER_FLAGS = "";
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
-				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/orch90.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/orch90.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -1777,7 +1772,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/orch90/RelWithDebInfo;
+				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/orch90/RelWithDebInfo;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -1790,8 +1785,8 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/paulz/OVCC/orch90/../CoCo,
-					/Users/paulz/OVCC/orch90,
+					$SOURCE_ROOT/orch90/../CoCo,
+					$SOURCE_ROOT/orch90,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1806,7 +1801,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -1815,7 +1809,7 @@
 				SECTORDER_FLAGS = "";
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
-				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/orch90.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/orch90.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -1827,7 +1821,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/SuperIDE/RelWithDebInfo;
+				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/SuperIDE/RelWithDebInfo;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -1840,8 +1834,8 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/paulz/OVCC/SuperIDE/../CoCo,
-					/Users/paulz/OVCC/SuperIDE,
+					$SOURCE_ROOT/SuperIDE/../CoCo,
+					$SOURCE_ROOT/SuperIDE,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1856,7 +1850,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -1865,7 +1858,7 @@
 				SECTORDER_FLAGS = "";
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
-				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/superide.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/superide.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -1897,9 +1890,9 @@
 					/opt/homebrew/include/SDL2,
 					/usr/local/include,
 					/usr/local/include/agar,
-					/Users/paulz/OVCC/becker/../CoCo,
-					/Users/paulz/OVCC/becker/EXPORT,
-					/Users/paulz/OVCC/becker,
+					$SOURCE_ROOT/becker/../CoCo,
+					$SOURCE_ROOT/becker/EXPORT,
+					$SOURCE_ROOT/becker,
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
@@ -1918,6 +1911,9 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-fpascal-strings",
+				);
 				OTHER_LDFLAGS = (
 					"-Wl,-search_paths_first",
 					"-Wl,-headerpad_max_install_names",
@@ -1930,7 +1926,7 @@
 				);
 				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SYMROOT = /Users/paulz/OVCC/build;
+				SYMROOT = $SOURCE_ROOT/build;
 			};
 			name = Release;
 		};
@@ -1940,7 +1936,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/HardDisk/MinSizeRel;
+				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/HardDisk/MinSizeRel;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -1953,8 +1949,8 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/paulz/OVCC/HardDisk/../CoCo,
-					/Users/paulz/OVCC/HardDisk,
+					$SOURCE_ROOT/HardDisk/../CoCo,
+					$SOURCE_ROOT/HardDisk,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1969,7 +1965,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -1978,7 +1973,7 @@
 				SECTORDER_FLAGS = "";
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
-				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/harddisk.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/harddisk.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -1990,7 +1985,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/HardDisk/RelWithDebInfo;
+				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/HardDisk/RelWithDebInfo;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -2003,8 +1998,8 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/paulz/OVCC/HardDisk/../CoCo,
-					/Users/paulz/OVCC/HardDisk,
+					$SOURCE_ROOT/HardDisk/../CoCo,
+					$SOURCE_ROOT/HardDisk,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2019,7 +2014,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -2028,7 +2022,7 @@
 				SECTORDER_FLAGS = "";
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
-				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/harddisk.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/harddisk.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -2040,7 +2034,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/FD502/Debug;
+				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/FD502/Debug;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -2053,8 +2047,8 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/paulz/OVCC/FD502/../CoCo,
-					/Users/paulz/OVCC/FD502,
+					$SOURCE_ROOT/FD502/../CoCo,
+					$SOURCE_ROOT/FD502,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2068,7 +2062,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -2077,7 +2070,7 @@
 				SECTORDER_FLAGS = "";
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
-				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/fd502.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/fd502.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -2089,7 +2082,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/mpi/Debug;
+				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/mpi/Debug;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -2102,8 +2095,8 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/paulz/OVCC/mpi/../CoCo,
-					/Users/paulz/OVCC/mpi,
+					$SOURCE_ROOT/mpi/../CoCo,
+					$SOURCE_ROOT/mpi,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2117,7 +2110,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -2126,7 +2118,7 @@
 				SECTORDER_FLAGS = "";
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
-				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/mpi.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/mpi.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -2138,7 +2130,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/becker/Release;
+				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/becker/Release;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -2152,8 +2144,8 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/paulz/OVCC/becker/../CoCo,
-					/Users/paulz/OVCC/becker,
+					$SOURCE_ROOT/becker/../CoCo,
+					$SOURCE_ROOT/becker,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2168,7 +2160,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -2177,7 +2168,7 @@
 				SECTORDER_FLAGS = "";
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
-				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/becker.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/becker.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -2189,7 +2180,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/HardDisk/Release;
+				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/HardDisk/Release;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -2202,8 +2193,8 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/paulz/OVCC/HardDisk/../CoCo,
-					/Users/paulz/OVCC/HardDisk,
+					$SOURCE_ROOT/HardDisk/../CoCo,
+					$SOURCE_ROOT/HardDisk,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2218,7 +2209,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -2227,7 +2217,7 @@
 				SECTORDER_FLAGS = "";
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
-				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/harddisk.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/harddisk.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -2239,7 +2229,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/mpu/Release;
+				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/mpu/Release;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -2252,8 +2242,8 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/paulz/OVCC/mpu/../CoCo,
-					/Users/paulz/OVCC/mpu,
+					$SOURCE_ROOT/mpu/../CoCo,
+					$SOURCE_ROOT/mpu,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2268,7 +2258,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -2277,7 +2266,7 @@
 				SECTORDER_FLAGS = "";
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
-				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/mpu.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/mpu.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -2289,7 +2278,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/Ramdisk/Release;
+				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/Ramdisk/Release;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -2302,8 +2291,8 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/paulz/OVCC/Ramdisk/../CoCo,
-					/Users/paulz/OVCC/Ramdisk,
+					$SOURCE_ROOT/Ramdisk/../CoCo,
+					$SOURCE_ROOT/Ramdisk,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2318,7 +2307,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -2327,7 +2315,7 @@
 				SECTORDER_FLAGS = "";
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
-				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/ramdisk.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/ramdisk.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -2339,7 +2327,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/becker/RelWithDebInfo;
+				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/becker/RelWithDebInfo;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -2353,8 +2341,8 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/paulz/OVCC/becker/../CoCo,
-					/Users/paulz/OVCC/becker,
+					$SOURCE_ROOT/becker/../CoCo,
+					$SOURCE_ROOT/becker,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2369,7 +2357,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -2378,7 +2365,7 @@
 				SECTORDER_FLAGS = "";
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
-				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/becker.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/becker.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -2410,9 +2397,9 @@
 					/opt/homebrew/include/SDL2,
 					/usr/local/include,
 					/usr/local/include/agar,
-					/Users/paulz/OVCC/becker/../CoCo,
-					/Users/paulz/OVCC/becker/EXPORT,
-					/Users/paulz/OVCC/becker,
+					$SOURCE_ROOT/becker/../CoCo,
+					$SOURCE_ROOT/becker/EXPORT,
+					$SOURCE_ROOT/becker,
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
@@ -2431,6 +2418,9 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-fpascal-strings",
+				);
 				OTHER_LDFLAGS = (
 					"-Wl,-search_paths_first",
 					"-Wl,-headerpad_max_install_names",
@@ -2443,7 +2433,7 @@
 				);
 				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SYMROOT = /Users/paulz/OVCC/build;
+				SYMROOT = $SOURCE_ROOT/build;
 			};
 			name = RelWithDebInfo;
 		};
@@ -2453,7 +2443,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/mpi/RelWithDebInfo;
+				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/mpi/RelWithDebInfo;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -2466,8 +2456,8 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/paulz/OVCC/mpi/../CoCo,
-					/Users/paulz/OVCC/mpi,
+					$SOURCE_ROOT/mpi/../CoCo,
+					$SOURCE_ROOT/mpi,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2482,7 +2472,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -2491,7 +2480,7 @@
 				SECTORDER_FLAGS = "";
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
-				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/mpi.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/mpi.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -2503,7 +2492,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/SuperIDE/Release;
+				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/SuperIDE/Release;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -2516,8 +2505,8 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/paulz/OVCC/SuperIDE/../CoCo,
-					/Users/paulz/OVCC/SuperIDE,
+					$SOURCE_ROOT/SuperIDE/../CoCo,
+					$SOURCE_ROOT/SuperIDE,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2532,7 +2521,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -2541,7 +2529,7 @@
 				SECTORDER_FLAGS = "";
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
-				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/superide.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/superide.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -2581,7 +2569,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/FD502/MinSizeRel;
+				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/FD502/MinSizeRel;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -2594,8 +2582,8 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/paulz/OVCC/FD502/../CoCo,
-					/Users/paulz/OVCC/FD502,
+					$SOURCE_ROOT/FD502/../CoCo,
+					$SOURCE_ROOT/FD502,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2610,7 +2598,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -2619,7 +2606,7 @@
 				SECTORDER_FLAGS = "";
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
-				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/fd502.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/fd502.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -2659,7 +2646,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/mpi/Release;
+				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/mpi/Release;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -2672,8 +2659,8 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/paulz/OVCC/mpi/../CoCo,
-					/Users/paulz/OVCC/mpi,
+					$SOURCE_ROOT/mpi/../CoCo,
+					$SOURCE_ROOT/mpi,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2688,7 +2675,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -2697,7 +2683,7 @@
 				SECTORDER_FLAGS = "";
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
-				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/mpi.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/mpi.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -2709,7 +2695,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/mpu/Debug;
+				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/mpu/Debug;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -2722,8 +2708,8 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/paulz/OVCC/mpu/../CoCo,
-					/Users/paulz/OVCC/mpu,
+					$SOURCE_ROOT/mpu/../CoCo,
+					$SOURCE_ROOT/mpu,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2737,7 +2723,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -2746,7 +2731,7 @@
 				SECTORDER_FLAGS = "";
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
-				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/mpu.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/mpu.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -2758,7 +2743,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/Ramdisk/Debug;
+				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/Ramdisk/Debug;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -2771,8 +2756,8 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/paulz/OVCC/Ramdisk/../CoCo,
-					/Users/paulz/OVCC/Ramdisk,
+					$SOURCE_ROOT/Ramdisk/../CoCo,
+					$SOURCE_ROOT/Ramdisk,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2786,7 +2771,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -2795,7 +2779,7 @@
 				SECTORDER_FLAGS = "";
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
-				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/ramdisk.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/ramdisk.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -2809,7 +2793,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/CoCo/Release;
+				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/CoCo/Release;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = "";
 				EXECUTABLE_SUFFIX = "";
@@ -2820,7 +2804,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = /Users/paulz/OVCC/CoCo/CMakeFiles/ovcc.dir/Info.plist;
+				INFOPLIST_FILE = $SOURCE_ROOT/CoCo/CMakeFiles/ovcc.dir/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = OVCC;
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2833,7 +2817,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = (
@@ -2846,7 +2829,7 @@
 				SECTORDER_FLAGS = "";
 				SKIP_INSTALL = NO;
 				SYSTEM_HEADER_SEARCH_PATHS = "$(inherited)";
-				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/ovcc.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/ovcc.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -2858,7 +2841,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/SuperIDE/MinSizeRel;
+				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/SuperIDE/MinSizeRel;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -2871,8 +2854,8 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/paulz/OVCC/SuperIDE/../CoCo,
-					/Users/paulz/OVCC/SuperIDE,
+					$SOURCE_ROOT/SuperIDE/../CoCo,
+					$SOURCE_ROOT/SuperIDE,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2887,7 +2870,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -2896,7 +2878,7 @@
 				SECTORDER_FLAGS = "";
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
-				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/superide.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/superide.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -2908,7 +2890,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/becker/Debug;
+				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/becker/Debug;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -2922,8 +2904,8 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/paulz/OVCC/becker/../CoCo,
-					/Users/paulz/OVCC/becker,
+					$SOURCE_ROOT/becker/../CoCo,
+					$SOURCE_ROOT/becker,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2937,7 +2919,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -2946,7 +2927,7 @@
 				SECTORDER_FLAGS = "";
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
-				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/becker.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/becker.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -2958,7 +2939,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/FD502/RelWithDebInfo;
+				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/FD502/RelWithDebInfo;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -2971,8 +2952,8 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/paulz/OVCC/FD502/../CoCo,
-					/Users/paulz/OVCC/FD502,
+					$SOURCE_ROOT/FD502/../CoCo,
+					$SOURCE_ROOT/FD502,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2987,7 +2968,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -2996,7 +2976,7 @@
 				SECTORDER_FLAGS = "";
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
-				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/fd502.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/fd502.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -3010,7 +2990,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/CoCo/RelWithDebInfo;
+				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/CoCo/RelWithDebInfo;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = "";
 				EXECUTABLE_SUFFIX = "";
@@ -3021,7 +3001,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = /Users/paulz/OVCC/CoCo/CMakeFiles/ovcc.dir/Info.plist;
+				INFOPLIST_FILE = $SOURCE_ROOT/CoCo/CMakeFiles/ovcc.dir/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = OVCC;
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3034,7 +3014,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = (
@@ -3047,7 +3026,7 @@
 				SECTORDER_FLAGS = "";
 				SKIP_INSTALL = NO;
 				SYSTEM_HEADER_SEARCH_PATHS = "$(inherited)";
-				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/ovcc.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/ovcc.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -3062,7 +3041,7 @@
 				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=macosx*]" = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/CoCo/Debug;
+				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/CoCo/Debug;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = "";
 				EXECUTABLE_SUFFIX = "";
@@ -3073,7 +3052,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = /Users/paulz/OVCC/CoCo/CMakeFiles/ovcc.dir/Info.plist;
+				INFOPLIST_FILE = $SOURCE_ROOT/CoCo/CMakeFiles/ovcc.dir/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = OVCC;
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3084,10 +3063,7 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_CFLAGS = (
-					"-fpascal-strings",
-					"$(inherited)",
-				);
+				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
@@ -3098,7 +3074,7 @@
 				SECTORDER_FLAGS = "";
 				SKIP_INSTALL = NO;
 				SYSTEM_HEADER_SEARCH_PATHS = "$(inherited)";
-				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/ovcc.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/ovcc.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -3110,7 +3086,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/mpu/MinSizeRel;
+				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/mpu/MinSizeRel;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -3123,8 +3099,8 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/paulz/OVCC/mpu/../CoCo,
-					/Users/paulz/OVCC/mpu,
+					$SOURCE_ROOT/mpu/../CoCo,
+					$SOURCE_ROOT/mpu,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3139,7 +3115,6 @@
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -3148,7 +3123,7 @@
 				SECTORDER_FLAGS = "";
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
-				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/mpu.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/mpu.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -3188,7 +3163,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/paulz/OVCC/SuperIDE/Debug;
+				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/SuperIDE/Debug;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -3201,8 +3176,8 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/paulz/OVCC/SuperIDE/../CoCo,
-					/Users/paulz/OVCC/SuperIDE,
+					$SOURCE_ROOT/SuperIDE/../CoCo,
+					$SOURCE_ROOT/SuperIDE,
 				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3216,7 +3191,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-fPIC",
-					"-fpascal-strings",
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -3225,7 +3199,7 @@
 				SECTORDER_FLAGS = "";
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
-				TARGET_TEMP_DIR = "/Users/paulz/OVCC/build/superide.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/superide.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
