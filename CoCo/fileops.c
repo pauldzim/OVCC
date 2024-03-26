@@ -26,7 +26,6 @@ This file is part of VCC (Virtual Color Computer).
 
 static char ExecFolder[MAX_PATH];
 
-
 void ValidatePath(char *Path)
 {
 	char TempPath[MAX_PATH]="";

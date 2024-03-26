@@ -1,13 +1,12 @@
 This is a fork of Walter Zambotti's OVCC project: https://github.com/WallyZambotti/OVCC
 
-I have added an xcodeproj file, so that OVCC it can be built using Apple's Xcode
-IDE.
+I have added an xcodeproj file, so that OVCC can be built using Apple's Xcode IDE.
 
 'homebrew' and the SDL2, fontconfig, freetype, and png16 libraries are required
 to build OVCC. See https://brew.sh
 
 The AGAR library at https://github.com/JulNadeauCA/libagar.git is also required.
-To work under OS X, it needs to have the patches in the 'AGAR-patches' directory
+To work under OS X, it needs to have the patches in the 'Patches/AGAR' directory
 in this repo applied before building it.
 
 See Walter's page for more info on OVCC and the build requirements for it.
@@ -30,3 +29,9 @@ This version of OVCC has a few differences from Walter's:
       and load the 'fd502.rom' file. Click the 'External Rom Image' button and
       then click 'OK'. Then do a Hard Reset. and you should see that "Disk
       Extended Color Basic" has loaded.
+
+One note: If you load the libmpi.so module first ("Mult-Pak Interface"), and
+then load the libfd502.so module (floppy disk controller) into it, you *must*
+load it into MPI Slot 4. The floppy disk controller won't work in any other slot.
+I didn't see this documented anywhere, and it took me quite some time to figure
+out.
