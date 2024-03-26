@@ -11,6 +11,9 @@ in this repo applied before building it.
 
 See Walter's page for more info on OVCC and the build requirements for it.
 
+This version only supports the arm64 architecture (M1 chips and newer) mainly
+because I couldn't figure out how to do dual-architecture builds using Homebrew.
+
 This version of OVCC has a few differences from Walter's:
 
     - The required ROMs (at least 'coco3.rom' and 'fd502.rom' are needed) should
@@ -29,6 +32,13 @@ This version of OVCC has a few differences from Walter's:
       and load the 'fd502.rom' file. Click the 'External Rom Image' button and
       then click 'OK'. Then do a Hard Reset. and you should see that "Disk
       Extended Color Basic" has loaded.
+
+You can find the needed ROMs at https://colorcomputerarchive.com. I used the
+ones from the repo/ROMs/XRoar/CoCo directory.
+
+There is a prebuilt image of OVCC (MacOS arm64 only) at
+https://drive.google.com/drive/folders/1Va9Vq35dOAkd4joCtuB7zRYQ8CY6mssN?usp=sharing
+The prebuilt image also needs to have the ROMs added to it before it will run.
 
 One note: If you load the libmpi.so module first ("Mult-Pak Interface"), and
 then load the libfd502.so module (floppy disk controller) into it, you *must*
