@@ -94,9 +94,8 @@ unsigned char VcenterTable[4]={29,23,12,12};
 static unsigned int Timeout=250;
 static unsigned int OldTicks=0;
 static unsigned short OldYDiv=0xffff;
-static unsigned short SvY0=0xffff, SvY1=0;
 static unsigned short StartX=0xffff, EndX=0xffff;
-static unsigned short StartY0=0, StartY1=0;
+static unsigned short StartY0=0xffff, StartY1=0;
 static unsigned short EndY0=0, EndY1=0;
 static char Dragging=0, Selected=0, RightClick=0;
 static char Logging=0;
@@ -136,7 +135,7 @@ void UpdateScreen (SystemState2 *USState32)
 #ifdef COPY_PASTE
 	unsigned char SwitchP=0;
 	unsigned int Ticks, TicksDiff;
-	unsigned short YDiv, MouseX=0, MouseY=0, MouseY0=0, MouseY1=0;
+	unsigned short YDiv, MouseX=0, MouseY0=0, MouseY1=0;
 #endif
 	Carry1=1;
 	Pcolor=0;
@@ -187,13 +186,13 @@ void UpdateScreen (SystemState2 *USState32)
 
 				//XTRACE0("9");
 				MouseX = USState32->MouseX/SParms.MXDiv;
-				MouseY0 = SParms.MYOfs+YDiv*SParms.MYMult >= Ty;
-				MouseY1 = SParms.MYOfs+YDiv*SParms.MYMult <= Ty+SParms.MYSpan;
+				MouseY0 = Ty >= SParms.MYOfs+YDiv*SParms.MYMult;
+				MouseY1 = Ty <= SParms.MYOfs+YDiv*SParms.MYMult+SParms.MYSpan;
 			}
 			if (Selected == 1)
 			{
 				//XTRACE0("A");
-				if (y >= SvY0 && y+1 <= SvY1)
+				if (y >= StartY0 && y+1 <= StartY1)
 				{
 					//XTRACE0("B");
 					MouseX = EndX;
@@ -201,7 +200,7 @@ void UpdateScreen (SystemState2 *USState32)
 					MouseY1 = EndY1;
 				}
 			}
-			//XTRACEN(">[%d,%d]", MouseX, MouseY);
+			//XTRACEN(">[%d,%d,%d]", MouseX, MouseY0, MouseY1);
 #endif
 			Attributes=0;
 			for (HorzBeam=0;HorzBeam<BytesperRow*ExtendedText;HorzBeam+=ExtendedText)
@@ -215,10 +214,10 @@ void UpdateScreen (SystemState2 *USState32)
 						EndX = MouseX;
 						EndY0 = MouseY0;
 						EndY1 = MouseY1;
-						if (y < SvY0)
-							SvY0 = y;
-						if (y+1 > SvY1)
-							SvY1 = y+1;
+						if (y < StartY0)
+							StartY0 = y;
+						if (y+1 > StartY1)
+							StartY1 = y+1;
 					}
 					SwitchP = 1;
 					Character=buffer[Start+(unsigned char)(HorzBeam+Hoffset)];
@@ -338,13 +337,13 @@ void UpdateScreen (SystemState2 *USState32)
 
 				//XTRACE0("9");
 				MouseX = USState32->MouseX/SParms.MXDiv;
-				MouseY0 = SParms.MYOfs+YDiv*SParms.MYMult >= Ty;
-				MouseY1 = SParms.MYOfs+YDiv*SParms.MYMult <= Ty+SParms.MYSpan;
+				MouseY0 = Ty >= SParms.MYOfs+YDiv*SParms.MYMult;
+				MouseY1 = Ty <= SParms.MYOfs+YDiv*SParms.MYMult+SParms.MYSpan;
 			}
 			if (Selected == 1)
 			{
 				//XTRACE0("A");
-				if (y >= SvY0 && y+1 <= SvY1)
+				if (y >= StartY0 && y+1 <= StartY1)
 				{
 					//XTRACE0("B");
 					MouseX = EndX;
@@ -352,7 +351,7 @@ void UpdateScreen (SystemState2 *USState32)
 					MouseY1 = EndY1;
 				}
 			}
-			//XTRACEN(">[%d,%d]", MouseX, MouseY);
+			//XTRACEN(">[%d,%d,%d]", MouseX, MouseY0, MouseY1);
 #endif
 			Attributes=0;
 			for (HorzBeam=0;HorzBeam<BytesperRow*ExtendedText;HorzBeam+=ExtendedText)
@@ -366,10 +365,10 @@ void UpdateScreen (SystemState2 *USState32)
 						EndX = MouseX;
 						EndY0 = MouseY0;
 						EndY1 = MouseY1;
-						if (y < SvY0)
-							SvY0 = y;
-						if (y+1 > SvY1)
-							SvY1 = y+1;
+						if (y < StartY0)
+							StartY0 = y;
+						if (y+1 > StartY1)
+							StartY1 = y+1;
 					}
 					SwitchP = 1;
 					Character=buffer[Start+(unsigned char)(HorzBeam+Hoffset)];
@@ -656,13 +655,13 @@ void UpdateScreen (SystemState2 *USState32)
 
 				//XTRACE0("9");
 				MouseX = USState32->MouseX/SParms.MXDiv;
-				MouseY0 = SParms.MYOfs+YDiv*SParms.MYMult >= Ty;
-				MouseY1 = SParms.MYOfs+YDiv*SParms.MYMult <= Ty+SParms.MYSpan;
+				MouseY0 = Ty >= SParms.MYOfs+YDiv*SParms.MYMult;
+				MouseY1 = Ty <= SParms.MYOfs+YDiv*SParms.MYMult+SParms.MYSpan;
 			}
 			if (Selected == 1)
 			{
 				//XTRACE0("A");
-				if (y >= SvY0 && y+1 <= SvY1)
+				if (y >= StartY0 && y+1 <= StartY1)
 				{
 					//XTRACE0("B");
 					MouseX = EndX;
@@ -670,7 +669,7 @@ void UpdateScreen (SystemState2 *USState32)
 					MouseY1 = EndY1;
 				}
 			}
-			//XTRACEN(">[%d,%d]", MouseX, MouseY);
+			//XTRACEN(">[%d,%d,%d]", MouseX, MouseY0, MouseY1);
 #endif
 			for (HorzBeam=0;HorzBeam<BytesperRow;HorzBeam++)
 			{										
@@ -683,10 +682,10 @@ void UpdateScreen (SystemState2 *USState32)
 						EndX = MouseX;
 						EndY0 = MouseY0;
 						EndY1 = MouseY1;
-						if (y < SvY0)
-							SvY0 = y;
-						if (y+1 > SvY1)
-							SvY1 = y+1;
+						if (y < StartY0)
+							StartY0 = y;
+						if (y+1 > StartY1)
+							StartY1 = y+1;
 					}
 					SwitchP = 1;
 					Character=buffer[Start+(unsigned char)(HorzBeam+Hoffset)];
@@ -842,8 +841,8 @@ void UpdateScreen (SystemState2 *USState32)
 #ifdef COPY_PASTE
 			if (Logging && YDiv != OldYDiv && TicksDiff > Timeout)
 			{
-				XTRACEN("        64-127 %d %d %d %d %d\n",
-					y, YStride, USState32->MouseY, Xpitch, HorzCenter);
+				XTRACEN("        64-127 %d %d %d %d %d %d\n",
+					y, YStride, USState32->MouseY0, USState32->MouseY1, Xpitch, HorzCenter);
 				if (y >= 180)
 					OldTicks = Ticks;
 			}
@@ -3594,8 +3593,8 @@ void HandleSelect(SystemState2 *USState32, unsigned short y, unsigned short YDiv
 		//XTRACE0("1");
 		RightClick = 0;
 		*MouseX = USState32->MouseX/SParms.MXDiv;
-		*MouseY0 = SParms.MYOfs+YDiv*SParms.MYMult >= Ty;
-		*MouseY1 = SParms.MYOfs+YDiv*SParms.MYMult <= Ty+SParms.MYSpan;
+		*MouseY0 = Ty >= SParms.MYOfs+YDiv*SParms.MYMult;
+		*MouseY1 = Ty <= SParms.MYOfs+YDiv*SParms.MYMult+SParms.MYSpan;
 		if (Selected == 1)
 		{
 			//XTRACE0("2");
@@ -3610,10 +3609,8 @@ void HandleSelect(SystemState2 *USState32, unsigned short y, unsigned short YDiv
 		{
 			//XTRACE0("3");
 			StartX = *MouseX;
-			StartY0 = *MouseY0;
-			StartY1 = *MouseY1;
-			SvY0 = 0xffff;
-			SvY1 = 0;
+			StartY0 = 0xffff;
+			StartY1 = 0;
 			Dragging = 1;
 		}
 	}
@@ -3635,21 +3632,10 @@ void HandleSelect(SystemState2 *USState32, unsigned short y, unsigned short YDiv
 
 			//XTRACE0("5");
 			*MouseX = USState32->MouseX/SParms.MXDiv;
-			*MouseY0 = SParms.MYOfs+YDiv*SParms.MYMult >= Ty;
-			*MouseY1 = SParms.MYOfs+YDiv*SParms.MYMult <= Ty+SParms.MYSpan;
+			*MouseY0 = Ty >= SParms.MYOfs+YDiv*SParms.MYMult;
+			*MouseY1 = Ty <= SParms.MYOfs+YDiv*SParms.MYMult+SParms.MYSpan;
 			Selected = 1;
 			Dragging = 0;
-		}
-		if (Selected == 1)
-		{
-			//XTRACE0("6");
-			if (y >= SvY0 && y+1 <= SvY1)
-			{
-				//XTRACE0("7");
-				*MouseX = EndX;
-				*MouseY0 = EndY0;
-				*MouseY1 = EndY1;
-			}
 		}
 	}
 	else
@@ -3661,8 +3647,8 @@ clear:
 		EndX = 0xffff;
 		EndY0 = 0;
 		EndY1 = 0;
-		SvY0 = 0xffff;
-		SvY1 = 0;
+		StartY0 = 0xffff;
+		StartY1 = 0;
 		Clipped = 0;
 		Selected = 0;
 		Dragging = 0;
@@ -3949,21 +3935,21 @@ void SetupDisplayAGAR(void)
 	if (MasterMode == 0)
 	{
 		SParms.MXDiv = 4;
-		SParms.MYOfs = 64;
+		SParms.MYOfs = 50;
 		SParms.MYMult = LinesperRow*2;
 		SParms.MYSpan = 14;
 	}
 	else if (MasterMode == 1 || MasterMode == 2)
 	{
 		SParms.MXDiv = 8;
-		SParms.MYOfs = 64;
+		SParms.MYOfs = 50;
 		SParms.MYMult = LinesperRow*2;
 		SParms.MYSpan = 14;
 	}
 	else if (MasterMode >= 64 && MasterMode <= 127)
 	{
 		SParms.MXDiv = 16;
-		SParms.MYOfs = 72;
+		SParms.MYOfs = 50;
 		SParms.MYMult = 24;
 		SParms.MYSpan = 21;
 	}
