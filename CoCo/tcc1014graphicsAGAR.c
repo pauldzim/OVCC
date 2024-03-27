@@ -207,7 +207,7 @@ void UpdateScreen (SystemState2 *USState32)
 			{									
 #ifdef COPY_PASTE
 				SwitchP = 0;
-				if (HorzBeam+1 > StartX && HorzBeam+1 <= MouseX && MouseY0 && MouseY1)
+				if (HorzBeam+1 > StartX && HorzBeam+1 <= MouseX && ((MouseY0 && MouseY1) || (y >= StartY0 && y+1 <= StartY1)))
 				{
 					if (Dragging == 1)
 					{
@@ -358,7 +358,7 @@ void UpdateScreen (SystemState2 *USState32)
 			{									
 #ifdef COPY_PASTE
 				SwitchP = 0;
-				if (HorzBeam+1 > StartX && HorzBeam+1 <= MouseX && MouseY0 && MouseY1)
+				if (HorzBeam+1 > StartX && HorzBeam+1 <= MouseX && ((MouseY0 && MouseY1) || (y >= StartY0 && y+1 <= StartY1)))
 				{
 					if (Dragging == 1)
 					{
@@ -675,7 +675,7 @@ void UpdateScreen (SystemState2 *USState32)
 			{										
 #ifdef COPY_PASTE
 				SwitchP = 0;
-				if (HorzBeam+5 > StartX && HorzBeam+5 <= MouseX && MouseY0 && MouseY1)
+				if (HorzBeam+5 > StartX && HorzBeam+5 <= MouseX && ((MouseY0 && MouseY1) || (y >= StartY0 && y+1 <= StartY1)))
 				{
 					if (Dragging == 1)
 					{
