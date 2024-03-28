@@ -2,6 +2,9 @@ This is a fork of Walter Zambotti's OVCC project: https://github.com/WallyZambot
 
 I have added an xcodeproj file, so that OVCC can be built using Apple's Xcode IDE.
 
+If you have any issues with building the project or running the prebuilt app
+(see below) please contact me at the email address in my user profile.
+
 'homebrew' and the SDL2, fontconfig, freetype, and png16 libraries are required
 to build OVCC. See https://brew.sh
 
@@ -36,8 +39,10 @@ This version of OVCC has a few differences from Walter's:
 You can find the needed ROMs at https://colorcomputerarchive.com. I used the
 ones from the repo/ROMs/XRoar/CoCo directory.
 
-There is a prebuilt image of OVCC (MacOS arm64 only) at
+There is a prebuilt image of the OVCC app (MacOS arm64 only) at
+
 https://drive.google.com/drive/folders/1Va9Vq35dOAkd4joCtuB7zRYQ8CY6mssN?usp=sharing
+
 The prebuilt image also needs to have the ROMs added to it before it will run.
 
 One note: If you load the libmpi.so module first ("Mult-Pak Interface"), and
