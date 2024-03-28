@@ -22,8 +22,6 @@ This file is part of VCC (Virtual Color Computer).
 #include "defines.h"
 #include "fileops.h"
 
-#include "xdebug.h"
-
 static char ExecFolder[MAX_PATH];
 
 void ValidatePath(char *Path)
@@ -32,7 +30,6 @@ void ValidatePath(char *Path)
 	int tpl, len;
 
 	if (ExecFolder[0] == 0) getcwd(ExecFolder, sizeof(ExecFolder));
-	XTRACE("ExecFolder 1: \"%s\"\n", ExecFolder);
 
 	strncpy(TempPath,Path,sizeof(TempPath));
 	TempPath[sizeof(TempPath)-1] = 0;
@@ -55,7 +52,6 @@ int CheckPath( char *Path)	//Return 1 on Error
 	char TempPath[MAX_PATH]="";
 
 	if (ExecFolder[0] == 0) getcwd(ExecFolder, sizeof(ExecFolder));
-	XTRACE("ExecFolder 2: \"%s\"\n", ExecFolder);
 
 	if ((strlen(Path)==0) | (strlen(Path) > MAX_PATH))
 		return(1);
