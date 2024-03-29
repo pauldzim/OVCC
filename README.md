@@ -43,8 +43,6 @@ There is a prebuilt image of the OVCC app (MacOS arm64 only) at
 
 https://drive.google.com/drive/folders/1Va9Vq35dOAkd4joCtuB7zRYQ8CY6mssN?usp=sharing
 
-The prebuilt image also needs to have the ROMs added to it before it will run.
-
 One note: If you load the libmpi.so module first ("Mult-Pak Interface"), and
 then load the libfd502.so module (floppy disk controller) into it, you *must*
 load it into MPI Slot 4. The floppy disk controller won't work in any other slot.
