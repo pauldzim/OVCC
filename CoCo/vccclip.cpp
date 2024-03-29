@@ -13,7 +13,7 @@ void HandleCopy(void);
 void HandlePaste(void);
 
 extern void DoKeyBoardEvent(unsigned short, unsigned short, unsigned short, unsigned short);
-static unsigned char PasteBuf[80 * 24 + 1];
+static unsigned char PasteBuf[82*24+1];		// 80 +2 for a CR/LF per line
 static unsigned int PBIndex, PBLen;
 static char KeyDown = 0;
 static char CharDelay = 0;

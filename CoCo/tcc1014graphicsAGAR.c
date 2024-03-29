@@ -102,13 +102,14 @@ static char Logging=0;
 
 static struct sparms
 {
+	unsigned short MXOfs;
 	unsigned short MXDiv;
 	unsigned short MYOfs;
 	unsigned short MYMult;
 	unsigned short MYSpan;
 } SParms;
 
-unsigned char SelectBuf[80*24+1];
+unsigned char SelectBuf[82*24+1];	// 80 +2 for a CR/LF per line
 unsigned short SBIndex=0;
 char Clipped=0, Pasting=0;
 
@@ -206,8 +207,11 @@ void UpdateScreen (SystemState2 *USState32)
 			for (HorzBeam=0;HorzBeam<BytesperRow*ExtendedText;HorzBeam+=ExtendedText)
 			{									
 #ifdef COPY_PASTE
+				unsigned char TChar;
+
 				SwitchP = 0;
-				if (HorzBeam+1 > StartX && HorzBeam+1 <= MouseX && ((MouseY0 && MouseY1) || (y >= StartY0 && y+1 <= StartY1)))
+				if (HorzBeam+SParms.MXOfs > StartX && HorzBeam+SParms.MXOfs <= MouseX &&
+				    ((MouseY0 && MouseY1) || (y >= StartY0 && y+1 <= StartY1)))
 				{
 					if (Dragging == 1)
 					{
@@ -220,33 +224,68 @@ void UpdateScreen (SystemState2 *USState32)
 							StartY1 = y+1;
 					}
 					SwitchP = 1;
-					Character=buffer[Start+(unsigned char)(HorzBeam+Hoffset)];
-					if (Selected == 1 && Clipped == 0 && YDiv != OldYDiv && Character != 32)
+					Character = buffer[Start + (unsigned char)(HorzBeam + Hoffset)];
+					TChar = Character;
+					if (TChar != 32)
 					{
-						SelectBuf[SBIndex++] = Character < 32 ? Character | 64 : Character;
-						assert(SBIndex <= sizeof(SelectBuf)-1);
-						//if (HorzBeam == BytesperRow)
-						//	SelectBuf[SBIndex++] = 10; // 10 = LF
+						if (HorzBeam+ExtendedText >= BytesperRow*ExtendedText)
+						{
+							SwitchP = 0;
+						}
+						if (Selected == 1 && Clipped == 0 && YDiv != OldYDiv)
+						{
+							SelectBuf[SBIndex++] = TChar < 32 ? TChar | 64 : TChar;
+							assert(SBIndex <= sizeof(SelectBuf)-1);
+							XTRACEN("[%02x-%02x-%c]", TChar, TChar < 32 ? TChar | 64 : TChar,
+								TChar < 32 ? TChar | 64 : TChar);
+							if (EndLine == 0 && (HorzBeam+ExtendedText >= BytesperRow*ExtendedText ||
+									     HorzBeam+SParms.MXOfs >= MouseX))
+							{
+								EndLine = 1;
+								//SelectBuf[SBIndex++] = 13; // 13 = CR
+								//assert(SBIndex <= sizeof(SelectBuf)-1);
+								SelectBuf[SBIndex++] = 10; // 10 = LF
+								assert(SBIndex <= sizeof(SelectBuf)-1);
+								XTRACE0("<CR1>");
+							}
+						}
 					}
-					if (Character == 32)
+					if (TChar == 32)
 					{
 						unsigned short i;
 
 						for (i = HorzBeam+ExtendedText; i < BytesperRow*ExtendedText; i += ExtendedText)
-							if (buffer[Start+(unsigned char)(i+Hoffset)] != 32)
+							if (buffer[Start + (unsigned char)(i + Hoffset)] != 32)
 								break;
-						if (i == BytesperRow*ExtendedText)
+						if (i >= BytesperRow*ExtendedText)
 						{
 							SwitchP = 0;
-							//if (Selected == 1 && YDiv != OldYDiv)
-							//{
-							//	SelectBuf[YDiv * BytesperRow + HorzBeam] = 10; // 10 = LF
-							//}
+							if (EndLine == 0 && Selected == 1 && Clipped == 0 && YDiv != OldYDiv)
+							{
+								EndLine = 1;
+								//SelectBuf[SBIndex++] = 13; // 13 = CR
+								//assert(SBIndex <= sizeof(SelectBuf)-1);
+								SelectBuf[SBIndex++] = 10; // 10 = LF
+								assert(SBIndex <= sizeof(SelectBuf)-1);
+								XTRACE0("<CR2>");
+							}
 						}
 						else if (Selected == 1 && Clipped == 0 && YDiv != OldYDiv)
 						{
-							SelectBuf[SBIndex++] = Character < 32 ? Character | 64 : Character;
+							SelectBuf[SBIndex++] = 32;
 							assert(SBIndex <= sizeof(SelectBuf)-1);
+							XTRACEN("[%02x-%02x-%c]", 32, 32, 32);
+							//XTRACE0(" ");
+							if (EndLine == 0 && (HorzBeam+ExtendedText >= BytesperRow*ExtendedText ||
+									     HorzBeam+SParms.MXOfs >= MouseX))
+							{
+								EndLine = 1;
+								//SelectBuf[SBIndex++] = 13; // 13 = CR
+								//assert(SBIndex <= sizeof(SelectBuf)-1);
+								SelectBuf[SBIndex++] = 10; // 10 = LF
+								assert(SBIndex <= sizeof(SelectBuf)-1);
+								XTRACE0("<CR3>");
+							}
 						}
 					}
 				}
@@ -307,6 +346,10 @@ void UpdateScreen (SystemState2 *USState32)
 				}
 			} 
 #ifdef COPY_PASTE
+			if (Selected == 1 && Clipped == 0 && YDiv != OldYDiv)
+			{
+				XTRACE0("\n");
+			}
 			if (Logging && YDiv != OldYDiv && TicksDiff > Timeout)
 			{
 				//XTRACEN("        0 %d %d\n", y, LinesperRow);
@@ -357,8 +400,11 @@ void UpdateScreen (SystemState2 *USState32)
 			for (HorzBeam=0;HorzBeam<BytesperRow*ExtendedText;HorzBeam+=ExtendedText)
 			{									
 #ifdef COPY_PASTE
+				unsigned char TChar;
+
 				SwitchP = 0;
-				if (HorzBeam+1 > StartX && HorzBeam+1 <= MouseX && ((MouseY0 && MouseY1) || (y >= StartY0 && y+1 <= StartY1)))
+				if (HorzBeam+SParms.MXOfs > StartX && HorzBeam+SParms.MXOfs <= MouseX &&
+				    ((MouseY0 && MouseY1) || (y >= StartY0 && y+1 <= StartY1)))
 				{
 					if (Dragging == 1)
 					{
@@ -371,33 +417,68 @@ void UpdateScreen (SystemState2 *USState32)
 							StartY1 = y+1;
 					}
 					SwitchP = 1;
-					Character=buffer[Start+(unsigned char)(HorzBeam+Hoffset)];
-					if (Selected == 1 && Clipped == 0 && YDiv != OldYDiv && Character != 32)
+					Character = buffer[Start + (unsigned char)(HorzBeam + Hoffset)];
+					TChar = Character;
+					if (TChar != 32)
 					{
-						SelectBuf[SBIndex++] = Character < 32 ? Character | 64 : Character;
-						assert(SBIndex <= sizeof(SelectBuf)-1);
-						//if (HorzBeam == BytesperRow)
-						//	SelectBuf[SBIndex++] = 10; // 10 = LF
+						if (HorzBeam+ExtendedText >= BytesperRow*ExtendedText)
+						{
+							SwitchP = 0;
+						}
+						if (Selected == 1 && Clipped == 0 && YDiv != OldYDiv)
+						{
+							SelectBuf[SBIndex++] = TChar < 32 ? TChar | 64 : TChar;
+							assert(SBIndex <= sizeof(SelectBuf)-1);
+							XTRACEN("[%02x-%02x-%c]", TChar, TChar < 32 ? TChar | 64 : TChar,
+								TChar < 32 ? TChar | 64 : TChar);
+							if (EndLine == 0 && (HorzBeam+ExtendedText >= BytesperRow*ExtendedText ||
+									     HorzBeam+SParms.MXOfs >= MouseX))
+							{
+								EndLine = 1;
+								//SelectBuf[SBIndex++] = 13; // 13 = CR
+								//assert(SBIndex <= sizeof(SelectBuf)-1);
+								SelectBuf[SBIndex++] = 10; // 10 = LF
+								assert(SBIndex <= sizeof(SelectBuf)-1);
+								XTRACE0("<CR1>");
+							}
+						}
 					}
-					if (Character == 32)
+					if (TChar == 32)
 					{
 						unsigned short i;
 
 						for (i = HorzBeam+ExtendedText; i < BytesperRow*ExtendedText; i += ExtendedText)
-							if (buffer[Start+(unsigned char)(i+Hoffset)] != 32)
+							if (buffer[Start + (unsigned char)(i + Hoffset)] != 32)
 								break;
-						if (i == BytesperRow*ExtendedText)
+						if (i >= BytesperRow*ExtendedText)
 						{
 							SwitchP = 0;
-							//if (Selected == 1 && YDiv != OldYDiv)
-							//{
-							//	SelectBuf[YDiv * BytesperRow + HorzBeam] = 10; // 10 = LF
-							//}
+							if (EndLine == 0 && Selected == 1 && Clipped == 0 && YDiv != OldYDiv)
+							{
+								EndLine = 1;
+								//SelectBuf[SBIndex++] = 13; // 13 = CR
+								//assert(SBIndex <= sizeof(SelectBuf)-1);
+								SelectBuf[SBIndex++] = 10; // 10 = LF
+								assert(SBIndex <= sizeof(SelectBuf)-1);
+								XTRACE0("<CR2>");
+							}
 						}
 						else if (Selected == 1 && Clipped == 0 && YDiv != OldYDiv)
 						{
-							SelectBuf[SBIndex++] = Character < 32 ? Character | 64 : Character;
+							SelectBuf[SBIndex++] = 32;
 							assert(SBIndex <= sizeof(SelectBuf)-1);
+							XTRACEN("[%02x-%02x-%c]", 32, 32, 32);
+							//XTRACE0(" ");
+							if (EndLine == 0 && (HorzBeam+ExtendedText >= BytesperRow*ExtendedText ||
+									     HorzBeam+SParms.MXOfs >= MouseX))
+							{
+								EndLine = 1;
+								//SelectBuf[SBIndex++] = 13; // 13 = CR
+								//assert(SBIndex <= sizeof(SelectBuf)-1);
+								SelectBuf[SBIndex++] = 10; // 10 = LF
+								assert(SBIndex <= sizeof(SelectBuf)-1);
+								XTRACE0("<CR3>");
+							}
 						}
 					}
 				}
@@ -474,6 +555,10 @@ void UpdateScreen (SystemState2 *USState32)
 				}
 			} 
 #ifdef COPY_PASTE
+			if (Selected == 1 && Clipped == 0 && YDiv != OldYDiv)
+			{
+				XTRACE0("\n");
+			}
 			if (Logging && YDiv != OldYDiv && TicksDiff > Timeout)
 			{
 				//XTRACE0("        1-2\n");
@@ -677,7 +762,8 @@ void UpdateScreen (SystemState2 *USState32)
 				unsigned char TChar;
 
 				SwitchP = 0;
-				if (HorzBeam+5 > StartX && HorzBeam+5 <= MouseX && ((MouseY0 && MouseY1) || (y >= StartY0 && y+1 <= StartY1)))
+				if (HorzBeam+SParms.MXOfs > StartX && HorzBeam+SParms.MXOfs <= MouseX &&
+				    ((MouseY0 && MouseY1) || (y >= StartY0 && y+1 <= StartY1)))
 				{
 					if (Dragging == 1)
 					{
@@ -697,7 +783,7 @@ void UpdateScreen (SystemState2 *USState32)
 					TChar = Character & 63;
 					if (TChar != 32)
 					{
-						if (HorzBeam+1 == BytesperRow)
+						if (HorzBeam+1 >= BytesperRow)
 						{
 							SwitchP = 0;
 						}
@@ -705,8 +791,10 @@ void UpdateScreen (SystemState2 *USState32)
 						{
 							SelectBuf[SBIndex++] = TChar < 32 ? TChar | 64 : TChar;
 							assert(SBIndex <= sizeof(SelectBuf)-1);
-							XTRACEN("[%02x-%02x-%c]", TChar, TChar < 32 ? TChar | 64 : TChar, TChar < 32 ? TChar | 64 : TChar);
-							if (EndLine == 0 && (HorzBeam+1 == BytesperRow || HorzBeam+5 == MouseX))
+							XTRACEN("[%02x-%02x-%c]", TChar, TChar < 32 ? TChar | 64 : TChar,
+								TChar < 32 ? TChar | 64 : TChar);
+							if (EndLine == 0 && (HorzBeam+1 >= BytesperRow ||
+									     HorzBeam+SParms.MXOfs >= MouseX))
 							{
 								EndLine = 1;
 								//SelectBuf[SBIndex++] = 13; // 13 = CR
@@ -724,7 +812,7 @@ void UpdateScreen (SystemState2 *USState32)
 						for (i = HorzBeam+1; i < BytesperRow; i++)
 							if ((buffer[Start + (unsigned char)(i + Hoffset)] & 63) != 32)
 								break;
-						if (i == BytesperRow)
+						if (i >= BytesperRow)
 						{
 							SwitchP = 0;
 							if (EndLine == 0 && Selected == 1 && Clipped == 0 && YDiv != OldYDiv)
@@ -736,10 +824,6 @@ void UpdateScreen (SystemState2 *USState32)
 								assert(SBIndex <= sizeof(SelectBuf)-1);
 								XTRACE0("<CR2>");
 							}
-							//else
-							//{
-							//	XTRACE0("[?1]");
-							//}
 						}
 						else if (Selected == 1 && Clipped == 0 && YDiv != OldYDiv)
 						{
@@ -747,7 +831,8 @@ void UpdateScreen (SystemState2 *USState32)
 							assert(SBIndex <= sizeof(SelectBuf)-1);
 							XTRACEN("[%02x-%02x-%c]", 32, 32, 32);
 							//XTRACE0(" ");
-							if (EndLine == 0 && (HorzBeam+1 == BytesperRow || HorzBeam+5 == MouseX))
+							if (EndLine == 0 && (HorzBeam+1 >= BytesperRow ||
+									     HorzBeam+SParms.MXOfs >= MouseX))
 							{
 								EndLine = 1;
 								//SelectBuf[SBIndex++] = 13; // 13 = CR
@@ -757,15 +842,7 @@ void UpdateScreen (SystemState2 *USState32)
 								XTRACE0("<CR3>");
 							}
 						}
-						//else
-						//{
-						//	XTRACE0("[?2]");
-						//}
 					}
-					//else
-					//{
-					//	XTRACE0("[?3]");
-					//}
 				}
 				else
 #endif
@@ -3993,6 +4070,7 @@ void SetupDisplayAGAR(void)
 #ifdef COPY_PASTE
 	if (MasterMode == 0)
 	{
+		SParms.MXOfs = 1;
 		SParms.MXDiv = 4;
 		SParms.MYOfs = 50;
 		SParms.MYMult = LinesperRow*2;
@@ -4000,6 +4078,7 @@ void SetupDisplayAGAR(void)
 	}
 	else if (MasterMode == 1 || MasterMode == 2)
 	{
+		SParms.MXOfs = 1;
 		SParms.MXDiv = 8;
 		SParms.MYOfs = 50;
 		SParms.MYMult = LinesperRow*2;
@@ -4007,6 +4086,7 @@ void SetupDisplayAGAR(void)
 	}
 	else if (MasterMode >= 64 && MasterMode <= 127)
 	{
+		SParms.MXOfs = 5;
 		SParms.MXDiv = 16;
 		SParms.MYOfs = 50;
 		SParms.MYMult = 24;

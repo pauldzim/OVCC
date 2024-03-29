@@ -60,7 +60,7 @@ extern unsigned char Lpf[4];
 extern unsigned char VcenterTable[4];
 
 #ifdef COPY_PASTE
-extern unsigned char SelectBuf[80*24+1];
+extern unsigned char SelectBuf[82*24+1];	// 80 +2 for a CR/LF per line
 extern unsigned short SBIndex;
 extern char Clipped, Pasting;
 #endif
