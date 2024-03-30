@@ -116,6 +116,7 @@ int main(int argc, char **argv)
 {
 	char cwd[260];
 	char name[260];
+	char execpath[260];
 
 	if (getcwd(cwd, sizeof(cwd)) != NULL)
 	{
@@ -167,23 +168,26 @@ int main(int argc, char **argv)
 	fprintf(stderr, "GlobalExecFolder: %s\n", GlobalExecFolder);
 	fprintf(stderr, "GlobalFullName: %s\n", GlobalFullName);
 	fprintf(stderr, "GlobalShortName: %s\n", GlobalShortName);
-	fprintf(stderr, "argv[0]: %s\n", argv[0]);
+
 	if (strcmp(GlobalExecFolder, "/") == 0)
 	{
-		char *str = argv[0], *laststr = NULL;
+		char *str, *laststr = NULL;
 
-		while ((str = strstr(str, "Contents")) != NULL)
+		AG_Strlcpy(execpath, argv[0], sizeof(execpath));
+		str = execpath;
+
+		while ((str = strstr(str, "/Contents")) != NULL)
 		{
 			laststr = str;
-			str += 8;
+			str += 9;
 		}
 		if (laststr != NULL)
 		{
-			laststr += 8;
+			laststr += 9;
 			*laststr = 0;
 		}
-		fprintf(stderr, "       : %s\n", argv[0]);
-		strcpy(GlobalExecFolder, argv[0]);
+
+		GlobalExecFolder = execpath;
 		chdir(GlobalExecFolder);
 	}
 
@@ -197,15 +201,14 @@ int main(int argc, char **argv)
 		fprintf(stderr, "Opening log file: %s\n", GlobalExecFolder);
 		logg = fopen(GlobalExecFolder, "w");
 		if (!logg)
-		{
 			fprintf(stderr, "Couldn't open ovcc.log\n");
-			return 1;
-		}
+		else
+			setbuf(logg, NULL);
 		GlobalExecFolder[savlen] = 0;
-		setbuf(logg, NULL);
 	}
 # endif
 #endif
+
 	XTRACE("GlobalExecFolder: %s\n", GlobalExecFolder);
 
 	DecorateWindow(&EmuState2);
