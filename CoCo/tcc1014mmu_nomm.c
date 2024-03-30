@@ -173,6 +173,15 @@ void CopyRom_sw(void)
 	XTRACE("Attempting to load coco3.rom from \"%s\"\n", BasicRomName());
 	temp=load_int_rom(BasicRomName());		//Try to load the image
 	if (temp == 0)
+	{
+		// If we can't find it check user's .ovcc directory
+		AG_Strlcpy(ExecPath, GlobalUserFolder, sizeof(ExecPath));
+		strcat(ExecPath, GetPathDelimStr());
+		strcat(ExecPath, "coco3.rom");
+		XTRACE("Attempting to load %s\n", ExecPath);
+		temp = load_int_rom(ExecPath);
+	}
+	if (temp == 0)
 	{	// If we can't find it use default copy
 		AG_Strlcpy(ExecPath, GlobalExecFolder, sizeof(ExecPath));
 		strcat(ExecPath, GetPathDelimStr());

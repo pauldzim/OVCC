@@ -53,6 +53,7 @@ static bool RomPackLoaded = false;
 
 extern SystemState2 EmuState2;
 
+static char PakFolder[MAX_PATH]="";
 static unsigned int BankedCartOffset=0;
 static char DllPath[256]="";
 static unsigned short ModualParms=0;
@@ -97,6 +98,7 @@ static void (*ModuleReset)(void)=NULL;
 static void (*SetIniPath)(INIman *)=NULL;
 static void (*SetIni)(INIman *)=NULL;
 static void (*PakSetCart)(SETCART)=NULL;
+static void (*PakSetFolder)(char *)=NULL;
 
 void UpdateCartridgeMenu(char *modname);
 
@@ -285,6 +287,7 @@ int InsertModule (char *ModulePath)
 		// SetIniPath = SDL_LoadFunction(hinstLib, "SetIniPath");
 		SetIni = SDL_LoadFunction(hinstLib, "SetIniPath");
 		PakSetCart = SDL_LoadFunction(hinstLib, "SetCart");
+		PakSetFolder = SDL_LoadFunction(hinstLib, "PakSetFolder");
 		if (GetModuleName == NULL)
 		{
 			XTRACE("NULL 2\n");
@@ -299,6 +302,19 @@ int InsertModule (char *ModulePath)
 		GetModuleName(Modname, GetMenuAnchor());  //Instanciate the menus from HERE!
 		UpdateCartridgeMenu(Modname); //Refresh Menus
 		sprintf(Temp,"Configure %s",Modname);
+
+		if (PakSetFolder != NULL)
+		{
+			if (PakFolder[0] == 0)
+			{
+				AG_Strlcpy(PakFolder, GlobalExecFolder, sizeof(PakFolder));
+#ifdef DARWIN
+				strcat(PakFolder, GetPathDelimStr());
+				strcat(PakFolder, "Frameworks");
+#endif
+			}
+			PakSetFolder(PakFolder);
+		}
 
 		strcat(String,"Module Name: ");
 		strcat(String,Modname);
@@ -464,6 +480,7 @@ void UnloadDll(short int config)
 	ModuleReset=NULL;
 	SetIni=NULL;
 	PakSetCart=NULL;
+	PakSetFolder=NULL;
 	if (hinstLib !=NULL)
 		SDL_UnloadObject(hinstLib); 
 	hinstLib=NULL;

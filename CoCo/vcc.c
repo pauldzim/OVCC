@@ -95,6 +95,7 @@ FILE *logg;
 char *GlobalExecFolder;
 char *GlobalFullName;
 char *GlobalShortName;
+char *GlobalUserFolder;
 void HandleSDLevent(SDL_Event);
 void FullScreenToggleAGAR(void);
 void InvalidateBoarderAGAR(void);
@@ -116,6 +117,8 @@ int main(int argc, char **argv)
 {
 	char cwd[260];
 	char name[260];
+	char execpath[260];
+	char userpath[260];
 
 	if (getcwd(cwd, sizeof(cwd)) != NULL)
 	{
@@ -167,23 +170,26 @@ int main(int argc, char **argv)
 	fprintf(stderr, "GlobalExecFolder: %s\n", GlobalExecFolder);
 	fprintf(stderr, "GlobalFullName: %s\n", GlobalFullName);
 	fprintf(stderr, "GlobalShortName: %s\n", GlobalShortName);
-	fprintf(stderr, "argv[0]: %s\n", argv[0]);
+
 	if (strcmp(GlobalExecFolder, "/") == 0)
 	{
-		char *str = argv[0], *laststr = NULL;
+		char *str, *laststr = NULL;
 
-		while ((str = strstr(str, "Contents")) != NULL)
+		AG_Strlcpy(execpath, argv[0], sizeof(execpath));
+		str = execpath;
+
+		while ((str = strstr(str, "/Contents")) != NULL)
 		{
 			laststr = str;
-			str += 8;
+			str += 9;
 		}
 		if (laststr != NULL)
 		{
-			laststr += 8;
+			laststr += 9;
 			*laststr = 0;
 		}
-		fprintf(stderr, "       : %s\n", argv[0]);
-		strcpy(GlobalExecFolder, argv[0]);
+
+		GlobalExecFolder = execpath;
 		chdir(GlobalExecFolder);
 	}
 
@@ -197,16 +203,35 @@ int main(int argc, char **argv)
 		fprintf(stderr, "Opening log file: %s\n", GlobalExecFolder);
 		logg = fopen(GlobalExecFolder, "w");
 		if (!logg)
-		{
 			fprintf(stderr, "Couldn't open ovcc.log\n");
-			return 1;
-		}
+		else
+			setbuf(logg, NULL);
 		GlobalExecFolder[savlen] = 0;
-		setbuf(logg, NULL);
 	}
 # endif
 #endif
+
 	XTRACE("GlobalExecFolder: %s\n", GlobalExecFolder);
+
+	{
+		AG_User *user = AG_GetEffectiveUser();
+
+		if (user && user->home)
+		{
+			XTRACE("Home directory is %s\n", user->home);
+			AG_Strlcpy(userpath, user->home, sizeof(userpath));
+			strcat(userpath, GetPathDelimStr());
+			strcat(userpath, ".");
+			strcat(userpath, "ovcc");
+			chdir(userpath);
+		}
+		else
+		{
+			AG_Strlcpy(userpath, ".", sizeof(userpath));
+		}
+		GlobalUserFolder = userpath;
+		XTRACE("GlobalUserFolder: %s\n", GlobalUserFolder);
+	}
 
 	DecorateWindow(&EmuState2);
 
