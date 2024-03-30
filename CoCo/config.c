@@ -150,7 +150,8 @@ void LoadConfig(SystemState2 *LCState)
 	strcpy(CurrentConfig.PathtoExe,ExecDirectory);
 	strcat(CurrentConfig.PathtoExe,GetPathDelimStr());
 	strcat(CurrentConfig.PathtoExe,AppName);
-	strcpy(IniFilePath,ExecDirectory);
+	//strcpy(IniFilePath,ExecDirectory);
+	strcpy(IniFilePath,GlobalUserFolder);
 	strcat(IniFilePath,GetPathDelimStr());
 	strcat(IniFilePath,IniFileName);
 	XTRACE("AppName: \"%s\", ExecDirectory: \"%s\", CurrentConfig.PathtoExe: \"%s\", IniFilePath: \"%s\"\n",

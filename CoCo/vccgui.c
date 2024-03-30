@@ -23,6 +23,7 @@ This file is part of VCC (Virtual Color Computer).
 #include "AGARInterface.h"
 #include "audio.h"
 #include "config.h"
+#include "fileops.h"
 #include "keyboard.h"
 #include "joystickinputSDL.h"
 #include "throttle.h"
@@ -114,6 +115,7 @@ static char tapeMode[64] = "STOP";
 static char bitbangerfile[512] = "<No Capture File!>";
 static int AddLFtoCR = 1;
 static int PrintMonitor = 0;
+static char PakFolder[MAX_PATH]="";
 
 void _MessageBox(const char *msg)
 {
@@ -1536,6 +1538,7 @@ void *CartLoad(void *p)
     extern int InsertModule(char *);
     SystemState2 *state = p;
 
+    XTRACE("vccgui: Cartload(\"%s\")\n", modulefile);
     InsertModule(modulefile);
 
 	state->EmulationRunning = TRUE;
@@ -1553,8 +1556,10 @@ void LoadPack(AG_Event *event)
 	char *file = AG_STRING(2);
 	AG_FileType *ft = AG_PTR(3);
 
+    XTRACE("vccgui: LoadPack()\n");
     if (AG_FileExists(file))
     {
+        XTRACE("vccgui: LoadPack(\"%s\")\n", file);
         AG_Strlcpy(modulefile, file, sizeof(modulefile));
 
 	    AG_ThreadTryCreate(&threadID, CartLoad, state);
@@ -1572,14 +1577,23 @@ static void LoadCart(AG_Event *event)
     SystemState2 *state = AG_PTR(1);
 
     if (inLoadCart) return;
-    
+
+    if (PakFolder[0] == 0)
+    {
+        AG_Strlcpy(PakFolder, GlobalExecFolder, sizeof(PakFolder));
+#ifdef DARWIN
+        strcat(PakFolder, GetPathDelimStr());
+        strcat(PakFolder, "Frameworks");
+#endif
+    }
+
     AG_Window *fdw = AG_WindowNew(0);
     AG_WindowSetCaption(fdw, "Load Pak/Cartridge");
     AG_WindowSetGeometryAligned(fdw, AG_WINDOW_ALIGNMENT_NONE, 500, 500);
     AG_WindowSetCloseAction(fdw, AG_WINDOW_DETACH);
 
     AG_FileDlg *fd = AG_FileDlgNew(fdw, AG_FILEDLG_EXPAND | AG_FILEDLG_CLOSEWIN | AG_FILEDLG_MASK_EXT);
-    AG_FileDlgSetDirectory(fd, GlobalExecFolder);
+    AG_FileDlgSetDirectory(fd, "%s", PakFolder);
 
     AG_FileDlgAddType(fd, "CoCo Pak or Cartridge", "*.rom,*.ccc,*.so,*.dll", LoadPack, "%p", state);
     AG_WindowShow(fdw);
