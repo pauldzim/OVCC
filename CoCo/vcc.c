@@ -173,6 +173,11 @@ int main(int argc, char **argv)
 	fprintf(stderr, "GlobalFullName: %s\n", GlobalFullName);
 	fprintf(stderr, "GlobalShortName: %s\n", GlobalShortName);
 
+	/* On Mac, when starting the app from Finder or Launchpad, the CWD is
+	 * set to "/", which means file loading/saving doesn't work. So we
+	 * take the path to the executable from argv[0], and find the Contents
+	 * folder from there.
+	 */
 	if (strcmp(GlobalExecFolder, "/") == 0)
 	{
 		char *str, *laststr = NULL;
@@ -215,6 +220,7 @@ int main(int argc, char **argv)
 
 	XTRACE("GlobalExecFolder: %s\n", GlobalExecFolder);
 
+	/* Find the path to the user's .ovcc directory */
 	{
 		AG_User *user = AG_GetEffectiveUser();
 
