@@ -61,6 +61,15 @@
 		4BC9116D2BB0C218000189ED /* libfreetype.6.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BC911652BB0C0ED000189ED /* libfreetype.6.dylib */; };
 		4BC9116E2BB0C218000189ED /* libpng16.16.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BC911662BB0C0ED000189ED /* libpng16.16.dylib */; };
 		4BC9116F2BB0C218000189ED /* libSDL2-2.0.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BC911672BB0C0ED000189ED /* libSDL2-2.0.0.dylib */; };
+		4BFA4E402BC31FD800AB7B27 /* rgbdos.rom in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BFA4E372BC31FD700AB7B27 /* rgbdos.rom */; };
+		4BFA4E412BC31FD800AB7B27 /* hdbdw3bc3.rom in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BFA4E382BC31FD700AB7B27 /* hdbdw3bc3.rom */; };
+		4BFA4E422BC31FD800AB7B27 /* coco3.rom in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BFA4E392BC31FD700AB7B27 /* coco3.rom */; };
+		4BFA4E452BC31FD800AB7B27 /* disk11.rom in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BFA4E3C2BC31FD700AB7B27 /* disk11.rom */; };
+		4BFA4E462BC31FD800AB7B27 /* orch90.rom in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BFA4E3D2BC31FD800AB7B27 /* orch90.rom */; };
+		4BFA4E472BC31FD800AB7B27 /* hdbdw3bck.rom in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BFA4E3E2BC31FD800AB7B27 /* hdbdw3bck.rom */; };
+		4BFA4E482BC31FD800AB7B27 /* Vcc.ini in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BFA4E3F2BC31FD800AB7B27 /* Vcc.ini */; };
+		4BFA4E4B2BC3253C00AB7B27 /* hdbdw3bc3 w-offset 5A000.rom in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BFA4E492BC3253C00AB7B27 /* hdbdw3bc3 w-offset 5A000.rom */; };
+		4BFA4E4C2BC3253C00AB7B27 /* hdbdw3bck w-offset 5A000.rom in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BFA4E4A2BC3253C00AB7B27 /* hdbdw3bck w-offset 5A000.rom */; };
 		4E642DEAFFDC4B84912CDB60 /* iniman.c in Sources */ = {isa = PBXBuildFile; fileRef = 4AEE860745AC40E09C86349A /* iniman.c */; };
 		511AD50FA5344F75B33A6D51 /* harddisk.c in Sources */ = {isa = PBXBuildFile; fileRef = A053D5FDFCF0418593DD8ABC /* harddisk.c */; };
 		53841C79FF184DED9D353C24 /* fileops.c in Sources */ = {isa = PBXBuildFile; fileRef = 56167180D9944DC0ADBA93EB /* fileops.c */; };
@@ -142,7 +151,7 @@
 			containerPortal = 0F86427A7DCF46528881356D /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = B2673C64198041B2B959ADE4;
-			remoteInfo = ovcc;
+			remoteInfo = Ovcc;
 		};
 		91069B4407CC4F2DB6D848CB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -181,6 +190,15 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				4BFA4E4B2BC3253C00AB7B27 /* hdbdw3bc3 w-offset 5A000.rom in CopyFiles */,
+				4BFA4E4C2BC3253C00AB7B27 /* hdbdw3bck w-offset 5A000.rom in CopyFiles */,
+				4BFA4E402BC31FD800AB7B27 /* rgbdos.rom in CopyFiles */,
+				4BFA4E412BC31FD800AB7B27 /* hdbdw3bc3.rom in CopyFiles */,
+				4BFA4E422BC31FD800AB7B27 /* coco3.rom in CopyFiles */,
+				4BFA4E452BC31FD800AB7B27 /* disk11.rom in CopyFiles */,
+				4BFA4E462BC31FD800AB7B27 /* orch90.rom in CopyFiles */,
+				4BFA4E472BC31FD800AB7B27 /* hdbdw3bck.rom in CopyFiles */,
+				4BFA4E482BC31FD800AB7B27 /* Vcc.ini in CopyFiles */,
 				4BC9116A2BB0C217000189ED /* libag_core.8.dylib in CopyFiles */,
 				4BC9116B2BB0C218000189ED /* libag_gui.8.dylib in CopyFiles */,
 				4BC9116C2BB0C218000189ED /* libfontconfig.1.dylib in CopyFiles */,
@@ -230,6 +248,17 @@
 		4BC911652BB0C0ED000189ED /* libfreetype.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libfreetype.6.dylib; sourceTree = "<group>"; };
 		4BC911662BB0C0ED000189ED /* libpng16.16.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libpng16.16.dylib; sourceTree = "<group>"; };
 		4BC911672BB0C0ED000189ED /* libSDL2-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libSDL2-2.0.0.dylib"; sourceTree = "<group>"; };
+		4BFA4E372BC31FD700AB7B27 /* rgbdos.rom */ = {isa = PBXFileReference; lastKnownFileType = file; name = rgbdos.rom; path = newroms/rgbdos.rom; sourceTree = "<group>"; };
+		4BFA4E382BC31FD700AB7B27 /* hdbdw3bc3.rom */ = {isa = PBXFileReference; lastKnownFileType = file; name = hdbdw3bc3.rom; path = newroms/hdbdw3bc3.rom; sourceTree = "<group>"; };
+		4BFA4E392BC31FD700AB7B27 /* coco3.rom */ = {isa = PBXFileReference; lastKnownFileType = file; name = coco3.rom; path = newroms/coco3.rom; sourceTree = "<group>"; };
+		4BFA4E3A2BC31FD700AB7B27 /* hdbdw3bc3 w-offset 5A000.rom */ = {isa = PBXFileReference; lastKnownFileType = file; name = "hdbdw3bc3 w-offset 5A000.rom"; path = "newroms/hdbdw3bc3 w-offset 5A000.rom"; sourceTree = "<group>"; };
+		4BFA4E3B2BC31FD700AB7B27 /* hdbdw3bck w-offset 5A000.rom */ = {isa = PBXFileReference; lastKnownFileType = file; name = "hdbdw3bck w-offset 5A000.rom"; path = "newroms/hdbdw3bck w-offset 5A000.rom"; sourceTree = "<group>"; };
+		4BFA4E3C2BC31FD700AB7B27 /* disk11.rom */ = {isa = PBXFileReference; lastKnownFileType = file; name = disk11.rom; path = newroms/disk11.rom; sourceTree = "<group>"; };
+		4BFA4E3D2BC31FD800AB7B27 /* orch90.rom */ = {isa = PBXFileReference; lastKnownFileType = file; name = orch90.rom; path = newroms/orch90.rom; sourceTree = "<group>"; };
+		4BFA4E3E2BC31FD800AB7B27 /* hdbdw3bck.rom */ = {isa = PBXFileReference; lastKnownFileType = file; name = hdbdw3bck.rom; path = newroms/hdbdw3bck.rom; sourceTree = "<group>"; };
+		4BFA4E3F2BC31FD800AB7B27 /* Vcc.ini */ = {isa = PBXFileReference; lastKnownFileType = text; name = Vcc.ini; path = newroms/Vcc.ini; sourceTree = "<group>"; };
+		4BFA4E492BC3253C00AB7B27 /* hdbdw3bc3 w-offset 5A000.rom */ = {isa = PBXFileReference; lastKnownFileType = file; name = "hdbdw3bc3 w-offset 5A000.rom"; path = "newroms/hdbdw3bc3 w-offset 5A000.rom"; sourceTree = "<group>"; };
+		4BFA4E4A2BC3253C00AB7B27 /* hdbdw3bck w-offset 5A000.rom */ = {isa = PBXFileReference; lastKnownFileType = file; name = "hdbdw3bck w-offset 5A000.rom"; path = "newroms/hdbdw3bck w-offset 5A000.rom"; sourceTree = "<group>"; };
 		4FD02C4F056545B3AFA8BBA2 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = Ramdisk/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
 		545A88B7B86047539EAA0A28 /* libmpu.so */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = libmpu.so; sourceTree = BUILT_PRODUCTS_DIR; };
 		54E9BAC4B5524B208748B35D /* vccgui.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = vccgui.c; path = CoCo/vccgui.c; sourceTree = SOURCE_ROOT; };
@@ -249,7 +278,7 @@
 		746E0984B1284642A0635013 /* memboard.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = memboard.c; path = Ramdisk/memboard.c; sourceTree = SOURCE_ROOT; };
 		76A5E5B8686F408B93895B09 /* mc6821.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = mc6821.c; path = CoCo/mc6821.c; sourceTree = SOURCE_ROOT; };
 		780FEAF768094E50B83BEB1E /* tcc1014mmu_common.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = tcc1014mmu_common.c; path = CoCo/tcc1014mmu_common.c; sourceTree = SOURCE_ROOT; };
-		7C5DFA5F69A7419B89FDEAF8 /* ovcc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = ovcc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C5DFA5F69A7419B89FDEAF8 /* Ovcc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = Ovcc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8245D9FA81D84E1BB943422E /* mpu.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = mpu.c; path = mpu/mpu.c; sourceTree = SOURCE_ROOT; };
 		8323B721618840EA9E0DB76B /* cloud9.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = cloud9.c; path = SuperIDE/cloud9.c; sourceTree = SOURCE_ROOT; };
 		8452D962325943FE88550587 /* libfd502.so */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = libfd502.so; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -532,7 +561,7 @@
 				5C2F6D97234B49B4AF1D8681 /* libmpi.so */,
 				545A88B7B86047539EAA0A28 /* libmpu.so */,
 				B9BAACB57E5A43928DF78352 /* liborch90.so */,
-				7C5DFA5F69A7419B89FDEAF8 /* ovcc.app */,
+				7C5DFA5F69A7419B89FDEAF8 /* Ovcc.app */,
 				8D95AB97156A416798894725 /* libramdisk.so */,
 				192EC50E837A41C7B008937B /* libsuperide.so */,
 			);
@@ -542,6 +571,17 @@
 		A6620248B0764BFDBA2AC88A = {
 			isa = PBXGroup;
 			children = (
+				4BFA4E492BC3253C00AB7B27 /* hdbdw3bc3 w-offset 5A000.rom */,
+				4BFA4E4A2BC3253C00AB7B27 /* hdbdw3bck w-offset 5A000.rom */,
+				4BFA4E392BC31FD700AB7B27 /* coco3.rom */,
+				4BFA4E3C2BC31FD700AB7B27 /* disk11.rom */,
+				4BFA4E3A2BC31FD700AB7B27 /* hdbdw3bc3 w-offset 5A000.rom */,
+				4BFA4E382BC31FD700AB7B27 /* hdbdw3bc3.rom */,
+				4BFA4E3B2BC31FD700AB7B27 /* hdbdw3bck w-offset 5A000.rom */,
+				4BFA4E3E2BC31FD800AB7B27 /* hdbdw3bck.rom */,
+				4BFA4E3D2BC31FD800AB7B27 /* orch90.rom */,
+				4BFA4E372BC31FD700AB7B27 /* rgbdos.rom */,
+				4BFA4E3F2BC31FD800AB7B27 /* Vcc.ini */,
 				1877199B556644949A7964E5 /* ALL_BUILD */,
 				EF7D4C9584C04B14A16F9707 /* becker */,
 				F4CECBB0D7724E0492BA1943 /* fd502 */,
@@ -551,7 +591,7 @@
 				3499DA71417F463CAF199E03 /* orch90 */,
 				28B38C79BB744CAF8F4EEF48 /* ramdisk */,
 				2AEBFB86CEB2456FB75D9A6E /* superide */,
-				BA6E59515E9F4FAC8880C687 /* ovcc */,
+				BA6E59515E9F4FAC8880C687 /* Ovcc */,
 				9EBD02FE3EF347E69F7DC140 /* Products */,
 				7E0CDE88FCD14658910D700E /* Frameworks */,
 				B869D9A6E633440FA2342B71 /* Resources */,
@@ -583,14 +623,14 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		BA6E59515E9F4FAC8880C687 /* ovcc */ = {
+		BA6E59515E9F4FAC8880C687 /* Ovcc */ = {
 			isa = PBXGroup;
 			children = (
 				845964832C4B4AB38884C899 /* Source Files */,
 				465E85EFC5DF4EA6B591A73B /* Resources */,
 				3242222214F44912BE0A07AB /* CMakeLists.txt */,
 			);
-			name = ovcc;
+			name = Ovcc;
 			sourceTree = "<group>";
 		};
 		BFECFD253BDD401BB16E2FB2 /* Source Files */ = {
@@ -757,9 +797,9 @@
 			productReference = 8D95AB97156A416798894725 /* libramdisk.so */;
 			productType = "com.apple.product-type.tool";
 		};
-		B2673C64198041B2B959ADE4 /* ovcc */ = {
+		B2673C64198041B2B959ADE4 /* Ovcc */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 32C0DDCC93284AF68FEA64DF /* Build configuration list for PBXNativeTarget "ovcc" */;
+			buildConfigurationList = 32C0DDCC93284AF68FEA64DF /* Build configuration list for PBXNativeTarget "Ovcc" */;
 			buildPhases = (
 				5AD347DBA8CC43BD87DAF3B4 /* Resources */,
 				6489975FCFA2432EA2E131D7 /* Sources */,
@@ -771,9 +811,9 @@
 			);
 			dependencies = (
 			);
-			name = ovcc;
-			productName = ovcc;
-			productReference = 7C5DFA5F69A7419B89FDEAF8 /* ovcc.app */;
+			name = Ovcc;
+			productName = Ovcc;
+			productReference = 7C5DFA5F69A7419B89FDEAF8 /* Ovcc.app */;
 			productType = "com.apple.product-type.application";
 		};
 		CBC0C726E7BD4D00B7FEBCDB /* harddisk */ = {
@@ -829,7 +869,7 @@
 			projectRoot = "";
 			targets = (
 				F7AC195232A74D0285F04FB5 /* ALL_BUILD */,
-				B2673C64198041B2B959ADE4 /* ovcc */,
+				B2673C64198041B2B959ADE4 /* Ovcc */,
 				6406FFE20BEC4E1E932F6358 /* becker */,
 				D7BFFB2EC7D3420897740CD8 /* fd502 */,
 				CBC0C726E7BD4D00B7FEBCDB /* harddisk */,
@@ -871,7 +911,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ninstall_name_tool -change /opt/homebrew/opt/freetype/lib/libfreetype.6.dylib @executable_path/../Frameworks/libfreetype.6.dylib $TARGET_BUILD_DIR/ovcc.app/Contents/Frameworks/libag_gui.8.dylib\ninstall_name_tool -change /opt/homebrew/opt/fontconfig/lib/libfontconfig.1.dylib @executable_path/../Frameworks/libfontconfig.1.dylib $TARGET_BUILD_DIR/ovcc.app/Contents/Frameworks/libag_gui.8.dylib\ninstall_name_tool -change /opt/homebrew/opt/libpng/lib/libpng16.16.dylib @executable_path/../Frameworks/libpng16.16.dylib $TARGET_BUILD_DIR/ovcc.app/Contents/Frameworks/libag_gui.8.dylib\ninstall_name_tool -change /opt/homebrew/opt/fontconfig/lib/libfontconfig.1.dylib @executable_path/../Frameworks/libfontconfig.1.dylib $TARGET_BUILD_DIR/ovcc.app/Contents/MacOS/ovcc\ninstall_name_tool -change /opt/homebrew/opt/freetype/lib/libfreetype.6.dylib @executable_path/../Frameworks/libfreetype.6.dylib $TARGET_BUILD_DIR/ovcc.app/Contents/MacOS/ovcc\ninstall_name_tool -change /opt/homebrew/opt/libpng/lib/libpng16.16.dylib @executable_path/../Frameworks/libpng16.16.dylib $TARGET_BUILD_DIR/ovcc.app/Contents/MacOS/ovcc\ninstall_name_tool -change /usr/local/lib/libag_core.dylib @executable_path/../Frameworks/libag_core.8.dylib $TARGET_BUILD_DIR/ovcc.app/Contents/MacOS/ovcc\ninstall_name_tool -change /usr/local/lib/libag_gui.dylib @executable_path/../Frameworks/libag_gui.8.dylib $TARGET_BUILD_DIR/ovcc.app/Contents/MacOS/ovcc\ninstall_name_tool -change /opt/homebrew/opt/sdl2/lib/libSDL2-2.0.0.dylib @executable_path/../Frameworks/libSDL2-2.0.0.dylib $TARGET_BUILD_DIR/ovcc.app/Contents/MacOS/ovcc\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ninstall_name_tool -change /opt/homebrew/opt/freetype/lib/libfreetype.6.dylib @executable_path/../Frameworks/libfreetype.6.dylib $TARGET_BUILD_DIR/Ovcc.app/Contents/Frameworks/libag_gui.8.dylib\ninstall_name_tool -change /opt/homebrew/opt/fontconfig/lib/libfontconfig.1.dylib @executable_path/../Frameworks/libfontconfig.1.dylib $TARGET_BUILD_DIR/Ovcc.app/Contents/Frameworks/libag_gui.8.dylib\ninstall_name_tool -change /opt/homebrew/opt/libpng/lib/libpng16.16.dylib @executable_path/../Frameworks/libpng16.16.dylib $TARGET_BUILD_DIR/Ovcc.app/Contents/Frameworks/libag_gui.8.dylib\ninstall_name_tool -change /opt/homebrew/opt/fontconfig/lib/libfontconfig.1.dylib @executable_path/../Frameworks/libfontconfig.1.dylib $TARGET_BUILD_DIR/Ovcc.app/Contents/MacOS/Ovcc\ninstall_name_tool -change /opt/homebrew/opt/freetype/lib/libfreetype.6.dylib @executable_path/../Frameworks/libfreetype.6.dylib $TARGET_BUILD_DIR/Ovcc.app/Contents/MacOS/Ovcc\ninstall_name_tool -change /opt/homebrew/opt/libpng/lib/libpng16.16.dylib @executable_path/../Frameworks/libpng16.16.dylib $TARGET_BUILD_DIR/Ovcc.app/Contents/MacOS/Ovcc\ninstall_name_tool -change /usr/local/lib/libag_core.dylib @executable_path/../Frameworks/libag_core.8.dylib $TARGET_BUILD_DIR/Ovcc.app/Contents/MacOS/Ovcc\ninstall_name_tool -change /usr/local/lib/libag_gui.dylib @executable_path/../Frameworks/libag_gui.8.dylib $TARGET_BUILD_DIR/Ovcc.app/Contents/MacOS/Ovcc\ninstall_name_tool -change /opt/homebrew/opt/sdl2/lib/libSDL2-2.0.0.dylib @executable_path/../Frameworks/libSDL2-2.0.0.dylib $TARGET_BUILD_DIR/Ovcc.app/Contents/MacOS/Ovcc\nln -s Frameworks/coco3.rom $TARGET_BUILD_DIR/Ovcc.app/Contents/coco3.rom\nln -s Frameworks/disk11.rom $TARGET_BUILD_DIR/Ovcc.app/Contents/disk11.rom\nln -s \"Frameworks/hdbdw3bc3 w-offset 5A000.rom\" \"$TARGET_BUILD_DIR/Ovcc.app/Contents/hdbdw3bc3 w-offset 5A000.rom\"\nln -s Frameworks/hdbdw3bc3.rom $TARGET_BUILD_DIR/Ovcc.app/Contents/hdbdw3bc3.rom\nln -s \"Frameworks/hdbdw3bck w-offset 5A000.rom\" \"$TARGET_BUILD_DIR/Ovcc.app/Contents/hdbdw3bck w-offset 5A000.rom\"\nln -s Frameworks/hdbdw3bck.rom $TARGET_BUILD_DIR/Ovcc.app/Contents/hdbdw3bck.rom\nln -s Frameworks/orch90.rom $TARGET_BUILD_DIR/Ovcc.app/Contents/orch90.rom\nln -s Frameworks/rgbdos.rom $TARGET_BUILD_DIR/Ovcc.app/Contents/rgbdos.rom\ncp $TARGET_BUILD_DIR/Ovcc.app/Contents/Frameworks/Vcc.ini $TARGET_BUILD_DIR/Ovcc.app/Contents/\n";
 		};
 		85669F6F111733F3987D4D5D /* Generate CMakeFiles/ALL_BUILD */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1052,7 +1092,7 @@
 		};
 		BCD8D826410A45AEAB217937 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B2673C64198041B2B959ADE4 /* ovcc */;
+			target = B2673C64198041B2B959ADE4 /* Ovcc */;
 			targetProxy = 807BD2F57B81468181F0006B /* PBXContainerItemProxy */;
 		};
 		C5623959E34E46598DF85754 /* PBXTargetDependency */ = {
@@ -1073,10 +1113,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = NO;
 				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/mpi/MinSizeRel;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .so;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1107,8 +1151,11 @@
 				);
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = Ovcc;
 				PRODUCT_NAME = mpi;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
 				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/mpi.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
@@ -1122,10 +1169,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = NO;
 				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/orch90/Debug;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .so;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1155,8 +1206,11 @@
 				);
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = Ovcc;
 				PRODUCT_NAME = orch90;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
 				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/orch90.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
@@ -1170,10 +1224,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = NO;
 				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/orch90/MinSizeRel;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .so;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1204,8 +1262,11 @@
 				);
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = Ovcc;
 				PRODUCT_NAME = orch90;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
 				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/orch90.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
@@ -1219,9 +1280,15 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEPLOYMENT_POSTPROCESSING = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = NO;
+				COPY_PHASE_STRIP = NO;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
+				DEPLOYMENT_POSTPROCESSING = NO;
 				DRIVERKIT_DEPLOYMENT_TARGET = 23.4;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
+				ENABLE_CODE_COVERAGE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks,
 					"$(inherited)",
@@ -1245,6 +1312,7 @@
 					$SOURCE_ROOT/becker,
 					"$(inherited)",
 				);
+				INFOPLIST_KEY_CFBundleDisplayName = "";
 				LIBRARY_SEARCH_PATHS = (
 					/opt/homebrew/lib,
 					/usr/local/lib,
@@ -1261,9 +1329,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_CFLAGS = (
-					"-fpascal-strings",
-				);
+				OTHER_CFLAGS = "-fpascal-strings";
 				OTHER_LDFLAGS = (
 					"-Wl,-search_paths_first",
 					"-Wl,-headerpad_max_install_names",
@@ -1275,6 +1341,9 @@
 					"$(inherited)",
 				);
 				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk;
+				SKIP_INSTALL = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_SWIFT_SYMBOLS = NO;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SYMROOT = $SOURCE_ROOT/build;
 			};
@@ -1287,9 +1356,14 @@
 				ARCHS = arm64;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				COMBINE_HIDPI_IMAGES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = NO;
 				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/CoCo/MinSizeRel;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				EXECUTABLE_PREFIX = "";
 				EXECUTABLE_SUFFIX = "";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -1300,7 +1374,7 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = $SOURCE_ROOT/CoCo/CMakeFiles/ovcc.dir/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = OVCC;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					/opt/homebrew/lib,
@@ -1320,11 +1394,14 @@
 					Cocoa,
 				);
 				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ovcc;
+				PRODUCT_BUNDLE_IDENTIFIER = Ovcc;
+				PRODUCT_NAME = Ovcc;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SECTORDER_FLAGS = "";
-				SKIP_INSTALL = NO;
+				SKIP_INSTALL = YES;
+				STRIP_SWIFT_SYMBOLS = NO;
 				SYSTEM_HEADER_SEARCH_PATHS = "$(inherited)";
-				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/ovcc.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/Ovcc.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -1335,10 +1412,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = NO;
 				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/HardDisk/Debug;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .so;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1368,8 +1449,11 @@
 				);
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = Ovcc;
 				PRODUCT_NAME = harddisk;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
 				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/harddisk.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
@@ -1383,7 +1467,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
+				COMBINE_HIDPI_IMAGES = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
@@ -1401,6 +1485,7 @@
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ALL_BUILD;
 				SECTORDER_FLAGS = "";
+				STRIP_SWIFT_SYMBOLS = NO;
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -1411,9 +1496,15 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEPLOYMENT_POSTPROCESSING = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = NO;
+				COPY_PHASE_STRIP = NO;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
+				DEPLOYMENT_POSTPROCESSING = NO;
 				DRIVERKIT_DEPLOYMENT_TARGET = 23.4;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
+				ENABLE_CODE_COVERAGE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks,
 					"$(inherited)",
@@ -1437,6 +1528,7 @@
 					$SOURCE_ROOT/becker,
 					"$(inherited)",
 				);
+				INFOPLIST_KEY_CFBundleDisplayName = "";
 				LIBRARY_SEARCH_PATHS = (
 					/opt/homebrew/lib,
 					/usr/local/lib,
@@ -1453,9 +1545,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_CFLAGS = (
-					"-fpascal-strings",
-				);
+				OTHER_CFLAGS = "-fpascal-strings";
 				OTHER_LDFLAGS = (
 					"-Wl,-search_paths_first",
 					"-Wl,-headerpad_max_install_names",
@@ -1467,6 +1557,9 @@
 					"$(inherited)",
 				);
 				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk;
+				SKIP_INSTALL = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_SWIFT_SYMBOLS = NO;
 				SYMROOT = $SOURCE_ROOT/build;
 			};
 			name = Debug;
@@ -1476,10 +1569,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = NO;
 				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/Ramdisk/MinSizeRel;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .so;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1510,8 +1607,11 @@
 				);
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = Ovcc;
 				PRODUCT_NAME = ramdisk;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
 				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/ramdisk.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
@@ -1525,10 +1625,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = NO;
 				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/mpu/RelWithDebInfo;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .so;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1559,8 +1663,11 @@
 				);
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = Ovcc;
 				PRODUCT_NAME = mpu;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
 				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/mpu.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
@@ -1574,10 +1681,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = NO;
 				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/FD502/Release;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .so;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1608,8 +1719,11 @@
 				);
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = Ovcc;
 				PRODUCT_NAME = fd502;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
 				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/fd502.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
@@ -1623,10 +1737,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = NO;
 				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/Ramdisk/RelWithDebInfo;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .so;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1657,8 +1775,11 @@
 				);
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = Ovcc;
 				PRODUCT_NAME = ramdisk;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
 				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/ramdisk.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
@@ -1672,10 +1793,15 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = NO;
 				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/becker/MinSizeRel;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .so;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -1707,8 +1833,11 @@
 				);
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = Ovcc;
 				PRODUCT_NAME = becker;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
 				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/becker.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
@@ -1722,10 +1851,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = NO;
 				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/orch90/Release;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .so;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1756,8 +1889,11 @@
 				);
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = Ovcc;
 				PRODUCT_NAME = orch90;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
 				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/orch90.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
@@ -1771,10 +1907,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = NO;
 				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/orch90/RelWithDebInfo;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .so;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1805,8 +1945,11 @@
 				);
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = Ovcc;
 				PRODUCT_NAME = orch90;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
 				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/orch90.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
@@ -1820,10 +1963,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = NO;
 				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/SuperIDE/RelWithDebInfo;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .so;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1854,8 +2001,11 @@
 				);
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = Ovcc;
 				PRODUCT_NAME = superide;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
 				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/superide.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
@@ -1869,9 +2019,15 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEPLOYMENT_POSTPROCESSING = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = NO;
+				COPY_PHASE_STRIP = NO;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
+				DEPLOYMENT_POSTPROCESSING = NO;
 				DRIVERKIT_DEPLOYMENT_TARGET = 23.4;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
+				ENABLE_CODE_COVERAGE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks,
 					"$(inherited)",
@@ -1895,6 +2051,7 @@
 					$SOURCE_ROOT/becker,
 					"$(inherited)",
 				);
+				INFOPLIST_KEY_CFBundleDisplayName = "";
 				LIBRARY_SEARCH_PATHS = (
 					/opt/homebrew/lib,
 					/usr/local/lib,
@@ -1911,9 +2068,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_CFLAGS = (
-					"-fpascal-strings",
-				);
+				OTHER_CFLAGS = "-fpascal-strings";
 				OTHER_LDFLAGS = (
 					"-Wl,-search_paths_first",
 					"-Wl,-headerpad_max_install_names",
@@ -1925,6 +2080,9 @@
 					"$(inherited)",
 				);
 				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk;
+				SKIP_INSTALL = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_SWIFT_SYMBOLS = NO;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SYMROOT = $SOURCE_ROOT/build;
 			};
@@ -1935,10 +2093,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = NO;
 				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/HardDisk/MinSizeRel;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .so;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1969,8 +2131,11 @@
 				);
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = Ovcc;
 				PRODUCT_NAME = harddisk;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
 				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/harddisk.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
@@ -1984,10 +2149,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = NO;
 				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/HardDisk/RelWithDebInfo;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .so;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -2018,8 +2187,11 @@
 				);
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = Ovcc;
 				PRODUCT_NAME = harddisk;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
 				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/harddisk.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
@@ -2033,10 +2205,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = NO;
 				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/FD502/Debug;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .so;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -2066,8 +2242,11 @@
 				);
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = Ovcc;
 				PRODUCT_NAME = fd502;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
 				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/fd502.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
@@ -2081,10 +2260,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = NO;
 				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/mpi/Debug;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .so;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -2114,8 +2297,11 @@
 				);
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = Ovcc;
 				PRODUCT_NAME = mpi;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
 				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/mpi.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
@@ -2129,10 +2315,15 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = NO;
 				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/becker/Release;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .so;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -2164,8 +2355,11 @@
 				);
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = Ovcc;
 				PRODUCT_NAME = becker;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
 				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/becker.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
@@ -2179,10 +2373,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = NO;
 				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/HardDisk/Release;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .so;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -2213,8 +2411,11 @@
 				);
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = Ovcc;
 				PRODUCT_NAME = harddisk;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
 				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/harddisk.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
@@ -2228,10 +2429,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = NO;
 				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/mpu/Release;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .so;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -2262,8 +2467,11 @@
 				);
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = Ovcc;
 				PRODUCT_NAME = mpu;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
 				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/mpu.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
@@ -2277,10 +2485,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = NO;
 				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/Ramdisk/Release;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .so;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -2311,8 +2523,11 @@
 				);
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = Ovcc;
 				PRODUCT_NAME = ramdisk;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
 				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/ramdisk.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
@@ -2326,10 +2541,15 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = NO;
 				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/becker/RelWithDebInfo;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .so;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -2361,8 +2581,11 @@
 				);
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = Ovcc;
 				PRODUCT_NAME = becker;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
 				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/becker.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
@@ -2376,9 +2599,15 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEPLOYMENT_POSTPROCESSING = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = NO;
+				COPY_PHASE_STRIP = NO;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
+				DEPLOYMENT_POSTPROCESSING = NO;
 				DRIVERKIT_DEPLOYMENT_TARGET = 23.4;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
+				ENABLE_CODE_COVERAGE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks,
 					"$(inherited)",
@@ -2402,6 +2631,7 @@
 					$SOURCE_ROOT/becker,
 					"$(inherited)",
 				);
+				INFOPLIST_KEY_CFBundleDisplayName = "";
 				LIBRARY_SEARCH_PATHS = (
 					/opt/homebrew/lib,
 					/usr/local/lib,
@@ -2418,9 +2648,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_CFLAGS = (
-					"-fpascal-strings",
-				);
+				OTHER_CFLAGS = "-fpascal-strings";
 				OTHER_LDFLAGS = (
 					"-Wl,-search_paths_first",
 					"-Wl,-headerpad_max_install_names",
@@ -2432,6 +2660,9 @@
 					"$(inherited)",
 				);
 				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk;
+				SKIP_INSTALL = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_SWIFT_SYMBOLS = NO;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SYMROOT = $SOURCE_ROOT/build;
 			};
@@ -2442,10 +2673,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = NO;
 				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/mpi/RelWithDebInfo;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .so;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -2476,8 +2711,11 @@
 				);
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = Ovcc;
 				PRODUCT_NAME = mpi;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
 				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/mpi.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
@@ -2491,10 +2729,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = NO;
 				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/SuperIDE/Release;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .so;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -2525,8 +2767,11 @@
 				);
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = Ovcc;
 				PRODUCT_NAME = superide;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
 				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/superide.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
@@ -2540,7 +2785,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
+				COMBINE_HIDPI_IMAGES = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
@@ -2558,6 +2803,7 @@
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ALL_BUILD;
 				SECTORDER_FLAGS = "";
+				STRIP_SWIFT_SYMBOLS = NO;
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -2568,10 +2814,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = NO;
 				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/FD502/MinSizeRel;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .so;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -2602,8 +2852,11 @@
 				);
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = Ovcc;
 				PRODUCT_NAME = fd502;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
 				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/fd502.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
@@ -2617,7 +2870,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
+				COMBINE_HIDPI_IMAGES = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
@@ -2635,6 +2888,7 @@
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ALL_BUILD;
 				SECTORDER_FLAGS = "";
+				STRIP_SWIFT_SYMBOLS = NO;
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -2645,10 +2899,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = NO;
 				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/mpi/Release;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .so;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -2679,8 +2937,11 @@
 				);
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = Ovcc;
 				PRODUCT_NAME = mpi;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
 				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/mpi.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
@@ -2694,10 +2955,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = NO;
 				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/mpu/Debug;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .so;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -2727,8 +2992,11 @@
 				);
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = Ovcc;
 				PRODUCT_NAME = mpu;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
 				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/mpu.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
@@ -2742,10 +3010,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = NO;
 				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/Ramdisk/Debug;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .so;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -2775,8 +3047,11 @@
 				);
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = Ovcc;
 				PRODUCT_NAME = ramdisk;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
 				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/ramdisk.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
@@ -2792,9 +3067,14 @@
 				ARCHS = arm64;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				COMBINE_HIDPI_IMAGES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = NO;
 				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/CoCo/Release;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				EXECUTABLE_PREFIX = "";
 				EXECUTABLE_SUFFIX = "";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -2805,7 +3085,7 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = $SOURCE_ROOT/CoCo/CMakeFiles/ovcc.dir/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = OVCC;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					/opt/homebrew/lib,
@@ -2825,11 +3105,14 @@
 					Cocoa,
 				);
 				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ovcc;
+				PRODUCT_BUNDLE_IDENTIFIER = Ovcc;
+				PRODUCT_NAME = Ovcc;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SECTORDER_FLAGS = "";
-				SKIP_INSTALL = NO;
+				SKIP_INSTALL = YES;
+				STRIP_SWIFT_SYMBOLS = NO;
 				SYSTEM_HEADER_SEARCH_PATHS = "$(inherited)";
-				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/ovcc.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/Ovcc.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -2840,10 +3123,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = NO;
 				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/SuperIDE/MinSizeRel;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .so;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -2874,8 +3161,11 @@
 				);
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = Ovcc;
 				PRODUCT_NAME = superide;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
 				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/superide.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
@@ -2889,10 +3179,15 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = NO;
 				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/becker/Debug;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .so;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -2923,8 +3218,11 @@
 				);
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = Ovcc;
 				PRODUCT_NAME = becker;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
 				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/becker.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
@@ -2938,10 +3236,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = NO;
 				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/FD502/RelWithDebInfo;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .so;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -2972,8 +3274,11 @@
 				);
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = Ovcc;
 				PRODUCT_NAME = fd502;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
 				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/fd502.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
@@ -2989,9 +3294,14 @@
 				ARCHS = arm64;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				COMBINE_HIDPI_IMAGES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = NO;
 				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/CoCo/RelWithDebInfo;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				EXECUTABLE_PREFIX = "";
 				EXECUTABLE_SUFFIX = "";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -3002,7 +3312,7 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = $SOURCE_ROOT/CoCo/CMakeFiles/ovcc.dir/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = OVCC;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					/opt/homebrew/lib,
@@ -3022,11 +3332,14 @@
 					Cocoa,
 				);
 				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ovcc;
+				PRODUCT_BUNDLE_IDENTIFIER = Ovcc;
+				PRODUCT_NAME = Ovcc;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SECTORDER_FLAGS = "";
-				SKIP_INSTALL = NO;
+				SKIP_INSTALL = YES;
+				STRIP_SWIFT_SYMBOLS = NO;
 				SYSTEM_HEADER_SEARCH_PATHS = "$(inherited)";
-				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/ovcc.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/Ovcc.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -3040,9 +3353,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=macosx*]" = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				COMBINE_HIDPI_IMAGES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = NO;
 				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/CoCo/Debug;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				EXECUTABLE_PREFIX = "";
 				EXECUTABLE_SUFFIX = "";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -3053,7 +3371,7 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = $SOURCE_ROOT/CoCo/CMakeFiles/ovcc.dir/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = OVCC;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					/opt/homebrew/lib,
@@ -3070,11 +3388,14 @@
 					Cocoa,
 				);
 				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ovcc;
+				PRODUCT_BUNDLE_IDENTIFIER = Ovcc;
+				PRODUCT_NAME = Ovcc;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SECTORDER_FLAGS = "";
-				SKIP_INSTALL = NO;
+				SKIP_INSTALL = YES;
+				STRIP_SWIFT_SYMBOLS = NO;
 				SYSTEM_HEADER_SEARCH_PATHS = "$(inherited)";
-				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/ovcc.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/Ovcc.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -3085,10 +3406,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = NO;
 				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/mpu/MinSizeRel;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .so;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -3119,8 +3444,11 @@
 				);
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = Ovcc;
 				PRODUCT_NAME = mpu;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
 				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/mpu.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
@@ -3134,7 +3462,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
+				COMBINE_HIDPI_IMAGES = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
@@ -3152,6 +3480,7 @@
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ALL_BUILD;
 				SECTORDER_FLAGS = "";
+				STRIP_SWIFT_SYMBOLS = NO;
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -3162,10 +3491,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = NO;
 				CONFIGURATION_BUILD_DIR = $SOURCE_ROOT/SuperIDE/Debug;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .so;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -3195,8 +3528,11 @@
 				);
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = Ovcc;
 				PRODUCT_NAME = superide;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_SWIFT_SYMBOLS = NO;
 				TARGET_TEMP_DIR = "$(SOURCE_ROOT)/build/superide.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
@@ -3230,7 +3566,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		32C0DDCC93284AF68FEA64DF /* Build configuration list for PBXNativeTarget "ovcc" */ = {
+		32C0DDCC93284AF68FEA64DF /* Build configuration list for PBXNativeTarget "Ovcc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E92EAFF185DF4D7CA436096C /* Debug */,
