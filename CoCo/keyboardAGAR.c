@@ -52,7 +52,7 @@ This file is part of VCC (Virtual Color Computer).
 	Forward declarations
 */
 
-char SetMouseStatusSDL(short, unsigned char);
+unsigned short SetMouseStatusSDL(unsigned short, unsigned char);
 
 /*****************************************************************************/
 /*
@@ -693,12 +693,14 @@ void SetStickNumbersSDL(unsigned char Temp1,unsigned char Temp2)
 unsigned short get_pot_valueSDL(unsigned char pot)
 {
 	extern int gWindow;
-	
+
+	SDL_JoystickUpdate();
+
 	if (LeftSDL.UseMouse == JOYSTICK_JOYSTICK)
 	{
 		JoyStickPollSDL(&Stick1, LeftStickNumber);
-		LeftStickX = (unsigned short)(SDL_JoystickGetAxis(Stick1, 0)+32678)>>10;
-		LeftStickY = (unsigned short)(SDL_JoystickGetAxis(Stick1, 1)+32678)>>10;
+		LeftStickX = (unsigned short)(SDL_JoystickGetAxis(Stick1, 0)+32768)>>10;
+		LeftStickY = (unsigned short)(SDL_JoystickGetAxis(Stick1, 1)+32768)>>10;
 		LeftButton1Status = SDL_JoystickGetButton(Stick1, 0);
 		LeftButton2Status = SDL_JoystickGetButton(Stick1, 1);
 	}
@@ -706,8 +708,8 @@ unsigned short get_pot_valueSDL(unsigned char pot)
 	if (RightSDL.UseMouse == JOYSTICK_JOYSTICK)
 	{
 		JoyStickPollSDL(&Stick1, RightStickNumber);
-		RightStickX= (unsigned short)(SDL_JoystickGetAxis(Stick1, 0)+32678)>>10;
-		RightStickY= (unsigned short)(SDL_JoystickGetAxis(Stick1, 1)+32678)>>10;
+		RightStickX= (unsigned short)(SDL_JoystickGetAxis(Stick1, 0)+32768)>>10;
+		RightStickY= (unsigned short)(SDL_JoystickGetAxis(Stick1, 1)+32768)>>10;
 		RightButton1Status = SDL_JoystickGetButton(Stick1, 0);
 		RightButton2Status = SDL_JoystickGetButton(Stick1, 1);
 	}
@@ -737,9 +739,9 @@ unsigned short get_pot_valueSDL(unsigned char pot)
 /*****************************************************************************/
 /**
 */
-char SetMouseStatusSDL(short ScanCode,unsigned char Phase)
+unsigned short SetMouseStatusSDL(unsigned short ScanCode,unsigned char Phase)
 {
-	char ReturnValue=ScanCode;
+	unsigned short ReturnValue=ScanCode;
 
 	switch (Phase)
 	{

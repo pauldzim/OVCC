@@ -1,3 +1,5 @@
+Update: Joysticks are now working. Bumped the version to 1.6.1a
+
 This is a fork of Walter Zambotti's OVCC project: https://github.com/WallyZambotti/OVCC
 
 I have added an xcodeproj file, so that OVCC can be built using Apple's Xcode IDE.
@@ -29,12 +31,6 @@ This version of OVCC has a few differences from Walter's:
 
     - When running OVCC, in the 'Cartridge->Load Cart' menu, the loadable
       modules (.so) can be found in the 'Frameworks' subfolder.
-
-    - After loading the FD502 module for the first time, select the 'Cartridge->
-      FD-502 Config' menu entry, then in the dialog click the 'Browse' button
-      and load the 'fd502.rom' file. Click the 'External Rom Image' button and
-      then click 'OK'. Then do a Hard Reset. and you should see that "Disk
-      Extended Color Basic" has loaded.
 
 One note: If you load the libmpi.so module first ("Mult-Pak Interface"), and
 then load the libfd502.so module (floppy disk controller) into it, you *must*
